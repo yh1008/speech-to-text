@@ -6,9 +6,9 @@ As Chinese students studying in the states, we found our speaking habits morphed
 Model breakdown:  
 M1: language detection model  
 M2: Mandarin speech-to-text model  
-M3: English speech-to-text model     
-
-
+M3: English speech-to-text model       
+  
+Data Preperation: http://kaldi-asr.org/doc/kaldi_for_dummies.html  
 | acoustic data:  | filename: | pattern: |path: | source:|
 | ------------- | ------------- |-|--|--|
 |  |spk2gender  |\<speakerID>\<gender> | /data/train /data/test | handmade|
@@ -22,4 +22,4 @@ M3: English speech-to-text model
 |Tools:  | utils | |/ | kaldi/egs/wsj/s5| 
 |  |steps  |  |/ | kaldi/egs/wsj/s5 |
 |  | score.sh |  | /| kaldi/egs/voxforge/s5/local | 
-http://kaldi-asr.org/doc/kaldi_for_dummies.html
+
