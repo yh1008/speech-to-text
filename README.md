@@ -8,3 +8,14 @@ M1: language detection model
 M2: Mandarin speech-to-text model  
 M3: English speech-to-text model   
     
+
+| acoustic data:  | filename: | pattern: |path: | source:|
+| ------------- | ------------- |-|--|--|
+|  |spk2gender  |<speakerID><gender> | /data/train /data/test | handmade|
+|  | utt2spk    |<utteranceID><speakerID> | /data/train /data/test| handmade | 
+|  | wav.scp    | <utteranceID><full_path_to_audio_file>|/data/train /data/test | handmade|
+|  | text       |<utteranceID><full_path_to_audio_file> | /data/train /data/test|  exists | 
+|  |  | | | |
+|  | | | |  | 
+|  |  | | | |
+|  | | | |  | 
