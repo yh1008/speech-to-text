@@ -9,7 +9,11 @@ As Chinese students studying in the states, we found our speaking habits morphed
 M1: language detection model  
 M2: Mandarin speech-to-text model  
 M3: English speech-to-text model  
-  
+
+### Interesting Python Kaldi Wrapper to be examined:
+- [Pykaldi](https://github.com/UFAL-DSG/pykaldi/tree/master/pykaldi) 
+- [Alex Dialog System Framwork](http://alex.readthedocs.io/en/master/_man_rst/alex.tools.kaldi.README.html)
+
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
   
@@ -29,6 +33,7 @@ M3: English speech-to-text model
 
 ### Language Model:
 - [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)  
+What are our language model:  
 3-grams trained from the transcripts of THCHS30 + LDC2015S04  
 directory structure taken from /egs/TIMIT/s5   
 ```
@@ -36,5 +41,10 @@ directory structure taken from /egs/TIMIT/s5
   /local
     /nist_lm
       /lm_phone_bg.arpa.gz
-```
+```  
+How to build a language model: 
+- [SRILM](http://www.speech.sri.com/projects/srilm/)
+- [Kaldi lm_build ](https://github.com/srvk/lm_build)
+- [egs/babel/s5/local/train_lms_srilm.sh built using SRILM toolkit](https://github.com/kaldi-asr/kaldi/blob/master/egs/babel/s5/local/train_lms_srilm.sh) 
+
 
