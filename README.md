@@ -81,7 +81,7 @@ How to build a language model:
 
 ### HMM
 1. likelihood
-2. training (Forward-backward algorithm [EM]): given an observation sequence, learn the best $lambda {a_ij, bj(X)}$
+2. training (Forward-backward algorithm [EM]): given an observation sequence, learn the best ![lambda](https://latex.codecogs.com/gif.latex?%5Clambda%5C%7B%20a_%7Bij%7D%2C%20b_j%28X%29%20%5C%7D)
 3. decoding (Viterbi algorithm): given an on observation sequence, determine the most probable hidden state sequence.
 3. 
 
