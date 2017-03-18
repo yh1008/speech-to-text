@@ -10,17 +10,17 @@ M3: English speech-to-text model
   
 Data Preperation: http://kaldi-asr.org/doc/kaldi_for_dummies.html  
   
-| acoustic data:  | filename: | pattern: |path: | source:|
-| ------------- | ------------- |-|--|--|
-|  |spk2gender  |\<speakerID>\<gender> | /data/train /data/test | handmade|
-|  | utt2spk    |\<utteranceID>\<speakerID> | /data/train /data/test| handmade | 
-|  | wav.scp    |\<utteranceID>\<full_path_to_audio_file>|/data/train /data/test | handmade|
-|  | text       |\<utteranceID>\<full_path_to_audio_file> | /data/train /data/test|  exists | 
-|language data:  | lexicon.txt |\<word> \<phone 1>\<phone 2> ... |data/local/dict| egs/voxforge|
-|  | nonsilence_phones.txt | \<phone>|data/local/dict | unkown | 
-|  |silence_phones.txt   |\<phone> |data/local/dict |unkown |
-|  | optional_silence.txt |\<phone> | data/local/dict| unkown | 
-|Tools:  | utils | |/ | kaldi/egs/wsj/s5| 
-|  |steps  |  |/ | kaldi/egs/wsj/s5 |
-|  | score.sh |  | /| kaldi/egs/voxforge/s5/local | 
+| acoustic data:  | filename: | format: | pattern: |path: | source:|
+| ------------- | ------------- |-|-|--|--|
+|  |spk2gender  |\<speakerID>\<gender> | no extension|/data/train /data/test | handmade|
+|  | utt2spk    |\<utteranceID>\<speakerID> |no extension| /data/train /data/test| handmade | 
+|  | wav.scp    |\<utteranceID>\<full_path_to_audio_file>| kaldi script file|/data/train /data/test | handmade|
+|  | text       |\<utteranceID>\<full_path_to_audio_file> |.ark: kaldi archive file| /data/train /data/test|  exists | 
+|language data:  | lexicon.txt |\<word> \<phone 1>\<phone 2> ... | |data/local/dict| egs/voxforge|
+|  | nonsilence_phones.txt | \<phone>| |data/local/dict | unkown | 
+|  |silence_phones.txt   |\<phone> | |data/local/dict |unkown |
+|  | optional_silence.txt |\<phone> |  | data/local/dict| unkown | 
+|Tools:  | utils | ||/ | kaldi/egs/wsj/s5|   
+|  |steps  | | |/ | kaldi/egs/wsj/s5 |
+|  | score.sh | | | /| kaldi/egs/voxforge/s5/local | 
 
