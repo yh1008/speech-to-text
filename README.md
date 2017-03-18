@@ -27,7 +27,8 @@ M3: English speech-to-text model
 
 ### Language Model:
 - [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)  
-3-grams trained from the transcripts of THCHS30 + LDC2015S04
+3-grams trained from the transcripts of THCHS30 + LDC2015S04  
+directory structure taken from /egs/TIMIT/s5   
 ```
 /data
   /local
