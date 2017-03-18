@@ -14,7 +14,7 @@ Data Preperation: http://kaldi-asr.org/doc/kaldi_for_dummies.html
 | ------------- | ------------- |-|-|--|--|
 |  |spk2gender  |\<speakerID>\<gender> | |/data/train /data/test | handmade|
 |  | utt2spk    |\<utteranceID>\<speakerID> | | /data/train /data/test| handmade | 
-|  | wav.scp    |\<utteranceID>\<full_path_to_audio_file>| kaldi script file|/data/train /data/test | handmade|
+|  | wav.scp    |\<utteranceID>\<full_path_to_audio_file>| .scp: kaldi script file|/data/train /data/test | handmade|
 |  | text       |\<utteranceID>\<full_path_to_audio_file> |.ark: kaldi archive file| /data/train /data/test|  exists | 
 |language data:  | lexicon.txt |\<word> \<phone 1>\<phone 2> ... | .ark: kaldi archive file |data/local/dict| egs/voxforge|
 |  | nonsilence_phones.txt | \<phone>| |data/local/dict | unkown | 
