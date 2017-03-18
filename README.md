@@ -32,10 +32,12 @@ M3: English speech-to-text model
 |  | score.sh | | | /| kaldi/egs/voxforge/s5/local |   
 
 ### Language Model:
-- [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)  
+- [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)   
+
 What are our language model:  
-3-grams trained from the transcripts of THCHS30 + LDC2015S04  
-directory structure taken from /egs/TIMIT/s5   
+3-grams trained from the transcripts of THCHS30 + LDC2015S04    
+
+directory structure taken from /egs/TIMIT/s5: 
 ```
 /data
   /local
