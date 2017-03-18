@@ -12,7 +12,10 @@ M3: English speech-to-text model
 
 ### Interesting Python Kaldi Wrapper to be examined:
 - [Pykaldi](https://github.com/UFAL-DSG/pykaldi/tree/master/pykaldi) 
-- [Alex Dialog System Framwork](http://alex.readthedocs.io/en/master/_man_rst/alex.tools.kaldi.README.html)
+- [Alex Dialog System Framwork](http://alex.readthedocs.io/en/master/_man_rst/alex.tools.kaldi.README.html)  
+
+### Kaldi recommended recipe to be examined:
+- [Librispeech](http://www.openslr.org/11/)  
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
