@@ -10,7 +10,7 @@ M3: English speech-to-text model
   
 Data Preperation: http://kaldi-asr.org/doc/kaldi_for_dummies.html  
   
-| acoustic data:  | filename: | format: | pattern: |path: | source:|
+| acoustic data:  | filename: |  pattern: | format: |path: | source:|
 | ------------- | ------------- |-|-|--|--|
 |  |spk2gender  |\<speakerID>\<gender> | no extension|/data/train /data/test | handmade|
 |  | utt2spk    |\<utteranceID>\<speakerID> |no extension| /data/train /data/test| handmade | 
@@ -20,7 +20,7 @@ Data Preperation: http://kaldi-asr.org/doc/kaldi_for_dummies.html
 |  | nonsilence_phones.txt | \<phone>| |data/local/dict | unkown | 
 |  |silence_phones.txt   |\<phone> | |data/local/dict |unkown |
 |  | optional_silence.txt |\<phone> |  | data/local/dict| unkown | 
-|Tools:  | utils | ||/ | kaldi/egs/wsj/s5|   
-|  |steps  | | |/ | kaldi/egs/wsj/s5 |
+|Tools:  | utils | | | / | kaldi/egs/wsj/s5|   
+|  |steps  | | | / | kaldi/egs/wsj/s5 |
 |  | score.sh | | | /| kaldi/egs/voxforge/s5/local | 
 
