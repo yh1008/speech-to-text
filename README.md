@@ -24,6 +24,13 @@ M3: English speech-to-text model
 |  |steps  | | | / | kaldi/egs/wsj/s5 |
 |  | score.sh | | | /| kaldi/egs/voxforge/s5/local |   
 
-### Lanuage Model 
-- [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)
+### Language Model 
+- [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)  
+3-grams trained from the transcripts of THCHS30 + LDC2015S04
+```
+/data
+  /local
+    /nist_lm
+      /lm_phone_bg.arpa.gz
+```
 
