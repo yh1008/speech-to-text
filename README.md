@@ -60,7 +60,7 @@ How to build a language model:
 - [Kaldi lm_build ](https://github.com/srvk/lm_build)
 - [egs/babel/s5/local/train_lms_srilm.sh built using SRILM toolkit](https://github.com/kaldi-asr/kaldi/blob/master/egs/babel/s5/local/train_lms_srilm.sh) 
 
-### MFCC: 
+### MFCC Feature Extraction: 
 ```
    echo
    echo "===== FEATURES EXTRACTION ====="
@@ -78,4 +78,11 @@ How to build a language model:
    steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train $mfccdir
    steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test $mfccdir
 ```
+
+### HMM
+1. likelihood
+2. training (Forward-backward algorithm [EM]): given an observation sequence, learn the best $lambda {a_ij, bj(X)}$
+3. decoding (Viterbi algorithm): given an on observation sequence, determine the most probable hidden state sequence.
+3. 
+
 
