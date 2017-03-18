@@ -9,7 +9,7 @@ M2: Mandarin speech-to-text model
 M3: English speech-to-text model       
   
 ### Data Preperation:
-- [resource](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
+- [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
   
 | acoustic data:  | filename: |  pattern: | format: |path: | source:|
 | ------------- | ------------- |-|-|--|--|
