@@ -15,7 +15,15 @@ M3: English speech-to-text model
 - [Alex Dialog System Framwork](http://alex.readthedocs.io/en/master/_man_rst/alex.tools.kaldi.README.html)  
 
 ### Kaldi recommended recipe to be examined:
-- [Librispeech](http://www.openslr.org/11/)  
+- [Librispeech](http://www.openslr.org/11/)    
+
+### Kaldi resources:
+- [Daniel Povey Lectures](http://www.danielpovey.com/kaldi-lectures.html)
+- [An Introduction to Kaldi Toolkit](http://berlin.csie.ntnu.edu.tw/Courses/Speech%20Recognition/Lectures2013/SP2013F_Lecture14-Introduction%20to%20the%20Kaldi%20toolkit.pdf)
+- [Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit](https://engineering.jhu.edu/clsp/wp-content/uploads/sites/75/2016/06/Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit.pdf)
+
+### Baseline Model Paper:
+- [A Chinese-English Mixlingual Database and A Speech Recognition Baseline](https://arxiv.org/pdf/1609.08412v1.pdf)
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
