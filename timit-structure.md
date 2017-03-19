@@ -3,6 +3,7 @@
 ### specs
 8 core Ubuntu 16.04 LTS Google Cloud VM    
 finish ./run.sh in 3 hours  
+finish ./run_kt.sh in 2.5 hours
 
 ### pre-run.sh: file structure of kaldi/egs/timit/s5/
 ```
