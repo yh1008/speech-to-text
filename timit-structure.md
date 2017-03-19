@@ -1,5 +1,9 @@
 # TIMIT Study
 
+### specs
+8 core Google Cloud VM    
+finish ./run.sh in 3 hours  
+
 ### pre-run.sh: file structure of kaldi/egs/timit/s5/
 ```
 yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
