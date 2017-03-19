@@ -32,7 +32,7 @@ yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
 ```
 
 ### modification to run on CPU 
-1. to avoid error
+1. to avoid qsub not found error
 ```steps/make_mfcc.sh --cmd queue.pl -l arch=*64 --nj 30 data/train exp/make_mfcc/train mfcc
 steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
 queue.pl: error submitting jobs to queue (return status was 32512)
@@ -54,4 +54,16 @@ export train_cmd="run.pl"
 export decode_cmd="run.pl"
 export mkgraph_cmd="run.pl"
 export cuda_cmd="run.pl"
+```
+- [reference] (https://sourceforge.net/p/kaldi/discussion/1355348/thread/98345f33/)  
+
+2. to avoid bc: command not found error 
+```
+local/score.sh: line 56: bc: command not found
+run.pl: 5 / 5 failed, log is in exp/mono/decode_dev/scoring/log/best_path.1.*.log
+steps/decode.sh: Scoring failed. (ignore by '--skip-scoring true')
+```
+do 
+```
+$sudo apt-get install bc
 ```
