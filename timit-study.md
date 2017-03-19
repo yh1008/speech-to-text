@@ -72,3 +72,6 @@ do
 ```
 $sudo apt-get install bc
 ```
+
+### usefull tutorial 
+- [University of Edinburgh-Automatic Speech Reconigtion course](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
