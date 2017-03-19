@@ -1,7 +1,7 @@
 # TIMIT Study
 
 ### specs
-8 core Google Cloud VM Ubuntu 16.04 LTS
+8 core Ubuntu 16.04 LTS Google Cloud VM    
 finish ./run.sh in 3 hours  
 
 ### pre-run.sh: file structure of kaldi/egs/timit/s5/
