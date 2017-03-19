@@ -4,11 +4,10 @@
 As Chinese students studying in the states, we found our speaking habits morphed -- English words and phrases easily get slipped into Chinese sentences. We greatly feel the need to have messaging apps that can handle multilingual speech-to-text translation. So in this task, we are going to develop this function -- build a model using deep learning technologies to corretly translate multilingual audio (having Chinese and English in the same sentence) into text.
 
 ### Data Source:
-- [Mandarin-English Code-Switching in South-East Asia](https://catalog.ldc.upenn.edu/ldc2015s04)  
-### Model breakdown:  
-M1: language detection model  
-M2: Mandarin speech-to-text model  
-M3: English speech-to-text model  
+- [Mandarin-English Code-Switching in South-East Asia](https://catalog.ldc.upenn.edu/ldc2015s04)   
+
+### Baseline Model Paper:
+- [A Chinese-English Mixlingual Database and A Speech Recognition Baseline](https://arxiv.org/pdf/1609.08412v1.pdf)
 
 ### Interesting Python Kaldi Wrapper to be examined:
 - [Pykaldi](https://github.com/UFAL-DSG/pykaldi/tree/master/pykaldi) 
@@ -21,9 +20,6 @@ M3: English speech-to-text model
 - [Daniel Povey Lectures](http://www.danielpovey.com/kaldi-lectures.html)
 - [An Introduction to Kaldi Toolkit](http://berlin.csie.ntnu.edu.tw/Courses/Speech%20Recognition/Lectures2013/SP2013F_Lecture14-Introduction%20to%20the%20Kaldi%20toolkit.pdf)
 - [Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit](https://engineering.jhu.edu/clsp/wp-content/uploads/sites/75/2016/06/Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit.pdf)
-
-### Baseline Model Paper:
-- [A Chinese-English Mixlingual Database and A Speech Recognition Baseline](https://arxiv.org/pdf/1609.08412v1.pdf)
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
