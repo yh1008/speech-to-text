@@ -55,7 +55,7 @@ export decode_cmd="run.pl"
 export mkgraph_cmd="run.pl"
 export cuda_cmd="run.pl"
 ```
-- [reference] (https://sourceforge.net/p/kaldi/discussion/1355348/thread/98345f33/)  
+- [reference](https://sourceforge.net/p/kaldi/discussion/1355348/thread/98345f33/)  
 
 2. to avoid bc: command not found error 
 ```
