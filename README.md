@@ -80,7 +80,7 @@ How to build a language model:
 ```
 
 ### HMM - GMM 
-[Reference] (http://www.inf.ed.ac.uk/teaching/courses/asr/2012-13/asr03-hmmgmm-4up.pdf)  
+[Reference](http://www.inf.ed.ac.uk/teaching/courses/asr/2012-13/asr03-hmmgmm-4up.pdf)  
 
 ![a](https://latex.codecogs.com/gif.latex?a_%7Bij%7D) as the transition probability from state i to state j   
 ![b](https://latex.codecogs.com/gif.latex?b_j%28X%29) as the emission probability from state j to sequence X  
