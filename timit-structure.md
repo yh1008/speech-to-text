@@ -32,6 +32,12 @@ yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
 ```
 
 ### modification to run on CPU 
+1. to avoid error
+```steps/make_mfcc.sh --cmd queue.pl -l arch=*64 --nj 30 data/train exp/make_mfcc/train mfcc
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+queue.pl: error submitting jobs to queue (return status was 32512)
+sh: 1: qsub: not found
+```
 in cmd.sh 
 change 
 ```
