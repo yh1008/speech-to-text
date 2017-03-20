@@ -77,10 +77,10 @@ $sudo apt-get install bc
 - [University of Edinburgh-Automatic Speech Reconigtion course](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
 made in 2017  
 contains:  
-- Kaldi recipe file structure explanations:   
-   **path.sh** contains environment variable KALDI_ROOT to point to the Kaldi installation.   
-   **exp** contains the actual experiments, models and their logs.   
-   **local** contains files that relate only to the corpus we are working on.
+1. Kaldi recipe file structure explanations:   
+   **path.sh** contains environment variable KALDI_ROOT to point to the Kaldi installation.     
+   **exp** contains the actual experiments, models and their logs.     
+   **local** contains files that relate only to the corpus we are working on.    
    to check that the data directories conforms to Kaldi specifications, run the next two lines in **run.sh**:  
    ```
    utils/validate_Data_dir.sh data/train
@@ -88,4 +88,8 @@ contains:
    ```
    
       
-- 
+2. MFCC feature extractions:    
+   scripts and archives:   
+   *.scp files map utterance if to position in *.ark files. The latter contains the actual data.  
+   **scp:feats.scp** to read 
+   **ark:mfcc.ark** to write to stdout. Archives will be written in binary; to avoid it append the **,t** modifierL **ark,t:mfcc.ark**
