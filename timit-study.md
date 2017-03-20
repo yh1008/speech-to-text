@@ -122,7 +122,7 @@ We first see something similar to the above 3-state HMM topology. Followed by \<
   0.005339943 0.002408599 0.005009499 0.004234992 0.003415213 0.004226068 0.003845918 0.004330037 0.004469929 0.00555164 0.006493011 0.007199864 0.01219888 0.0938514 0.05168371 0.07636816 0.08218509 0.06499127 0.06110011 0.06516927 0.05807921 0.06776563 0.07036626 0.08379282 0.1019901 0.1359497 0.5388283 0.371821 0.4569601 0.5199628 0.4027453 0.3459871 0.3799254 0.3325204 0.3964455 0.3940115 0.4471866 0.5627591 0.7084802 ]
 </DiagGMM> 
 ```
-Here DiagGMM stores parameters of each single diagonal-covariance Gaussian Mixture Model as: inverse variances, and (means times inverse variances)  [source](http://kaldi-asr.org/doc/model.html)  
+Here DiagGMM stores parameters of each single diagonal-covariance Gaussian Mixture Model as: inverse variances, and (means times inverse variances)  [SOURCE](http://kaldi-asr.org/doc/model.html)  
 
 There will be many monophone models created, the final model summary information can be found using:
 ```
@@ -184,6 +184,90 @@ Transition-state 144: phone = zh hmm-state = 2 pdf = 143
  Transition-id = 287 p = 0.75 [self-loop]
  Transition-id = 288 p = 0.25 [2 -> 3]
 ```  
+for better visual alignment, type
+```
+show-alignments data/lang/phones.txt exp/mono/0.mdl "ark:gunzip -c exp/mono/ali.1.gz |" | head -n 2
+```
+viola:  
+```
+faem0_si1392  [ 2 4 3 3 3 3 3 3 6 5 5 5 5 ] [ 38 37 37 37 40 42 ] [ 218 217 217 217
+ 217 217 217 217 217 217 217 217 217 220 219 222 221 ] [ 248 247 247 247 247 247 24
+7 250 252 ] [ 176 175 178 177 177 177 177 177 180 ] [ 122 121 121 121 121 121 121 1
+21 124 123 126 125 125 ] [ 26 28 27 30 29 29 ] [ 212 211 214 216 215 ] [ 146 148 15
+0 ] [ 260 262 261 264 263 ] [ 278 277 277 277 280 282 281 281 ] [ 14 13 13 13 13 13
+ 16 15 18 17 17 ] [ 176 178 180 ] [ 62 64 66 ] [ 206 208 210 ] [ 242 241 244 246 ] 
+[ 170 169 169 169 169 172 171 171 174 173 173 173 173 ] [ 38 37 37 37 40 42 41 ] [ 
+218 217 217 217 217 217 217 217 217 217 220 219 222 ] [ 146 145 148 147 150 ] [ 62 
+64 66 ] [ 56 55 55 55 55 55 58 57 60 59 59 ] [ 248 250 249 249 252 251 251 251 251 
+251 ] [ 116 115 115 115 118 117 117 120 119 ] [ 224 223 223 223 223 223 223 226 225
+ 225 228 ] [ 98 97 97 100 99 102 101 ] [ 266 265 265 265 265 268 267 267 267 270 26
+9 269 ] [ 86 88 90 ] [ 110 112 111 111 114 ] [ 122 121 121 121 121 121 121 121 121 
+121 124 123 126 125 125 ] [ 8 7 7 7 7 7 7 7 10 9 9 12 ] [ 212 214 216 ] [ 176 175 1
+75 178 177 180 ] [ 134 133 133 133 136 135 138 137 ] [ 86 88 87 90 ] [ 278 277 277 
+277 280 279 282 281 ] [ 38 37 40 42 ] [ 62 64 66 ] [ 206 205 208 207 207 207 207 20
+7 210 209 ] [ 14 13 16 15 15 15 18 17 17 17 ] [ 62 61 64 66 ] [ 164 166 165 168 167
+ ] [ 152 154 156 ] [ 188 190 189 189 192 191 191 191 ] [ 224 223 223 223 223 223 22
+3 223 223 226 225 225 228 227 ] [ 86 85 85 85 85 85 85 85 85 85 85 88 87 90 ] [ 260
+ 259 262 264 263 ] [ 68 70 72 71 71 71 ] [ 2 4 3 3 6 5 5 5 5 5 5 ] [ 14 16 15 15 15
+ 15 15 15 15 18 17 17 ] [ 182 181 184 186 ] [ 260 262 264 ] [ 68 70 72 ] [ 122 121 
+121 121 121 121 121 124 123 126 ] [ 152 151 151 151 151 151 154 153 153 153 153 156
+ 155 155 155 155 155 ] [ 170 169 169 169 169 169 169 172 171 174 173 173 ] [ 260 26
+2 264 263 263 263 263 ] [ 218 217 217 217 217 217 217 217 217 217 220 219 222 221 2
+21 ] [ 2 1 4 3 3 3 3 3 3 3 6 ] 
+```
+```
+faem0_si1392  sil                           ax                    s                
+                                                       uw                          
+            m                                       f                              
+                         ao                    r                       ix          
+    vcl                     z                                   ae                 
+                  m               cl           p               uh                  
+l                                                       ax                       s 
+                                                      ix                      cl   
+        ch                                   uw                                    
+      ey                                      sh                                   
+           en                          w                                           
+        eh           er                      f                                     
+                          aa                            r               m          
+                 hh                                  eh              z             
+                      ax              cl           p                               
+            ae                                cl              k                    
+   iy              ng                                  sh                          
+                                eh                                            vcl  
+                   d                     sil                       ae              
+                        n                   vcl             d            f         
+                                  iy                                               
+                       l                                                   vcl     
+                        s                                                          
+     sil                       
+```
+now the **transition-ids** are grouped by the phones!   
+
+### decoding of the Monophone Model
+main script:
+```
+utils.mkgraph.sh --mono data/lang_test_bg exp/mono exp/mono/graph
+```
+which combines the HMM structure in the trained model, any Context dependency, the Lexicon and the Grammar and creates a decoding graph in the form a FST(finite state transducer).   
+Usage: utils/mkgraph.sh [options] \<lang-dir> \<model-dir> \<graphdir>  
+
+**data/lang_test_bg/G.fst** stores bigram model of phones.
+
+```
+steps/decode.sh --nj 4 exp/mono/graph data/test exp/mono/decode_test
+```
+which generates lattices of word (phone for the TIMIT dataset) sequences.  
+Usage: steps/decode.sh [options] \<graph-dir> \<data-dir> \<decode-dir>
+
+we can score the monophone by typing:  
+```
+grep Sum exp/mono/decode_test/score_*/*.sys | utils/best_wer.sh
+```
+shows
+```
+%WER 32.5 | 192 7215 | 70.3 19.4 10.3 2.7 32.5 100.0 | -0.255 | exp/mono/decode_test/score_6/ctm_39phn.filt.sys
+```
+32.5% phone error rate!  
 
 
 ### best kaldi tutorial 
