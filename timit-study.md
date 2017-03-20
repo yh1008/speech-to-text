@@ -88,8 +88,11 @@ contains:
    ```
    
       
-2. MFCC feature extractions:    
-   scripts and archives:   
-   *.scp files map utterance if to position in *.ark files. The latter contains the actual data.  
-   **scp:feats.scp** to read 
-   **ark:mfcc.ark** to write to stdout. Archives will be written in binary; to avoid it append the **,t** modifierL **ark,t:mfcc.ark**
+2. MFCC feature extractions:      
+   scripts and archives:     
+   
+   *.scp files map utterance if to position in *.ark files. The latter contains the actual data.    
+   
+   **scp:feats.scp** to read   
+   
+   **ark:mfcc.ark** to write to stdout. Archives will be written in binary; to avoid it append the **,t** modifier  **ark,t:mfcc.ark**
