@@ -73,5 +73,10 @@ do
 $sudo apt-get install bc
 ```
 
-### useful tutorial 
+### best kaldi tutorial 
 - [University of Edinburgh-Automatic Speech Reconigtion course](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
+made in 2017  
+contains:  
+- Kaldi recipe file structure explanations:   
+   path.sh conains envorpnment variable KALDI_ROOT to point to the Kaldi installation. 
+- 
