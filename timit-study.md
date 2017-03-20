@@ -245,7 +245,12 @@ l                                                       ax                      
                         s                                                          
      sil                       
 ```
-now the **transition-ids** are grouped by the phones!   
+now the **transition-ids** are grouped by the phones!    
+
+To show alignments without reordering transition probabilities(Kaldi by default place the current state's self-loops at the end of the forward transition to the next state; Kaldi does it to optimize decoding); type
+```
+convert-ali --reorder=false exp/mono/0.mdl exp/mono/0.mdl exp/mono/tree ark:"gunzip -c exp/mono/ali.1.gz | " ark,t:- | head -1
+```
 
 ### Decoding of the Monophone Model
 main script:
