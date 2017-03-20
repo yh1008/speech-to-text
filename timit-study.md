@@ -109,7 +109,8 @@ The transition probabilities are defined after the \<Transition> tags.
 gmm-copy --binary=false exp/mono/0,mdl - | less
 ```
 Model file contains transition-model object, then GMM object [p35](http://www.danielpovey.com/files/Lecture2.pdf)  
-We first see something similar to the above 3-state HMM topology. Followed by \<Triples> tags, which map each phone and one of its three states to a unique number. Pattern: \<phone number> \<state number> \<unique number>. 
+We first see something similar to the above 3-state HMM topology. Followed by \<Triples> tags, which map each phone and one of its three states to a unique number. Pattern: \<phone number> \<state number> \<unique number>.   
+
 ```
 </DiagGMM> 
 <DiagGMM> 
@@ -121,6 +122,70 @@ We first see something similar to the above 3-state HMM topology. Followed by \<
   0.005339943 0.002408599 0.005009499 0.004234992 0.003415213 0.004226068 0.003845918 0.004330037 0.004469929 0.00555164 0.006493011 0.007199864 0.01219888 0.0938514 0.05168371 0.07636816 0.08218509 0.06499127 0.06110011 0.06516927 0.05807921 0.06776563 0.07036626 0.08379282 0.1019901 0.1359497 0.5388283 0.371821 0.4569601 0.5199628 0.4027453 0.3459871 0.3799254 0.3325204 0.3964455 0.3940115 0.4471866 0.5627591 0.7084802 ]
 </DiagGMM> 
 ```
+Here DiagGMM stores parameters of each single diagonal-covariance Gaussian Mixture Model as: inverse variances, and (means times inverse variances)  [source](http://kaldi-asr.org/doc/model.html)  
+
+There will be many monophone models created, the final model summary information can be found using:
+```
+gmm-info exp/mono/final.mdl
+```
+
+to look at the alignment of the monophone model:  
+```
+copy-int-vector "ark:gunzip -c exp/mono/ali.1.gz|" ark,t:- | head -n 1
+```  
+alignments are in gzip format. The above command unzip the file and pipe them directly in as the read specifier. Then apply **ark,t:-** to get readable output from the write specifier. **head -n 1** only shows the first line.    
+we get the following output:
+```
+faem0_si1392 2 4 3 3 3 3 3 3 6 5 5 5 5 38 37 37 37 40 42 218 217 217 217 217 217 21
+7 217 217 217 217 217 217 220 219 222 221 248 247 247 247 247 247 247 250 252 176 1
+75 178 177 177 177 177 177 180 122 121 121 121 121 121 121 121 124 123 126 125 125 
+26 28 27 30 29 29 212 211 214 216 215 146 148 150 260 262 261 264 263 278 277 277 2
+77 280 282 281 281 14 13 13 13 13 13 16 15 18 17 17 176 178 180 62 64 66 206 208 21
+0 242 241 244 246 170 169 169 169 169 172 171 171 174 173 173 173 173 38 37 37 37 4
+0 42 41 218 217 217 217 217 217 217 217 217 217 220 219 222 146 145 148 147 150 62 
+64 66 56 55 55 55 55 55 58 57 60 59 59 248 250 249 249 252 251 251 251 251 251 116 
+115 115 115 118 117 117 120 119 224 223 223 223 223 223 223 226 225 225 228 98 97 9
+7 100 99 102 101 266 265 265 265 265 268 267 267 267 270 269 269 86 88 90 110 112 1
+11 111 114 122 121 121 121 121 121 121 121 121 121 124 123 126 125 125 8 7 7 7 7 7 
+7 7 10 9 9 12 212 214 216 176 175 175 178 177 180 134 133 133 133 136 135 138 137 8
+6 88 87 90 278 277 277 277 280 279 282 281 38 37 40 42 62 64 66 206 205 208 207 207
+ 207 207 207 210 209 14 13 16 15 15 15 18 17 17 17 62 61 64 66 164 166 165 168 167 
+152 154 156 188 190 189 189 192 191 191 191 224 223 223 223 223 223 223 223 223 226
+ 225 225 228 227 86 85 85 85 85 85 85 85 85 85 85 88 87 90 260 259 262 264 263 68 7
+0 72 71 71 71 2 4 3 3 6 5 5 5 5 5 5 14 16 15 15 15 15 15 15 15 18 17 17 182 181 184
+ 186 260 262 264 68 70 72 122 121 121 121 121 121 121 124 123 126 152 151 151 151 1
+51 151 154 153 153 153 153 156 155 155 155 155 155 170 169 169 169 169 169 169 172 
+171 174 173 173 260 262 264 263 263 263 263 218 217 217 217 217 217 217 217 217 217
+ 220 219 222 221 221 2 1 4 3 3 3 3 3 3 3 6 
+ ```
+ These numbers are called **transition-ids**. Type
+ ```
+ show-transitions data/lang/phones.txt exp/mono/0.mdl
+```
+what each transition-id stand for and its probability, for e.g.
+```
+Transition-state 1: phone = sil hmm-state = 0 pdf = 0
+ Transition-id = 1 p = 0.5 [self-loop]
+ Transition-id = 2 p = 0.5 [0 -> 1]  
+Transition-state 2: phone = sil hmm-state = 1 pdf = 1
+ Transition-id = 3 p = 0.5 [self-loop]
+ Transition-id = 4 p = 0.5 [1 -> 2]
+Transition-state 3: phone = sil hmm-state = 2 pdf = 2
+ Transition-id = 5 p = 0.75 [self-loop]
+ Transition-id = 6 p = 0.25 [2 -> 3]
+ ...
+Transition-state 142: phone = zh hmm-state = 0 pdf = 141
+ Transition-id = 283 p = 0.75 [self-loop]
+ Transition-id = 284 p = 0.25 [0 -> 1]
+Transition-state 143: phone = zh hmm-state = 1 pdf = 142
+ Transition-id = 285 p = 0.75 [self-loop]
+ Transition-id = 286 p = 0.25 [1 -> 2]
+Transition-state 144: phone = zh hmm-state = 2 pdf = 143
+ Transition-id = 287 p = 0.75 [self-loop]
+ Transition-id = 288 p = 0.25 [2 -> 3]
+```  
+
+
 ### best kaldi tutorial 
 - [University of Edinburgh-Automatic Speech Reconigtion course](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
 made in 2017  
@@ -136,7 +201,7 @@ contains:
    ```
    
       
-2. MFCC feature extractions:      
+2. decriptions to MFCC feature extractions:      
    scripts and archives:     
    
    *.scp files map utterance if to position in *.ark files. The latter contains the actual data.    
@@ -144,3 +209,26 @@ contains:
    rspecifier:  **scp:feats.scp**  
    
    wspecifier:  **ark:mfcc.ark** to write to stdout. Archives will be written in binary; to avoid it append the **,t** modifier  **ark,t:mfcc.ark**
+   
+ 
+3. examinations of Monophone Model:
+   view the HMM topology through 
+   ```
+   less data/lang/topo
+   ```
+   view the final monophone model:
+   ```
+   gmm-copy --binary=false exp/mono/final.mdl - | less
+   ```
+   which contains the above topology, Triples, DiagGMM.   
+   view gmm summary:  
+   ```
+   gmm-info exp/mono/final.mdl
+   ```  
+   view some of the mixture Gaussians densities corresponding to cepstral coefficients:
+   ```
+   gmm-copy --binary=false exp/mono/final.mdl - | python local/plot_gmm.sh 
+   ```
+   
+   
+   
