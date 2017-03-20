@@ -58,7 +58,7 @@ copy-feats scp:data/train/feats.scp ark,t:- | head
 ```
 the archives by default are written in binary, in order to view it with human eyes, we use **copy-feats** make a copy and write to stdout with the suitable wspecifier.   
 
-### **--nj** specifies number of parallel jobs
+### --nj: specifies number of parallel jobs
 ```
 steps/train_mono.sh --nj 4 data/train data/lang exp/mono
 ```
@@ -83,3 +83,18 @@ number of transition-states 144
 feature dimension 39
 number of gaussians 986
 ```
+
+### search for a string in less
+e.g. search for gmm-est in steps/train_mono.sh
+```
+less steps/train_mono.sh
+```
+while in **less**, type / followe imidiately by the string of interest
+```
+/gmm-est
+```
+press **n** repeatedly to loop through all occurences of the search string.  
+press **q** to quit **less**.   
+
+
+collected from [labs](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
