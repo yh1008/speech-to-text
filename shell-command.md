@@ -97,4 +97,23 @@ press **n** repeatedly to loop through all occurences of the search string.
 press **q** to quit **less**.   
 
 
+### check space left on the disk
+```
+df -h
+```
+
+### check memory left on the disk
+```
+top 
+```
+or 
+```
+htop
+```
+
+### check syntax of a bash script WITHOUT running it
+```
+bash -n scriptname
+```
+
 ### collected from [labs](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
