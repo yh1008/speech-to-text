@@ -1,11 +1,11 @@
 # TIMIT Study
 
-### specs
+### Specs
 8 core Ubuntu 16.04 LTS Google Cloud VM    
 finish ./run.sh in 3 hours  
 finish ./run_kt.sh in 2.5 hours
 
-### pre-run.sh: file structure of kaldi/egs/timit/s5/
+### Pre-run.sh: file structure of kaldi/egs/timit/s5/
 ```
 yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
 .
@@ -36,7 +36,7 @@ yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
 └── utils -> ../../wsj/s5/utils
 ```
 
-### modification to run on CPU 
+### Modification to Run on CPU 
 1. to avoid qsub not found error
 ```steps/make_mfcc.sh --cmd queue.pl -l arch=*64 --nj 30 data/train exp/make_mfcc/train mfcc
 steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
@@ -60,7 +60,7 @@ export decode_cmd="run.pl"
 export mkgraph_cmd="run.pl"
 export cuda_cmd="run.pl"
 ```
-- [reference](https://sourceforge.net/p/kaldi/discussion/1355348/thread/98345f33/)  
+- [REFERENCE](https://sourceforge.net/p/kaldi/discussion/1355348/thread/98345f33/)  
 
 2. to avoid bc: command not found error 
 ```
@@ -73,7 +73,7 @@ do
 $sudo apt-get install bc
 ```
 
-### three-state HMM topology  
+### Three-state HMM Topology  
 stored in data/lang/topo
 ```
 less data/lang/topo
@@ -243,7 +243,7 @@ l                                                       ax                      
 ```
 now the **transition-ids** are grouped by the phones!   
 
-### decoding of the Monophone Model
+### Decoding of the Monophone Model
 main script:
 ```
 utils.mkgraph.sh --mono data/lang_test_bg exp/mono exp/mono/graph
@@ -270,7 +270,7 @@ shows
 32.5% phone error rate!  
 
 
-### best kaldi tutorial 
+### Best Kaldi Tutorial 
 - [University of Edinburgh-Automatic Speech Reconigtion course](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
 made in 2017  
 contains:  
