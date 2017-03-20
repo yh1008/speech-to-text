@@ -35,6 +35,10 @@ yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
 ├── timit.zip
 └── utils -> ../../wsj/s5/utils
 ```
+### Common Mistakes
+
+1. File paths in Kaldi are often **absolute**!
+2. Kaldi takes up 13G, makes sure you have enough disk space. 
 
 ### Modification to Run on CPU 
 1. to avoid qsub not found error
