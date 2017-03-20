@@ -39,6 +39,10 @@ yh2901@instance-1:~/kaldi/egs/timit/s5$ tree .
 
 1. File paths in Kaldi are often **absolute**!
 2. Kaldi takes up 13G, makes sure you have enough disk space. 
+3. when try to ssh onto the VM and see WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! do
+```
+ssh-keygen -R <HOSTNAME>
+```
 
 ### Modification to Run on CPU 
 1. to avoid qsub not found error
@@ -76,7 +80,6 @@ do
 ```
 $sudo apt-get install bc
 ```
-
 ### Three-state HMM Topology  
 stored in data/lang/topo
 ```
