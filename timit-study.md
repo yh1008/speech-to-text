@@ -78,5 +78,14 @@ $sudo apt-get install bc
 made in 2017  
 contains:  
 - Kaldi recipe file structure explanations:   
-   path.sh conains envorpnment variable KALDI_ROOT to point to the Kaldi installation. 
+   **path.sh** contains environment variable KALDI_ROOT to point to the Kaldi installation.   
+   **exp** contains the actual experiments, models and their logs.   
+   **local** contains files that relate only to the corpus we are working on.
+   to check that the data directories conforms to Kaldi specifications, run the next two lines in **run.sh**:  
+   ```
+   utils/validate_Data_dir.sh data/train
+   utils/validate_data_dir.sh data/test
+   ```
+   
+      
 - 
