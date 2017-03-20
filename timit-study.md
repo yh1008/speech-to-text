@@ -296,6 +296,19 @@ contains:
    
  
 3. examinations of Monophone Model:
+   train the mono model:
+   ```
+   steps/train_mono.sh --nj 4 data/train data/lang exp/mono
+   ```
+   decode the mono model:
+   ```
+   utils.mkgraph.sh --mono data/lang_test_bg exp/mono exp/mono/graph
+   steps/decode.sh --nj 4 exp/mono/graph data/test exp/mono/decode_test
+   ```
+   view its PER score:
+   ```
+   grep Sum exp/mono/decode_test/score_*/*.sys | utils/best_wer.sh
+   ```
    view the HMM topology through 
    ```
    less data/lang/topo
