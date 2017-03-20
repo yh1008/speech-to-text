@@ -29,3 +29,25 @@ less sa1.phn
 ```
 wc -l < data/train/utt2spk
 ```
+### check the dimensionality of MFCC features
+```
+feat-to-dim scp:data/train/feats.scp -
+feat-to-dim ark:mfcc/raw_mfcc_train.1.ark -
+```
+
+### **grep** search for a string in a file 
+```
+grep falr0_sx335 feats.scp 
+```
+
+### check how many frames that utterance has?
+```
+feat-to-len 
+```
+feat-to-len: reads an archive of features and writes a corresponding archive
+that maps utterance-id to utterance length in frames, or (with
+one argument) print to stdout the total number of frames in the
+input archive.  
+Usage: feat-to-len [options] \<in-rspecifier> [\<out-wspecifier>]
+e.g.: feat-to-len scp:feats.scp ark,t:feats.lengths
+or: feat-to-len scp:feats.scp
