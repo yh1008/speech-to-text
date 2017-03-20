@@ -57,3 +57,29 @@ or: feat-to-len scp:feats.scp
 copy-feats scp:data/train/feats.scp ark,t:- | head
 ```
 the archives by default are written in binary, in order to view it with human eyes, we use **copy-feats** make a copy and write to stdout with the suitable wspecifier.   
+
+### **--nj** specifies number of parallel jobs
+```
+steps/train_mono.sh --nj 4 data/train data/lang exp/mono
+```
+The option **--nj 4** instructs Kaldi to split computation into four parallel jobs. And there needs to be >= number of CPUs which are not in use.   
+
+### check how many phones are in the language model
+```
+wc -l < data/lang/phones.txt
+```
+
+### get summary information of mono model 
+```
+gmm-info exp/mono/final.mdl
+```  
+get
+```
+gmm-info exp/mono/final.mdl 
+number of phones 48
+number of pdfs 144
+number of transition-ids 288
+number of transition-states 144
+feature dimension 39
+number of gaussians 986
+```
