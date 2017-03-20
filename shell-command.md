@@ -50,4 +50,10 @@ one argument) print to stdout the total number of frames in the
 input archive.  
 Usage: feat-to-len [options] \<in-rspecifier> [\<out-wspecifier>]
 e.g.: feat-to-len scp:feats.scp ark,t:feats.lengths
-or: feat-to-len scp:feats.scp
+or: feat-to-len scp:feats.scp  
+
+### write the MFCC features to stdout 
+```
+copy-feats scp:data/train/feats.scp ark,t:- | head
+```
+the archives by default are written in binary, in order to view it with human eyes, we use **copy-feats** make a copy and write to stdout with the suitable wspecifier.   
