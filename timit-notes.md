@@ -1,5 +1,7 @@
 # TIMIT Study
 
+[TIMIT](https://catalog.ldc.upenn.edu/ldc93s1) dataset is phone based! 
+
 ### Specs
 8 core Ubuntu 16.04 LTS Google Cloud VM    
 finish ./run.sh in 3 hours  
