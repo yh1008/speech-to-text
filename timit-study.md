@@ -93,8 +93,6 @@ contains:
    
    *.scp files map utterance if to position in *.ark files. The latter contains the actual data.    
    
-   rspecifier:  
-   **scp:feats.scp** to read   
-   wspecifier:  
+   rspecifier:  **scp:feats.scp**  
    
-   **ark:mfcc.ark** to write to stdout. Archives will be written in binary; to avoid it append the **,t** modifier  **ark,t:mfcc.ark**
+   wspecifier:  **ark:mfcc.ark** to write to stdout. Archives will be written in binary; to avoid it append the **,t** modifier  **ark,t:mfcc.ark**
