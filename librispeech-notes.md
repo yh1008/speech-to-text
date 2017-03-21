@@ -229,3 +229,20 @@ SE stands for SplitEventMap, which is splitting point of the tree. 0, 1 or 2 fol
 here, CE 1398 means if left [ 323 324 325 326 ] is evaluated as true, we choose pdf-id 1398, if not true, we choose pdf-id 1460. CE stands for a ConstantEventMap and indicates a leaf of the tree. 
 
 After running steps/train_deltas.sh, we can create a decodinggraph and decode the triphone system using utils/mkgraph.sh, followed with steps/decode.sh
+
+### stronger acoustic model, better alignment 
+Align the system, use
+```
+steps/align_si.sh 
+usage: steps/align_si.sh <data-dir> <lang-dir> <src-dir> <align-dir>
+```
+for example:
+```
+# Align a 10k utts subset using the tri2b model
+steps/align_si.sh  --nj 16 --cmd "$train_cmd" --use-graphs true \
+  data/train_10k data/lang_nosp exp/tri2b exp/tri2b_ali_10k
+```
+here, the \<align-dir> could also take a normal training experiment directory e.g. tri1 instead of tri1_ali 
+Typically, between each training phase, there will be a pass of alignment. So it is not necessary to perform alignment in a seperate step, but it is a good practice to ensure we have the absolute latest alignments for the latest model. 
+
+To even strengthen the acoustic model, we shall train a system on top of LDA_MLLT features using the tri1_ali 
