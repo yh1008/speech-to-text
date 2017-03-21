@@ -97,6 +97,10 @@ to search sentence that starts with 'SPEECH'
 ```
 /^SPEECH
 ```
+to search by line number, say line 50 
+```
+50g
+```
 
 press **n** repeatedly to loop through all occurences of the search string.  
 press **q** to quit **less**.   
@@ -119,6 +123,11 @@ htop
 ### check syntax of a bash script WITHOUT running it
 ```
 bash -n scriptname
+```
+
+### to print directly through console
+```
+more <path to the file> 
 ```
 
 ### collected from [labs](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab1.pdf)
