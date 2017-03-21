@@ -217,3 +217,15 @@ to view this tree, type
 copy-tree --binary=false exp/tri1/tree - | less
 ```
 shows the entire clustering tree. 
+```
+{ SE 0 [ 1 2 3 4 5 ]
+```
+SE stands for SplitEventMap, which is splitting point of the tree. 0, 1 or 2 following SE stands for left, centre, and right. 
+```
+{ SE 0 [ 1 2 3 4 5 ]
+{ CE 614 SE 0 [ 323 324 325 326 ]
+{ CE 1398 CE 1460 } 
+```
+here, CE 1398 means if left [ 323 324 325 326 ] is evaluated as true, we choose pdf-id 1398, if not true, we choose pdf-id 1460. CE stands for a ConstantEventMap and indicates a leaf of the tree. 
+
+After running steps/train_deltas.sh, we can create a decodinggraph and decode the triphone system using utils/mkgraph.sh, followed with steps/decode.sh
