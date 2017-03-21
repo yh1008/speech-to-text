@@ -93,6 +93,11 @@ while in **less**, type / followe imidiately by the string of interest
 ```
 /gmm-est
 ```
+to search sentence that starts with 'SPEECH'
+```
+/^SPEECH
+```
+
 press **n** repeatedly to loop through all occurences of the search string.  
 press **q** to quit **less**.   
 
