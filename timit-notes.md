@@ -1,4 +1,4 @@
-# TIMIT Study
+# TIMIT Study Note
 
 [TIMIT](https://catalog.ldc.upenn.edu/ldc93s1) dataset is phone based! 
 
