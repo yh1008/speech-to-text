@@ -302,7 +302,7 @@ shows:
 the first number in each bracket is a phone state. The second number is a weight, which for our cases will always be set to 1. This file sets out, for each frame, which phone state will be on; or equivalently, which output of the neural network will be set to 1, and the rest of the output are just 0. *we are doing frame corss-entrophy training [lab4 p.4](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab4.pdf)
 
 ### the class priors P(q) and posteriors P(q|x)
-Use the following command to sum the pdf vectors to counts, this is used to obtain prior counts for hybrid decoding. [analyze-counts kaldi doc](http://kaldi-asr.org/doc/analyze-counts_8cc.html#a0ddf1224851353fc92bfbff6f499fa97)
+Use the following command to sum the pdf vectors to counts, this is used to obtain prior counts for decoding. [analyze-counts kaldi doc](http://kaldi-asr.org/doc/analyze-counts_8cc.html#a0ddf1224851353fc92bfbff6f499fa97)
 ```
 ali-to-phones --per-frame=true exp/tri2b/final.mdl ark:"gunzip -c exp/tri2b/ali.1.gz |" ark:- | analyze-counts --verbose=1 ark:- -
 ```
@@ -310,6 +310,7 @@ gives you the count table:
 ```
 ### The sorted count table,
 count	(norm),	id
+...
 15972	(0.0217483),	336	
 16170	(0.0220179),	159	
 16471	(0.0224278),	333	
@@ -319,8 +320,8 @@ count	(norm),	id
 Why do we need the count table (class priors)?:   
 In the hybrid model, instead of using GMM, we use NN to estimate posterior probabilities. The output of the neural network is the probability of a phone class given the feature P(q|x). In order to compute the emission probability P(x|q) for HMM, we uses the bayes rule:
 ```
-P(x|q) = P(q|x) * P(x)/ P(q) simplied as 
-P(x|q) ~ P(q|x) / P(q), which is okay as P(x) does not depend on the class q
+P(x|q) = P(q|x) * P(x)/ P(q) simplified as 
+P(x|q) ~ P(q|x) / P(q), which is okay, as P(x) does not depend on the class q
 ```
 This being said, we need to scale the NN output by class priors P(q) for HMM. 
 In nnet/train.sh there is a similar script to compute the class prior P(q) from the alignments and stores them in a file called ali_train_pdf.counts:
