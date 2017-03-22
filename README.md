@@ -20,6 +20,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [Daniel Povey Lectures](http://www.danielpovey.com/kaldi-lectures.html)
 - [An Introduction to Kaldi Toolkit](http://berlin.csie.ntnu.edu.tw/Courses/Speech%20Recognition/Lectures2013/SP2013F_Lecture14-Introduction%20to%20the%20Kaldi%20toolkit.pdf)
 - [Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit](https://engineering.jhu.edu/clsp/wp-content/uploads/sites/75/2016/06/Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit.pdf)
+- [Kaldi Document in CN](https://shiweipku.gitbooks.io/chinese-doc-of-kaldi/content/index.html)
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
@@ -74,6 +75,8 @@ How to build a language model:
    steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train $mfccdir
    steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test $mfccdir
 ```
+MFCC-related documents
+- [MFCC extraction in detail (CN)](https://my.oschina.net/jamesju/blog/193343)
 
 ### HMM - GMM 
 [Reference](http://www.inf.ed.ac.uk/teaching/courses/asr/2012-13/asr03-hmmgmm-4up.pdf)  
