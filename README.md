@@ -90,6 +90,13 @@ HMM solves the following three problems:
 2. training (Forward-backward algorithm EM): given an observation sequence, learn the best ![lambda](https://latex.codecogs.com/gif.latex?%5Clambda%5C%7B%20a_%7Bij%7D%2C%20b_j%28X%29%20%5C%7D)
 3. decoding (Viterbi algorithm): given an on observation sequence, determine the most probable hidden state sequence
 
+### CNN and MFSC features
 
-
+In order to train CNN, we need to extract MFSC features from the acoustic data instead of MFCC features, as DCT in MFCC destroys locality. MFSC features also called filter banks. In Kaldi, the scripts are something like the following: 
+```
+steps/make_fbank.sh --nj 3 \ $trainDir/train_clean_fbank exp/make_fbank/train_clean_fbank feat/fbank/ || exit 1;
+steps/compute_cmvn_stats.sh $trainDir/train_clean_fbank exp/make_fbank/train_clean_fbank feat/fbank/ || exit 1;
+```
+notice that fbanks don't work well with GMM as fbanks features are highly correlated, but GMM modelled with diagonal covariance matrices assumed independence of feature streams. fbanks/MFSC is okay with DNN, best for CNN. 
+[Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)
 
