@@ -115,7 +115,7 @@ The transition probabilities are defined after the \<Transition> tags.
 
 ### Inspect Monophone Model 
 ```
-gmm-copy --binary=false exp/mono/0,mdl - | less
+gmm-copy --binary=false exp/mono/0.mdl - | less
 ```
 Model file contains transition-model object, then GMM object [p35](http://www.danielpovey.com/files/Lecture2.pdf)  
 We first see something similar to the above 3-state HMM topology. Followed by \<Triples> tags, which map each phone and one of its three states to a unique number. Pattern: \<phone number> \<state number> \<unique number>.   
