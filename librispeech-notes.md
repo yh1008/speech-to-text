@@ -125,7 +125,7 @@ CHEL WAS SITTING AT HER WINDOW KEEPING A SHARP EYE ON EVERYTHING THAT PASSED FRO
 M BROOKS AND CHILDREN UP
 ```
 
-### to train a tri-phone model
+### Train a Triphone model
 train_deltas.sh trains triphone models on top of MFCC+delta+delta-delta features. 
 ```
 steps/train_deltas.sh 
@@ -150,12 +150,13 @@ add-deltas scp:data/train_10k/feats.scp ark:- | feat-to-dim ark:- -
 39
 ```
 
-### logs are stored in
+### Logs
+logs are stored in: 
 ```
 less exp/word/tri1/log/acc.1.1.long 
 ```
 
-### tri-phone model close look
+### Triphone Model: a Closer Look
 in the following command:
 ```
 steps/train_deltas.sh --boost-silence 1.25 --cmd "$train_cmd" \
