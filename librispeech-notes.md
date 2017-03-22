@@ -301,7 +301,7 @@ shows:
 ```
 the first number in each bracket is a phone state. The second number is a weight, which for our cases will always be set to 1. This file sets out, for each frame, which phone state will be on; or equivalently, which output of the neural network will be set to 1, and the rest of the output are just 0. *we are doing frame corss-entrophy training [lab4 p.4] (https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab4.pdf)
 
-### pdfs
+### posteriors
 use the following command to show posterior probability P(q|x) from GMM, where q are phone state, and x are features
 ```
 ali-to-phones --per-frame=true exp/tri2b/final.mdl ark:"gunzip -c exp/tri2b/ali.1.gz |" ark:- | analyze-counts --verbose=1 ark:- -
@@ -310,7 +310,7 @@ gives you
 ```
 [ 0.5 141395.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 2026.5 0.5 0.5 0.5 0.5 0.5 0.5 27.5 0.5 45.5 424.5 693.5 0.5 0.5 17.5 51.5 0.5 3508.5 0.5 1308.5 0.5 0.5 0.5 0.5 0.5 6348.5 4563.5 15156.5 2378.5 2316.5 1574.5 7072.5 0.5 107.5 0.5 71.5 0.5 9168.5 179.5 1064.5 0.5 0.5 0.5 0.5 0.5 94.5 0.5 40.5 0.5 2672.5 330.5 5859.5 0.5 60.5 0.5 261.5 0.5 0.5 0.5 0.5 0.5 331.5 9492.5 5497.5 446.5 205.5 1362.5 4166.5 0.5 0.5 7.5 48.5 0.5 0.5 0.5 0.5 0.5 0.5 100.5 31.5 0.5 605.5 3285.5 9224.5 309.5 0.5 156.5 555.5 0.5 0.5 0.5 0.5 0.5 72.5 0.5 421.5 0.5 1873.5 147.5 8036.5 93.5 99.5 0.5 248.5 0.5 0.5 0.5 0.5 0.5 0.5 10835.5 2093.5 0.5 1078.5 6242.5 6520.5 0.5 9.5 102.5 165.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 9.5 0.5 0.5 0.5 1852.5 0.5 0.5 0.5 64.5 0.5 8863.5 2631.5 3917.5 0.5 2684.5 226.5 1793.5 0.5 1176.5 2830.5 2025.5 0.5 16170.5 11474.5 13471.5 0.5 8078.5 3379.5 7182.5 0.5 3966.5 553.5 3892.5 0.5 0.5 0.5 0.5 0.5 4241.5 889.5 9116.5 0.5 3680.5 0.5 8983.5 0.5 215.5 3.5 425.5 0.5 4069.5 5224.5 13438.5 0.5 0.5 0.5 0.5 0.5 22.5 533.5 289.5 0.5 1475.5 3323.5 4231.5 160.5 32.5 203.5 323.5 0.5 1595.5 1876.5 975.5 0.5 11408.5 0.5 279.5 0.5 0.5 0.5 0.5 0.5 64.5 0.5 249.5 0.5 2398.5 0.5 13406.5 0.5 74.5 0.5 606.5 0.5 1250.5 1031.5 1512.5 0.5 6710.5 1109.5 5546.5 0.5 0.5 0.5 0.5 0.5 0.5 249.5 297.5 0.5 9.5 5287.5 2678.5 0.5 0.5 0.5 243.5 0.5 3991.5 8054.5 12511.5 0.5 0.5 17213.5 2457.5 0.5 7636.5 5473.5 5356.5 0.5 0.5 0.5 0.5 0.5 125.5 0.5 227.5 0.5 5629.5 0.5 11679.5 0.5 97.5 0.5 310.5 0.5 0.5 0.5 0.5 0.5 116.5 0.5 115.5 0.5 836.5 2522.5 9012.5 3127.5 0.5 88.5 1138.5 0.5 0.5 5719.5 1508.5 0.5 11452.5 0.5 1591.5 0.5 0.5 0.5 0.5 0.5 12.5 0.5 18.5 0.5 941.5 1273.5 3574.5 0.5 0.5 0.5 202.5 0.5 1051.5 5802.5 3577.5 0.5 0.5 7.5 240.5 0.5 4686.5 13526.5 16471.5 0.5 9163.5 15972.5 11497.5 0.5 4408.5 13195.5 3462.5 0.5 6213.5 72.5 2440.5 ]
 ```
-now in hybrid model, instead of using GMM, we use NN to estimate posterior probabilities. The output of the neural network is the probability of a phone class given the feature P(q|x). In order to compute the emission probability P(x|q) for HMM. We uses the bayes rule:
+now in hybrid model, instead of using GMM, we use NN to estimate posterior probabilities. The output of the neural network is the probability of a phone class given the feature P(q|x). In order to compute the emission probability P(x|q) for HMM, we uses the bayes rule:
 ```
 P(x|q) = P(q|x) * P(x)/ P(q) simplied as 
 P(x|q) ~ P(q|x) / P(q), which is okay as P(x) does not depend on the class q
@@ -325,6 +325,39 @@ In nnet/train.sh there is a similar script to compute posteriors P(q|x) from the
     ${utt_weights:+ "--utt-weights=$utt_weights"} \
     "$labels_tr_pdf" $dir/ali_train_pdf.counts 2>$dir/log/analyze_counts_pdf.log
 ```
+in nnet/train.sh, we can provide our own counts, if not, it will look for ali_train_pdf.counts:
+```
+[ -z "$class_frame_counts" -a -f $srcdir/prior_counts ] && class_frame_counts=$srcdir/prior_counts # priority,
+[ -z "$class_frame_counts" ] && class_frame_counts=$srcdir/ali_train_pdf.counts
+```
+in the decoding stage showed as below:
+```
+# Run the decoding in the queue,
+if [ $stage -le 0 ]; then
+  $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
+    nnet-forward $nnet_forward_opts --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu "$nnet" "$feats" ark:- \| \
+    latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
+    --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
+    $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
+fi
+```
+we see that **class-frame-counts** (class probability used for scaling) got passed in as an argument for decoding. 
 
+the neural network parameters are stored in exp/tri3_nnet/nnet.proto
+you can modify it and generate the initial model with the required parameters in your proto file:
+```
+cp exp/word/tri3_nnet/nnet.proto my.proto  #copy the proto file
+nano my.proto #modify it
+nnet-initialize --binary=false my.proto my.init #generate the initial model
+```
+after the model generation is finished, you can look at the model by typing
+```
+nnet-info my.init
+```
+and see the file in details:
+```
+less my.init
+```
 
+decode will be next step, after which score it! 
 
