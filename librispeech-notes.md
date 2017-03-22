@@ -262,7 +262,7 @@ steps/align_si.sh  --nj 10 --cmd "$train_cmd" --use-graphs true \
 ```
 tri2b_ali_10k/ali.\*.gz stores transition id  
 
-### Neural Networks 
+### Neural Networks: Data Prep and Train
 split the dataset into train and validation set:
 ```
 dir=data/train_words
@@ -288,7 +288,7 @@ steps/nnet/train.sh --....
 The ###### PREPARE ALIGNMENTS ###### section in the steps/nnet/train.sh will create 1. target labels using the above alignment 2. counts of the pdfs corresponding to the phones in the alignments. 
 
 
-### labels
+### Target Labels
 to look at the lables in alignment: 
 ```
  ali-to-pdf exp/tri2b/final.mdl "ark:gunzip -c exp/tri2b/ali.1.gz |" ark:- | ali-to-post ark:- ark,t:- | less
@@ -301,7 +301,7 @@ shows:
 ```
 the first number in each bracket is a phone state. The second number is a weight, which for our cases will always be set to 1. This file sets out, for each frame, which phone state will be on; or equivalently, which output of the neural network will be set to 1, and the rest of the output are just 0. *we are doing frame corss-entrophy training [lab4 p.4](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab4.pdf)
 
-### the class priors P(q) and posteriors P(q|x)
+### the Class Priors P(q) and Posteriors P(q|x)
 Use the following command to sum the pdf vectors to counts, this is used to obtain prior counts for decoding. [analyze-counts kaldi doc](http://kaldi-asr.org/doc/analyze-counts_8cc.html#a0ddf1224851353fc92bfbff6f499fa97)
 ```
 ali-to-phones --per-frame=true exp/tri2b/final.mdl ark:"gunzip -c exp/tri2b/ali.1.gz |" ark:- | analyze-counts --verbose=1 ark:- -
@@ -351,6 +351,7 @@ fi
 ```
 we see that **class-frame-counts** (class probability used for scaling) got passed in as an argument for decoding. 
 
+### Neural Network Wrapping Up
 the neural network parameters are stored in exp/tri3_nnet/nnet.proto
 you can modify it and generate the initial model with the required parameters in your proto file:
 ```
