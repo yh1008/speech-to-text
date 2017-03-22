@@ -92,11 +92,12 @@ HMM solves the following three problems:
 
 ### CNN and MFSC features
 
-In order to train CNN, we need to extract MFSC features from the acoustic data instead of MFCC features, as DCT in MFCC destroys locality. MFSC features also called filter banks. In Kaldi, the scripts are something like the following: 
+In order to train CNN, we need to extract MFSC features from the acoustic data instead of MFCC features, as Discrete Cosine Transformation (DCT) in MFCC destroys locality. MFSC features also called filter banks. In Kaldi, the scripts are something like the following: 
 ```
 steps/make_fbank.sh --nj 3 \ $trainDir/train_clean_fbank exp/make_fbank/train_clean_fbank feat/fbank/ || exit 1;
 steps/compute_cmvn_stats.sh $trainDir/train_clean_fbank exp/make_fbank/train_clean_fbank feat/fbank/ || exit 1;
 ```
-notice that fbanks don't work well with GMM as fbanks features are highly correlated, but GMM modelled with diagonal covariance matrices assumed independence of feature streams. fbanks/MFSC is okay with DNN, best for CNN. 
-[Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)
+notice that fbanks don't work well with GMM as fbanks features are highly correlated, but GMM modelled with diagonal covariance matrices assumed independence of feature streams. fbanks/MFSC is okay with DNN, best for CNN.   
+[why MFSC+GMM produced high WER-see Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)   
+[why DCT destroys locality-see post](http://dsp.stackexchange.com/questions/31917/why-discrete-cosine-transform-may-not-maintain-locality)
 
