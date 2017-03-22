@@ -245,7 +245,7 @@ steps/align_si.sh  --nj 16 --cmd "$train_cmd" --use-graphs true \
 here, the \<align-dir> could also take a normal training experiment directory e.g. tri1 instead of tri1_ali. 
 Typically, between each training phase, there will be a pass of alignment. So it is not necessary to perform alignment in a seperate step, but it is a good practice to ensure we have the absolute latest alignments for the latest model. 
 
-To even strengthen the acoustic model, we shall train a system on top of LDA_MLLT_SAT features using the tri1_ali. 
+To even strengthen the acoustic model, we shall train a system on top of LDA_MLLT features using the tri1_ali. 
 ```
 # train an LDA+MLLT system.
 steps/train_lda_mllt.sh --cmd "$train_cmd" \
