@@ -299,7 +299,7 @@ shows:
  44 1 ] [ 44 1 ] [ 43 1 ] [ 164 1 ] [ 164 1 ] [ 164 1 ] [ 164 1 ] [ 164 1 ] [ 164 1 ] [ 1136 1 ] [ 1136 1 ] [ 1136 1 ] [ 758 1 ] [ 
 758 1 ] 
 ```
-the first number in each bracket is a phone state. The second number is a weight, which for our cases will always be set to 1. This file sets out, for each frame, which phone state will be on; or equivalently, which output of the neural network will be set to 1, and the rest of the output are just 0. *we are doing frame corss-entrophy training [lab4 p.4] (https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab4.pdf)
+the first number in each bracket is a phone state. The second number is a weight, which for our cases will always be set to 1. This file sets out, for each frame, which phone state will be on; or equivalently, which output of the neural network will be set to 1, and the rest of the output are just 0. *we are doing frame corss-entrophy training [lab4 p.4](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab4.pdf)
 
 ### posteriors
 use the following command to show posterior probability P(q|x) from GMM, where q are phone state, and x are features
@@ -361,3 +361,4 @@ less my.init
 
 decode will be next step, after which score it! 
 
+[GATHERED FROM LAB4](https://www.inf.ed.ac.uk/teaching/courses/asr/2016-17/lab4.pdf)
