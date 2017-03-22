@@ -242,7 +242,16 @@ for example:
 steps/align_si.sh  --nj 16 --cmd "$train_cmd" --use-graphs true \
   data/train_10k data/lang_nosp exp/tri2b exp/tri2b_ali_10k
 ```
-here, the \<align-dir> could also take a normal training experiment directory e.g. tri1 instead of tri1_ali 
+here, the \<align-dir> could also take a normal training experiment directory e.g. tri1 instead of tri1_ali. 
 Typically, between each training phase, there will be a pass of alignment. So it is not necessary to perform alignment in a seperate step, but it is a good practice to ensure we have the absolute latest alignments for the latest model. 
 
-To even strengthen the acoustic model, we shall train a system on top of LDA_MLLT features using the tri1_ali 
+To even strengthen the acoustic model, we shall train a system on top of LDA_MLLT_SAT features using the tri1_ali. 
+```
+# train another LDA+MLLT+SAT system on the entire 100 hour subset
+steps/train_sat.sh  --cmd "$train_cmd" 4200 40000 \
+  data/train_clean_100 data/lang_nosp \
+  exp/tri3b_ali_clean_100 exp/tri4b
+```
+looks like  MLLT (Maximum Likelihood Linear Transform) allows sharing a few full covariance matrices across many distributions without storing and computing all. This adds to basic MFCC features with GMM in a way that GMM models use diagonal covariances matrics to get the emission probability. Given only diagonal covariance matrics are used, not full covairances, it assumes that each element of the feature vectors (MFCCs) are independent. Here MLLT loosens this assumption by adding a few full covairances matrics to the system. 
+
+
