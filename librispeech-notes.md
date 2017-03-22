@@ -1,4 +1,4 @@
-# LIBRISPEECH Study
+# LIBRISPEECH Study Note
 
 
 ### Fixing Errors 
@@ -220,7 +220,7 @@ shows the entire clustering tree.
 ```
 { SE 0 [ 1 2 3 4 5 ]
 ```
-SE stands for SplitEventMap, which is splitting point of the tree. 0, 1 or 2 following SE stands for left, centre, and right. 
+SE stands for SplitEventMap, which is splitting point of the tree. 0, 1 or 2 following SE stands for left, center, and right. 
 ```
 { SE 0 [ 1 2 3 4 5 ]
 { CE 614 SE 0 [ 323 324 325 326 ]
@@ -228,9 +228,9 @@ SE stands for SplitEventMap, which is splitting point of the tree. 0, 1 or 2 fol
 ```
 here, CE 1398 means if left [ 323 324 325 326 ] is evaluated as true, we choose pdf-id 1398, if not true, we choose pdf-id 1460. CE stands for a ConstantEventMap and indicates a leaf of the tree. 
 
-After running steps/train_deltas.sh, we can create a decodinggraph and decode the triphone system using utils/mkgraph.sh, followed with steps/decode.sh
+After running steps/train_deltas.sh, we can create a decoding graph and decode the triphone system using utils/mkgraph.sh, followed with steps/decode.sh
 
-### stronger acoustic model, better alignment 
+### LDA+MLLT: stronger acoustic model, better alignment 
 Align the system, use
 ```
 steps/align_si.sh 
@@ -247,11 +247,18 @@ Typically, between each training phase, there will be a pass of alignment. So it
 
 To even strengthen the acoustic model, we shall train a system on top of LDA_MLLT_SAT features using the tri1_ali. 
 ```
-# train another LDA+MLLT+SAT system on the entire 100 hour subset
-steps/train_sat.sh  --cmd "$train_cmd" 4200 40000 \
-  data/train_clean_100 data/lang_nosp \
-  exp/tri3b_ali_clean_100 exp/tri4b
+# train an LDA+MLLT system.
+steps/train_lda_mllt.sh --cmd "$train_cmd" \
+   --splice-opts "--left-context=3 --right-context=3" 2500 15000 \
+   data/train_10k data/lang_nosp exp/tri1_ali_10k exp/tri2b
 ```
-looks like  MLLT (Maximum Likelihood Linear Transform) allows sharing a few full covariance matrices across many distributions without storing and computing all. This adds to basic MFCC features with GMM in a way that GMM models use diagonal covariances matrics to get the emission probability. Given only diagonal covariance matrics are used, not full covairances, it assumes that each element of the feature vectors (MFCCs) are independent. Here MLLT loosens this assumption by adding a few full covairances matrics to the system. 
+looks like  MLLT (Maximum Likelihood Linear Transform) allows sharing a few full covariance matrices across many distributions without storing and computing all. This adds to basic MFCC features+GMM in a way that GMM models use diagonal covariances matrics to get the emission probability. Given only diagonal covariance matrics are used, not full covairances, GMM assumes each element of the feature vectors (MFCCs) are independent. Here MLLT loosens this assumption by adding a few full covairances matrics to the system. 
 
+then aligns the system to get teh latest possible alignment for the neural networks:
+```
+# Align a 10k utts subset using the tri2b model
+steps/align_si.sh  --nj 10 --cmd "$train_cmd" --use-graphs true \
+  data/train_10k data/lang_nosp exp/tri2b exp/tri2b_ali_10k
+```
+### Neural Networks 
 
