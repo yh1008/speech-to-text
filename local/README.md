@@ -1,7 +1,8 @@
-# 
+# Data Preperation
 
-### Data Preperation-Audio Data  
-For interview:  
+### Audio Data  
+
+For seame_d2/data/interview:  
 there are 94 unique speakers in total
 for speaker id 01MA: 01 are spearker identity, M for gender (M for male, F for female), A for nationality (A is Malaysian, B is Singaporean)   
 
