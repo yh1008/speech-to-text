@@ -8,6 +8,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 
 ### Baseline Model Paper:
 - [A Chinese-English Mixlingual Database and A Speech Recognition Baseline](https://arxiv.org/pdf/1609.08412v1.pdf)
+- [Speech Recognition on English-Mandarin Code-Switching Data using Factored Language Models](http://www.csl.uni-bremen.de/cms/images/documents/publications/DA_JanGebhardt.pdf)
 
 ### Interesting Python Kaldi Wrapper to be examined:
 - [Pykaldi](https://github.com/UFAL-DSG/pykaldi/tree/master/pykaldi) 
@@ -22,13 +23,20 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [Building Speech Recognition Systems with the Kaldi Toolkit](https://engineering.jhu.edu/clsp/wp-content/uploads/sites/75/2016/06/Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit.pdf)
 - [Kaldi Document in CN](https://shiweipku.gitbooks.io/chinese-doc-of-kaldi/content/index.html)
 - [Kaldi Data Prep](http://pages.jh.edu/~echodro1/tutorial/kaldi/kaldi-training2.html)
+- [Kaldi Data Prep (kaldi-asr.org)](http://kaldi-asr.org/doc/data_prep.html)
+- Kaldi excamples
+  - [Resource Management](http://kaldi-asr.org/doc/tutorial_running.html)
+  - Timit
+
+
+
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
   
-| acoustic data:  | filename: |  pattern: | format: |path: | source:|
+|  | filename: |  pattern: | format: |path: | source:|
 | ------------- | ------------- |-|-|--|--|
-|  |spk2gender  |\<speakerID>\<gender> | |/data/train /data/test | handmade|
+|acoustic data:   |spk2gender  |\<speakerID>\<gender> | |/data/train /data/test | handmade|
 |  | utt2spk    |\<utteranceID>\<speakerID> | | /data/train /data/test| handmade | 
 |  | wav.scp    |\<utteranceID>\<full_path_to_audio_file>| .scp: kaldi script file|/data/train /data/test | handmade|
 |  | text       |\<utteranceID>\<full_path_to_audio_file> |.ark: kaldi archive file| /data/train /data/test|  exists | 
