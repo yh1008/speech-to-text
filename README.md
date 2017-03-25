@@ -76,7 +76,7 @@ options:
                                                      # all non-silence phones.
      --sil-prob <probability of silence>             # default: 0.5 [must have 0 < silprob < 1]
 ```
-Turning the –share-silence-phones option to TRUE was extremely helpful for for the Cantonese data of IARPA's BABEL project, where the data is very messy and has long untranscribed portions that the Kaldi developers try to align to a special phone which we designate for that purpose.
+Turning the –share-silence-phones option to TRUE was extremely helpful for the Cantonese data of IARPA's BABEL project, where the data is very messy and has long untranscribed portions that the Kaldi developers try to align to a special phone that is designated for that purpose.
 The --sil-prob might be another potentially important option.
 
 ### MFCC Feature Extraction: 
