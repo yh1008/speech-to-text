@@ -18,7 +18,7 @@ Upon recreating utterance id based on start and end time from each recording, we
 
 - [x] utt2spk 
 spk2utt  
-text   
+- [x] text   
 wav.scp  
 segments    
 
