@@ -20,5 +20,6 @@ Upon recreating utterance id based on start and end time from each recording, we
 spk2utt  
 - [x] text   
 - [x] wav.scp  
+- [x] spk2gender
 segments    
 
