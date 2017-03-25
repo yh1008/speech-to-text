@@ -29,3 +29,7 @@ feats.scp
 cmvn.scp  
 
 
+error:
+utils/validate_data_dir.sh: file data/train/utt2spk is not in sorted order or has duplicates  
+needs to be fixed! 
+
