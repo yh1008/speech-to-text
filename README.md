@@ -28,9 +28,6 @@ As Chinese students studying in the states, we found our speaking habits morphed
   - [Resource Management](http://kaldi-asr.org/doc/tutorial_running.html)
   - Timit
 
-
-
-
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
   
@@ -65,6 +62,22 @@ How to build a language model:
 - [SRILM](http://www.speech.sri.com/projects/srilm/)
 - [Kaldi lm_build ](https://github.com/srvk/lm_build)
 - [egs/babel/s5/local/train_lms_srilm.sh built using SRILM toolkit](https://github.com/kaldi-asr/kaldi/blob/master/egs/babel/s5/local/train_lms_srilm.sh) 
+
+Kaldi script utils/prepare_lang.sh
+```
+usage: utils/prepare_lang.sh <dict-src-dir> <oov-dict-entry> <tmp-dir> <lang-dir>
+e.g.: utils/prepare_lang.sh data/local/dict <SPOKEN_NOISE> data/local/lang data/lang
+options:
+     --num-sil-states <number of states>             # default: 5, #states in silence models.
+     --num-nonsil-states <number of states>          # default: 3, #states in non-silence models.
+     --position-dependent-phones (true|false)        # default: true; if true, use _B, _E, _S & _I
+                                                     # markers on phones to indicate word-internal positions.
+     --share-silence-phones (true|false)             # default: false; if true, share pdfs of
+                                                     # all non-silence phones.
+     --sil-prob <probability of silence>             # default: 0.5 [must have 0 < silprob < 1]
+```
+Turning the –share-silence-phones option to TRUE was extremely helpful for for the Cantonese data of IARPA's BABEL project, where the data is very messy and has long untranscribed portions that the Kaldi developers try to align to a special phone which we designate for that purpose.
+The --sil-prob might be another potentially important option.
 
 ### MFCC Feature Extraction: 
 ```
