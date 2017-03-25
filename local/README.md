@@ -2,9 +2,9 @@
 
 ### Audio Data  
 
-For seame_d2/data/interview:  
-there are 94 unique speakers in total
-for speaker id 01MA: 01 are spearker identity, M for gender (M for male, F for female), A for nationality (A is Malaysian, B is Singaporean)   
+For seame_d2/data/interview:    
+there are 94 unique speakers in total  
+for speaker id 01MA: 01 is spearker identity, M for gender (M for male, F for female), A for nationality (A is Malaysian, B is Singaporean)     
 
 test set contains speaker id: '01MA', '03FA','08MA', '29FA','29MB','42FB','44MB','45FB','67MB','55FB'   
 
