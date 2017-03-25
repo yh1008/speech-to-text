@@ -21,6 +21,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [An Introduction to Kaldi Toolkit](http://berlin.csie.ntnu.edu.tw/Courses/Speech%20Recognition/Lectures2013/SP2013F_Lecture14-Introduction%20to%20the%20Kaldi%20toolkit.pdf)
 - [Building Speech Recognition Systems with the Kaldi Toolkit](https://engineering.jhu.edu/clsp/wp-content/uploads/sites/75/2016/06/Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit.pdf)
 - [Kaldi Document in CN](https://shiweipku.gitbooks.io/chinese-doc-of-kaldi/content/index.html)
+- [Kaldi Data Prep](http://pages.jh.edu/~echodro1/tutorial/kaldi/kaldi-training2.html)
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
