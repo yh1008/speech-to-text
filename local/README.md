@@ -21,5 +21,5 @@ spk2utt
 - [x] text   
 - [x] wav.scp  
 - [x] spk2gender
-segments    
+- [x] segments    
 
