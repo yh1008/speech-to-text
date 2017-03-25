@@ -12,4 +12,11 @@ train set contains speaker id: '37MB', '23FB', '07FB', '09FB', '19MA', '04FA', '
 
 ### Acoustic Data
 
-Upon recreating utterance id based on start and end time from each recording, we end up with 40712 utterances. 
+Upon recreating utterance id based on start and end time from each recording, we end up with 40712 utterances.   
+
+- [x] utt2spk 
+spk2utt
+text 
+wav.scp
+segments  
+
