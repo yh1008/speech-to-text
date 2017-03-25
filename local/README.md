@@ -16,10 +16,16 @@ Upon recreating utterance id based on start and end time from each recording, we
 1. there are 37060 utterances in train set  
 2. there are 3652 utterances in test set  
 
-- [x] utt2spk 
-spk2utt  
+files I manually created:   
+- [x] utt2spk  
 - [x] text   
 - [x] wav.scp  
 - [x] spk2gender
-- [x] segments    
+- [x] segments   
+
+files I called the kaldi script to create:
+-[x] spk2utt
+feats.scp  
+cmvn.scp  
+
 
