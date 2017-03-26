@@ -24,7 +24,7 @@ files I manually created:
 - [x] segments   
 
 files I called the kaldi script to create:
--[x] spk2utt
+- [x] spk2utt
 feats.scp  
 cmvn.scp  
 
