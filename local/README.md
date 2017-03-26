@@ -48,3 +48,6 @@ utt2spk is not in sorted order (fix this yourself)
 [possible solutions]http://kaldi-asr.org/doc/data_prep.html
 export LC_ALL=C 
 
+possible problem:
+the speaker-id should be a prefix of the utterance-id  
+[source](https://sourceforge.net/p/kaldi/discussion/1355347/thread/1012cc7b/)
