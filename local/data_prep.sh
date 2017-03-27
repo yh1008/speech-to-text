@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install flac
+
 cp -r ../wsj/s5/steps ./
 cp -r ../wsj/s5/utils ./
 
