@@ -28,26 +28,3 @@ files I called the kaldi script to create:
 feats.scp  
 cmvn.scp  
 
-
-error:
-utils/validate_data_dir.sh: file data/train/utt2spk is not in sorted order or has duplicates  
-needs to be fixed! 
-```
-utils/fix_data_dir.sh data/train
-utils/fix_data_dir.sh: file data/train/utt2spk is not in sorted order or not unique, sorting it
-utils/fix_data_dir.sh: file data/train/spk2utt is not in sorted order or not unique, sorting it
-utils/fix_data_dir.sh: file data/train/text is not in sorted order or not unique, sorting it
-utils/fix_data_dir.sh: file data/train/segments is not in sorted order or not unique, sorting it
-utils/fix_data_dir.sh: file data/train/wav.scp is not in sorted order or not unique, sorting it
-utils/fix_data_dir.sh: file data/train/spk2gender is not in sorted order or not unique, sorting it
-utils/fix_data_dir.sh: filtered data/train/segments from 36990 to 36940 lines based on filter /tmp/kaldi.VKzR/recordings.
-utils/fix_data_dir.sh: filtered data/train/wav.scp from 193 to 192 lines based on filter /tmp/kaldi.VKzR/recordings.
-- data/train/utt2spk differ: char 3299, line 98
-utt2spk is not in sorted order (fix this yourself)
-```
-[possible solutions]http://kaldi-asr.org/doc/data_prep.html
-export LC_ALL=C 
-
-possible problem:
-the speaker-id should be a prefix of the utterance-id  
-[source](https://sourceforge.net/p/kaldi/discussion/1355347/thread/1012cc7b/)
