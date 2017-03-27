@@ -52,12 +52,12 @@ print (train_ids[:5])
 directory = parent_path + "/data/train/spk2gender"
 with open(directory, 'w') as outfile:
     for speakerid in train_ids:
-        outfile.write("{} {}\n".format(speakerid,speakerid[4]))
+        outfile.write("{} {}\n".format(speakerid,speakerid[4].lower()))
 
 directory = parent_path + "/data/test/spk2gender"
 with open(directory, 'w') as outfile:
     for speakerid in test_ids:
-        outfile.write("{} {}\n".format(speakerid, speakerid[4]))
+        outfile.write("{} {}\n".format(speakerid, speakerid[4].lower()))
 
 # b.) wav.scp 
 # This file connects every utterance (sentence said by one person during particular recording session) with an audio file related to this utterance. If you stick to my naming approach, 'utteranceID' is nothing more than 'speakerID' (speaker's folder name) glued with *.wav file name without '.wav' ending (look for examples below).
@@ -200,4 +200,33 @@ with open(corpus_path, 'w') as outputfile:
                     #outputfile.write(line)
                     outputfile.write(re.split("\t", line)[3])
 
+# (f) segments
+
+# segments file for training set
+directory = parent_path + "/data/train/segments"
+counter = 0
+with open(directory, 'w') as outputfile:
+    for utt in utter_ids:
+        speaker_id = re.split("_", utt)[0]
+        if speaker_id in train_ids:
+            
+            recording_id = "_".join(utt.split("_", 2)[:2])
+            segment_begin = str(int(re.split("_", utt)[2])/1000)
+            segment_end = str(int(re.split("_", utt)[3])/1000)
+            outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
+    
+        
+# segments file for training set
+directory = parent_path + "/data/test/segments"
+counter = 0 
+with open(directory, 'w') as outputfile:
+    for utt in utter_ids:
+        speaker_id = re.split("_", utt)[0]
+        if speaker_id in test_ids:
+            recording_id = "_".join(utt.split("_", 2)[:2])
+            segment_begin = str(int(re.split("_", utt)[2])/1000)
+            segment_end = str(int(re.split("_", utt)[3])/1000)
+            outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
+            counter += 1
+print (counter)
 
