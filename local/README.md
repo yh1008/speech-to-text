@@ -28,3 +28,6 @@ files I called the kaldi script to create:
 feats.scp  
 cmvn.scp  
 
+validate the data/train and data/test directory:
+- [x] utils/validate_data_dir --no-feats data/train 
+- [x] utils/validate_data_dir --no-feats data/test 
