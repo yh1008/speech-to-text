@@ -3,9 +3,11 @@
 ### The baseline ASR system in the paper: 
 Achieves 37.2% MER
 
-Adapt the Cambridge pronunciation dictionary for Singaporean accent: following three rules are used: 1. syllable-final voiceless plosive omitted if preceded by another consonant: /p/, /t/, /k/ might be deleted 
-word-fins; /t/, /d/ omitted if preceded by another consonant: /t/, /d/ might be deleted 
-word-final metathesis from ‘sp’ to ‘ps’ 
+Adapt the Cambridge pronunciation dictionary for Singaporean accent: following three rules are used: 
+1. syllable-final voiceless plosive omitted if preceded by another consonant: /p/, /t/, /k/ might be deleted 
+word-fins; 
+2. /t/, /d/ omitted if preceded by another consonant: /t/, /d/ might be deleted 
+3. word-final metathesis from ‘sp’ to ‘ps’ 
 
 
 trigram language model:
