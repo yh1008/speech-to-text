@@ -25,8 +25,60 @@ files I manually created:
 
 files I called the kaldi script to create:
 - [x] spk2utt
-feats.scp  
+- [x] feats.scp  
 cmvn.scp  
+
+feats.scp points tothe extracted features-MFCC features. The pattern is \<utterance-id> \<extended-filename-of-features> 
+```
+$ less feats.scp | head -2
+
+NI02FAX_0101_0055711_0060021 /home/yh2901/kaldi/egs/codeswitch/mfcc/raw_mfcc_train.1.ark:29
+```
+The above (extended file name) means, open the "archive" file /home/yh2901/kaldi/egs/codeswitch/mfcc/raw_mfcc_train.1.ark:29, fseek() to position 24, and read the data that is there.   
+To create this feats.scp, type 
+```
+steps/make_mfcc.sh --nj 8 data/train exp/make_mfcc/train mfcc
+steps/make_mfcc.sh --nj 8 data/test exp/make_mfcc/test mfcc
+```
+now my mfcc directory contains 
+```
+ tree mfcc
+mfcc
+├── raw_mfcc_test.1.ark
+├── raw_mfcc_test.1.scp
+├── raw_mfcc_test.2.ark
+├── raw_mfcc_test.2.scp
+├── raw_mfcc_test.3.ark
+├── raw_mfcc_test.3.scp
+├── raw_mfcc_test.4.ark
+├── raw_mfcc_test.4.scp
+├── raw_mfcc_test.5.ark
+├── raw_mfcc_test.5.scp
+├── raw_mfcc_test.6.ark
+├── raw_mfcc_test.6.scp
+├── raw_mfcc_test.7.ark
+├── raw_mfcc_test.7.scp
+├── raw_mfcc_test.8.ark
+├── raw_mfcc_test.8.scp
+├── raw_mfcc_train.1.ark
+├── raw_mfcc_train.1.scp
+├── raw_mfcc_train.2.ark
+├── raw_mfcc_train.2.scp
+├── raw_mfcc_train.3.ark
+├── raw_mfcc_train.3.scp
+├── raw_mfcc_train.4.ark
+├── raw_mfcc_train.4.scp
+├── raw_mfcc_train.5.ark
+├── raw_mfcc_train.5.scp
+├── raw_mfcc_train.6.ark
+├── raw_mfcc_train.6.scp
+├── raw_mfcc_train.7.ark
+├── raw_mfcc_train.7.scp
+├── raw_mfcc_train.8.ark
+└── raw_mfcc_train.8.scp
+
+0 directories, 32 files
+```
 
 validate the data/train and data/test directory:
 - [x] utils/validate_data_dir --no-feats data/train 
