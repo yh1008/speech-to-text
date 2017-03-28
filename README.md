@@ -28,7 +28,9 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - Kaldi excamples
   - [Resource Management](http://kaldi-asr.org/doc/tutorial_running.html)
   - [Speech-to-Text in Swedish using Kaldi](http://www.diva-portal.org/smash/get/diva2:949757/FULLTEXT01.pdf)
-
+- Decoding
+  - [Online decoding in Kaldi](http://kaldi-asr.org/doc/online_decoding.html) 
+  - [Decoding Lecture slides](http://danielpovey.com/files/Lecture4.pdf)
 
 
 ### Data Preperation:
