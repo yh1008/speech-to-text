@@ -3,19 +3,25 @@
 ### Audio Data  
 
 For seame_d2/data/interview:    
-there are 94 unique speakers in total  
-for speaker id 01MA: 01 is spearker identity, M for gender (M for male, F for female), A for nationality (A is Malaysian, B is Singaporean)     
+there are 95 speaker-id in total (e.g. NI01MAX). Technically format of `01MA` is sufficient for identifying any unique speaker in our audios, but to make the utterance-id, recording-id and speaker-id aligned for Kaldi to process, I decide to make the entire prefix (e.g. NI01MAX) of recording-id (e.g. NI01MAX_0101.flac) my speaker-id.   
 
-test set contains speaker id: '01MA', '03FA','08MA', '29FA','29MB','42FB','44MB','45FB','67MB','55FB'   
+description of the speaker-id NI01MA: N is recording location, I stands for `i`nterview style, 01 is spearker identity, M for gender (M for male, F for female), A for nationality (A is Malaysian, B is Singaporean)     
 
-train set contains speaker id: '37MB', '23FB', '07FB', '09FB', '19MA', '04FA', '06FB', '57FB', '25FA', '64FB', '36MB', '28MB', '23FA', '56MB', '20MA', '43FB', '25MB', '30MB', '52MB', '21MB', '26FB', '22FB', '05MA', '17FB', '08FB', '22MA', '58FB', '12FA', '46FB', '15FA', '17FA', '13FA', '07FA', '21MA', '50FB', '61FB', '14MA', '19MB', '03FB', '66MB', '62MB', '04FB', '10FB', '06MA', '13MB', '11FB', '41MB', '48FB', '26MA', '53FB', '14MB', '40FB', '24MA', '27FA', '28FA', '34FB', '63MB', '60MB', '35FB', '18MA', '47MB', '12MA', '65MB', '02FA', '27MB', '33MB', '59FB', '09MA', '31FB', '39FB', '15FB', '16MA', '24MB', '51MB', '05MB', '32FB', '54FB', '01FA', '18MB', '49MB', '20MB', '11FA', '10FA', '16FB'
+test set contains speaker id: ['UI08MAZ', 'NI67MBQ', 'UI03FAZ', 'NI45FBP', 'NI55FBP', 'NI42FBQ', 'NI01MAX', 'UI29FAZ', 'NI29MBP', 'NI44MBQ'] 
+
+train set contains speaker id: ['NI28MBP', 'UI01FAZ', 'NI25MBQ', 'UI07FAZ', 'UI23FAZ', 'UI17FAZ', 'NI02FAX', 'NI27MBQ', 'NI09FBP', 'NI31FBP', 'UI04FAZ', 'UI12FAZ', 'UI18MAZ', 'NI46FBQ', 'UI28FAZ', 'UI02FAZ', 'NI56MBX', 'NI62MBQ', 'NI14MBP', 'NI59FBQ', 'NI37MBP', 'NI63MBP', 'NI26FBP', 'NI21MBQ', 'NI61FBP', 'UI20MAZ', 'NI41MBP', 'NI52MBQ', 'NI65MBP', 'NI18MBP', 'NI57FBQ', 'UI06MAZ', 'NI58FBP', 'NI49MBP', 'NI60MBP', 'NI50FBQ', 'UI05MAZ', 'NI54FBQ', 'NI51MBP', 'NI66MBQ', 'NI35FBP', 'NI05MBQ', 'NI10FBP', 'UI10FAZ', 'NI39FBP', 'NI53FBP', 'NI03FBX', 'NI33MBP', 'UI27FAZ', 'NI47MBP', 'NI23FBQ', 'NI36MBQ', 'UI25FAZ', 'NI15FBQ', 'NI32FBQ', 'NI48FBQ', 'NI12MAP', 'UI22MAZ', 'NI24MBP', 'UI26MAZ', 'UI15FAZ', 'UI09MAZ', 'NI30MBQ', 'NI16FBP', 'UI14MAZ', 'NI17FBQ', 'NI43FBP', 'NI04FBX', 'NI13MBQ', 'UI24MAZ', 'NI34FBQ', 'NI06FBP', 'NI22FBP', 'UI11FAZ', 'UI16MAZ', 'NI11FBP', 'NI08FBP', 'NI07FBQ', 'UI19MAZ', 'NI20MBP', 'NI64FBQ', 'UI13FAZ', 'NI19MBQ', 'UI21MAZ', 'NI40FBQ']
+
 
 ### Acoustic Data
 make sure to execute `. ./path.sh` before running any command to set the Kaldi environmental variable 
 
 Upon recreating utterance id based on start and end time from each recording, we end up with 40712 utterances:
 1. there are 37060 utterances in train set  
-2. there are 3652 utterances in test set  
+2. there are 3652 utterances in test set    
+
+In real feature extraction:  
+1. calling fix_data_dir.sh: kept 36826 utterances out of 36940
+2. fix_data_dir.sh: kept 3455 utterances out of 3652  
 
 files I manually created:   
 - [x] utt2spk  
