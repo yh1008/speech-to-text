@@ -8,7 +8,7 @@ also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch`
 
 
 ### local
-contains data preperation script and its README file 
+contains data preperation script and its README file   
 to execute:
 ```
 chmod 755 local/audio_data_prep.py
