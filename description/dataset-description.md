@@ -1,3 +1,11 @@
+# [SEAME](https://catalog.ldc.upenn.edu/ldc2015s04) Dataset description 
+
+### Ratio between transcribed words
+Mandarin: 44%
+English: 26% 
+Silence: 21%
+Others: 7%
+
 ### Transcription: special handling
 
 1. Discourse particle: We use both English and Mandarin words to represent discourse particle. When the discourse occurs in Mandarin segment, we use words such as [啊], [喔], etc. to represent. When the discourse occurs in English segment, we use words such as [ah], [oh], etc. to represent.
