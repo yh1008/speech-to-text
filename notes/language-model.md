@@ -1,7 +1,7 @@
 ### How to train our language model
 
 As for the language model (LM), we used the conventional
-3-grams. To deal with the mixlingual difficulty, four LM
+3-grams. To deal with the mixlingual difficulty, four 
 configurations were investigated. The first one (THLM) was
 the LM offered by the THCHS30 database. This LM well
 matched the lexicon of the baseline system, as the Chinese
