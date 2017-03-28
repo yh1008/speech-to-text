@@ -84,6 +84,7 @@ more <path to the file>
 ### count how many file in a directory
 ```
 ls -l . | egrep -c '^-'
+ls -1 | wc -l
 ```
 
 ### check how many frames that utterance has?
