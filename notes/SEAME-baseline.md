@@ -1,4 +1,4 @@
-# Summary of the ASR system in [paper](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6289015) 
+# [SEAME baseline paper](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6289015) 
 
 ### The baseline ASR system in the paper: 
 Achieves 37.2% MER
