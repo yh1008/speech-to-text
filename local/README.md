@@ -11,6 +11,7 @@ test set contains speaker id: '01MA', '03FA','08MA', '29FA','29MB','42FB','44MB'
 train set contains speaker id: '37MB', '23FB', '07FB', '09FB', '19MA', '04FA', '06FB', '57FB', '25FA', '64FB', '36MB', '28MB', '23FA', '56MB', '20MA', '43FB', '25MB', '30MB', '52MB', '21MB', '26FB', '22FB', '05MA', '17FB', '08FB', '22MA', '58FB', '12FA', '46FB', '15FA', '17FA', '13FA', '07FA', '21MA', '50FB', '61FB', '14MA', '19MB', '03FB', '66MB', '62MB', '04FB', '10FB', '06MA', '13MB', '11FB', '41MB', '48FB', '26MA', '53FB', '14MB', '40FB', '24MA', '27FA', '28FA', '34FB', '63MB', '60MB', '35FB', '18MA', '47MB', '12MA', '65MB', '02FA', '27MB', '33MB', '59FB', '09MA', '31FB', '39FB', '15FB', '16MA', '24MB', '51MB', '05MB', '32FB', '54FB', '01FA', '18MB', '49MB', '20MB', '11FA', '10FA', '16FB'
 
 ### Acoustic Data
+make sure to execute . ./path.sh before running any command to set the Kaldi environmental variable 
 
 Upon recreating utterance id based on start and end time from each recording, we end up with 40712 utterances:
 1. there are 37060 utterances in train set  
@@ -26,9 +27,9 @@ files I manually created:
 files I called the kaldi script to create:
 - [x] spk2utt
 - [x] feats.scp  
-cmvn.scp  
+- [x] cmvn.scp  
 
-feats.scp points tothe extracted features-MFCC features. The pattern is \<utterance-id> \<extended-filename-of-features> 
+**feats.scp** points tothe extracted features-MFCC features. The pattern is \<utterance-id> \<extended-filename-of-features> 
 ```
 $ less feats.scp | head -2
 
@@ -80,6 +81,26 @@ mfcc
 0 directories, 32 files
 ```
 
-validate the data/train and data/test directory:
-- [x] utils/validate_data_dir --no-feats data/train 
-- [x] utils/validate_data_dir --no-feats data/test 
+to compute **cmvn.scp** which contains statistics for cepstral mean and variance normalization, indexed by speaker, type
+```
+$ steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train mfcc
+```
+generates cmvn.scp in data/train and data/test
+```
+$ less cmvn.scp | head -2
+NI02FAX /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:8
+NI03FBX /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:255
+```
+
+validate the data/train and data/test after generating utt2spk file:
+- [x] utils/validate_data_dir.sh --no-feats data/train 
+- [x] utils/validate_data_dir.sh --no-feats data/test 
+
+validate the data/train and data/test after generating feats.scp file:
+- [x] utils/validate_data_dir.sh data/train 
+- [x] utils/validate_data_dir.sh data/test 
+
+fix the sorting error, use the following command:
+```
+utils/fix_data_dir.sh data/train 
+```
