@@ -27,7 +27,9 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [Kaldi Data Prep (kaldi-asr.org)](http://kaldi-asr.org/doc/data_prep.html)
 - Kaldi excamples
   - [Resource Management](http://kaldi-asr.org/doc/tutorial_running.html)
-  - Timit 
+  - [Speech-to-Text in Swedish using Kaldi](http://www.diva-portal.org/smash/get/diva2:949757/FULLTEXT01.pdf)
+
+
 
 ### Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
@@ -63,6 +65,7 @@ How to build a language model:
 - [SRILM](http://www.speech.sri.com/projects/srilm/)
 - [Kaldi lm_build ](https://github.com/srvk/lm_build)
 - [egs/babel/s5/local/train_lms_srilm.sh built using SRILM toolkit](https://github.com/kaldi-asr/kaldi/blob/master/egs/babel/s5/local/train_lms_srilm.sh) 
+- [Language Preparation](http://white.ucc.asn.au/Kaldi-Notes/tidigits/lang_prep)
 
 Kaldi script utils/prepare_lang.sh
 ```
@@ -79,6 +82,14 @@ options:
 ```
 Turning the –share-silence-phones option to TRUE was extremely helpful for the Cantonese data of IARPA's BABEL project, where the data is very messy and has long untranscribed portions that the Kaldi developers try to align to a special phone that is designated for that purpose.
 The --sil-prob might be another potentially important option.
+
+#### Preparation
+- lexicon.txt
+  - The pronunciation dictionary where every line is a word with its phonemic pronunciation. It Only contains words and their pronunciations that are present in the corpus.
+  - ENG: [CMU dictionary](http://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/)
+- nonsilence_phones.txt
+- optional_silence.txt
+- silence_phones.txt 
 
 ### MFCC Feature Extraction: 
 ```
