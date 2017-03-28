@@ -2,7 +2,7 @@
 
 move this `codeswitch` directory under `kaldi/egs/`
 ```
-cp codewitch ./kaldi/egs/
+cp codeswitch ./kaldi/egs/
 ```
 also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch` 
 
