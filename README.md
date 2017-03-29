@@ -35,6 +35,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
   - [Online decoding in Kaldi](http://kaldi-asr.org/doc/online_decoding.html) 
   - [Decoding Lecture slides](http://danielpovey.com/files/Lecture4.pdf)
   - [Kaldi decoder document](http://www.hark.jp/document/2.3.0/hark-document-en/subsec-KaldiDecoder.html)
+  - [How to use an Existing DNN Recognizer for Decoding in Kaldi](http://jrmeyer.github.io/kaldi/2017/01/10/Using-built-DNN-model-Kaldi.html)
 
 
 ### Data Preperation:
