@@ -7,14 +7,14 @@ Silence: 21%
 Others: 7%
 
 ### Data Summary
-Number of utterance: 54929
-Number of utterance with unparsed elements: 204
-Number of utterance with non-transcribable sounds: 8823
+Number of utterance: 54929  
+Number of utterance with unparsed elements: 204  
+Number of utterance with non-transcribable sounds: 8823  
 
-Based on the default parsing (2 space between Madarin chatacters and 1 space between English characters)
-Number of word: 28614
-Number of non-transcribable sound word: 12450
-Number of word filtered out by CMU dictionary (all English words): 8639
+Based on the default parsing (2 space between Madarin chatacters and 1 space between English characters)  
+Number of word: 28614  
+Number of non-transcribable sound word: 12450  
+Number of word filtered out by CMU dictionary (all English words): 8639  
 
 ### Transcription: special handling
 
