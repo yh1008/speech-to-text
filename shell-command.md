@@ -81,6 +81,11 @@ bash -n scriptname
 more <path to the file> 
 ```
 
+### find file in the current directory by partial name
+```
+find ./ -name *NC02FBY*
+```
+
 ### count how many file in a directory
 ```
 ls -l . | egrep -c '^-'
