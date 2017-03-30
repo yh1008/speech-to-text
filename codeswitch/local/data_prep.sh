@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ -f path.sh ] && . ./path.sh
+
 sudo apt-get install flac
 
 cp -r ../wsj/s5/steps ./
@@ -20,3 +22,6 @@ utils/fix_data_dir.sh data/test
 
 utils/fix_data_dir.sh data/train
 utils/fix_data_dir.sh data/test 
+
+utils/validate_data_dir.sh data/train
+utils/validate_data_dir.sh data/test
