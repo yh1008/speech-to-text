@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 
 
-# In[2]:
 
 __author__="Emily Hua"
 
 
 # Now you have to create some text files that will allow Kaldi to communicate with your audio data. Consider these files as 'must be done'. Each file that you will create in this section (and in Language data section as well) can be considered as a text file with some number of strings (each string in a new line). These strings need to be sorted. If you will encounter any sorting issues you can use Kaldi scripts for checking (utils/validate_data_dir.sh) and fixing (utils/fix_data_dir.sh) data order. And for you information - utils directory will be attached to your project in Tools attachment section.
 
-# In[3]:
+# In[2]:
 
 import os
 parent_path = os.path.split(os.getcwd())[0]
@@ -17,14 +16,14 @@ print (parent_path)
 
 # In kaldi/egs/code-switch directory, create a folder **data**. Then create **test** and **train** subfolders inside. Create in each subfolder following files (so you have files named in the same way in test and train subfolders but they relate to two different data sets that you created before):
 
-# In[49]:
+# In[3]:
 
 directory = parent_path + "/data/train"
 if not os.path.exists(directory):
     os.makedirs(directory)
 
 
-# In[50]:
+# In[4]:
 
 directory = parent_path + "/data/test"
 if not os.path.exists(directory):
@@ -38,7 +37,7 @@ if not os.path.exists(directory):
 # 
 # Pattern: [speakerID] [gender]
 
-# In[12]:
+# In[8]:
 
 import re
 from collections import defaultdict 
@@ -63,10 +62,10 @@ id_dic_i = speaker_re_counts(dir_list_i)
 id_dic_c = speaker_re_counts(dir_list_c)
 
 
-# In[13]:
+# In[9]:
 
 test_short_ids_i = ['01MA', '03FA','08MA', '29FA','29MB','42FB','44MB','45FB','67MB','55FB']
-test_short_ids_c = ['30NC48FB', '18NC36MB','43NC61FB', '34NC37MB']
+test_short_ids_c = ['01NC01FB', '01NC02FB','06NC11MA', '06NC12MA']
 
 def train_test_split(id_dic, test_short_ids):
     train_ids = []
@@ -83,7 +82,7 @@ train_ids_i, test_ids_i = train_test_split(id_dic_i, test_short_ids_i)
 train_ids_c, test_ids_c = train_test_split(id_dic_c, test_short_ids_c)
 
 
-# In[19]:
+# In[10]:
 
 print (test_ids_i[:5])
 print (train_ids_i[:5])
@@ -91,21 +90,21 @@ print (test_ids_c[:5])
 print (train_ids_c[:5])
 
 
-# In[17]:
+# In[11]:
 
 print ("parent path: {}".format(parent_path))
 
 
-# In[51]:
+# In[12]:
 
 # add interview speaker id to the train 
 directory = parent_path + "/data/train/spk2gender"
-with open(directory, 'a+') as outfile:
+with open(directory, 'w') as outfile:
     for speakerid in train_ids_i:
         outfile.write("{} {}\n".format(speakerid,speakerid[4].lower()))
 
 
-# In[52]:
+# In[13]:
 
 # add conversation speaker id to the train 
 directory = parent_path + "/data/train/spk2gender"
@@ -114,16 +113,16 @@ with open(directory, 'a+') as outfile:
         outfile.write("{} {}\n".format(speakerid[2:],speakerid[6].lower()))
 
 
-# In[53]:
+# In[14]:
 
 # add interview speaker id to the test 
 directory = parent_path + "/data/test/spk2gender"
-with open(directory, 'a+') as outfile:
+with open(directory, 'w') as outfile:
     for speakerid in test_ids_i:
         outfile.write("{} {}\n".format(speakerid, speakerid[4].lower()))
 
 
-# In[54]:
+# In[15]:
 
 # add conversation speaker id to the test 
 directory = parent_path + "/data/test/spk2gender"
@@ -135,21 +134,17 @@ print ("finish creating spk2gender in train and test set ")
 
 
 
-
 # b.) wav.scp 
 # This file connects every utterance (sentence said by one person during particular recording session) with an audio file related to this utterance. If you stick to my naming approach, 'utteranceID' is nothing more than 'speakerID' (speaker's folder name) glued with *.wav file name without '.wav' ending (look for examples below).
 # 
 # Pattern: [recordingID] [full_path_to_audio_file]
 
-# In[57]:
 
-
-# In[72]:
 
 # add interview train into wav.scp 
 
 directory = parent_path + "/data/train/wav.scp"
-with open(directory, 'a+') as outfile:
+with open(directory, 'w') as outfile:
     for file in dir_list_i:
         speaker_id = re.split("_", file)[0]
         if speaker_id in train_ids_i:
@@ -160,15 +155,15 @@ with open(directory, 'a+') as outfile:
 
 # need to carefully re-name recordings in conversation, cause they don't have the speaker id as prefix. In their original naming convension, recordings from the same speaker will be identifies as different speaker. 
 
-# In[64]:
+# In[20]:
 
 print(train_ids_c[:1])
 
 
-# In[98]:
+# In[24]:
 
 # add conversation train into wav.scp 
-speaker_multiple = ['NC49FBQ', 'NC07FBX', 'NC37MBP', 'NC08FBY', 'NC50FBP', 'NC03FBX', 'NC44MBQ', 'NC22MBQ', 'NC06FAY', 'NC48FBP', 'NC35FBQ', 'NC10MAY', 'NC36MBQ', 'NC05FAX', 'NC43FBQ', 'NC41MBP', 'NC09FAX', 'NC45MBP', 'NC04FBY']
+speaker_multiple = ['NC50FBP', 'NC44MBQ', 'NC45MBP', 'NC05FAX', 'NC49FBQ', 'NC41MBP', 'NC07FBX', 'NC03FBX', 'NC04FBY', 'NC10MAY', 'NC37MBP', 'NC36MBQ', 'NC35FBQ', 'NC22MBQ', 'NC08FBY', 'NC48FBP', 'NC06FAY', 'NC43FBQ', 'NC09FAX']
 directory = parent_path + "/data/train/wav.scp"
 with open(directory, 'a+') as outfile:
     for file in dir_list_c:
@@ -182,18 +177,18 @@ with open(directory, 'a+') as outfile:
                 recording_id = re.split("\.", newfile)[0]
                 #print ("this {} has multiple recordings, renaming them to {}".format(speaker_id, newfile))
             else: 
-                path = parent_path + "/audio/train/" + speaker_id[2:] + "/" + file
-                recording_id = re.split("\.", file)[0]
+                path = parent_path + "/audio/train/" + speaker_id[2:] + "/" + file[2:]
+                recording_id = re.split("\.", file)[0][2:]
             outfile.write("{} flac -c -d -s {} |\n".format(recording_id, path))
             
 
 
-# In[79]:
+# In[25]:
 
 # add interview test into wav.scp 
 
 directory = parent_path + "/data/test/wav.scp"
-with open(directory, 'a+') as outfile:
+with open(directory, 'w') as outfile:
     for file in dir_list_i:
         speaker_id = re.split("_", file)[0]
         if speaker_id in test_ids_i:
@@ -206,7 +201,6 @@ with open(directory, 'a+') as outfile:
 print (test_ids_c)
 
 
-# In[77]:
 
 # add conversation test into wav.scp 
 
@@ -226,7 +220,7 @@ print ("finish creating wav.scp in train and test set")
 # 
 # Pattern: [uterranceID] [text_transcription]
 
-# In[88]:
+# In[29]:
 
 trans_path_i = parent_path + "/LDC2015S04/seame_d2/data/interview/transcript"
 trans_list_i = os.listdir(trans_path_i)[1:]
@@ -236,12 +230,12 @@ print (trans_list_i[:2])
 print (trans_list_c[:2])
 
 
-# In[119]:
+# In[30]:
 
 # create interview text in train set 
 
 directory = parent_path + "/data/train/text"
-with open(directory, 'a+') as outputfile:
+with open(directory, 'w') as outputfile:
     for file in trans_list_i: 
         speaker_id = re.split("_", file)[0]
         if speaker_id in train_ids_i:
@@ -256,7 +250,7 @@ with open(directory, 'a+') as outputfile:
                     outputfile.write("{} {}".format(utterance_id, text))
 
 
-# In[120]:
+# In[31]:
 
 # create conversation text in train set 
 
@@ -288,7 +282,7 @@ with open(directory, 'a+') as outputfile:
 # create interview text in test 
 
 directory = parent_path + "/data/test/text"
-with open(directory, 'a+') as outputfile:
+with open(directory, 'w') as outputfile:
     for file in trans_list_i: 
         speaker_id = re.split("_", file)[0]
         if speaker_id in test_ids_i:
@@ -303,7 +297,7 @@ with open(directory, 'a+') as outputfile:
                     outputfile.write("{} {}".format(utterance_id, text))
 
 
-# In[96]:
+# In[33]:
 
 # create conversation text in test 
 
@@ -332,7 +326,7 @@ print ("finish create text in train and test set")
 # 
 # Pattern: [uterranceID] [speakerID]
 
-# In[100]:
+# In[35]:
 
 #trans_path = parent_path + "/LDC2015S04/seame_d2/data/interview/transcript/"
 import sys
@@ -340,10 +334,6 @@ trans_list = os.listdir(trans_path_i)[1:]
 largest_frame = -sys.maxsize
 print (len(trans_list))
 
-
-
-
-# In[104]:
 
 #trans_path = parent_path + "/LDC2015S04/seame_d2/data/interview/transcript/"
 import sys
@@ -364,7 +354,7 @@ print ("largest_frame is {}".format(largest_frame))
 print ("since 7004497 is our largest frame, then we need to create string with 7 digits to hold all frames")
 
 
-# In[115]:
+# In[38]:
 
 # create utterance id for interview: recording id + start time + end time; for e.g. NI01MAX_0101_0001353_0003612
 counter = 0
@@ -382,7 +372,7 @@ for file in trans_list_i:
 print ("there are {} new utterance ids".format(len(utter_ids_i)))
 
 
-# In[123]:
+# In[39]:
 
 # create utterance id for conversation
 
@@ -406,27 +396,26 @@ for file in trans_list_c:
 print ("there are {} new utterance ids".format(len(utter_ids_c)))
 
 
-# In[124]:
+# In[40]:
 
 print("sample newly created utterance id {}".format(utter_ids_i[:1]))
 
 
-# In[125]:
+# In[41]:
 
 print("sample newly created utterance id {}".format(utter_ids_c[:1]))
 
 
-# In[136]:
+# In[42]:
 
 train_ids_c_short = [ x[2:] for x in train_ids_c]
 
 
-# In[140]:
+# In[43]:
 
 print (train_ids_c_short[:2])
 
 
-# In[142]:
 
 utt2spk_path = parent_path + "/data/train/utt2spk"
 counter = 0
@@ -442,8 +431,6 @@ with open(utt2spk_path, 'w') as outputfile:
             counter += 1
             outputfile.write("{} {}\n".format(file, speaker_id))
 print ("there are {} in train/utt2spk".format(counter))
-
-
 
 test_ids_c_short = [x[2:] for x in test_ids_c]
 utt2spk_path = parent_path + "/data/test/utt2spk"
@@ -468,7 +455,7 @@ print ("there are {} in test/utt2spk".format(counter))
 # 
 # Pattern: [text_transcription]
 
-# In[74]:
+# In[49]:
 
 temp_path = parent_path + "/data/local"
 if not os.path.exists(temp_path):
@@ -478,7 +465,7 @@ corpus_path = parent_path + "/data/local/corpus.txt"
 trans_path = parent_path + "/LDC2015S04/seame_d2/data/interview/transcript"
 trans_list = os.listdir(trans_path)[1:]
 
-with open(corpus_path, 'a+') as outputfile:
+with open(corpus_path, 'w') as outputfile:
     for file in trans_list: 
             trans_file = trans_path + "/" + file
             with open(trans_file, 'r') as inputfile:
@@ -487,7 +474,7 @@ with open(corpus_path, 'a+') as outputfile:
                     outputfile.write(re.split("\t", line)[3])
 
 
-# In[152]:
+# In[50]:
 
 temp_path = parent_path + "/data/local"
 if not os.path.exists(temp_path):
@@ -507,6 +494,7 @@ with open(corpus_path, 'a+') as outputfile:
 
 
 
+
 # (f) segments file  
 # the format of the "segments" file is:  
 # [utterance-id] [recoding-id] [segment-begin] [segment-end]   
@@ -518,7 +506,7 @@ with open(corpus_path, 'a+') as outputfile:
 # interview segments file for training set
 directory = parent_path + "/data/train/segments"
 counter = 0
-with open(directory, 'a+') as outputfile:
+with open(directory, 'w') as outputfile:
     for utt in utter_ids_i:
         speaker_id = re.split("_", utt)[0]
         if speaker_id in train_ids_i:
@@ -527,11 +515,7 @@ with open(directory, 'a+') as outputfile:
             segment_begin = str(int(re.split("_", utt)[2])/1000)
             segment_end = str(int(re.split("_", utt)[3])/1000)
             outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
-    
-       
 
-
-# In[160]:
 
 # conversation segments file for training set
 
@@ -549,7 +533,7 @@ with open(directory, 'a+') as outputfile:
     
 
 
-# In[165]:
+# In[56]:
 
 # interview segments file for training set
 directory = parent_path + "/data/test/segments"
@@ -568,7 +552,7 @@ with open(directory, 'w') as outputfile:
 print (counter)
 
 
-# In[166]:
+# In[57]:
 
 # conversation segments file for training set
 directory = parent_path + "/data/test/segments"
@@ -585,7 +569,6 @@ with open(directory, 'a+') as outputfile:
             outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
             counter += 1
 print (counter)
-
 
 
 
