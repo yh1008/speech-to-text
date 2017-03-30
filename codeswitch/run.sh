@@ -17,8 +17,8 @@ echo ===========================================================================
 
 mkdir conf
 cp ../timit/s5/conf/mfcc.conf ./conf
-steps/make_mfcc.sh --nj $feats_nj data/train exp/make_mfcc/train $mfccdir
-steps/make_mfcc.sh --nj $feats_nj data/test exp/make_mfcc/test $mfccdir
 
-steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train $mfccdir
-steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test $mfccdir
+for x in train test; do 
+  steps/make_mfcc.sh --nj $feats_nj data/$x exp/make_mfcc/$x $mfccdir
+  steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x $mfccdir
+done
