@@ -6,7 +6,7 @@ feats_nj=8
 mfccdir=mfcc
 
 echo ============================================================================
-echo            "                Data Preperation                    "
+echo            "                Acoustic Data Preperation                    "
 echo ============================================================================
 
 ./local/data_prep.sh
