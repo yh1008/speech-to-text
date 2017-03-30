@@ -1,7 +1,7 @@
 # Data Preperation
 
 ### Audio Data  
-For seame_d2/data/interview:    
+#### For seame_d2/data/interview:    
 there are 95 speaker-id in total (e.g. NI01MAX). Technically format of `01MA` is sufficient for identifying any unique speaker in our audios, but to make the utterance-id, recording-id and speaker-id aligned for Kaldi to process, I decide to make the entire prefix (e.g. NI01MAX) of recording-id (e.g. NI01MAX_0101.flac) my speaker-id.   
 
 description of the speaker-id NI01MA: N is recording location, I stands for `i`nterview style, 01 is spearker identity, M for gender (M for male, F for female), A for nationality (A is Malaysian, B is Singaporean)     
@@ -10,7 +10,7 @@ test set contains 10 speaker id: ['UI08MAZ', 'NI67MBQ', 'UI03FAZ', 'NI45FBP', 'N
 
 train set contains 85 speaker id: ['NI28MBP', 'UI01FAZ', 'NI25MBQ', 'UI07FAZ', 'UI23FAZ', 'UI17FAZ', 'NI02FAX', 'NI27MBQ', 'NI09FBP', 'NI31FBP', 'UI04FAZ', 'UI12FAZ', 'UI18MAZ', 'NI46FBQ', 'UI28FAZ', 'UI02FAZ', 'NI56MBX', 'NI62MBQ', 'NI14MBP', 'NI59FBQ', 'NI37MBP', 'NI63MBP', 'NI26FBP', 'NI21MBQ', 'NI61FBP', 'UI20MAZ', 'NI41MBP', 'NI52MBQ', 'NI65MBP', 'NI18MBP', 'NI57FBQ', 'UI06MAZ', 'NI58FBP', 'NI49MBP', 'NI60MBP', 'NI50FBQ', 'UI05MAZ', 'NI54FBQ', 'NI51MBP', 'NI66MBQ', 'NI35FBP', 'NI05MBQ', 'NI10FBP', 'UI10FAZ', 'NI39FBP', 'NI53FBP', 'NI03FBX', 'NI33MBP', 'UI27FAZ', 'NI47MBP', 'NI23FBQ', 'NI36MBQ', 'UI25FAZ', 'NI15FBQ', 'NI32FBQ', 'NI48FBQ', 'NI12MAP', 'UI22MAZ', 'NI24MBP', 'UI26MAZ', 'UI15FAZ', 'UI09MAZ', 'NI30MBQ', 'NI16FBP', 'UI14MAZ', 'NI17FBQ', 'NI43FBP', 'NI04FBX', 'NI13MBQ', 'UI24MAZ', 'NI34FBQ', 'NI06FBP', 'NI22FBP', 'UI11FAZ', 'UI16MAZ', 'NI11FBP', 'NI08FBP', 'NI07FBQ', 'UI19MAZ', 'NI20MBP', 'NI64FBQ', 'UI13FAZ', 'NI19MBQ', 'UI21MAZ', 'NI40FBQ']
 
-For seame_d1/data/conversation:
+#### For seame_d1/data/conversation:  
 there are 64 speaker-id in total (e.g. NC16FBQ). The original recording naming format is 08NC16FBQ_0101 where 08 is the conversation group, C stands for `c`oncersation, 0101 stands for the first part of the first recording of this speaker. Since the same speaker (e.g. NC16FBQ) can end up in multiple conversation group and Kaldi strictly requires speaker-id to be the prefix of utterance-id and recording-id, I rename this kind of recordings to NC16FBQ_080101 instead. 
 
 test set contains 4 speaker id: ['NC01FB', 'NC02FB','NC11MA', 'NC12MA']
