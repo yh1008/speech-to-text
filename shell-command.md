@@ -92,6 +92,14 @@ ls -l . | egrep -c '^-'
 ls -1 | wc -l
 ```
 
+### delete a file by name (e.g. .DS_Store and .ipynb_checkpoints)
+```
+find . -name .ipynb_checkpoints -print0 | xargs -0 git rm -rf --ignore-unmatch
+```
+```
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+```
+
 ### check how many frames that utterance has?
 ```
 feat-to-len 
