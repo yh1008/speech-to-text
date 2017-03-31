@@ -10,7 +10,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [A Chinese-English Mixlingual Database and A Speech Recognition Baseline](https://arxiv.org/pdf/1609.08412v1.pdf)
 
 ### Other Code-switching related Paper:
-- [A First Speech Recognition System For Mandarin-English Code-switch Conversational Speech] (http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6289015)
+- [A First Speech Recognition System For Mandarin-English Code-switch Conversational Speech](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6289015)
 - [Speech Recognition on English-Mandarin Code-Switching Data using Factored Language Models](http://www.csl.uni-bremen.de/cms/images/documents/publications/DA_JanGebhardt.pdf)
 
 ### Interesting Python Kaldi Wrapper to be examined:
