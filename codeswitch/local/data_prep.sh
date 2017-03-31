@@ -25,3 +25,5 @@ utils/fix_data_dir.sh data/test
 
 utils/validate_data_dir.sh data/train
 utils/validate_data_dir.sh data/test
+
+echo "Acoustic Data preparation succeeded"
