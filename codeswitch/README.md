@@ -34,3 +34,62 @@ echo $KALDI_ROOT
 ```
 
 
+## Language Model Preparation
+### 1. Combine and fix the transcripts
+#### Folder: data/train, data/test
+#### File created: text
+#### File content: all the sentences in transcripts, with utterance id and sentence transcript
+Transcripts under folder data/train and data/test should be like the following, where a **unique utterance id** (if a speaker has more than one utterance, the utterance id is not the speaker id) is followed by a sentence.
+```
+110236_20091006_82330_F_0001 I'M WORRIED ABOUT THAT
+110236_20091006_82330_F_0002 AT LEAST NOW WE HAVE THE BENEFIT
+110236_20091006_82330_F_0003 DID YOU EVER GO ON STRIKE
+...
+120958_20100126_97016_M_0285 SOMETIMES LESS IS BETTER
+120958_20100126_97016_M_0286 YOU MUST LOVE TO COOK
+```
+
+Our data has multiple utterances for a speaker, so we need to
+- match utterance id and speaker id by creating a segment file like this, with utterance id, speaker id, start time, end time:
+```
+110236_20091006_82330_F_001 110236_20091006_82330_F 0.0 3.44
+110236_20091006_82330_F_002 110236_20091006_82330_F 4.60 8.54
+...
+120958_20100126_97016_M_285 120958_20100126_97016_M 925.35 927.88
+120958_20100126_97016_M_286 120958_20100126_97016_M 928.31 930.51
+```
+- remove the start time and end time in the original transcript and replace the unique speaker id with the unique utterance id
+- combine all the sentences in training data as a whole (and the same to test data)
+
+### 2. Get word list
+#### Folder: data/train, data/test
+#### File created: words.txt
+#### File content: all the unique words in text
+```
+cut -d ' ' -f 2- text | sed 's/ /\n/g' | sort -u > words.txt
+```
+
+### 3. Filter lexicon
+#### Folder: data/local/lang
+#### File created: lexicon.txt
+#### File content: the pronunciation (phones) of words that appear in the data
+Using python script
+
+### 4. Create phone list
+#### Folder: data/local/lang
+#### File created: nonsilence_phone.txt, silence_phone.txt, optional_silence.txt
+#### File content: the range of phones
+silence_phone.txt is from python script
+```
+cut -d ' ' -f 2- lexicon.txt | sed 's/ /\n/g' | sort -u > nonsilence_phones.txt
+echo 'SIL' > optional_silence.txt
+```
+
+### 4. Generate other files
+#### Folder: codeswitch
+#### File created: 
+#### File content: 
+```
+cd codeswitch
+utils/prepare_lang.sh data/local/lang 'OOV' data/local/ data/lang
+```
