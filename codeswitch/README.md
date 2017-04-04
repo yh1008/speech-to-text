@@ -87,7 +87,7 @@ echo 'SIL' > optional_silence.txt
 
 ### 4. Generate other files
 #### Folder: codeswitch
-#### File created: 
+#### File created: phones (folder), oov.txt, L.fst
 #### File content: 
 ```
 cd codeswitch
