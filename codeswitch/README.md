@@ -91,5 +91,5 @@ echo 'SIL' > optional_silence.txt
 #### File content: 
 ```
 cd codeswitch
-utils/prepare_lang.sh data/local/lang 'OOV' data/local/ data/lang
+utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
 ```
