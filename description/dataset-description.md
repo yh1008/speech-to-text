@@ -9,20 +9,20 @@ Others: 7%
 ### Data Summary
 #### Sentences
 Number of utterance: 54929  
-Number of segmented utterance: 45872
-Number of unsegmented utterance: 9057
+Number of segmented utterance: 45872  
+Number of unsegmented utterance: 9057  
 
 #### Words
-Based on the default parsing (2 space between Madarin chatacters and 1 space between English characters)  
-Number of word: 518489
-Number of unique word: 28610
+Based on the default parsing (2 space between Madarin chatacters and 1 space between English characters)    
+Number of word: 518489  
+Number of unique word: 28610  
 
-Based on the processing (one step involves replacing non-transcribable sound (e.g., '[mm]') with sil symble which has space before and after (e.g., ' SIL1 '), and it will be able to help split some unsegmented phrases (e.g., '[mm]但是[mm]' (1 word in default) -> 'SIL1 但是 SIL1' (3 words after processing)))
-Number of word used: 534296
-Number of unique word used: 17531
-Number of unique word in filtered lexicon file: 11205
+Based on the processing (one step involves replacing non-transcribable sound (e.g., '[mm]') with sil symble which has space before and after (e.g., ' SIL1 '), and it will be able to help split some unsegmented phrases (e.g., '[mm]但是[mm]' (1 word in default) -> 'SIL1 但是 SIL1' (3 words after processing)))  
+Number of word used: 534296  
+Number of unique word used: 17531  
+Number of unique word in filtered lexicon file: 11205  
 
-Number of waste word type: 168
+Number of waste word type: 168  
 
 ### Transcription: special handling
 
