@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import codecs
 import re
 import os
