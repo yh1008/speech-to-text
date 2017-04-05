@@ -85,11 +85,58 @@ cut -d ' ' -f 2- lexicon.txt | sed 's/ /\n/g' | sort -u > nonsilence_phones.txt
 echo 'SIL' > optional_silence.txt
 ```
 
-### 4. Generate other files
+### 5. Generate other files
 #### Folder: codeswitch
 #### File created: phones (folder), oov.txt, L.fst
 #### File content: 
 ```
 cd codeswitch
 utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
+```
+
+## Decoding Phase
+### 1. Make sure to install portaudio successfully
+```
+cd /kaldi/tools
+./install_portaudio.sh
+cd /kaldi/src
+make ext -j 8
+```
+
+### 2. Copy egs/voxforge/online_demo to kaldi/egs/codeswitch/
+```
+cp -r /kaldi/egs/voxforge/online_demo /kaldi/egs/codeswitch/
+```
+
+### 3. Within codeswitch/online_demo
+```
+mkdir online-data
+cd online-data
+mkdir audio && mkdir models
+cd models
+mkdir mono
+```
+
+#### The structure looks like:
+```
+codeswitch/
+├── online_demo
+│   ├── online-data
+│   │   └── models
+│   │       ├── mono
+│   │       │   ├── final.mdl
+│   │       │   ├── words.txt
+│   │       │   ├── HCLG.fst
+│   │   └── audio
+│   │       ├── test.wav
+│   │       ├── test.wav.trn
+```
+
+#### Copy final.mdl to models/mono; copy graph_word/words.txt to models/mono; copy graph_word/HCLG.fst to models/mono;
+#### Copy a wav and its transcription into audio folder
+ 
+### 4. Run the script
+```
+cd kaldi/egs/codeswitch/online_demo
+./run.sh
 ```
