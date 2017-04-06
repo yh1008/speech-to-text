@@ -13,17 +13,11 @@ to execute:
 ```
 ./run.sh
 ```
+in `run.sh`, a shell script called `data_prep.sh` will be called to prepare audio and acoustic data, along with fixing and validating the directories. 
 
 ### local
 contains data preperation script and its README file   
-to execute:
-```
-chmod 755 local/audio_data_prep.py
-chmod 755 local/acoustic_data_prep.py
-
-./local/audio_data_prep.py
-./local/acoustic_data_prep.py
-```
+within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories. 
 
 
 ### path.sh 
