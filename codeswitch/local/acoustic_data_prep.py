@@ -79,7 +79,11 @@ with open(directory, 'w') as outfile:
 directory = parent_path + "/data/train/spk2gender"
 with open(directory, 'a+') as outfile:
     for speakerid in train_ids_c:
-        outfile.write("{} {}\n".format(speakerid[2:],speakerid[6].lower()))
+        if speakerid[2:] == "NC50XFB":
+            gender = 'f'            
+        else:
+            gender = speakerid[6]
+        outfile.write("{} {}\n".format(speakerid[2:].gender.lower()))
 
 # add interview speaker id to the test 
 directory = parent_path + "/data/test/spk2gender"
@@ -399,8 +403,8 @@ with open(directory, 'w') as outputfile:
         if speaker_id in train_ids_i:
             
             recording_id = "_".join(utt.split("_", 2)[:2])
-            segment_begin = str(int(re.split("_", utt)[2])/1000)
-            segment_end = str(int(re.split("_", utt)[3])/1000)
+            segment_begin = str(int(re.split("_", utt)[2])/1000.0)
+            segment_end = str(int(re.split("_", utt)[3])/1000.0)
             outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
     
        
@@ -413,8 +417,8 @@ with open(directory, 'a+') as outputfile:
         speaker_id = re.split("_", utt)[0]
         if speaker_id in train_ids_c_short:          
             recording_id = "_".join(utt.split("_", 2)[:2])
-            segment_begin = str(int(re.split("_", utt)[2])/1000)
-            segment_end = str(int(re.split("_", utt)[3])/1000)
+            segment_begin = str(int(re.split("_", utt)[2])/1000.0)
+            segment_end = str(int(re.split("_", utt)[3])/1000.0)
             outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
 
 
@@ -426,8 +430,8 @@ with open(directory, 'w') as outputfile:
         speaker_id = re.split("_", utt)[0]
         if speaker_id in test_ids_i:
             recording_id = "_".join(utt.split("_", 2)[:2])
-            segment_begin = str(int(re.split("_", utt)[2])/1000)
-            segment_end = str(int(re.split("_", utt)[3])/1000)
+            segment_begin = str(int(re.split("_", utt)[2])/1000.0)
+            segment_end = str(int(re.split("_", utt)[3])/1000.0)
             outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
             counter += 1
 
@@ -439,8 +443,8 @@ with open(directory, 'a+') as outputfile:
         speaker_id = re.split("_", utt)[0]
         if speaker_id in test_ids_c_short:
             recording_id = "_".join(utt.split("_", 2)[:2])
-            segment_begin = str(int(re.split("_", utt)[2])/1000)
-            segment_end = str(int(re.split("_", utt)[3])/1000)
+            segment_begin = str(int(re.split("_", utt)[2])/1000.0)
+            segment_end = str(int(re.split("_", utt)[3])/1000.0)
             outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
             counter += 1
             
