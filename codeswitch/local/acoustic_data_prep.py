@@ -83,7 +83,7 @@ with open(directory, 'a+') as outfile:
             gender = 'f'            
         else:
             gender = speakerid[6]
-        outfile.write("{} {}\n".format(speakerid[2:].gender.lower()))
+        outfile.write("{} {}\n".format(speakerid[2:], gender.lower()))
 
 # add interview speaker id to the test 
 directory = parent_path + "/data/test/spk2gender"
