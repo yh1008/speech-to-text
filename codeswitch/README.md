@@ -13,7 +13,7 @@ to execute:
 ```
 ./run.sh
 ```
-in `run.sh`, a shell script called `data_prep.sh` will be called to prepare audio and acoustic data, along with fixing and validating the directories. 
+in `run.sh`, a shell script called `data_prep.sh` will be execuated to prepare audio and acoustic data, along with fixing and validating the directories. 
 
 ### local
 contains data preperation script and its README file   
