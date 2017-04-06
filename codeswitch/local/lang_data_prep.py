@@ -1,15 +1,25 @@
-#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
 
 import codecs
 import re
 import os
 
+#### default file structure ####
+# put this file under the local folder (codeswitch/local)
+# put two dictionaries (cmu one and TH one) under the local folder (codeswitch/local)
+# have the unziped corpus folder under the main folder (so you have codeswitch/LDC2015S04/seame_d1/data/conversation/transcript/ etc.)
+# have the essential folders made. here we need codeswitch/data/local/lang/
+
+parent_path = os.path.split(os.getcwd())[0]
+
 
 #### settings ####
-dirs = ['./LDC2015S04/seame_d1/data/conversation/transcript/','./LDC2015S04/seame_d2/data/interview/transcript/']
-newfolder = 'fixed/'
-dir_lang = './data/local/lang/'
+dirs = ['/LDC2015S04/seame_d1/data/conversation','/LDC2015S04/seame_d2/data/interview']
+oldfolder = '/transcript/'
+newfolder = '/transcript_filtered/'
+dir_lang = '/data/local/lang/'
 dir_dicsource = ''
+
 
 #### functions ####
 # from https://segmentfault.com/q/1010000000732038
@@ -21,7 +31,6 @@ def isAlpha(word):
         return False
 		
 # from http://www.cnblogs.com/kaituorensheng/p/3554571.html
-# -*- coding: cp936 -*-
 def strQ2B(ustring):
     """全角转半角"""
     rstring = ""
@@ -32,7 +41,7 @@ def strQ2B(ustring):
         elif (inside_code >= 65281 and inside_code <= 65374): #全角字符（除空格）根据关系转化
             inside_code -= 65248
 
-        rstring += chr(inside_code)
+        rstring += unichr(inside_code)
     return rstring
 	
 
@@ -71,10 +80,10 @@ print("Number of Chinese lexicon: " + str(len(d_th)))
 # to get the full word list
 words = []
 for dir in dirs:
-	filenames = os.listdir(dir)
+	filenames = os.listdir(parent_path+dir+oldfolder)
 	for filename in filenames:
 		if filename[-4:] == ".txt":
-			with codecs.open(dir+"/"+filename, 'r', 'utf-8') as f:
+			with codecs.open(parent_path+dir+oldfolder+filename, 'r', 'utf-8') as f:
 				for line in f.readlines():
 					sentence = line.split() # 1st element -- audio file id, 2nd element -- start time, 3rd element -- end time
 					words_cur = sentence[4:]   
@@ -126,10 +135,10 @@ text_all = []
 text_unparse = []
 
 for dir in dirs:
-	filenames = os.listdir(dir)
+	filenames = os.listdir(parent_path+dir+oldfolder)
 	for filename in filenames:
 		if filename[-4:] == ".txt":
-			with codecs.open(dir+filename, 'r', 'utf-8') as f:
+			with codecs.open(parent_path+dir+oldfolder+filename, 'r', 'utf-8') as f:
 				text = []
 
 				for line in f.readlines():
@@ -214,18 +223,20 @@ for dir in dirs:
 				f.close()
             
 			#save files without unparsed lines
-			dir_save = dir + newfolder
+			dir_save = parent_path + dir + newfolder
+			if not os.path.exists(dir_save):
+				os.makedirs(dir_save)
 			with codecs.open(dir_save+filename, 'w', 'utf-8') as f:
 				for line in text:
 					f.write(line + "\n")
 			f.close()
 
-with codecs.open(dir_lang+'unparsed.txt', 'w', 'utf-8') as f:
+with codecs.open(parent_path+dir_lang+'unparsed.txt', 'w', 'utf-8') as f:
     for line in text_unparse:
         f.write(line + "\n")
     f.close()
 
-with codecs.open(dir_lang+'text.txt', 'w', 'utf-8') as f:
+with codecs.open(parent_path+dir_lang+'text.txt', 'w', 'utf-8') as f:
     for line in text_all:
         f.write(line + "\n")
     f.close()
@@ -237,7 +248,7 @@ print("Number of unsegmented utterance: "+str(len(text_unparse)))
 
 #### output phones ####
 # output silence_phones.txt
-with codecs.open(dir_lang+'silence_phones.txt', 'w', 'utf-8') as f:
+with codecs.open(parent_path+dir_lang+'silence_phones.txt', 'w', 'utf-8') as f:
     f.write('SIL\n')
     for k,v in d_waste2idx.items():
         f.write(v + "\n")
@@ -271,9 +282,9 @@ print("Number of unique words used: " + str(len(words_all_uniq)))
 print("Number of unique words in filtered lexicon file: " + str(len(d_train)))
 
 # output lexicon.txt
-lexicons = [str(k) + " " + str(v) + "\n" for k,v in d_train.items()]
+lexicons = [k + " " + v + "\n" for k,v in d_train.items()]
 
-with codecs.open(dir_lang+'lexicon.txt', 'w', 'utf-8') as f:
+with codecs.open(parent_path+dir_lang+'lexicon.txt', 'w', 'utf-8') as f:
     f.write('<oov> <oov>\n')
     for lexicon in lexicons:
         f.write(lexicon)
@@ -285,3 +296,4 @@ with codecs.open(dir_lang+'lexicon.txt', 'w', 'utf-8') as f:
 f.close()
 
 print("Finish writing lexicon.txt")
+print("**********Done!**********")
