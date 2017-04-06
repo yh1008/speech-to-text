@@ -8,6 +8,7 @@ This built text and segments files using filtered transcripts
 
 import os
 import re
+import sys
 from collections import defaultdict 
 parent_path = os.path.split(os.getcwd())[0]
 
