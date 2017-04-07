@@ -89,7 +89,7 @@ utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
 ```
 ### 6. Install srilm to build the ARPA language model 
 
-you can download this srilm-1.7.2.tar.gz from [SRILM](http://www.speech.sri.com/projects/srilm/download.html) by filling out the download form. And then copy this file to `kaldi/tools` and name it `srilm.tgz`. After that, execute `install_srilm.sh`
+you can download this srilm-1.7.2.tar.gz from [SRILM](http://www.speech.sri.com/projects/srilm/download.html) by filling out the download form (I can't upload this gz file to Git, cause it exceeds 50MB limit). And then copy this file to `kaldi/tools` and name it `srilm.tgz`. After that, execute `install_srilm.sh`
 ```
 cp srilm-1.7.2.tar.gz ~/kaldi/tools/srilm.tgz
 cd kaldi/tools
