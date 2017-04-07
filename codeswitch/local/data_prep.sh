@@ -2,8 +2,6 @@
 
 # author: Emily Hua
 
-[ -f path.sh ] && . ./path.sh
-
 sudo apt-get install flac
 
 cp -r ../../wsj/s5/steps ../
