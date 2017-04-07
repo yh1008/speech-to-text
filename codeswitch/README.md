@@ -87,6 +87,44 @@ echo 'SIL' > optional_silence.txt
 cd codeswitch
 utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
 ```
+### 6. Install srilm to build the ARPA language model 
+
+you can download this srilm-1.7.2.tar.gz from [SRILM](http://www.speech.sri.com/projects/srilm/download.html) by filling out the download form. And then copy this file to `kaldi/tools` and name it `srilm.tgz`. After that, execute `install_srilm.sh`
+```
+cp srilm-1.7.2.tar.gz ~/kaldi/tools/srilm.tgz
+cd kaldi/tools
+./install_srilm.sh
+```
+build the language model using the following script: 
+
+```
+cd ~/kaldi/egs/codeswitch
+loc=`which ngram-count`;
+   if [ -z $loc ]; then
+       if uname -a | grep 64 >/dev/null; then
+               sdir=$KALDI_ROOT/tools/srilm/bin/i686-m64
+       else
+               sdir=$KALDI_ROOT/tools/srilm/bin/i686
+         fi
+       if [ -f $sdir/ngram-count ]; then
+                echo "Using SRILM language modelling tool from $sdir"
+                export PATH=$PATH:$sdir
+   else
+           echo "SRILM toolkit is probably not installed.
+           Instructions: tools/install_srilm.sh"
+      exit 1
+   fi
+fi
+mkdir data/local/tmp
+ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -text data/local/corpus.txt -lm data/local/tmp/lm.arpa
+```
+
+### 7. create G.fst using the ARPA language model
+```
+ lang=data/lang
+ local=data/local
+ arpa2fst --disambig-symbol=#0 --read-symbol-table=$lang/words.txt $local/tmp/lm.arpa $lang/G.fst
+```
 
 ## Decoding Phase
 ### 1. Make sure to install portaudio successfully
