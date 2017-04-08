@@ -32,7 +32,7 @@ utils/utt2spk_to_spk2utt.pl data/test/utt2spk > data/test/spk2utt
 utils/fix_data_dir.sh data/train
 utils/fix_data_dir.sh data/test 
 
-utils/validate_data_dir.sh data/train
-utils/validate_data_dir.sh data/test
+utils/validate_data_dir.sh --no-feats data/train
+utils/validate_data_dir.sh --no-feats data/test
 
 echo "Acoustic Data preparation succeeded"
