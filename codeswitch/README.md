@@ -125,6 +125,7 @@ ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -tex
  local=data/local
  arpa2fst --disambig-symbol=#0 --read-symbol-table=$lang/words.txt $local/tmp/lm.arpa $lang/G.fst
 ```
+Here we used `disambig-symbol=#0` to make the grammar transducer(G) determinizable. The effect of this omission was that the back-off arcs in the G.fst being cut-off, leading to a highly non-stochastic LG cascade with a very spiky distribution over the allowed word sequences and hence the higher WER [source](http://vpanayotov.blogspot.com/2012/06/kaldi-decoding-graph-construction.html)
 
 ## Decoding Phase
 ### 1. Make sure to install portaudio successfully
