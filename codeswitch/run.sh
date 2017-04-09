@@ -48,6 +48,7 @@ fi
  
 local=data/local
 mkdir $local/tmp
+lm_order=3
 ngram-count -order $lm_order -write-vocab $local/tmp/vocab-full.txt -wbdiscount -text $local/corpus.txt -lm $local/tmp/lm.arpa
 
 echo ============================================================================
