@@ -120,12 +120,14 @@ ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -tex
 ```
 
 ### 7. create G.fst using the ARPA language model
+`G.fst` is an acceptor (i.e. input and output symbols are identical on each arc) with words as its symbols. The exception is the disambiguation symbol #0 which only appears on the input side. 
 ```
  lang=data/lang
  local=data/local
  arpa2fst --disambig-symbol=#0 --read-symbol-table=$lang/words.txt $local/tmp/lm.arpa $lang/G.fst
 ```
-Here we used `disambig-symbol=#0` to make the grammar transducer(G) determinizable. The effect of this omission was that the back-off arcs in the G.fst being cut-off, leading to a highly non-stochastic LG cascade with a very spiky distribution over the allowed word sequences and hence the higher WER [source](http://vpanayotov.blogspot.com/2012/06/kaldi-decoding-graph-construction.html)
+Here we used `disambig-symbol=#0` to make the grammar transducer(G) determinizable. The effect of this omission was that the back-off arcs in the G.fst being cut-off, leading to a highly non-stochastic LG cascade with a very spiky distribution over the allowed word sequences and hence the higher WER [source](http://vpanayotov.blogspot.com/2012/06/kaldi-decoding-graph-construction.html)  
+`#0` is used for epsilon on the input of G.fst. `episolon` ( `<eps>` ) is a special symbol, meaning "there is no symbol on this arc". `eps2disambig.pl` converts all episolon input labels to special symbol `#0`. I checked, in our lexicon there is no `#0`, so this symbol won't be mistaken as a word. [source](http://kaldi-asr.org/doc/graph_recipe_test.html)
 
 ## Decoding Phase
 ### 1. Make sure to install portaudio successfully
