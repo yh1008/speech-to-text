@@ -11,7 +11,8 @@ import os
 # have the essential folders made. here we need codeswitch/data/local/lang/
 
 parent_path = os.path.split(os.getcwd())[0]
-
+test_short_ids_i = ['01MA', '03FA','08MA', '29FA','29MB','42FB','44MB','45FB','67MB','55FB']
+test_short_ids_c = ['01NC01FB', '01NC02FB','06NC11MA', '06NC12MA']
 
 #### settings ####
 dirs = ['/LDC2015S04/seame_d1/data/conversation','/LDC2015S04/seame_d2/data/interview']
@@ -19,6 +20,7 @@ oldfolder = '/transcript/'
 newfolder = '/transcript_filtered/'
 dir_lang = '/data/local/lang/'
 dir_dicsource = ''
+
 
 
 #### functions ####
@@ -33,10 +35,6 @@ def isAlphahyphen(word):
             return True
         elif word == "'":
             return True
-        #elif word.replace('-','').isalnum():
-        #    return True
-        #elif word.replace("'",'').isalnum():
-        #    return True
         else:
             try:
                 return word.replace('-','').replace("'",'').encode('ascii').isalnum()
@@ -80,6 +78,31 @@ def splitMix(word):
     res += [word[idx_b:]]
     return res    
 
+    
+def oov(words_all_uniq,d_cmu,d_th):
+    d = dict()
+    words_oov_english = []
+    words_oov_chinese = []
+    for word in words_all_uniq:
+        try:
+            d[word] = d_cmu[word]
+            for i in range(1,max_num+1):
+                try:
+                    d[word+"(i)"] = d_cmu[word+"(i)"]
+                except:
+                    break
+        except:
+            try:
+                d[word] = d_th[word]
+            except:
+                if isAlphahyphen(word):
+                    words_oov_english += [word]
+                else:
+                    words_oov_chinese += [word]
+                continue
+    return d,words_oov_english,words_oov_chinese
+    
+    
 #### read lexicons ####
 filename_cmu = "cmudict-0.7b"
 d_cmu = dict()
@@ -166,10 +189,23 @@ print("Number of waste word type: " + str(len(set(words_waste))))
 #### fix, filter, output text transcript ####
 # fix and output the transcript text going to be used
 words_all = []
+words_train = []
+words_test = []
 text_all = []
+text_train = []
+text_test = []
 text_unparse = []
 
+time_all = 0
+time_train = 0
+time_test = 0
+
 for dir in dirs:
+    if "conversation" in dir:
+        test_id = test_short_ids_c
+    elif "interview" in dir:
+        test_id = test_short_ids_i
+        
     filenames = os.listdir(parent_path+dir+oldfolder)
     for filename in filenames:
         if filename[-4:] == ".txt":
@@ -263,6 +299,23 @@ for dir in dirs:
                         text += [sentence_cur]
                         text_all += [sentence_cur]
                         words_all += words_cur_fix
+                        time_all += float(info_cur[2]) - float(info_cur[1])
+                        
+                        isTest = False
+                        for short_id in test_id:
+                            if short_id in filename:
+                                isTest = True
+                        
+                        if isTest:
+                            text_test += [sentence_cur]
+                            words_test += words_cur_fix
+                            time_test += float(info_cur[2]) - float(info_cur[1])
+                        else:
+                            text_train += [sentence_cur]
+                            words_train += words_cur_fix
+                            time_train += float(info_cur[2]) - float(info_cur[1])
+
+                            
     
                 f.close()
             
@@ -288,7 +341,12 @@ with codecs.open(parent_path+dir_lang+'text.txt', 'w', 'utf-8') as f:
 print("Finish reading lines")
 print("Number of segmented utterance: "+str(len(text_all)))
 print("Number of unsegmented utterance: "+str(len(text_unparse)))
-
+print("Size of full set: "+str(time_all/1000/60/60)+" hours")
+print("***** train and test *****")
+print("Number of utterance in training set: "+str(len(text_train)))
+print("Size of training set: "+str(time_train/1000/60/60)+" hours")
+print("Number of utterance in test set: "+str(len(text_test)))
+print("Size of test set: "+str(time_test/1000/60/60)+" hours")
 
 #### output phones ####
 # output silence_phones.txt
@@ -304,6 +362,23 @@ print("Finish writing silence_phones.txt")
 #### filter and output lexicon ####
 words_all = [word.upper() for word in words_all]
 words_all_uniq = list(set(words_all))
+words_train_uniq = list(set(words_train))
+words_test_uniq = list(set(words_test))
+
+d_all,words_oov_all_english,words_oov_all_chinese = oov(words_all_uniq,d_cmu,d_th)
+d_train,words_oov_train_english,words_oov_train_chinese = oov(words_train_uniq,d_cmu,d_th)
+d_test,words_oov_test_english,words_oov_test_chinese = oov(words_test_uniq,d_train,d_train)
+
+print("Finish calculating oov")
+print("Training set: English oov " + str(len(words_oov_train_english)) + "/" + str(len([item for item in words_train_uniq if isAlphahyphen(item)])))
+print("Training set: Chinese oov " + str(len(words_oov_train_chinese)) + "/" + str(len([item for item in words_train_uniq if not isAlphahyphen(item)])))
+print("Test set: English oov " + str(len(words_oov_test_english)) + "/" + str(len([item for item in words_test_uniq if isAlphahyphen(item)])))
+print("Test set: Chinese oov " + str(len(words_oov_test_chinese)) + "/" + str(len([item for item in words_test_uniq if not isAlphahyphen(item)])))
+
+
+
+
+'''
 words_oov = []
 d_train = dict()
 for word in words_all_uniq:
@@ -324,6 +399,8 @@ print("Finish lexicon filtering")
 print("Number of words used: " + str(len(words_all)))
 print("Number of unique words used: " + str(len(words_all_uniq)))
 print("Number of unique words in filtered lexicon file: " + str(len(d_train)))
+
+'''
 
 # output lexicon.txt
 lexicons = [k + " " + v + "\n" for k,v in d_train.items()]
