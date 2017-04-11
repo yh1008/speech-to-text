@@ -22,15 +22,32 @@ dir_dicsource = ''
 
 
 #### functions ####
-# from https://segmentfault.com/q/1010000000732038
-# to detect english character ONLY
-def isAlpha(word):
+# modified from https://segmentfault.com/q/1010000000732038
+# to detect english character and hyphen and ' ONLY
+def isAlphahyphen(word):
     try:
-        return word.encode('ascii').isalpha()
-    except UnicodeEncodeError:
-        return False
-		
-# from http://www.cnblogs.com/kaituorensheng/p/3554571.html
+        float(word)
+        return True
+    except:
+        if word == '-':
+            return True
+        elif word == "'":
+            return True
+        #elif word.replace('-','').isalnum():
+        #    return True
+        #elif word.replace("'",'').isalnum():
+        #    return True
+        else:
+            try:
+                return word.replace('-','').replace("'",'').encode('ascii').isalnum()
+            except UnicodeEncodeError:
+                if word == '-':
+                    return True
+                else:
+                    return False
+   
+        
+# copied from http://www.cnblogs.com/kaituorensheng/p/3554571.html
 def strQ2B(ustring):
     """全角转半角"""
     rstring = ""
@@ -43,7 +60,25 @@ def strQ2B(ustring):
 
         rstring += unichr(inside_code)
     return rstring
-	
+    
+# split chinese words concatenated with english words
+# input a pure chinese string or english string (adapted to - or ') will return itself
+# output: a list of split words
+def splitMix(word):
+    res = []
+    idx_b = 0
+    for i in range(len(word)):
+        if i == 0:
+            char_b = isAlphahyphen(word[i])
+        else:
+            if char_b == isAlphahyphen(word[i]):
+                next
+            else:
+                char_b = isAlphahyphen(word[i])
+                res += [word[idx_b:i]]
+                idx_b = i
+    res += [word[idx_b:]]
+    return res    
 
 #### read lexicons ####
 filename_cmu = "cmudict-0.7b"
@@ -80,15 +115,15 @@ print("Number of Chinese lexicon: " + str(len(d_th)))
 # to get the full word list
 words = []
 for dir in dirs:
-	filenames = os.listdir(parent_path+dir+oldfolder)
-	for filename in filenames:
-		if filename[-4:] == ".txt":
-			with codecs.open(parent_path+dir+oldfolder+filename, 'r', 'utf-8') as f:
-				for line in f.readlines():
-					sentence = line.split() # 1st element -- audio file id, 2nd element -- start time, 3rd element -- end time
-					words_cur = sentence[4:]   
-					words += words_cur
-				f.close()
+    filenames = os.listdir(parent_path+dir+oldfolder)
+    for filename in filenames:
+        if filename[-4:] == ".txt":
+            with codecs.open(parent_path+dir+oldfolder+filename, 'r', 'utf-8') as f:
+                for line in f.readlines():
+                    sentence = line.split() # 1st element -- audio file id, 2nd element -- start time, 3rd element -- end time
+                    words_cur = sentence[3:]   
+                    words += words_cur
+                f.close()
 
 print("Finish concatenating words")
 print("Number of words: " + str(len(words)))
@@ -135,101 +170,110 @@ text_all = []
 text_unparse = []
 
 for dir in dirs:
-	filenames = os.listdir(parent_path+dir+oldfolder)
-	for filename in filenames:
-		if filename[-4:] == ".txt":
-			with codecs.open(parent_path+dir+oldfolder+filename, 'r', 'utf-8') as f:
-				text = []
+    filenames = os.listdir(parent_path+dir+oldfolder)
+    for filename in filenames:
+        if filename[-4:] == ".txt":
+            with codecs.open(parent_path+dir+oldfolder+filename, 'r', 'utf-8') as f:
+                text = []
 
-				for line in f.readlines():
-					sentence_origin = line.strip()
+                for line in f.readlines():
+                    sentence_origin = line.strip()
                 
-					# deal with situations like 'co[mm]on' and 'co[mm]unication'
-					words_mm_cur = set(re.findall(r'''o(\[.+?\])''',line))
-					if len(words_mm_cur) > 0:
-						sentence_origin = sentence_origin.replace('o[mm]','omm')
+                    # deal with situations like 'co[mm]on' and 'co[mm]unication'
+                    words_mm_cur = set(re.findall(r'''o(\[.+?\])''',line))
+                    if len(words_mm_cur) > 0:
+                        sentence_origin = sentence_origin.replace('o[mm]','omm')
                 
-					# replace waste words with SILx; space after ] or before [ to avoid situations like co[mm]on or co[mm]unication
-					words_waste_cur = set(re.findall(r'''(\[.+?\])''',line) + re.findall(r'''(\(.+?\))''',line))
-					for element in words_waste_cur:
-						try:
-							sentence_origin = sentence_origin.replace(element,' ' + d_waste2idx[element] + ' ')
-						except:
-							continue
+                    # replace waste words with SILx; space after ] or before [ to avoid situations like co[mm]on or co[mm]unication
+                    words_waste_cur = set(re.findall(r'''(\[.+?\])''',line) + re.findall(r'''(\(.+?\))''',line))
+                    for element in words_waste_cur:
+                        try:
+                            sentence_origin = sentence_origin.replace(element,' ' + d_waste2idx[element] + ' ')
+                        except:
+                            continue
+
+                    # get rid of "#"
+                    # get rid of "="
+                    # deal with %word% like %chelsia%
+                    # deal with "word" like "william"
+                    # deal with pronunciation of single letter, for which the trascript is like P. S., I. T., etc.
+                    # deal with [ chinese char ] like [ 啊 ]
+                    sentence_origin = sentence_origin.replace('#',' ').replace('=',' ').replace('%',' ').replace('"',' ').replace('.',' ').replace('[',' ').replace(']',' ')
+                                            
                 
-					# get rid of "#"
-					sentence_origin = sentence_origin.replace('#',' ')
-                
-					# get rid of "="
-					sentence_origin = sentence_origin.replace('=',' ')
-                
-					# deal with %word% like %chelsia%
-					sentence_origin = sentence_origin.replace('%',' ')
-                
-					# deal with "word" like "william"
-					sentence_origin = sentence_origin.replace('"',' ')
-                
-					# deal with pronunciation of single letter, for which the trascript is like P. S., I. T., etc.
-					sentence_origin = sentence_origin.replace('.',' ')
-                
-					# Q2B
-					sentence_chars = list(sentence_origin)
-					for char_idx in range(len(sentence_chars)):
-						sentence_chars[char_idx] = strQ2B(sentence_chars[char_idx])
-					sentence_origin = "".join(sentence_chars)
-                
-					# trim again incase the substitution brings in space
-					sentence_origin = sentence_origin.strip()
+                    # Q2B
+                    sentence_chars = list(sentence_origin)
+                    for char_idx in range(len(sentence_chars)):
+                        sentence_chars[char_idx] = strQ2B(sentence_chars[char_idx])
+                    sentence_origin = "".join(sentence_chars)
+
+                    # split chinese words concatenated with english words
+                    words_fix = []
+                    info_cur = sentence_origin.split()[:3]
+                    words_cur = sentence_origin.split()[3:]
+                    for word_cur in words_cur:
+                        word_cur = splitMix(word_cur)
+                        if isinstance(word_cur,list):
+                            words_fix += word_cur
+                        else:
+                            words_fix += [word_cur]                
+                    sentence_origin = " ".join(info_cur+words_fix)
+                    
+                    # trim again incase the substitution brings in space
+                    sentence_origin = sentence_origin.strip()
                               
-					sentence = sentence_origin.split() # 1st element -- audio file id, 2nd element -- start time, 3rd element -- end time
-					info_cur = sentence[:3] # idx: 0~2
-					words_cur = sentence[3:] # idx: 3~
-					unparse = False
+                    sentence = sentence_origin.split() # 1st element -- audio file id, 2nd element -- start time, 3rd element -- end time
+                    info_cur = sentence[:3] # idx: 0~2
+                    words_cur = sentence[3:] # idx: 3~
+                    unparse = False
     
-					for word in words_cur: # filter out concatenated characters having Chinese characters, with length over 4
+                    for word in words_cur: # filter out concatenated characters having Chinese characters, with length over 4
           
-						# filter out unsegmented element (unparse = F -> unparse = T)
-						# for example, [leh]每次上学的时候daddy都会买糕点给我吃买马来糕#kuih# (idx: 53628)
-						try:
-							d_cmu[word.upper()] # if the word is a recorded English word
-							continue
-						except:
-							try:
-								d_idx2waste[word] # if the word is SILx
-								continue
-							except:
-								try:
-									d_th[word] # if the word is a recorded Chinese word
-									continue
-								except:
-									word_split = word.split("-")
-									if len(word_split) > 1: # pass if it is in the form of "a-b"
-										continue
-									elif isAlpha(word.replace("'","")): # words like o'clock
-										continue
-									else:
-										if len(word) > 4 and isAlpha(word) == False:
-											unparse = True
-											break
+                        # filter out unsegmented element (unparse = F -> unparse = T)
+                        # for example, [leh]每次上学的时候daddy都会买糕点给我吃买马来糕#kuih# (idx: 53628)
+                        if not isAlphahyphen(word): 
+                            try:
+                                d_th[word] # if the word is a recorded Chinese word
+                                continue
+                            except:
+                                if len(word) > 4:
+                                    unparse = True
+                                    break
 
-					if unparse:
-						text_unparse += [sentence_origin]
-					else:
-						sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur)
-						text += [sentence_cur]
-						text_all += [sentence_cur]
-						words_all += words_cur
+                    if unparse:
+                        text_unparse += [sentence_origin]
+                    else:
+                        # split chinese words into characters if not in dictionary to decrease oov rate
+                        words_cur_fix = []
+                        for word_cur in words_cur:
+                            word_cur = word_cur.upper()
+                            if not isAlphahyphen(word_cur): # if is not a english word
+                                try:
+                                    d_th[word_cur]
+                                    words_cur_fix += [word_cur]
+                                except:
+                                    if len(word_cur)>1:
+                                        needtosplit = True
+                                        for char_idx in range(len(word_cur)):
+                                            words_cur_fix += word_cur[char_idx]                         
+                            else:
+                                words_cur_fix += [word_cur]
+                            
+                        sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur_fix)
+                        text += [sentence_cur]
+                        text_all += [sentence_cur]
+                        words_all += words_cur_fix
     
-				f.close()
+                f.close()
             
-			#save files without unparsed lines
-			dir_save = parent_path + dir + newfolder
-			if not os.path.exists(dir_save):
-				os.makedirs(dir_save)
-			with codecs.open(dir_save+filename, 'w', 'utf-8') as f:
-				for line in text:
-					f.write(line + "\n")
-			f.close()
+            #save files without unparsed lines
+            dir_save = parent_path + dir + newfolder
+            if not os.path.exists(dir_save):
+                os.makedirs(dir_save)
+            with codecs.open(dir_save+filename, 'w', 'utf-8') as f:
+                for line in text:
+                    f.write(line + "\n")
+            f.close()
 
 with codecs.open(parent_path+dir_lang+'unparsed.txt', 'w', 'utf-8') as f:
     for line in text_unparse:
