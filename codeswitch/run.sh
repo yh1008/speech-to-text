@@ -3,10 +3,10 @@
 [ -f path.sh ] && . ./path.sh
 [ -f cmd.sh ] && . ./cmd.sh
 
-feats_nj=8
-mono_nj = 8
-tri_nj = 8
-decode_nj = 14
+feats_nj=16
+mono_nj=16
+tri_nj=16
+decode_nj=14
 mfccdir=mfcc
 
 echo ============================================================================
