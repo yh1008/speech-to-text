@@ -1,6 +1,7 @@
 #!/bin/bash
 
 [ -f path.sh ] && . ./path.sh
+[ -f comf ] && . ./comf
 
 feats_nj=8
 mono_nj = 8
@@ -72,7 +73,7 @@ echo ===========================================================================
 echo            "               First Triphone Pass Training                   "
 echo ============================================================================
 
-steps/train_deltas.sh --cmd "$train_cmd" 2000 11000 data/train data/lang exp/mono_ali exp/tri1
+steps/train_deltas.sh --cmd "$train_cmd" 1000 11000 data/train data/lang exp/mono_ali exp/tri1
 utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph #decoding
 steps/decode.sh --config conf/decode.config --nj $tri_nj --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
 
