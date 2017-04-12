@@ -8,4 +8,4 @@ sudo pip3 install --upgrade --no-deps git+git://github.com/Theano/Theano.git
 sudo pip3 install tensorflow
 sudo pip3 install keras
 sudo apt-get -y install ipython ipython-notebook
-sudo -H pip install jupyter
+sudo -H pip3 install jupyter
