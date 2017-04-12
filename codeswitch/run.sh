@@ -1,7 +1,7 @@
 #!/bin/bash
 
 [ -f path.sh ] && . ./path.sh
-[ -f comf ] && . ./comf
+[ -f cmd.sh ] && . ./cmd.sh
 
 feats_nj=8
 mono_nj = 8
