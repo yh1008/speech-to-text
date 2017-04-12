@@ -19,8 +19,13 @@ echo ===========================================================================
 echo          "                MFCC Feature Extration                    "
 echo ============================================================================
 
-mkdir conf
-cp ../timit/s5/conf/mfcc.conf ./conf
+conf_dir=conf
+if [[ ! -e $conf_dir ]]; then
+    mkdir $conf_dir
+elif [[ ! -d $conf_dir ]]; then
+    echo "$conf_dir already exists but is not a directory" 1>&2
+fi
+cp ../timit/s5/conf/mfcc.conf ./$conf_dir
 
 for x in train test; do 
   steps/make_mfcc.sh --nj $feats_nj data/$x exp/make_mfcc/$x $mfccdir
