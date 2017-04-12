@@ -288,11 +288,13 @@ for dir in dirs:
                                     d_th[word_cur]
                                     words_cur_fix += [word_cur]
                                 except:
-                                    if len(word_cur)>1:
+                                    if len(word_cur)>1: # if length of word > 1, or more than 1 chinese character
                                         needtosplit = True
                                         for char_idx in range(len(word_cur)):
-                                            words_cur_fix += word_cur[char_idx]                         
-                            else:
+                                            words_cur_fix += word_cur[char_idx]
+                                    else: # if only has one chinese character
+                                        words_cur_fix += [word_cur]                                            
+                            else: # if is not chinese word
                                 words_cur_fix += [word_cur]
                             
                         sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur_fix)
@@ -315,8 +317,6 @@ for dir in dirs:
                             words_train += words_cur_fix
                             time_train += float(info_cur[2]) - float(info_cur[1])
 
-                            
-    
                 f.close()
             
             #save files without unparsed lines
