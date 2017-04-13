@@ -79,10 +79,14 @@ with open(directory, 'w') as outfile:
 directory = parent_path + "/data/train/spk2gender"
 with open(directory, 'a+') as outfile:
     for speakerid in train_ids_c:
-        if speakerid[2:] == "NC50XFB":
-            gender = 'f'            
+        if speakerid == ".DS":
+            continue
         else:
-            gender = speakerid[6]
+            if speakerid[2:] == "NC50XFB":
+                gender = 'f'            
+            else:
+                #print(speakerid)
+                gender = speakerid[6]
         outfile.write("{} {}\n".format(speakerid[2:], gender.lower()))
 
 # add interview speaker id to the test 
@@ -261,21 +265,28 @@ print ("there are {} recording in audio files".format(len(dir_list_i)))
 
 for file in trans_list_i:
     file_path = trans_path_i + "/" + file
-    with open(file_path, 'r') as inputfile:
-        for line in inputfile:
-            second_frame = int(re.split(" ", line)[2])
-            if second_frame > largest_frame:
-                largest_frame = second_frame
+    if file == ".DS_Store":
+        continue
+    else:
+        with open(file_path, 'r') as inputfile:
+            for line in inputfile:
+                #print(line)
+                second_frame = int(re.split(" ", line)[2])
+                if second_frame > largest_frame:
+                    largest_frame = second_frame
 print ("largest_frame is {}".format(largest_frame))  
 
 
 for file in trans_list_c:
     file_path = trans_path_c + "/" + file
-    with open(file_path, 'r') as inputfile:
-        for line in inputfile:
-            second_frame = int(re.split(" ", line)[2])
-            if second_frame > largest_frame:
-                largest_frame = second_frame
+    if file == ".DS_Store":
+        continue
+    else:
+        with open(file_path, 'r') as inputfile:
+            for line in inputfile:
+                second_frame = int(re.split(" ", line)[2])
+                if second_frame > largest_frame:
+                    largest_frame = second_frame
 print ("largest_frame is {}".format(largest_frame))  
 print ("since 7242490 is our largest frame, then we need to create string with 7 digits to hold all frames")
 
@@ -284,14 +295,17 @@ counter = 0
 utter_ids_i = []
 for file in trans_list_i:
     file_path = trans_path_i + "/" + file
-    with open(file_path, 'r') as inputfile:
-        for line in inputfile:
-            speaker_id = re.split("_", line)[0]
-            prefix = re.split(" ", line)[0]
-            first_frame = re.split(" ", line)[1].zfill(7)
-            second_frame = re.split(" ", line)[2].zfill(7)
-            utterance_id =  prefix + "_" + first_frame + "_" + second_frame
-            utter_ids_i.append(utterance_id)
+    if file == ".DS_Store":
+        continue
+    else:
+        with open(file_path, 'r') as inputfile:
+            for line in inputfile:
+                speaker_id = re.split("_", line)[0]
+                prefix = re.split(" ", line)[0]
+                first_frame = re.split(" ", line)[1].zfill(7)
+                second_frame = re.split(" ", line)[2].zfill(7)
+                utterance_id =  prefix + "_" + first_frame + "_" + second_frame
+                utter_ids_i.append(utterance_id)
 print ("there are {} new utterance ids".format(len(utter_ids_i)))
 
 
@@ -301,19 +315,22 @@ counter = 0
 utter_ids_c = []
 for file in trans_list_c:
     file_path = trans_path_c + "/" + file
-    with open(file_path, 'r') as inputfile:
-        for line in inputfile:
-            speaker_id = re.split("_", line)[0]
-            if speaker_id[2:] in speaker_multiple:
-                pre = re.split("_",file)[0][:2]
-                end = re.split("_",file)[1].split(".")[0]
-                prefix = re.split("_",file)[0][2:] + '_' + pre + end
-            else:
-                prefix = re.split(" ", line)[0][2:]
-            first_frame = re.split(" ", line)[1].zfill(7)
-            second_frame = re.split(" ", line)[2].zfill(7)
-            utterance_id =  prefix + "_" + first_frame + "_" + second_frame
-            utter_ids_c.append(utterance_id)
+    if file == ".DS_Store":
+        continue
+    else:
+        with open(file_path, 'r') as inputfile:
+            for line in inputfile:
+                speaker_id = re.split("_", line)[0]
+                if speaker_id[2:] in speaker_multiple:
+                    pre = re.split("_",file)[0][:2]
+                    end = re.split("_",file)[1].split(".")[0]
+                    prefix = re.split("_",file)[0][2:] + '_' + pre + end
+                else:
+                    prefix = re.split(" ", line)[0][2:]
+                first_frame = re.split(" ", line)[1].zfill(7)
+                second_frame = re.split(" ", line)[2].zfill(7)
+                utterance_id =  prefix + "_" + first_frame + "_" + second_frame
+                utter_ids_c.append(utterance_id)
 print ("there are {} new utterance ids".format(len(utter_ids_c)))
 print("sample newly created utterance id {}".format(utter_ids_i[:1]))
 print("sample newly created utterance id {}".format(utter_ids_c[:1]))
