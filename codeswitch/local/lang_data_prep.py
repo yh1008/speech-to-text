@@ -296,26 +296,27 @@ for dir in dirs:
                                         words_cur_fix += [word_cur]                                            
                             else: # if is not chinese word
                                 words_cur_fix += [word_cur]
-                            
-                        sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur_fix)
-                        text += [sentence_cur]
-                        text_all += [sentence_cur]
-                        words_all += words_cur_fix
-                        time_all += float(info_cur[2]) - float(info_cur[1])
                         
-                        isTest = False
-                        for short_id in test_id:
-                            if short_id in filename:
-                                isTest = True
+                        if len(words_cur_fix) > 0: # to avoid transcripts without even a single word... yes they exsit:(                 
+                            sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur_fix)
+                            text += [sentence_cur]
+                            text_all += [sentence_cur]
+                            words_all += words_cur_fix
+                            time_all += float(info_cur[2]) - float(info_cur[1])
                         
-                        if isTest:
-                            text_test += [sentence_cur]
-                            words_test += words_cur_fix
-                            time_test += float(info_cur[2]) - float(info_cur[1])
-                        else:
-                            text_train += [sentence_cur]
-                            words_train += words_cur_fix
-                            time_train += float(info_cur[2]) - float(info_cur[1])
+                            isTest = False
+                            for short_id in test_id:
+                                if short_id in filename:
+                                    isTest = True
+                        
+                            if isTest:
+                                text_test += [sentence_cur]
+                                words_test += words_cur_fix
+                                time_test += float(info_cur[2]) - float(info_cur[1])
+                            else:
+                                text_train += [sentence_cur]
+                                words_train += words_cur_fix
+                                time_train += float(info_cur[2]) - float(info_cur[1])
 
                 f.close()
             
