@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """This is the main module that structures the audio directory for Kaldi to consume
+   This script will prepare the audio directory as audio/<test || train>/<speaker id>/<recording>
+   e.g. audio/train/NC03FBX/NC03FBX_020101.flac
 """
 __author__="Emily Hua"
 
@@ -82,7 +84,6 @@ def create_test_wannabe(dir_list, test_ids, dirn):
         speaker_id = re.split('_', file)[0]
         if speaker_id in test_ids:
             test_wannabe.append(file)
-            # I have add a file from this prefix into the test set, no need for more from this prefix
     print ("there are {} files ready to be moved into the test set".format(len(test_wannabe)))
     if dirn == "interview":
         assert (len(test_wannabe) == 16), "16 files from interview should be moved into the test set"
@@ -161,11 +162,9 @@ def get_speaker_multiple(ids):
     sets = set([])
     for i in ids:
         sets.add(i[2:])
-
     dic = defaultdict(list)
     for file in dir_list_c:
         dic[re.split("_",file)[0][2:]].append(file)
-
     for key in dic:
         if len(dic[key]) > 1 :
             speaker_multiple.append(key)
@@ -196,10 +195,8 @@ def load_conversation_train(speaker_multiple):
                 pre = re.split("_",file)[0][:2]
                 end = re.split("_",file)[1].split(".")[0]
                 newfile = re.split("_",file)[0][2:] + '_' + pre + end + ".flac"
-
                 newname = directory + "/" + speaker_id[2:] + "/" + newfile
                 print ("formated it from {} to {}".format(file, newname))
-
             else: 
                 newname = directory + "/" + speaker_id[2:] + "/" + file[2:]
             copyfile(src, dst)
@@ -208,12 +205,14 @@ def load_conversation_train(speaker_multiple):
     print ("loading finished")
     print ("loaded {} conversation recordings in to train set ".format(counter))
 
+print("\n(ง'̀-'́)ง you are executing audio_data_prep.py\n")
 
 parent_path = os.path.split(os.getcwd())[0]
 print ("the parent path is {}".format(parent_path))
 
 audio_path_i = parent_path + '/LDC2015S04/seame_d2/data/interview/audio'
 audio_path_c = parent_path + '/LDC2015S04/seame_d1/data/conversation/audio'
+
 dir_list_i = get_file_list(audio_path_i, 'interview')
 dir_list_c = get_file_list(audio_path_c, 'conversation')
 
@@ -229,15 +228,20 @@ train_ids_c, test_ids_c = train_test_split(id_dic_c, test_short_ids_c, "conversa
 test_wannabe_i = create_test_wannabe(dir_list_i, test_ids_i, "interview")
 test_wannabe_c = create_test_wannabe(dir_list_c, test_ids_c, "conversation")
 
+directory = parent_path+"/audio/test"
+if os.path.exists(directory):
+    clean_up(directory) # remove whatever is already in the test directory
+    
 load_audios_to_test(test_wannabe_i, audio_path_i, "interview")
+
 load_audios_to_test(test_wannabe_c, audio_path_c, "conversation")
 
 load_interview_train(dir_list_i) 
-speaker_multiple = get_speaker_multiple(train_ids_c)
 
+speaker_multiple = get_speaker_multiple(train_ids_c)
 load_conversation_train(speaker_multiple)
 
 
-print("\n (ง'̀-'́)ง audio data is successfully prepared!")
+print("\n(ง'̀-'́)ง audio data is successfully prepared!")
 
 
