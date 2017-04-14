@@ -350,8 +350,8 @@ def gen_segments(utter_ids, id_list, dirt, dirn):
             speaker_id = re.split("_", utt)[0]
             if speaker_id in id_list:
                 recording_id = "_".join(utt.split("_", 2)[:2])
-                segment_begin = str(int(re.split("_", utt)[2])/1000)
-                segment_end = str(int(re.split("_", utt)[3])/1000)
+                segment_begin = str(int(re.split("_", utt)[2])/1000.0) # make sure it doesn't get rounded by python2
+                segment_end = str(int(re.split("_", utt)[3])/1000.0)
                 counter += 1
                 outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
     print ("{} of lines of {} is written to segments in data/{}".format(counter, dirn, dirt))
