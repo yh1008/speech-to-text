@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 """This is the main module that structures the audio directory for Kaldi to consume
    This script will prepare the audio directory as audio/<test || train>/<speaker id>/<recording>
