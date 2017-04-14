@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+# coding: utf-8
 __author__="Emily Hua"
 
 """This is the main module that structures the acoustic files for Kaldi to consume
