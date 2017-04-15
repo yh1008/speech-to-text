@@ -44,3 +44,9 @@ echo 'SIL' > data/local/lang/optional_silence.txt
 
 utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
 echo "Language Data preparation succeeded"
+
+# install srilm
+cp srilm-1.7.2.tar.gz ~/kaldi/tools/srilm.tgz
+cd ../../tools
+./install_srilm.sh
+echo "Finish installing srilm"
