@@ -100,7 +100,10 @@ def generate_spk2gender(id_list, dirt, dirn):
                 speakerid = speakerid[2:]
                 if speakerid == "NC50XFB": # this speaker is originally gender unknown, to prevent it from being filtered out by Kaldi, I assign it to be female
                     gender = 'f'
-            gender = speakerid[4].lower()
+                else:
+                    gender = speakerid[4].lower()
+            else:
+                gender = speakerid[4].lower()
             outfile.write("{} {}\n".format(speakerid, gender))
 
 
