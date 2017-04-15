@@ -8,8 +8,12 @@ cp -r ../../wsj/s5/steps ../
 cp -r ../../wsj/s5/utils ../
 
 if [[ ! -e ./local ]]; then
+            mkdir local
+fi
+if [[ ! -e ./local/lang ]]; then
             mkdir local/lang
 fi
+
 
 # Move audios to the correct directories. 
 chmod 755 audio_data_prep.py
