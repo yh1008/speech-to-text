@@ -8,7 +8,7 @@ cp -r ../../wsj/s5/steps ../
 cp -r ../../wsj/s5/utils ../
 
 if [[ ! -e ./local ]]; then
-            mkdir local
+            mkdir local/lang
 fi
 
 # Move audios to the correct directories. 
