@@ -188,12 +188,12 @@ def write_text(file_list, trans_path, id_list, dirt, dirn):
     elif dirt == "train":
         directory = parent_path + "/data/train/text"
     counter = 0
-    with open(directory, 'a+') as outputfile:
+    with open(directory, 'a+', encoding="utf-8") as outputfile:
         for file in file_list:
             speaker_id = re.split("_", file)[0]
             if speaker_id in id_list: 
                 trans_file = trans_path + "/" + file
-                with open(trans_file, 'r') as inputfile: # only read file from transcript_filtered if the speaker is a match
+                with open(trans_file, 'r', encoding='utf-8') as inputfile: # only read file from transcript_filtered if the speaker is a match
                     for line in inputfile:
                         if dirn =="conversation" and dirt == "train":
                             if speaker_id[2:] in speaker_multiple:
@@ -233,7 +233,7 @@ def get_largest_frame(trans_list, trans_path):
     largest_frame = -sys.maxsize
     for file in trans_list:
         file_path = trans_path + "/" + file
-        with open(file_path, 'r') as inputfile:
+        with open(file_path, 'r', encoding='utf-8') as inputfile:
             for line in inputfile:
                 second_frame = int(re.split(" ", line)[2])
                 if second_frame > largest_frame:
@@ -259,7 +259,7 @@ def gen_utter_list(trans_list, trans_path, dirn):
     utter_ids = []
     for file in trans_list:
         file_path = trans_path + "/" + file
-        with open(file_path, 'r') as inputfile:
+        with open(file_path, 'r', encoding="utf-8") as inputfile:
             for line in inputfile:
                 speaker_id = re.split("_", line)[0]
                 if dirn == "conversation":
@@ -317,12 +317,12 @@ def write_corpus(trans_list, trans_path, train_ids, dirn):
     if not os.path.exists(temp_path):
         os.makedirs(temp_path) 
     corpus_path = parent_path + "/data/local/corpus.txt"
-    with open(corpus_path, 'a+') as outputfile:
+    with open(corpus_path, 'a+', encoding="utf-8") as outputfile:
         for file in trans_list:
             speaker_id = re.split("_",file)[0]
             if speaker_id in train_ids: # only take in training set transcript to over information leakage
                 trans_file = trans_path + "/" + file
-                with open(trans_file, 'r') as inputfile:
+                with open(trans_file, 'r', encoding="utf-8") as inputfile:
                     for line in inputfile:
                         counter += 1
                         outputfile.write(" ".join(re.split(" ", line)[3:]))
