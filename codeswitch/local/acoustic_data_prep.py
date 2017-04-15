@@ -337,7 +337,7 @@ def gen_segments(utter_ids, id_list, dirt, dirn):
     r"""create segments file under data/train or data/test
     for each line of this file has pattern <utterance_id><recording_id><segments_begin><segments_end>,
     where <segments_begin> and <segments_end> are in second
-    e.g.
+    e.g. NC01FBX_0101_0086300_0088370 NC01FBX_0101 86.3 88.37
     Returns
     -------
     None
