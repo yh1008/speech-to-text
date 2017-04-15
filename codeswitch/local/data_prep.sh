@@ -26,12 +26,6 @@ fi
 if [[ ! -e ./local/lang ]]; then
             mkdir local/lang
 fi
-echo ============================================================================
-echo            "                  Prepare Langauge Data                  "
-echo ============================================================================
-
-chmod 755 lang_data_prep.py
-./lang_data_prep.py
 
 echo ============================================================================
 echo            "                  Prepare Acoustic Data                  "
