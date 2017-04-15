@@ -385,7 +385,7 @@ file_clean_up(parent_path + "/data/train", "spk2gender")
 file_clean_up(parent_path + "/data/test", "spk2gender")
 
 generate_spk2gender(train_ids_i, "train", "interview")
-generate_spk2gender(train_ids_c, "test", "conversation")
+generate_spk2gender(train_ids_c, "train", "conversation")
 generate_spk2gender(test_ids_i, "test", "interview")
 generate_spk2gender(test_ids_c, "test", "conversation")
 print ("(☞ﾟ∀ﾟ)☞ finish generating spk2gender!\n")
