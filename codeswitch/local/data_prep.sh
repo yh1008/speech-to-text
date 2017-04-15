@@ -7,10 +7,9 @@ sudo apt-get install flac
 cp -r ../../wsj/s5/steps ../
 cp -r ../../wsj/s5/utils ../
 
-mkdir lang
-mkdir local
-cd local
-mkdir lang
+if [[ ! -e ./local ]]; then
+            mkdir local
+fi
 
 # Move audios to the correct directories. 
 chmod 755 audio_data_prep.py
