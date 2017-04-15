@@ -108,13 +108,14 @@ def load_audios_to_test(test_files_list,audio_path, dirn):
     if not os.path.exists(directory):
         os.makedirs(directory)        
     for file in test_files_list:
+        src = audio_path + "/" + file
         if dirn == "interview":
             speaker_id = re.split('_',file)[0]
         elif dirn =="conversation":
             speaker_id = re.split('_',file)[0][2:]
+            file = file[2:]
         if not os.path.exists(directory + "/" + speaker_id):
             os.makedirs(directory + "/" + speaker_id)
-        src = audio_path + "/" + file
         dst = directory + "/" + speaker_id + "/" + file
         copyfile(src, dst)
         counter += 1
