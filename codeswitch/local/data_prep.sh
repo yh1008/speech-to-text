@@ -26,6 +26,12 @@ fi
 if [[ ! -e ./local/lang ]]; then
             mkdir local/lang
 fi
+echo ============================================================================
+echo            "                  Prepare Langauge Data                  "
+echo ============================================================================
+
+chmod 755 lang_data_prep.py
+./lang_data_prep.py
 
 echo ============================================================================
 echo            "                  Prepare Acoustic Data                  "
@@ -53,7 +59,7 @@ utils/validate_data_dir.sh --no-feats data/test
 echo "Acoustic Data preparation succeeded"
 
 echo ============================================================================
-echo            "                  Prepare Language Data                 "
+echo            "            Prepare Additional Language Data                 "
 echo ============================================================================
 # Create words.txt (word symbol table) in data/train and data/test
 for x in train test; do 
