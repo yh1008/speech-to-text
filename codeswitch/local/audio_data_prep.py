@@ -206,7 +206,7 @@ def load_conversation_train(speaker_multiple):
     print ("loading finished")
     print ("loaded {} conversation recordings in to train set ".format(counter))
 
-print("\n(ง'̀-'́)ง you are executing audio_data_prep.py\n")
+print("\n you are executing audio_data_prep.py\n")
 
 parent_path = os.path.split(os.getcwd())[0]
 print ("the parent path is {}".format(parent_path))
@@ -243,6 +243,6 @@ speaker_multiple = get_speaker_multiple(train_ids_c)
 load_conversation_train(speaker_multiple)
 
 
-print("\n(ง'̀-'́)ง audio data is successfully prepared!")
+print("\n audio data is successfully prepared!")
 
 

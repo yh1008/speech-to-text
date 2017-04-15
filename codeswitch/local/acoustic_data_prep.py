@@ -357,7 +357,7 @@ def gen_segments(utter_ids, id_list, dirt, dirn):
                 outputfile.write("{} {} {} {}\n".format(utt, recording_id, segment_begin, segment_end))
     print ("{} of lines of {} is written to segments in data/{}".format(counter, dirn, dirt))
 
-print("\n(☞ﾟ∀ﾟ)☞  you are executing acoustic_data_prep.py\n")
+print("\n  you are executing acoustic_data_prep.py\n")
 
 parent_path = os.path.split(os.getcwd())[0]
 print ("parent path is {}".format(parent_path))
@@ -388,7 +388,7 @@ generate_spk2gender(train_ids_i, "train", "interview")
 generate_spk2gender(train_ids_c, "train", "conversation")
 generate_spk2gender(test_ids_i, "test", "interview")
 generate_spk2gender(test_ids_c, "test", "conversation")
-print ("(☞ﾟ∀ﾟ)☞ finish generating spk2gender!\n")
+print ("finish generating spk2gender!\n")
 
 # clean up existing wav.scp 
 file_clean_up(parent_path + "/data/train", "wav.scp")
@@ -399,7 +399,7 @@ generate_wavscp(dir_list_c, train_ids_c, "train", "conversation")
 generate_wavscp(dir_list_i, train_ids_i, "train", "interview")
 generate_wavscp(dir_list_c, test_ids_c, "test", "conversation")
 generate_wavscp(dir_list_i, test_ids_i, "test", "interview")
-print ("(☞ﾟ∀ﾟ)☞  finish generating wav.scp!\n")
+print ("finish generating wav.scp!\n")
 
 trans_path_i = parent_path + "/LDC2015S04/seame_d2/data/interview/transcript_filtered"
 trans_list_i = [f for f in os.listdir(trans_path_i) if f.endswith(".txt")]
@@ -416,7 +416,7 @@ write_text(trans_list_c, trans_path_c, train_ids_c, "train", "conversation")
 write_text(trans_list_i, trans_path_i, train_ids_i, "train", "interview")
 write_text(trans_list_c, trans_path_c, test_ids_c, "test", "conversation")
 write_text(trans_list_i, trans_path_i, test_ids_i, "test", "interview")
-print ("(☞ﾟ∀ﾟ)☞ finish creating text!\n")
+print ("finish creating text!\n")
 
 
 frame1 = get_largest_frame(trans_list_c, trans_path_c)
@@ -434,7 +434,7 @@ create_utt2spk(train_ids_c, utter_ids_c, "train", "conversation")
 create_utt2spk(train_ids_i, utter_ids_i, "train", "interview")
 create_utt2spk(test_ids_c, utter_ids_c, "test", "conversation")
 create_utt2spk(test_ids_i, utter_ids_i, "test", "interview")
-print ("(☞ﾟ∀ﾟ)☞ finish creating utt2spk file!\n")
+print ("finish creating utt2spk file!\n")
 
 # clean up any exisiting corpus.txt
 file_clean_up(parent_path+"/data/local", 'corpus.txt')
@@ -442,7 +442,7 @@ file_clean_up(parent_path+"/data/local", 'corpus.txt')
 
 write_corpus(trans_list_c, trans_path_c, train_ids_c, "conversation")
 write_corpus(trans_list_i, trans_path_i, train_ids_i, "interview")
-print("(☞ﾟ∀ﾟ)☞ finish creating data/lang/corpus.txt!\n")
+print(" finish creating data/lang/corpus.txt!\n")
 
 # clean up any exisiting segments
 file_clean_up(parent_path+"/data/train", 'segments')
@@ -452,6 +452,6 @@ gen_segments(utter_ids_c, train_ids_c, "train", "conversation")
 gen_segments(utter_ids_i, train_ids_i, "train", "interview")
 gen_segments(utter_ids_c, test_ids_c, "test", "conversation")
 gen_segments(utter_ids_i, test_ids_i, "test", "interview")
-print ("(☞ﾟ∀ﾟ)☞ finish creating segments file!\n")
+print ("finish creating segments file!\n")
 
-print ("\n(☞ﾟ∀ﾟ)☞ acoustic data is succesfully prepared!" )
+print ("\n acoustic data is succesfully prepared!" )
