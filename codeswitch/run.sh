@@ -14,12 +14,14 @@ echo            "                Acoustic Data Preperation                    "
 echo ============================================================================
 
 cd local
+chmod +x data_prep.sh
 ./data_prep.sh
 
 echo ============================================================================
 echo          "                MFCC Feature Extration                    "
 echo ============================================================================
 
+cd ../
 conf_dir=conf
 if [[ ! -e $conf_dir ]]; then
     mkdir $conf_dir
