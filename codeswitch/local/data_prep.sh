@@ -20,11 +20,14 @@ echo ===========================================================================
 echo            "                  Make Dir local/lang                  "
 echo ============================================================================
 
-if [[ ! -e ./local ]]; then
-            mkdir local
+if [[ ! -e ./data ]]; then
+            mkdir data
 fi
-if [[ ! -e ./local/lang ]]; then
-            mkdir local/lang
+if [[ ! -e ./data/local ]]; then
+            mkdir data/local
+fi
+if [[ ! -e ./data/local/lang ]]; then
+            mkdir data/local/lang
 fi
 
 echo ============================================================================
