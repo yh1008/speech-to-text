@@ -2,10 +2,23 @@
 
 # author: Emily Hua
 
+echo ============================================================================
+echo            "                  Installing flac                "
+echo ============================================================================
+
 sudo apt-get install flac
+
+echo ============================================================================
+echo            "                  Get steps and utils                 "
+echo ============================================================================
 
 cp -r ../../wsj/s5/steps ../
 cp -r ../../wsj/s5/utils ../
+
+
+echo ============================================================================
+echo            "                  Make Dir local/lang                  "
+echo ============================================================================
 
 if [[ ! -e ./local ]]; then
             mkdir local
@@ -14,7 +27,9 @@ if [[ ! -e ./local/lang ]]; then
             mkdir local/lang
 fi
 
-
+echo ============================================================================
+echo            "                  Prepare Acoustic Data                  "
+echo ============================================================================
 # Move audios to the correct directories. 
 chmod 755 audio_data_prep.py
 ./audio_data_prep.py
@@ -37,6 +52,9 @@ utils/validate_data_dir.sh --no-feats data/test
 
 echo "Acoustic Data preparation succeeded"
 
+echo ============================================================================
+echo            "                  Prepare Language Data                 "
+echo ============================================================================
 # Create words.txt (word symbol table) in data/train and data/test
 for x in train test; do 
   cut -d ' ' -f 2- data/$x/text | sed 's/ /\n/g' | sort -u > data/$x/words.txt
@@ -49,8 +67,11 @@ echo 'SIL' > data/local/lang/optional_silence.txt
 utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
 echo "Language Data preparation succeeded"
 
+echo ============================================================================
+echo            "                  Installing Srilm                  "
+echo ============================================================================
 # install srilm
-cp srilm-1.7.2.tar.gz ~/kaldi/tools/srilm.tgz
+cp srilm-1.7.2.tar.gz ../../tools/srilm.tgz
 cd ../../tools
 ./install_srilm.sh
 echo "Finish installing srilm"
