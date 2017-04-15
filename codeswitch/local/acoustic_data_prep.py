@@ -163,7 +163,7 @@ def generate_wavscp(dir_list, id_list, dirt, dirn):
                     outfile.write("{} flac -c -d -s {} |\n".format(recording_id, path))
                 elif dirn == "conversation" and speaker_id in id_list and dirt == "test":
                     counter += 1
-                    recording_id = re.split("\.", file)[0]
+                    recording_id = re.split("\.", file)[0][2:]
                     path = parent_path + "/audio/test/" + speaker_id[2:] + "/" + file[2:]
                     outfile.write("{} flac -c -d -s {} |\n".format(recording_id, path))
                     
@@ -195,15 +195,15 @@ def write_text(file_list, trans_path, id_list, dirt, dirn):
                 trans_file = trans_path + "/" + file
                 with open(trans_file, 'r') as inputfile: # only read file from transcript_filtered if the speaker is a match
                     for line in inputfile:
-                        if dirn =="conversation" and dirt=="train":
+                        if dirn =="conversation" and dirt == "train":
                             if speaker_id[2:] in speaker_multiple:
-                                pre = re.split("_",file)[0][:2]
-                                end = re.split("_",file)[1].split(".")[0]
+                                pre = re.split("_",file)[0][:2] # e.g. 04
+                                end = re.split("_",file)[1].split(".")[0] # e.g. 0201
                                 prefix = re.split("_",file)[0][2:] + '_' + pre + end  #make 04NC08FBY_0201 -> NC08FBY_040201
                             else:
                                 prefix = re.split(" ", line)[0][2:] #make prefix 02NC03FBX_0101 -> NC03FBX_0101
                             
-                        if dirn =="conversation":
+                        elif dirn =="conversation" and dirt == "test":
                             prefix = re.split(" ", line)[0][2:]
                         else:
                             prefix = re.split(" ", line)[0]
