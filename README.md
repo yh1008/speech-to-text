@@ -146,3 +146,23 @@ notice that fbanks don't work well with GMM as fbanks features are highly correl
 [why MFSC+GMM produced high WER-see Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)   
 [why DCT destroys locality-see post](http://dsp.stackexchange.com/questions/31917/why-discrete-cosine-transform-may-not-maintain-locality)
 
+### Run Kaldi on single GPU
+
+This doesn't require Sun GridEngine. 
+Simply download [CUDA toolkit] (https://developer.nvidia.com/cuda-downloads), install it with
+```
+sudo sh cuda_8.0.61_375.26_linux.run
+```
+and then go under kaldi/src execute
+```
+./configure
+```
+to check if it detects CUDA, you will also find `CUDA = true` in kaldi/src/kaldi.mk
+then recompile Kaldi with
+```
+make -j 8 # 8 for 8-core cpu
+make depend -j 8 # 8 for 8-core cpu
+```
+
+Noted that GMM-based training and decode is not supported by GPU, only `nnet` does.[source] (https://groups.google.com/forum/#!topic/kaldi-help/bLd2TvT4cDE)
+
