@@ -164,5 +164,5 @@ make -j 8 # 8 for 8-core cpu
 make depend -j 8 # 8 for 8-core cpu
 ```
 
-Noted that GMM-based training and decode is not supported by GPU, only `nnet` does.[source] (https://groups.google.com/forum/#!topic/kaldi-help/bLd2TvT4cDE)
+Noted that GMM-based training and decode is not supported by GPU, only `nnet` does. [source](https://groups.google.com/forum/#!topic/kaldi-help/bLd2TvT4cDE)
 
