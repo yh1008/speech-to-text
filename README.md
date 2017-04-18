@@ -166,3 +166,7 @@ make depend -j 8 # 8 for 8-core cpu
 
 Noted that GMM-based training and decode is not supported by GPU, only `nnet` does. [source](https://groups.google.com/forum/#!topic/kaldi-help/bLd2TvT4cDE)
 
+### Kaldi script to train nnet
+
+1. with online decoding:
+[local/online/run_nnet2_baseline.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/local/online/run_nnet2.sh)
