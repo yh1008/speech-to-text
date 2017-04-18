@@ -166,6 +166,13 @@ make depend -j 8 # 8 for 8-core cpu
 
 Noted that GMM-based training and decode is not supported by GPU, only `nnet` does. [source](https://groups.google.com/forum/#!topic/kaldi-help/bLd2TvT4cDE)
 
+**
+if you are using AWS g2.2xlarge, and launched the instance before 2017-04-18 (when this note is written), its NVIDIA may need a legacy 367.x driver, the default (latest) driver that comes with CUDA-8 `cuda_8.0.61_375.26_linux.run` will fail. I downloaded `NVIDIA-Linux-x86_64-367.18.run` from http://www.nvidia.com/Download/driverResults.aspx/102879/en-us. Install it with 
+```
+sudo sh NVIDIA-Linux-x86_64-367.18.run
+```
+and then when installing `cuda_8.0.61_375.26_linux.run`, it will prompt you choose whether to install NVIDIA driver 375, make sure you choose `no`. 
+
 ### Kaldi script to train nnet
 
 1. with online decoding:
