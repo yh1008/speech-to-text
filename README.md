@@ -172,15 +172,15 @@ To check the current version of the driver installed on the instance, type
 ```
 apt-cache search nvidia | grep -P '^nvidia-[0-9]+\s'
 ```
-to install a specific version from the list, type
+to install a version of your choice from the list, type
 ```
 sudo apt-get install nvidia-367
 ```
-You can also download a specifc version from web, for example `NVIDIA-Linux-x86_64-367.18.run` from http://www.nvidia.com/Download/driverResults.aspx/102879/en-us. Install it with 
+You can also download a specifc version from the web, for example [`NVIDIA-Linux-x86_64-367.18.run`](http://www.nvidia.com/Download/driverResults.aspx/102879/en-us). Install it with 
 ```
 sudo sh NVIDIA-Linux-x86_64-367.18.run
 ```
-and then when installing `cuda_8.0.61_375.26_linux.run`, it will prompt you choose whether to install NVIDIA driver 375, make sure you choose `no`. 
+and then when installing `cuda_8.0.61_375.26_linux.run`, it will ask you whether to install NVIDIA driver 375, make sure you choose `no`. 
 
 ### Kaldi script to train nnet
 
