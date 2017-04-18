@@ -13,12 +13,15 @@ echo ===========================================================================
 echo            "                Acoustic Data Preperation                    "
 echo ============================================================================
 
-./local/data_prep.sh
+cd local
+chmod +x data_prep.sh
+./data_prep.sh
 
 echo ============================================================================
 echo          "                MFCC Feature Extration                    "
 echo ============================================================================
 
+cd ../
 conf_dir=conf
 if [[ ! -e $conf_dir ]]; then
     mkdir $conf_dir
@@ -57,6 +60,7 @@ local=data/local
 mkdir $local/tmp
 lm_order=3
 ngram-count -order $lm_order -write-vocab $local/tmp/vocab-full.txt -wbdiscount -text $local/corpus.txt -lm $local/tmp/lm.arpa
+echo "created language model"
 
 echo ============================================================================
 echo            "               Make G.fst                   "
@@ -90,6 +94,7 @@ steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/l
 steps/train_lda_mllt.sh --cmd "$train_cmd" --splice-opts "--left-context=3 --right-context=3" 1000 11000 data/train data/lang exp/tri1_ali exp/tri2b
 utils/mkgraph.sh data/lang exp/tri2b exp/tri2b/graph 
 steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2b/decode
+steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri2b exp/tri2b_ali
 
 echo ============================================================================
 echo            "                  Run.sh finished!                   "
