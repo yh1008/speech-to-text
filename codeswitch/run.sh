@@ -92,7 +92,7 @@ echo ===========================================================================
 
 steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri1 exp/tri1_ali
 steps/train_lda_mllt.sh --cmd "$train_cmd" --splice-opts "--left-context=3 --right-context=3" 1000 11000 data/train data/lang exp/tri1_ali exp/tri2b
-#utils/mkgraph.sh data/lang exp/tri2b exp/tri2/graph 
+utils/mkgraph.sh data/lang exp/tri2b exp/tri2/graph 
 #steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2/decode
 steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri2 exp/tri2a_ali
 
