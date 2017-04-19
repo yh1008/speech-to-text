@@ -175,3 +175,9 @@ codeswitch/
 cd kaldi/egs/codeswitch/online_demo
 ./run.sh
 ```
+
+### Accuracy Recorder
+
+Case-inconsistant: WER 85% on tri2 LDA+MLLT  
+Case-consistant, 200+SIL: WER 66% on tri2 LDA+MLLT, WER 56-60% on DNN online/nnet2_baseline.sh
+

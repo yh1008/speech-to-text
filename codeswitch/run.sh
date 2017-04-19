@@ -74,7 +74,7 @@ echo            "               Monophone Training                   "
 echo ============================================================================
 
 steps/train_mono.sh --nj $mono_nj --cmd "$train_cmd" data/train data/lang exp/mono
-steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali
+steps/align_si.sh --nj $mono_nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali
 #utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph
 #steps/decode.sh --config conf/decode.conf --nj $mono_nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
 
@@ -92,9 +92,24 @@ echo ===========================================================================
 
 steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri1 exp/tri1_ali
 steps/train_lda_mllt.sh --cmd "$train_cmd" --splice-opts "--left-context=3 --right-context=3" 1000 11000 data/train data/lang exp/tri1_ali exp/tri2b
-utils/mkgraph.sh data/lang exp/tri2b exp/tri2b/graph 
-steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2b/decode
-steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri2b exp/tri2b_ali
+utils/mkgraph.sh data/lang exp/tri2b exp/tri2/graph 
+#steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2/decode
+steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri2 exp/tri2a_ali
+
+
+echo ============================================================================
+echo            "      Tri2b: Align LDA-MLLT triphones with FMLLR           "
+echo ============================================================================
+
+steps/align_fmllr.sh --nj 16 --cmd run.pl  data/train data/lang exp/tri2 exp/tri2b_ali
+
+echo ============================================================================
+echo            "      Tri3: SAT Aligned with FMLLR           "
+echo ============================================================================
+
+steps/train_sat.sh --cmd "$train_cmd" 1000 1100 data/train data/lang exp/tri2b_ali exp/tri3
+steps/align_fmllr.sh --cmd "$train_cmd" data/train data/lang exp/tri3 exp/tri3_ali
+utils/mkgraph.sh data/lang exp/tri3 exp/tri3/graph 
 
 echo ============================================================================
 echo            "                  Run.sh finished!                   "

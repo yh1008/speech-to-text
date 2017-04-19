@@ -20,15 +20,21 @@ echo ===========================================================================
 echo            "                  Make Dir local/lang                  "
 echo ============================================================================
 
-if [[ ! -e ./data ]]; then
+if [[ ! -e ../data ]]; then
             mkdir data
 fi
-if [[ ! -e ./data/local ]]; then
+if [[ ! -e ../data/local ]]; then
             mkdir data/local
 fi
-if [[ ! -e ./data/local/lang ]]; then
+if [[ ! -e ../data/local/lang ]]; then
             mkdir data/local/lang
 fi
+
+echo ============================================================================
+echo            "                  Prepare Language Data                 "
+echo ============================================================================
+
+python lang_data_prep.py
 
 echo ============================================================================
 echo            "                  Prepare Acoustic Data                  "
