@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
 import codecs
@@ -136,6 +137,47 @@ print("Finish loading thchs30 dictionary")
 print("Number of Chinese lexicon: " + str(len(d_th)))
 
 
+#### update lexicon ####
+
+english_part1 = ['DEATH','CITY','JACK','ROBO','RED','RED','SOCIO','PSYCHO','PSYCHO','PSYCHO','UN','UN','UN','UN',
+                'NET','TROUBLE','QUEENS','WIND','HAND','MAT','PSYCHO','TORCH','KUNG','NORTH','NORTH','TIME','EASY',
+                'TELE','CAR','POST','HOUSE','BLOG','GREY','GRAY','TIME','MOON','JOB','MAY','HOME','WEB','HYPER','BACK','BACK',
+                'SNOW','BIO','BIO','HOT','ROBO','DRAGON','DREAM','HERBAL','NET','ROAD','CUT','COURSE','WIND','PHOTO',
+                'SOFT','BLUE','FOUR','WAKE','GROUP','BACK','SKIN','PRE','SHORT','SHORT','MAL','MEDIA','UN','PHOTO','COURSE',
+                'SUN','CLUB','UN','CYBER','IN','GROUP','NON','NEWS','MEGA','COS','GOOGLE','DIFFERENT','INTER','EMOTION',
+                'HOUSE','IN','IN']
+english_part2 = ['NOTE','HALL','FRUIT','CUP','HILL','BOX','LINGUISTICS','LINGUISTIC','LINGUISTICS','MOTOR','INSTALL','INSTALLED','BLOCK','FRUITFUL',
+                'BOOK','SHOOT','BAY','SCREEN','PHONE','LAB','METRIC','LIGHT','FU','VILLE','POINT','FLOW','LINK',
+                'GRAPHIC','PARK','DOC','MATES','SPOT','SCALE','SCALE','SLOT','CAKE','STREET','BANK','PAGE','MAIL','TRADING','STAB','STABBING',
+                'BOARDING','INFORMATICS','PLASTIC','MAIL','SOCCER','BOAT','WEAVER','LIFE','BALL','MAP','LET','WORK','SURF','SHOOT',
+                'COPY','RAY','DAYS','BOARDING','MATE','STREET','FOOD','ORDER','LISTING','LISTED','FUNCTIONAL','CORP','COUNTABLE','SKIP','MATE',
+                'WAY','SNAP','SOLVE','JAVA','BOX','MATES','SPEECH','WRITING','WALL','PLAY',"'S","'S",'SPEECH','LESS',
+                'FLY','CHARGED','DEPTH']
+
+for a,b in zip(english_part1,english_part2):
+    d_cmu[(a+b)] = d_cmu[a]+" " +d_cmu[b]
+    #print(a+b+": "+d_cmu[(a+b)])
+
+print("Finish creating new words by concatenating existent words in English dictionary")
+print("Number of English lexicon now: " + str(len(d_cmu)))
+
+'''
+chinese_part1 = ['每个','小','早','上','讲','有','整','名','进','进','每','这','那','就','之','不','算','有','去','做','就',
+                '读','明','开','第','在','有','有','打','三','毕','不','过','整','八','比如','这','浪','女','过','前','靠',
+                '对','不','小','是','要']
+chinese_part2 = ['人','时','上','面','话','没有','个','字','来','去','次','边','边','可以','前','一样','是','什么','了','工','在',
+                '书','年','心','一个','那边','一点','很多','算','年','业','可以','了','天','点','说','样子','费','生','来','面','近',
+                '不对','可能','时候','不是','不要']
+
+for a,b in zip(chinese_part1,chinese_part2):
+    d_th[a+b] = d_th[a]+" " +d_th[b]
+    #print(a+b+": "+d_th[a+b])
+
+print("Finish creating new words by concatenating existent words in Chinese dictionary")
+print("Number of English lexicon now: " + str(len(d_th)))
+'''
+
+
 #### waste word collection ####
 # to get the full word list
 words = []
@@ -191,21 +233,29 @@ print("Finish creating waste word dictionary")
 print("Number of waste word type: " + str(len(set(words_waste))))
 
 
-#### misspelling ####
+#### correct misspelling ####
 
 mis_ori = ['ADMINISTATOR','AVALABLE','BELIEVEABLE','BULETIN','COMPLUSORY','CONTINUOS','DISSAPOINT','EMBARASSING','EXHIBITON','FULFIL','INTENATIONAL','INSTRUNMENT','SINAGPORE','STEALL','SYCHOLOGY','YOGHURT','GITAR','NEWTWORK','DONT','UNIVERSITI','BUBLE','ACTIVTIES','INSTITUITION','LAB.','WHEAREAS','PERMANET','ORIENTAION','EFFICICIENT','MULITPLED','POLLUTATNTS','THAILLAND','CRYSTALIZED','TOLIET','ENGINEEERING','EXPEIMENTAL','CONCIOUSLY',
-           'PRACTISING','COTENT','DORMITRIES','OCCATION','AUTHORISATION','PROGRAMMES','CINDERALLA','GOVERNENMENT','HABOUR',
+           'PRACTISING','COTENT','DORMITRIES','OCCATION','AUTHORISATION','PROGRAMMES','CINDERALLA','GOVERNENMENT','HABOUR','ORIENATION','NEWPAPER','RESEULT','DEPAND','EQUIMENT','VENTERAN','DEGREDATION','POSTDOC.','COLLEGUE','FAS','STOLVE','LEAPARD','NEWSCASTLE','FEND',
            'AUTHORISE','CATEGORISE','CENTRALISED','DEVELOPE','FLAVOURS','FLAVOURFUL','FINALISED','SUBSIDISE','ORGANISING','ORGANISES','ORGANISATIONAL','SPECIALISATION','SPECIALISATIONS','SPECIALISED','UTILISE','DEMORALISED','COLOURFUL','SOCIALISE','MEMORISE','PRIORITISE','ANALYSE','STANDARDISED','DEVELOPEMENT','EAZY','FLAVOURED','OPTIMISE','CONVENTIONALISED','STOREYS','HONOURS','ORGANISE','HOSPITALISED','CRITICISE', 'SPECIALISE',
+           'EMPHASISE',
+           'VOCALISE','ORGANICE','INDOEUROPEAN',
            '1','2','3','4']
 
-mis_fix = ['ADMINISTRATOR','AVAILABLE','BELIEVABLE','BULLETIN','COMPULSORY','CONTINUOUS','DISAPPOINT','EMBARRASING','EXHIBITION','FULFILL','INTERNATIONAL','INSTRUMENT','SINGAPORE','STEAL','PSYCHOLOGY','YOGURT','GUITAR','NETWORK',"DON'T",'UNIVERSITY','BUBBLE','ACTIVITIES','INSTITUTION','LAB','WHEREAS','PERMANENT','ORIENTATION','EFFICIENT','MULTIPLIED','POLLUTANTS','THAILAND','CRYSTALLIZED','TOILET','ENGINEERING','EXPERIMENTAL','CONSCIOUSLY',
-           'PRACTICING','CONTENT','DORMITORIES','OCCASION','AUTHORIZATION','PROGRAMS','CINDERELLA','GOVERNMENT','HARBOR',
+mis_fix = ['ADMINISTRATOR','AVAILABLE','BELIEVABLE','BULLETIN','COMPULSORY','CONTINUOUS','DISAPPOINT','EMBARRASSING','EXHIBITION','FULFILL','INTERNATIONAL','INSTRUMENT','SINGAPORE','STEAL','PSYCHOLOGY','YOGURT','GUITAR','NETWORK',"DON'T",'UNIVERSITY','BUBBLE','ACTIVITIES','INSTITUTION','LAB','WHEREAS','PERMANENT','ORIENTATION','EFFICIENT','MULTIPLIED','POLLUTANTS','THAILAND','CRYSTALLIZED','TOILET','ENGINEERING','EXPERIMENTAL','CONSCIOUSLY',
+           'PRACTICING','CONTENT','DORMITORIES','OCCASION','AUTHORIZATION','PROGRAMS','CINDERELLA','GOVERNMENT','HARBOR','ORIENTATION','NEWSPAPER','RESULT','DEPEND','EQUIPMENT','VETERAN','DEGRADATION','POSTDOC','COLLEAGUE','GAS','STOVE','LEOPARD','NEWCASTLE','FUND',
            'AUTHORIZE','CATEGORIZE','CENTRALIZED','DEVELOP','FLAVORS','FLAVORFUL','FINALIZED','SUBSIDIZE','ORGANIZING','ORGANIZES','ORGANIZATIONAL','SPECIALIZATION','SPECIALIZATIONS','SPECIALIZED','UTILIZE','DEMORALIZED','COLORFUL','SOCIALIZE','MEMORIZE','PRIORITIZE','ANALYZE','STANDARDIZED','DEVELOPMENT','EASY','FLAVORED','OPTIMIZE','CONVENTIONALIZED','STORIES','HONORS','ORGANIZE','HOSPITALIZED','CRITICIZE', 'SPECIALIZE',
+           'EMPHASIZE',
+           'VOCALIZE','ORGANIZE','INDO-EUROPEAN',
            'one','two','three','four']
 
 d_mis2fix = {k:v for k,v in zip(mis_ori,mis_fix)}
 
 
+#### to collect SIL words without [] or () ####
+
+waste_detect_1 = ['PPB','PPC','PPL','PPO']
+waste_detect_2 = ['ER','LOR','ORH','ORK','ORR','AR','ARR','EH','EM','EMM','ERR','ERM','ERRR','HOR','HORR','LAH','LA','LORH','LEH','MEH']
 
 
 #### fix, filter, output text transcript ####
@@ -221,6 +271,8 @@ text_unparse = []
 time_all = 0
 time_train = 0
 time_test = 0
+
+
 
 for dir in dirs:
     if "conversation" in dir:
@@ -246,6 +298,8 @@ for dir in dirs:
                     # replace waste words with SILx; space after ] or before [ to avoid situations like co[mm]on or co[mm]unication
                     words_waste_cur = set(re.findall(r'''(\[.+?\])''',line) + re.findall(r'''(\(.+?\))''',line))
                     for element in words_waste_cur:
+                        if element in ['[ppb]','[ppl]','[ppc]','[ppo]']:
+                            element.replace('[','(').replace(']',')')
                         try:
                             sentence_origin = sentence_origin.replace(element,' ' + d_waste2idx[element] + ' ')
                         except:
@@ -278,8 +332,32 @@ for dir in dirs:
                     # deal with x.y. like u.s.
                     # deal with [ chinese char ] like [ 啊 ]
                     sentence_origin = sentence_origin.replace('#',' ').replace('=',' ').replace('%',' ').replace('"',' ').replace(' .',' ').replace('.','. ').replace('[',' ').replace(']',' ')
-                                            
-                
+                     
+                    # correct misspelling phrases
+                    sentence_origin = sentence_origin.replace(' abit ',' a bit ').replace('\tabit',' a bit ')
+                    sentence_origin = sentence_origin.replace(' aboutforensic ',' about forensic ')
+                    sentence_origin = sentence_origin.replace(' somemore ',' some more ')
+                    sentence_origin = sentence_origin.replace('orang-utan',' orangutan ')
+                    '''
+                    sentence_origin = sentence_origin.replace('它是','它 是')
+                    sentence_origin = sentence_origin.replace('你是','你 是')
+                    sentence_origin = sentence_origin.replace('他是','他 是')
+                    sentence_origin = sentence_origin.replace('她是','她 是')
+                    sentence_origin = sentence_origin.replace('我是','我 是')
+                    sentence_origin = sentence_origin.replace('这是','这 是')
+                    sentence_origin = sentence_origin.replace('我在','我 在')
+                    sentence_origin = sentence_origin.replace('他在','他 在')
+                    sentence_origin = sentence_origin.replace('我们是','我们 是')
+                    sentence_origin = sentence_origin.replace('他们是','他们 是')
+                    sentence_origin = sentence_origin.replace('的时候','的 时候')
+                    sentence_origin = sentence_origin.replace('我觉得','我 觉得')
+                    sentence_origin = sentence_origin.replace('是一个','是 一个')
+                    sentence_origin = sentence_origin.replace('是什么','是 什么')
+                    sentence_origin = sentence_origin.replace('也没有',' 也 没有')
+                    '''
+                    
+                    # remove pounctuation
+                    sentence_origin = sentence_origin.replace('?',' ').replace(')',' ').replace(' - ',' ')
 
                     
                     # trim again incase the substitution brings in space
@@ -322,7 +400,33 @@ for dir in dirs:
                                     else: # if only has one chinese character
                                         words_cur_fix += [word_cur]                                            
                             else: # if is not chinese word
-                                words_cur_fix += [word_cur]
+                                if '-' in word_cur:
+                                    try:
+                                        d_cmu[word_cur]
+                                        words_cur_fix += [word_cur]
+                                    except:
+                                        word_cur = word_cur.split('-')                                    
+                                        for i in range(len(word_cur)):
+                                            try:
+                                                word_cur[i] = d_mis2fix[word_cur[i]]
+                                            except:
+                                                word_cur[i] = word_cur[i]                                    
+                                        words_cur_fix += word_cur
+                                else:
+                                    # to collect SIL phones without [] or ()
+                                    if word_cur in waste_detect_1:
+                                        word_cur = 'SIL1'
+                                    elif word_cur in waste_detect_2:
+                                        word_cur = 'SIL2'
+                                        
+                                    else:
+                                        try:
+                                            word_cur = d_mis2fix[word_cur]
+                                        except:
+                                            word_cur = word_cur                               
+                                 
+                                    words_cur_fix += [word_cur]
+                        
                         
                         if len(words_cur_fix) > 0: # to avoid transcripts without even a single word... yes they exsit:(                 
                             sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur_fix)
@@ -380,9 +484,11 @@ print("Size of test set: "+str(time_test/1000/60/60)+" hours")
 # output silence_phones.txt
 with codecs.open(parent_path+dir_lang+'silence_phones.txt', 'w', 'utf-8') as f:
     f.write('SIL\n')
-    for k,v in d_waste2idx.items():
-        f.write(v + "\n")
-f.close()
+    #for k,v in d_waste2idx.items():
+    #    f.write(v + "\n")
+    f.write('SIL1\n')
+    f.write('SIL2\n')
+    f.close()
 print("Finish writing silence_phones.txt")
 
 # nonsilence phones can be generated using shell script code
@@ -439,10 +545,12 @@ with codecs.open(parent_path+dir_lang+'lexicon.txt', 'w', 'utf-8') as f:
         f.write(lexicon)
     #for word in words_oov:
     #    f.write(str(word) + " " + "<oov>\n")
-    for k,v in d_waste2idx.items():
-        f.write(v + " sil" + "\n")
+    #for k,v in d_waste2idx.items():
+    #    f.write(v + " sil" + "\n")
+    f.write('SIL1 sil\n')
+    f.write('SIL2 sil\n')
         
-f.close()
+    f.close()
 
 print("Finish writing lexicon.txt")
 print("**********Done!**********")
