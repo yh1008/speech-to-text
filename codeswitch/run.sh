@@ -74,7 +74,7 @@ echo            "               Monophone Training                   "
 echo ============================================================================
 
 steps/train_mono.sh --nj $mono_nj --cmd "$train_cmd" data/train data/lang exp/mono
-steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali
+steps/align_si.sh --nj $mono_nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali
 #utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph
 #steps/decode.sh --config conf/decode.conf --nj $mono_nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
 
