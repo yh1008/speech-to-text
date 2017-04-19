@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-#!/usr/bin/env python3
 
 import codecs
 import re
@@ -26,7 +25,7 @@ dir_dicsource = ''
 
 #### functions ####
 # modified from https://segmentfault.com/q/1010000000732038
-# to detect english character and hyphen and ' ONLY
+# to detect english character and hyphen and ' and . ONLY
 def isAlphahyphen(word):
     try:
         float(word)
@@ -36,9 +35,11 @@ def isAlphahyphen(word):
             return True
         elif word == "'":
             return True
+        elif word == "'":
+            return True   
         else:
             try:
-                return word.replace('-','').replace("'",'').encode('ascii').isalnum()
+                return word.replace('-','').replace("'",'').replace('.','').encode('ascii').isalnum()
             except UnicodeEncodeError:
                 if word == '-':
                     return True
@@ -179,12 +180,32 @@ d_waste2idx = dict()
 idx = -1
 for k in d_waste.keys():
     idx += 1
-    d_waste2idx[k] = 'SIL' + str(idx)
+    if k[0] == '(':
+        d_waste2idx[k] = 'SIL1'
+    elif k[0] == '[':
+        d_waste2idx[k] = 'SIL2'
 
 d_idx2waste = {v:k for k,v in d_waste2idx.items()}
 
 print("Finish creating waste word dictionary")
 print("Number of waste word type: " + str(len(set(words_waste))))
+
+
+#### misspelling ####
+
+mis_ori = ['ADMINISTATOR','AVALABLE','BELIEVEABLE','BULETIN','COMPLUSORY','CONTINUOS','DISSAPOINT','EMBARASSING','EXHIBITON','FULFIL','INTENATIONAL','INSTRUNMENT','SINAGPORE','STEALL','SYCHOLOGY','YOGHURT','GITAR','NEWTWORK','DONT','UNIVERSITI','BUBLE','ACTIVTIES','INSTITUITION','LAB.','WHEAREAS','PERMANET','ORIENTAION','EFFICICIENT','MULITPLED','POLLUTATNTS','THAILLAND','CRYSTALIZED','TOLIET','ENGINEEERING','EXPEIMENTAL','CONCIOUSLY',
+           'PRACTISING','COTENT','DORMITRIES','OCCATION','AUTHORISATION','PROGRAMMES','CINDERALLA','GOVERNENMENT','HABOUR',
+           'AUTHORISE','CATEGORISE','CENTRALISED','DEVELOPE','FLAVOURS','FLAVOURFUL','FINALISED','SUBSIDISE','ORGANISING','ORGANISES','ORGANISATIONAL','SPECIALISATION','SPECIALISATIONS','SPECIALISED','UTILISE','DEMORALISED','COLOURFUL','SOCIALISE','MEMORISE','PRIORITISE','ANALYSE','STANDARDISED','DEVELOPEMENT','EAZY','FLAVOURED','OPTIMISE','CONVENTIONALISED','STOREYS','HONOURS','ORGANISE','HOSPITALISED','CRITICISE', 'SPECIALISE',
+           '1','2','3','4']
+
+mis_fix = ['ADMINISTRATOR','AVAILABLE','BELIEVABLE','BULLETIN','COMPULSORY','CONTINUOUS','DISAPPOINT','EMBARRASING','EXHIBITION','FULFILL','INTERNATIONAL','INSTRUMENT','SINGAPORE','STEAL','PSYCHOLOGY','YOGURT','GUITAR','NETWORK',"DON'T",'UNIVERSITY','BUBBLE','ACTIVITIES','INSTITUTION','LAB','WHEREAS','PERMANENT','ORIENTATION','EFFICIENT','MULTIPLIED','POLLUTANTS','THAILAND','CRYSTALLIZED','TOILET','ENGINEERING','EXPERIMENTAL','CONSCIOUSLY',
+           'PRACTICING','CONTENT','DORMITORIES','OCCASION','AUTHORIZATION','PROGRAMS','CINDERELLA','GOVERNMENT','HARBOR',
+           'AUTHORIZE','CATEGORIZE','CENTRALIZED','DEVELOP','FLAVORS','FLAVORFUL','FINALIZED','SUBSIDIZE','ORGANIZING','ORGANIZES','ORGANIZATIONAL','SPECIALIZATION','SPECIALIZATIONS','SPECIALIZED','UTILIZE','DEMORALIZED','COLORFUL','SOCIALIZE','MEMORIZE','PRIORITIZE','ANALYZE','STANDARDIZED','DEVELOPMENT','EASY','FLAVORED','OPTIMIZE','CONVENTIONALIZED','STORIES','HONORS','ORGANIZE','HOSPITALIZED','CRITICIZE', 'SPECIALIZE',
+           'one','two','three','four']
+
+d_mis2fix = {k:v for k,v in zip(mis_ori,mis_fix)}
+
+
 
 
 #### fix, filter, output text transcript ####
@@ -215,6 +236,7 @@ for dir in dirs:
 
                 for line in f.readlines():
                     sentence_origin = line.strip()
+                    sentence_origin += " " # to better detect and fix the last word
                 
                     # deal with situations like 'co[mm]on' and 'co[mm]unication'
                     words_mm_cur = set(re.findall(r'''o(\[.+?\])''',line))
@@ -229,15 +251,6 @@ for dir in dirs:
                         except:
                             continue
 
-                    # get rid of "#"
-                    # get rid of "="
-                    # deal with %word% like %chelsia%
-                    # deal with "word" like "william"
-                    # deal with pronunciation of single letter, for which the trascript is like P. S., I. T., etc.
-                    # deal with [ chinese char ] like [ 啊 ]
-                    sentence_origin = sentence_origin.replace('#',' ').replace('=',' ').replace('%',' ').replace('"',' ').replace('.',' ').replace('[',' ').replace(']',' ')
-                                            
-                
                     # Q2B
                     sentence_chars = list(sentence_origin)
                     for char_idx in range(len(sentence_chars)):
@@ -254,7 +267,20 @@ for dir in dirs:
                             words_fix += word_cur
                         else:
                             words_fix += [word_cur]                
-                    sentence_origin = " ".join(info_cur+words_fix)
+                    sentence_origin = " ".join(info_cur+words_fix)        
+                            
+                    # get rid of "#"
+                    # get rid of "="
+                    # deal with %word% like %chelsia%
+                    # deal with "word" like "william"
+                    # cancel: deal with pronunciation of single letter, for which the trascript is like P. S., I. T., etc. --> this is how cmu dictionary documents them
+                    # deal with a single period ' .'
+                    # deal with x.y. like u.s.
+                    # deal with [ chinese char ] like [ 啊 ]
+                    sentence_origin = sentence_origin.replace('#',' ').replace('=',' ').replace('%',' ').replace('"',' ').replace(' .',' ').replace('.','. ').replace('[',' ').replace(']',' ')
+                                            
+                
+
                     
                     # trim again incase the substitution brings in space
                     sentence_origin = sentence_origin.strip()
