@@ -184,8 +184,8 @@ and then when installing `cuda_8.0.61_375.26_linux.run`, it will ask you whether
 
 ### Install tensorflow-gpu 
 Required:
-1. [install CUDA toolkit](https://developer.nvidia.com/cuda-downloads) 
-2. [install cuDNN](https://developer.nvidia.com/cudnn) download v5, as of 04-18-2017, Tensorflow performs the best with cuDNN 5.x
+1. [install CUDA toolkit](https://developer.nvidia.com/cuda-downloads) 8.0 as of 04-18-2017   
+2. [install cuDNN](https://developer.nvidia.com/cudnn) download v5, as of 04-18-2017, Tensorflow performs the best with cuDNN 5.x     
 Follow commands carefully from the [Tensorflow website](https://www.tensorflow.org/versions/r0.11/get_started/os_setup#optional_install_cuda_gpus_on_linux).
 After intallation, you can test if tensorflow can detect your gpu by typing the following: 
 ```
