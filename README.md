@@ -182,6 +182,34 @@ sudo sh NVIDIA-Linux-x86_64-367.18.run
 ```
 and then when installing `cuda_8.0.61_375.26_linux.run`, it will ask you whether to install NVIDIA driver 375, make sure you choose `no`. 
 
+### Install tensorflow-gpu 
+Required:
+1. [install CUDA toolkit](https://developer.nvidia.com/cuda-downloads) 
+2. [install cuDNN](https://developer.nvidia.com/cudnn) download v5, as of 04-18-2017, Tensorflow performs the best with cuDNN 5.x
+Follow commands carefully from the [Tensorflow website](https://www.tensorflow.org/versions/r0.11/get_started/os_setup#optional_install_cuda_gpus_on_linux).
+After intallation, you can test if the tensorflow can detect your gpu by typing
+```
+# makes sure you are out of the tensorflow git repo
+python
+>>> import tensorflow as tf
+>>> sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+```
+A working tensorflow will output:
+```
+```
+1. During testing, if you run into error like:
+```
+I tensorflow/stream_executor/dso_loader.cc:126] Couldn't open CUDA library libcudnn.so.5. LD_LIBRARY_PATH: /usr/local/cuda/lib64
+I tensorflow/stream_executor/cuda/cuda_dnn.cc:3517] Unable to load cuDNN DSO
+```, from the writer's experience, you didn't set the right `LD_LIBRARY_PATH` in the `~/.profile` file. You need to examine where is the `libcudnn.so.5` and move it to the desired location, most likely it will be `/usr/local/cuda`. Also makes sure you `source ~/.profile` to activate the change, after you modify the file. 
+
+2. If you are testing it in a python shell, and you met the following error:
+```
+ImportError: libcudart.so.8.0: cannot open shared object file: No such file or directory
+```
+very likely you are in the actual `tensorflow` git repo. [source](https://github.com/tensorflow/tensorflow/issues/8107), makes sure you jump out of it before testing. 
+
+
 ### Kaldi script to train nnet
 
 1. with online decoding:
