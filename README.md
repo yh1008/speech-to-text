@@ -187,7 +187,7 @@ Required:
 1. [install CUDA toolkit](https://developer.nvidia.com/cuda-downloads) 
 2. [install cuDNN](https://developer.nvidia.com/cudnn) download v5, as of 04-18-2017, Tensorflow performs the best with cuDNN 5.x
 Follow commands carefully from the [Tensorflow website](https://www.tensorflow.org/versions/r0.11/get_started/os_setup#optional_install_cuda_gpus_on_linux).
-After intallation, you can test if the tensorflow can detect your gpu by typing
+After intallation, you can test if tensorflow can detect your gpu by typing the following: 
 ```
 # makes sure you are out of the tensorflow git repo
 python
@@ -196,18 +196,33 @@ python
 ```
 A working tensorflow will output:
 ```
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:00:04.0
+Total memory: 11.17GiB
+Free memory: 11.11GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0)
+Device mapping:
+/job:localhost/replica:0/task:0/gpu:0 -> device: 0, name: Tesla K80, pci bus id: 0000:00:04.0
+I tensorflow/core/common_runtime/direct_session.cc:257] Device mapping:
+/job:localhost/replica:0/task:0/gpu:0 -> device: 0, name: Tesla K80, pci bus id: 0000:00:04.0
+
 ```
 1. During testing, if you run into error like:
 ```
 I tensorflow/stream_executor/dso_loader.cc:126] Couldn't open CUDA library libcudnn.so.5. LD_LIBRARY_PATH: /usr/local/cuda/lib64
 I tensorflow/stream_executor/cuda/cuda_dnn.cc:3517] Unable to load cuDNN DSO
-```, from the writer's experience, you didn't set the right `LD_LIBRARY_PATH` in the `~/.profile` file. You need to examine where is the `libcudnn.so.5` and move it to the desired location, most likely it will be `/usr/local/cuda`. Also makes sure you `source ~/.profile` to activate the change, after you modify the file. 
+```
+from the writer's experience, you didn't set the right `LD_LIBRARY_PATH` in the `~/.profile` file. You need to examine where is `libcudnn.so.5` located and move it to the desired location, most likely it will be `/usr/local/cuda`. Also make sure you type `source ~/.profile` to activate the change, after you modify the file.    
 
 2. If you are testing it in a python shell, and you met the following error:
 ```
 ImportError: libcudart.so.8.0: cannot open shared object file: No such file or directory
 ```
-very likely you are in the actual `tensorflow` git repo. [source](https://github.com/tensorflow/tensorflow/issues/8107), makes sure you jump out of it before testing. 
+very likely you are in the actual `tensorflow` git repo. [source](https://github.com/tensorflow/tensorflow/issues/8107), make sure you jump out of it before testing. 
 
 
 ### Kaldi script to train nnet
