@@ -77,7 +77,7 @@ echo ===========================================================================
 steps/train_mono.sh --nj $mono_nj --cmd "$train_cmd" data/train data/lang exp/mono
 steps/align_si.sh --nj $mono_nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali
 #utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph
-#steps/decode.sh --config conf/decode.conf --nj $mono_nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
+#steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
 
 echo ============================================================================
 echo            "               First Triphone Pass Training                   "
@@ -85,7 +85,7 @@ echo ===========================================================================
 
 steps/train_deltas.sh --cmd "$train_cmd" 1000 11000 data/train data/lang exp/mono_ali exp/tri1
 utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph #decoding
-#steps/decode.sh --config conf/decode.conf --nj $tri_nj --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
+#steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
 
 echo ============================================================================
 echo            "               Tri2: LDA+MLLT                  "
@@ -94,7 +94,7 @@ echo ===========================================================================
 steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri1 exp/tri1_ali
 steps/train_lda_mllt.sh --cmd "$train_cmd" --splice-opts "--left-context=3 --right-context=3" 1000 11000 data/train data/lang exp/tri1_ali exp/tri2
 utils/mkgraph.sh data/lang exp/tri2 exp/tri2/graph 
-#steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri2b/graph data/test exp/tri2/decode
+#steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri2/graph data/test exp/tri2/decode
 steps/align_si.sh --nj 16 --cmd "$train_cmd" --use-graphs true data/train data/lang exp/tri2 exp/tri2a_ali #simple algin
 
 
@@ -111,6 +111,7 @@ echo ===========================================================================
 steps/train_sat.sh --cmd "$train_cmd" 1000 1100 data/train data/lang exp/tri2b_ali exp/tri3
 steps/align_fmllr.sh --cmd "$train_cmd" data/train data/lang exp/tri3 exp/tri3_ali
 utils/mkgraph.sh data/lang exp/tri3 exp/tri3/graph 
+#steps/decode.sh --config conf/decode.conf --nj $decode_nj --cmd "$decode_cmd" exp/tri3/graph data/test exp/tri3/decode
 
 echo ============================================================================
 echo            "                  Run.sh finished!                   "
