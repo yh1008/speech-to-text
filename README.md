@@ -13,6 +13,10 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [A First Speech Recognition System For Mandarin-English Code-switch Conversational Speech](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6289015)
 - [Speech Recognition on English-Mandarin Code-Switching Data using Factored Language Models](http://www.csl.uni-bremen.de/cms/images/documents/publications/DA_JanGebhardt.pdf)
 
+### Feature Improvement related Paper:
+- [Improved feature processing for Deep Neural Networks](http://www.danielpovey.com/files/2013_interspeech_nnet_lda.pdf)  
+
+
 ### Interesting Python Kaldi Wrapper to be examined:
 - [Pykaldi](https://github.com/UFAL-DSG/pykaldi/tree/master/pykaldi) 
 - [Alex Dialog System Framwork](http://alex.readthedocs.io/en/master/_man_rst/alex.tools.kaldi.README.html)  
