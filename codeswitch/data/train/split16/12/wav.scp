@@ -1,0 +1,14 @@
+NI43FBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI43FBP/NI43FBP_0101.flac |
+NI46FBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI46FBQ/NI46FBQ_0101.flac |
+NI46FBQ_0201 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI46FBQ/NI46FBQ_0201.flac |
+NI47MBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI47MBP/NI47MBP_0101.flac |
+NI48FBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI48FBQ/NI48FBQ_0101.flac |
+NI49MBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI49MBP/NI49MBP_0101.flac |
+NI50FBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI50FBQ/NI50FBQ_0101.flac |
+NI51MBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI51MBP/NI51MBP_0101.flac |
+NI52MBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI52MBQ/NI52MBQ_0101.flac |
+NI52MBQ_0201 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI52MBQ/NI52MBQ_0201.flac |
+NI53FBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI53FBP/NI53FBP_0101.flac |
+NI54FBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI54FBQ/NI54FBQ_0101.flac |
+NI56MBX_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI56MBX/NI56MBX_0101.flac |
+NI57FBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI57FBQ/NI57FBQ_0101.flac |

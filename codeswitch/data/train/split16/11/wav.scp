@@ -1,0 +1,6 @@
+NI35FBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI35FBP/NI35FBP_0101.flac |
+NI36MBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI36MBQ/NI36MBQ_0101.flac |
+NI37MBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI37MBP/NI37MBP_0101.flac |
+NI39FBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI39FBP/NI39FBP_0101.flac |
+NI40FBQ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI40FBQ/NI40FBQ_0101.flac |
+NI41MBP_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/train/NI41MBP/NI41MBP_0101.flac |

@@ -1,0 +1,12 @@
+NI43FBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:24214
+NI46FBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:24461
+NI47MBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:24708
+NI48FBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:24955
+NI49MBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:25202
+NI50FBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:25449
+NI51MBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:25696
+NI52MBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:25943
+NI53FBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:26190
+NI54FBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:26437
+NI56MBX /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:26684
+NI57FBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_train.ark:26931

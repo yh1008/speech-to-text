@@ -1,0 +1,4 @@
+UI29FAZ_0101 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/test/UI29FAZ/UI29FAZ_0101.flac |
+UI29FAZ_0102 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/test/UI29FAZ/UI29FAZ_0102.flac |
+UI29FAZ_0103 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/test/UI29FAZ/UI29FAZ_0103.flac |
+UI29FAZ_0104 flac -c -d -s /home/yh2901/kaldi/egs/codeswitch/audio/test/UI29FAZ/UI29FAZ_0104.flac |
