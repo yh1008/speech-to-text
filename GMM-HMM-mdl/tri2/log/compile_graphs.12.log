@@ -1,0 +1,29 @@
+# compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri2/tree exp/tri2/1.mdl data/lang/L.fst "ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/12/text |" "ark:|gzip -c >exp/tri2/fsts.12.gz" 
+# Started at Sat Apr 22 00:11:04 UTC 2017
+#
+compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri2/tree exp/tri2/1.mdl data/lang/L.fst 'ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/12/text |' 'ark:|gzip -c >exp/tri2/fsts.12.gz' 
+sym2int.pl: replacing FRESHIES with 1
+sym2int.pl: replacing 玩 with 1
+sym2int.pl: replacing 懂 with 1
+sym2int.pl: replacing 懂 with 1
+sym2int.pl: replacing 百 with 1
+sym2int.pl: replacing 付 with 1
+sym2int.pl: replacing SENTOSA with 1
+sym2int.pl: replacing 玩 with 1
+sym2int.pl: replacing SENTOSA with 1
+sym2int.pl: replacing 玩 with 1
+sym2int.pl: replacing 百 with 1
+sym2int.pl: replacing 玩 with 1
+sym2int.pl: replacing 玩 with 1
+sym2int.pl: replacing 候 with 1
+sym2int.pl: replacing 蛮 with 1
+sym2int.pl: replacing 蛮 with 1
+sym2int.pl: replacing WANTON-MEE with 1
+sym2int.pl: replacing ROTI-PRATA with 1
+sym2int.pl: replacing 鸡 with 1
+sym2int.pl: replacing 懒 with 1
+sym2int.pl: not warning for OOVs any more times
+** Replaced 1408 instances of OOVs with 1
+LOG (compile-train-graphs[5.1.60~1-b2d5d]:main():compile-train-graphs.cc:147) compile-train-graphs: succeeded for 3171 graphs, failed for 0
+# Accounting: time=52 threads=1
+# Ended (code 0) at Sat Apr 22 00:11:56 UTC 2017, elapsed time 52 seconds

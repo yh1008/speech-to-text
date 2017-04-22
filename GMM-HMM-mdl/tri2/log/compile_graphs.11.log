@@ -1,0 +1,29 @@
+# compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri2/tree exp/tri2/1.mdl data/lang/L.fst "ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/11/text |" "ark:|gzip -c >exp/tri2/fsts.11.gz" 
+# Started at Sat Apr 22 00:11:04 UTC 2017
+#
+compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri2/tree exp/tri2/1.mdl data/lang/L.fst 'ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/11/text |' 'ark:|gzip -c >exp/tri2/fsts.11.gz' 
+sym2int.pl: replacing 念 with 1
+sym2int.pl: replacing 嘛 with 1
+sym2int.pl: replacing YAN-ZHANG with 1
+sym2int.pl: replacing 么 with 1
+sym2int.pl: replacing 专 with 1
+sym2int.pl: replacing SPECIALISE with 1
+sym2int.pl: replacing 戚 with 1
+sym2int.pl: replacing 嘛 with 1
+sym2int.pl: replacing 校 with 1
+sym2int.pl: replacing 尝 with 1
+sym2int.pl: replacing 鲁 with 1
+sym2int.pl: replacing 鲁 with 1
+sym2int.pl: replacing 芭 with 1
+sym2int.pl: replacing 蕾 with 1
+sym2int.pl: replacing 嗯 with 1
+sym2int.pl: replacing 糟 with 1
+sym2int.pl: replacing 奏 with 1
+sym2int.pl: replacing IVE with 1
+sym2int.pl: replacing 校 with 1
+sym2int.pl: replacing 嘛 with 1
+sym2int.pl: not warning for OOVs any more times
+** Replaced 1226 instances of OOVs with 1
+LOG (compile-train-graphs[5.1.60~1-b2d5d]:main():compile-train-graphs.cc:147) compile-train-graphs: succeeded for 2819 graphs, failed for 0
+# Accounting: time=53 threads=1
+# Ended (code 0) at Sat Apr 22 00:11:57 UTC 2017, elapsed time 53 seconds

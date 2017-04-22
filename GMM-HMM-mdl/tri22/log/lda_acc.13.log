@@ -1,0 +1,49 @@
+# ali-to-post "ark:gunzip -c exp/tri2_ali/ali.13.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15 exp/tri2_ali/final.mdl ark:- ark:- | acc-lda --rand-prune=4.0 exp/tri2_ali/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/13/utt2spk scp:data/train/split16/13/cmvn.scp scp:data/train/split16/13/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- |" ark,s,cs:- exp/tri22/lda.13.acc 
+# Started at Sat Apr 22 03:33:04 UTC 2017
+#
+ali-to-post 'ark:gunzip -c exp/tri2_ali/ali.13.gz|' ark:- 
+weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15 exp/tri2_ali/final.mdl ark:- ark:- 
+acc-lda --rand-prune=4.0 exp/tri2_ali/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/13/utt2spk scp:data/train/split16/13/cmvn.scp scp:data/train/split16/13/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- |' ark,s,cs:- exp/tri22/lda.13.acc 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split16/13/utt2spk scp:data/train/split16/13/cmvn.scp scp:data/train/split16/13/feats.scp ark:- 
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 100 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 200 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 300 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 400 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 500 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 600 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 700 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 800 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 900 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1000 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1100 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1200 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1300 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1400 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1500 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1600 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1700 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1800 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1900 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2000 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2100 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2200 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2300 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NI65MBP_0101_0776752_0778352
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2400 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2500 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2600 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2700 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2800 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2900 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance UI01FAZ_0105_0221183_0228725
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 3000 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 3100 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 3200 utterances.
+LOG (ali-to-post[5.1.60~1-b2d5d]:main():ali-to-post.cc:65) Converted 3223 alignments.
+LOG (weight-silence-post[5.1.60~1-b2d5d]:main():weight-silence-post.cc:95) Done 3223 posteriors.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 3225 utterances, errors on 0
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:117) Done 3223 files, failed for 2
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:122) Written statistics.
+# Accounting: time=9 threads=1
+# Ended (code 0) at Sat Apr 22 03:33:13 UTC 2017, elapsed time 9 seconds

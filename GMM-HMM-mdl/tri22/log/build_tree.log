@@ -1,0 +1,31 @@
+# build-tree --verbose=1 --max-leaves=1000 --cluster-thresh=-1 exp/tri22/treeacc data/lang/phones/roots.int exp/tri22/questions.qst data/lang/topo exp/tri22/tree 
+# Started at Sat Apr 22 03:34:13 UTC 2017
+#
+build-tree --verbose=1 --max-leaves=1000 --cluster-thresh=-1 exp/tri22/treeacc data/lang/phones/roots.int exp/tri22/questions.qst data/lang/topo exp/tri22/tree 
+LOG (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:100) Number of separate statistics is 336434
+LOG (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:159) BuildTree: before building trees, map has 277 leaves.
+LOG (build-tree[5.1.60~1-b2d5d]:SplitDecisionTree():build-tree-utils.cc:577) DoDecisionTreeSplit: split 723 times, #leaves now 1000
+LOG (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:185) Setting clustering threshold to smallest split 13551.8
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:194) After decision tree split, num-leaves = 1000, like-impr = 2.87417 per frame over 1.77427e+07 frames.
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:198) Including just phones that were split, improvement is 2.87417 per frame over 1.77427e+07 frames.
+LOG (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:213) BuildTree: removed 68 leaves.
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:220) Objf change due to clustering -0.0252643 per frame.
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:223) Normalizing over only split phones, this is: -0.0252643 per frame.
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:BuildTree():build-tree.cc:226) Num-leaves is now 932
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 1, low count 0
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 2, low count 0
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 53, low count 50
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 55, low count 96
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 98, low count 9
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 123, low count 35
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 186, low count 14
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 198, low count 85
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 200, low count 33
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 205, low count 28
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 226, low count 17
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 231, low count 23
+VLOG[1] (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:138) For pdf-id 242, low count 55
+WARNING (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:180) Saw no stats for following phones: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 23 31 33 35 39 41 43 55 57 59 63 65 67 69 71 75 79 83 91 95 99 103 107 109 111 117 119 127 128 131 135 143 147 151 153 155 159 161 163 165 167 171 179 183 187 191 195 199 200 203 207 215 216 217 219 223 224 227 231 235 239 243 247 251 252 253 255 256 257 259 260 261 263 264 267 275 279 281 283 285 287 291 295 296 299 300 303 304 307 308 311 312 315 317 319 320 323 324 327 328 331 332 335 336 338 339 340 343 344 347 348 351 352 355 356 358 359 360 363 364 367 368 371 372 375 376 378 379 380 383 384 387 388 391 392 395 396 398 399 401 403 405 407 409 411 413 415 416 419 420 423 424 427 428 431 432 435 437 439 440 443 444 447 448 451 452 455 456 458 459 460 463 464 467 468 471 472 475 476 478 479 480 483 484 487 488 491 492 495 496 498 499 500 503 504 506 507 508 511 512 514 515 517 519 521 523 525 527 528 531 532 535 536 539 540 543 544 547 548 551 552 555 556 559 560 563 564 566 567 568 571 572 575 576 579 580 583 584 586 587 588 591 592 595 596 599 600 603 604 606 607 608 611 612 615 616 619 620 623 624 627 628 631 632 635 636 639 640 642 643 645 647 648 651 652 655 656 659 660 663 664 666 667 668 671 672 675 676 679 680 683 684 686 687 688 691 692 695 696 699 700 703 704 707 708 711 712 715 716 719 720 722 723 724 727 728 731 732 735 736 739 740 743 744 747 748 750 751 752 755 756 759 760 762 763 764 767 769 771 773 775 777 779 781 783 785 787 788 790 791 792 795 796 798 799 800 803 804 806 807 808 811 812 815 816 819 820 823 824 826 827 829 830 831 832 835 836 839 840 843 844 847 848 850 851 853 855 857 859 861 863 865 867 869 871 872 873 874 877 879 880 883 884 887 888 891 892 895 896 899 900 903 904 907 908 910 911 912 915 916 918 919 920 922 923 924 926 927 928 930 931 932 935 936 939 940 943 944 947 948 951 952 954 955 956 959 960 963 964 967 968 971 972 974 975 976 979 980 983 984 987 988 991 992 995 996 999 1000 1003 1004 1007 1008 1011 1012 1015 1016 1019 1020 1023 1024 1026 1027 1029 1031 1032 1035 1036 1039 1040 1043 1044 1047 1048 1050 1051 1052 1055 1056 1059 1060 1063 1064 1067 1068 1070 1071 1072 1075 1076 1078 1079 1080 1083 1084 1087 1088 1091 1092 1095 1097 1099 1101 1103 1105 1107 1109 1111 
+LOG (build-tree[5.1.60~1-b2d5d]:main():build-tree.cc:184) Wrote tree
+# Accounting: time=81 threads=1
+# Ended (code 0) at Sat Apr 22 03:35:34 UTC 2017, elapsed time 81 seconds

@@ -1,0 +1,1263 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/13/utt2spk scp:data/test/split14/13/cmvn.scp scp:data/test/split14/13/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2/decode/lat.13.gz" 
+# Started at Sat Apr 22 00:30:23 UTC 2017
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/13/utt2spk scp:data/test/split14/13/cmvn.scp scp:data/test/split14/13/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2/decode/lat.13.gz' 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split14/13/utt2spk scp:data/test/split14/13/cmvn.scp scp:data/test/split14/13/feats.scp ark:- 
+UI08MAZ_0101_0000000_0006419 SIL2 我 是 不可 以 做 到 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0000000_0006419 is -3.45449 over 640 frames.
+UI08MAZ_0101_0006419_0013530 可以 做 到 啦 EH 那些 COMMUNIST RAYMOND 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0006419_0013530 is -3.20933 over 709 frames.
+UI08MAZ_0101_0013530_0023052 IN THE MORNING 啊 很 喜欢 CONTINUE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0013530_0023052 is -3.17266 over 950 frames.
+UI08MAZ_0101_0026846_0032819 IS 就 跟 BY MY 你 RESEARCH 了 啊 DOING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0026846_0032819 is -3.43046 over 595 frames.
+UI08MAZ_0101_0032819_0042160 啊 还有 FINS SIL2 PRIMARY SCHOOL 啊 OK MY MAJOR 是 HA YAH THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0032819_0042160 is -3.45684 over 932 frames.
+UI08MAZ_0101_0048015_0049910 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0048015_0049910 is -2.61649 over 188 frames.
+UI08MAZ_0101_0049910_0054121 我 觉得 DURING THE 那 们 的 CLASS 的 时候 有 我 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0049910_0054121 is -3.78412 over 419 frames.
+UI08MAZ_0101_0054121_0061798 有 事 情 发生 SIL2 有 他 就 可 以 每 一个人 一个 英文 名 就 好像 啊 SPANISH 好像 在这里 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0054121_0061798 is -3.68935 over 766 frames.
+UI08MAZ_0101_0061798_0068543 啊 我 是 就 T U 的 了 SPEECH NAME CHRISTIAN 啊 SUN 做 的 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0061798_0068543 is -3.74717 over 673 frames.
+UI08MAZ_0101_0072374_0077451 YES SIL2 那 我 的 就是 DIFFERENT 中学 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0072374_0077451 is -3.34611 over 506 frames.
+UI08MAZ_0101_0079450_0085278 ARCHITECTURE 可是 你 都 都 有 五年 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0079450_0085278 is -3.37469 over 581 frames.
+UI08MAZ_0101_0089273_0095808 SIL2 ARCHITECTURE YOU KNOW 你 的 你 SO SIL BASICALLY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0089273_0095808 is -3.80067 over 652 frames.
+UI08MAZ_0101_0098245_0103364 那个 SERVICE 有 啦 没有 那个 就 ER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0098245_0103364 is -3.6331 over 510 frames.
+UI08MAZ_0101_0103364_0109316 话 YAH SIL2 我 当 你 当 初 一 他 进 的 LESSON 时候 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0103364_0109316 is -3.7212 over 593 frames.
+UI08MAZ_0101_0109316_0113851 没有 BEFORE 他 新的 B S M 时候 你 要 FORM TWO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0109316_0113851 is -3.88471 over 452 frames.
+UI08MAZ_0101_0113851_0115256 AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0113851_0115256 is -3.47095 over 139 frames.
+UI08MAZ_0101_0115256_0119341 FORM TWO 我 就 BECOMING 要 做 一个 TAX EH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0115256_0119341 is -4.00442 over 407 frames.
+UI08MAZ_0101_0119341_0125064 我 BEFORE 我 我 BEEP C 那个 DETERMINATION 说 LEH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0119341_0125064 is -3.53693 over 570 frames.
+UI08MAZ_0101_0125064_0132283 我 就 GO THROUGH ER 上 手 OFF ER 的 讲 我 我 的 GROUPING LIFE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0125064_0132283 is -3.75868 over 720 frames.
+UI08MAZ_0101_0132283_0138311 ERR 对 啦 就是 我 真 CAN BE PLANNING COMPETITION 什么 LIKE ALONE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0132283_0138311 is -4.00473 over 601 frames.
+UI08MAZ_0101_0138311_0147426 啊 我 学 很多 东 西 然后 ER 不同 学院 的 老师 SO 叫 我 的 的 那些 HALL FOUR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0138311_0147426 is -3.83681 over 910 frames.
+UI08MAZ_0101_0147426_0152702 啊 LEH 他 我 就 LIKE SPORTING 在 然后 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0147426_0152702 is -3.66062 over 526 frames.
+UI08MAZ_0101_0152702_0159031 TRIPLE POSE 的 跑步 BECAUSE SOLES 上 手 了 那些 FAMOUS ARTISTS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0152702_0159031 is -3.90058 over 631 frames.
+UI08MAZ_0101_0159031_0166703 LEH THEN 我 BEFORE 我 可以 BEFORE DESIGNING TO DETECT 那个 时候 我 有 BECOME MORE EFFORT SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0159031_0166703 is -4.15217 over 765 frames.
+UI08MAZ_0101_0166703_0169796 我 有 想 要 我 要 不要 我 要 出 一个 ARTISTS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0166703_0169796 is -4.12773 over 307 frames.
+UI08MAZ_0101_0169796_0176995 EH 这样 好像 时候 你 我 是 学 F EXPRESS 我 东 西 IN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0169796_0176995 is -3.98227 over 718 frames.
+UI08MAZ_0101_0176995_0181137 I THINK BE IN TERMS OF GROWING S 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0176995_0181137 is -3.7253 over 412 frames.
+UI08MAZ_0101_0181137_0182207 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0181137_0182207 is -3.34091 over 105 frames.
+UI08MAZ_0101_0182207_0190196 话 比较 有 你 给 我 去 比较 大 我 我 是 我 也 是 比较 ARE 比较 少 是 那种 比较 SINGER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0182207_0190196 is -4.04057 over 797 frames.
+UI08MAZ_0101_0190196_0196097 我 的 像 EXPRESSION WEDDING 是 THEN MALAYSIA 她 演 的 是 THEN DURING THIS LETTER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0190196_0196097 is -4.08806 over 588 frames.
+UI08MAZ_0101_0196097_0197113 AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0196097_0197113 is -3.6357 over 100 frames.
+UI08MAZ_0101_0197113_0206800 SO OUR 我 是 LIKE 所以 就 TRY 啊 我 喜欢 FOR 可能 都 啊 这样 子 ER UM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0197113_0206800 is -3.57924 over 967 frames.
+UI08MAZ_0101_0206800_0214090 PAY BACK TO THE FORM TWO 一个 NATION 然后 我 就 讲 五 找 一个 有 一 种 比较 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0206800_0214090 is -3.77223 over 727 frames.
+UI08MAZ_0101_0214090_0220474 你 叫 我 写 是 REALLY REALLY SPEAK 的 事业 然后 就 做 因为 他 DISCUSS 一个 很 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0214090_0220474 is -4.13088 over 636 frames.
+UI08MAZ_0101_0220474_0228379 你 是 一个 很 很 PROFESSIONAL 比较 清楚 了 不 清楚 你 浪 就是 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0220474_0228379 is -4.12098 over 789 frames.
+UI08MAZ_0101_0228379_0231135 啊 YES 还是 TARGET TEXT 可以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0228379_0231135 is -4.09143 over 274 frames.
+UI08MAZ_0101_0231135_0239367 K BEAM MUCH 我 们 的 没有 我 要 讲 讲 好像 COURSE 上 WAKE 当时 时候 我 要 整 就 时间 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0231135_0239367 is -3.77263 over 821 frames.
+UI08MAZ_0101_0239367_0248916 只是 一个 一个 一个 我 的 PHYSICAL 啊 我 整 就是 就是 职业 时间 都是 我 问 你 需要 WAS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0239367_0248916 is -3.95963 over 953 frames.
+UI08MAZ_0101_0248916_0249748 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0248916_0249748 is -2.85421 over 81 frames.
+UI08MAZ_0101_0249748_0257936 不是 要 就 全部 人 的 那 是 贡献 RECESSION I CAN CONTRIBUTE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0249748_0257936 is -3.75325 over 817 frames.
+UI08MAZ_0101_0257936_0263311 OH 我 一天 都是 会 有 受 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0257936_0263311 is -3.23293 over 536 frames.
+UI08MAZ_0101_0263311_0273758 只要 U S M 才 发现 到 说是 真 真 的 ARCHITECTURE LEH 真 的 那个 LECTURE 然后 GO THROW ER 每 一样 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0263311_0273758 is -3.6905 over 1043 frames.
+UI08MAZ_0101_0273758_0282074 然后 从 应该 是 觉得 我 不 时候 很多 很 很 不同 的 我 AH 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0273758_0282074 is -3.79074 over 830 frames.
+UI08MAZ_0101_0282074_0287455 的 讲 我 好像 LOWER 我们 学 所以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0282074_0287455 is -3.63192 over 536 frames.
+UI08MAZ_0101_0287455_0295189 ONE 他 已 很 GENERAL 的 ONE 还有 我 爸 爸 结婚 就 就 学 会 了 A 如果 药 制作 药 那个 TAX SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0287455_0295189 is -4.07697 over 771 frames.
+UI08MAZ_0101_0295189_0303416 BASICALLY 我 也 是 不过 他 笑 MAJOR IN TWENTY TWO YEARS 在 那 边 看 那个 TAX SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0295189_0303416 is -3.62191 over 821 frames.
+UI08MAZ_0101_0303416_0309006 了 我 在 J J C 的 LEH 我 明天 有 在 IMPOSE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0303416_0309006 is -3.67803 over 557 frames.
+UI08MAZ_0101_0309006_0315293 RANDOM PUT THEM TO KNOW READING SO YOU 要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0309006_0315293 is -3.64633 over 627 frames.
+UI08MAZ_0101_0315293_0321379 SIL2 SIL2 READINGS SIL2 最近 我 MORE COUNTRY BONDS 那些 过 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0315293_0321379 is -3.52659 over 607 frames.
+UI08MAZ_0101_0321379_0326600 SIL2 SYLLABLE 你 动作 的 时候 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0321379_0326600 is -3.52682 over 520 frames.
+UI08MAZ_0101_0326600_0331910 OK THEY DON'T KNOW 做 SURVEYS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0326600_0331910 is -3.20292 over 529 frames.
+UI08MAZ_0101_0331910_0338924 了 IS SOME 说 OFF THE TREND THEY 的 THE PROMOTIONAL 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0331910_0338924 is -3.81774 over 699 frames.
+UI08MAZ_0101_0338924_0342801 他 是 一个 CLIQUE ONLY PLAY TO DO THAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0338924_0342801 is -3.94198 over 386 frames.
+UI08MAZ_0101_0342801_0349527 THE THE COMMITTEE TO WORK TOGETHER THEN 就 THROUGH S 那个 SUSTAINABLE 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0342801_0349527 is -3.80932 over 671 frames.
+UI08MAZ_0101_0349527_0357376 IN SENSIBLE 还有 很多 东 西 了 EH 你 要 自己 DISGUSTING 我 去 VICIOUS THEN 什么 也是 STAY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0349527_0357376 is -3.97934 over 783 frames.
+UI08MAZ_0101_0357376_0366572 做 些 什么 SURFING CULTURE 好像 我们 我们 问 华 那些 我 们 的 CAPTURE 我 们 的 那个 WANT TO PLAY 的 STAY 我们 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0357376_0366572 is -3.91302 over 918 frames.
+UI08MAZ_0101_0366572_0375318 我 叫 我 做 我们 自 己 的 THEN EIGHTY 那个 CASES T 很多 都 有 LESSON 可是 我 是 MORE TO WATCH TO I MY MENTAL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0366572_0375318 is -4.01857 over 873 frames.
+UI08MAZ_0101_0375318_0381055 没有 EH 没有 我 都是 ER GREEN BETWEEN THE PROPS 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0375318_0381055 is -3.81218 over 572 frames.
+UI08MAZ_0101_0381055_0387856 去 做 就是 DO AH 因为 ER 可是 现在 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0381055_0387856 is -3.64834 over 678 frames.
+UI08MAZ_0101_0387856_0392415 在 有 有 是 那个 GOOD GOING 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0387856_0392415 is -3.60688 over 454 frames.
+UI08MAZ_0101_0392415_0400773 其实 我 读 一个 STATEMENT THEN 有些 们 是 想 如果 现在 CHAIN 全部 PERMISSION 用 MOTOR 该 去 LECTURE CLASS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0392415_0400773 is -4.21555 over 834 frames.
+UI08MAZ_0101_0400773_0406537 EH 但是 我们 还有 WAS 接 近 四十 多 五十 面 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0400773_0406537 is -3.70885 over 574 frames.
+UI08MAZ_0101_0406537_0412549 CAN EARN ONE WEEK 变成 以前 没有 SO WHAT 的 直接 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0406537_0412549 is -3.73128 over 599 frames.
+UI08MAZ_0101_0412549_0419441 所以 我们 都 现在 也是 MEANING 的 一个 很 很 严重 严重 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0412549_0419441 is -3.70231 over 687 frames.
+UI08MAZ_0101_0419441_0426039 很 严重 有的 那些 TUITION 也是 如果 你 在 没有 去 TAKE THE MOST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0419441_0426039 is -4.14694 over 658 frames.
+UI08MAZ_0101_0426039_0433685 没有 的 SIMPLE 的 SO BASICALLY COMMIT 跟 找 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0426039_0433685 is -3.28 over 763 frames.
+UI08MAZ_0101_0433685_0443761 如果 我们 都是 四 那个 WHOA 全部 现在 有一个 去 看 什么 都 可以 进 十九 一点 有 很 YEARS 我们 NEXT GENERATION 的 是 如果 人家 做人 的 MORE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0433685_0443761 is -3.99779 over 1006 frames.
+UI08MAZ_0101_0443761_0451675 我 JUNE CANTEEN SO PISSED 啊 这个 TRADITION 我 你 就 WAH 很 大 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0443761_0451675 is -3.48456 over 789 frames.
+UI08MAZ_0101_0451675_0460267 SIL2 是 CHOOSE DREAMS THEN SIL2 个 我 的 MAJOR IN WIN WIN THE 回去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0451675_0460267 is -3.56166 over 857 frames.
+UI08MAZ_0101_0460267_0466278 有 WINTER BIO IN THE VOICE INTERESTING GENERATE 可以 GET H ELECTRIC 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0460267_0466278 is -3.98378 over 599 frames.
+UI08MAZ_0101_0466278_0474165 THEN 可以 COCK 到 我 可以 REDUCE 的 那个 ELECTRIC CITIES THAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0466278_0474165 is -3.86837 over 787 frames.
+UI08MAZ_0101_0474165_0478376 他 的 SOURCE COME FROM 的 CHECK 过 他 的 FOR SIL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0474165_0478376 is -4.0775 over 419 frames.
+UI08MAZ_0101_0478376_0484801 我们 全部 他 LEH THEN 他 的 DON'T REALLY KNOW COCA COLA FIFTY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0478376_0484801 is -3.77324 over 641 frames.
+UI08MAZ_0101_0484801_0491377 只是 我们 现在 MAKE 一点 MALAYSIA 有 去 SO PERSON 这 COME FROM 做 过 TEN PERCENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0484801_0491377 is -3.88716 over 656 frames.
+UI08MAZ_0101_0491377_0495385 COMMERCIAL OF 那种 元 你 SPONSOR 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0491377_0495385 is -3.66118 over 399 frames.
+UI08MAZ_0101_0495385_0505482 I KNOW ANOTHER TWENTY PERCENT 这个 FOR 我 的 那些 BANNER 嘴 巴 仙 那时 EXAM 了 然 后 面 J B 是 七十 PERCENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0495385_0505482 is -3.84223 over 1008 frames.
+UI08MAZ_0101_0505482_0514100 我 们 的 PACKET 的 东 西 因为 如果 你 有 COMBINATION 你 就 很 少 你 就 REGISTER 他们 我 的 DEGREE YOU KNOW 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0505482_0514100 is -3.9607 over 860 frames.
+UI08MAZ_0101_0514100_0524974 LAST SEMESTER 的 时候 有 FREE 我 有 FREE 我 什么 CAN TRANSFER 去 的 BECAUSE WE 你 就是 要 减少 那个 FIELD 有用 到 完 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0514100_0524974 is -3.90579 over 1085 frames.
+UI08MAZ_0101_0524974_0534354 我 MEAN 是 以 MALAYSIA 他 不是 说 很 有 POTENTIAL 他 COMPARED TO 讲 过 SIL2 COMPARED TO 五 我 TURN THEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0524974_0534354 is -3.93099 over 936 frames.
+UI08MAZ_0101_0534354_0536519 我 要 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0534354_0536519 is -3.26009 over 215 frames.
+UI08MAZ_0101_0536519_0542381 ER 我 的 的 时候 MEAN 他 没有 像 不 THEN 因为 那个 那个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0536519_0542381 is -3.61531 over 584 frames.
+UI08MAZ_0101_0542381_0548931 CHOOSE TO OFF MINI MALAYSIA 也 不 是 很 讲 不是 STROKE 只是 一个 ENRICHING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0542381_0548931 is -3.88924 over 653 frames.
+UI08MAZ_0101_0548931_0557374 ER OUT TO TO FIVE MINUTES 的 MAYBE SECOND UPPER METER 不 SECOND MIDDLE THE SECOND 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0548931_0557374 is -3.86176 over 842 frames.
+UI08MAZ_0101_0557374_0566622 然后 ER 我 是 TRY TO 做 IN SMALLER SKILL 小 我 觉得 就 OH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0557374_0566622 is -3.46804 over 923 frames.
+UI08MAZ_0101_0566622_0574813 看 就是 教练 的 SMALL GROUP 啊 IS SMALL SIZE BUT THEN MAY BE COMMITTEE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0566622_0574813 is -3.92149 over 817 frames.
+UI08MAZ_0101_0574813_0580124 THE COMMITTEE 呢 就会 COME OUT 那种 大型 的 ANGEL 是 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0574813_0580124 is -3.88904 over 529 frames.
+UI08MAZ_0101_0580124_0586926 MAKES YOU KNOW 做 到 也是 SIXTIES SIXTY CENTERS 的 INTERVAL 会 去 MINIMUM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0580124_0586926 is -3.9925 over 678 frames.
+UI08MAZ_0101_0586926_0592341 THEN 做 到 就 说 去 小 小 学 是 SIXTY 我 我 REDUCE 它 变成 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0586926_0592341 is -3.86443 over 540 frames.
+UI08MAZ_0101_0592341_0598886 到 FIVE C M TO CAN SEE I'M 那时 我 我 需要 做 THESIS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0592341_0598886 is -3.83318 over 653 frames.
+UI08MAZ_0101_0598886_0599927 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0598886_0599927 is -3.08468 over 102 frames.
+UI08MAZ_0101_0599927_0604936 FIVE TO TEN GOING MAVIS DID THEY MAY 觉得 COMMITTEE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0599927_0604936 is -3.73518 over 499 frames.
+UI08MAZ_0101_0606771_0614836 啊 YA BUT 要 有 有 MISSION SIL2 也 没 有 WHISTLE OR SMALL 就 全部 LOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0606771_0614836 is -3.65222 over 805 frames.
+UI08MAZ_0101_0618052_0622778 ER OH 我 是 GO THROUGH REPEAT REPEAT THREE MEAL THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0618052_0622778 is -3.54407 over 471 frames.
+UI08MAZ_0101_0622778_0630150 DETAILS THEN 我 所以 要 FURTHER REBECCA 那个 我 的 DOCTOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0622778_0630150 is -3.56714 over 735 frames.
+UI08MAZ_0101_0630150_0640201 PROFILE 那个 真 真 的 MECHANISM 你 那个 我 的 到 四十 多 了 那个 MALLET 所以 有一个 人 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0630150_0640201 is -3.67691 over 1003 frames.
+UI08MAZ_0101_0640201_0646789 SIL2 八十 研究 那些 我们 他 就 今年 JUNE 那个 ELECTRIC BICYCLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0640201_0646789 is -3.77388 over 657 frames.
+UI08MAZ_0101_0646789_0654592 做 三 两 他 要 PROMOTE 的 是 GREEN INDUSTRY 就是 每 个 人 跑 THEN RIGHT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0646789_0654592 is -3.80854 over 778 frames.
+UI08MAZ_0101_0654592_0662934 他 就是 把 全部 在 BEAUTY WORLD 骑 脚 车 AROUND CAMPUS 就是 在 CAMPUS 里面 叫 什么 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0654592_0662934 is -3.79176 over 832 frames.
+UI08MAZ_0101_0662934_0669081 啊 那个 是 现在 他 没有 钱 拿 不到 的 GRAND 去 做 的 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0662934_0669081 is -3.663 over 613 frames.
+UI08MAZ_0101_0669081_0675728 我 就是 一个 很 好 MOST 都是 B C 还有 APPROVE 因为 还有 很多 FACTOR 很 够 力 要 早 一点 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0669081_0675728 is -4.15257 over 663 frames.
+UI08MAZ_0101_0675728_0684019 然后 就 什么 CHERISH THE LOSING SOMETHING 有些 东 西 很多 古 一个 不是 一个 GREEN 了 这个 是 FOR ME SINGAPORE 有 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0675728_0684019 is -4.09758 over 827 frames.
+UI08MAZ_0101_0684019_0692439 然后 所以 的 东 西 是 我 的 SIL2 AFTER THAT 就 去 考试 对 就是 HANDSOME THEN 你 如果 有 VERY PAINFUL 有 需要 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0684019_0692439 is -4.14602 over 840 frames.
+UI08MAZ_0101_0692439_0699998 你 才 他 就 他 如果 一个 他 送 你 就 用 什么 都 认识 他 吗 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0692439_0699998 is -3.88405 over 754 frames.
+UI08MAZ_0101_0699998_0705303 SIL2 没有 听 过 的 TRAFFIC SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0699998_0705303 is -3.18227 over 529 frames.
+UI08MAZ_0101_0708602_0713988 OK MYSELF SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0708602_0713988 is -3.3444 over 537 frames.
+UI08MAZ_0101_0713988_0723080 YA HE WAS QUITE A PERSON LO 我 会 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0713988_0723080 is -3.30984 over 907 frames.
+UI08MAZ_0101_0725165_0730569 SHE 我 有 TAKE 一个 看 我 的 不 会 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0725165_0730569 is -3.87507 over 538 frames.
+UI08MAZ_0101_0735067_0740972 OK SIL2 QUIT 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0735067_0740972 is -3.45106 over 589 frames.
+UI08MAZ_0101_0743585_0750343 会 是 的 从小 到 大 的 因为 我 我 不 想 去 PUBLIC SPEAKING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0743585_0750343 is -3.57614 over 674 frames.
+UI08MAZ_0101_0750343_0757909 EH 我 有 上去 啊 那种 功 课 印 象 那时 我 有 上 太 小 声 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0750343_0757909 is -3.67559 over 755 frames.
+UI08MAZ_0101_0757909_0765816 哈 哈 对 可是 我们 跑 AH 对 啊 是 啊 我 也 这样 WAITER 全部 有 我 就 有 钱 的 但是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0757909_0765816 is -3.83251 over 789 frames.
+UI08MAZ_0101_0765816_0770980 我 COM 还是 跑 我 就 说 我 要 SPEAKING 因为 我 他 讲 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0765816_0770980 is -4.02622 over 514 frames.
+UI08MAZ_0101_0770980_0779467 那种 SPEAKING 的 讲 JUST MEAN 叫 你 我 做 PRESENTATION OR FOR ME 啦 我 也 我 要 LIKE DO IS TO BE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0770980_0779467 is -3.96042 over 847 frames.
+UI08MAZ_0101_0779467_0782974 他 觉得 BOWLING 就 讲 话 我 的 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0779467_0782974 is -3.75127 over 349 frames.
+UI08MAZ_0101_0782974_0792249 我 是 喜欢 那种 CORE 的 A 我 在 那个 DIAMETER 去 过 了 因为 你 只要 的 FAMOUS 啊 你 不能 K 你 GOING TO 讲 话 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0782974_0792249 is -4.07688 over 926 frames.
+UI08MAZ_0101_0792249_0799665 那些 初 我 觉得 那 是 我 HALL 我 的 CHINESE 是 一 个 GOING TO 继续 讲 我 全部 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0792249_0799665 is -4.08108 over 740 frames.
+UI08MAZ_0101_0799665_0805014 那时 我 有 不 DESIGN 东 西 我 PRESENTATION 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0799665_0805014 is -3.53123 over 533 frames.
+UI08MAZ_0101_0811112_0821670 DO SOMETHING SIL2 NO 我 还有 另外 的 像 AFTER 我 的 那个 PHILOSOPHY 我 又 一个 我 就 不 想 吃 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0811112_0821670 is -3.73217 over 1054 frames.
+UI08MAZ_0101_0821670_0829576 我 读 书 的 SECTION ONE 每 一天 ONE MAIN 东 西 HALL SEVEN AH 有 SEVENS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0821670_0829576 is -3.92524 over 789 frames.
+UI08MAZ_0101_0829576_0835432 他 我 做 LEH 我 没有 TO TO 过 这个 我 不 过 ME CANCEL 以前 我们 叫 AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0829576_0835432 is -4.24986 over 584 frames.
+UI08MAZ_0101_0835432_0845044 我 是 读 我 全部 东 西 我 要 知道 我 的 SEMI 我 就 CONSIDER EXHIBITION 我 觉得 你 他 的 THING 就是 我 要 去 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0835432_0845044 is -3.90404 over 959 frames.
+UI08MAZ_0101_0845044_0850459 因为 老师 给 我们 SEVEN 其实 我们 就要 想 我 不 可 能 IS IT TO COPY PASTE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0845044_0850459 is -4.00549 over 540 frames.
+UI08MAZ_0101_0850459_0856678 那时 以前 SIL2 以前 我 应该 OR FORTY 我 知道 我 的 STANDARD 也是 要 不 要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0850459_0856678 is -3.67298 over 620 frames.
+UI08MAZ_0101_0856678_0863694 要 多少 多少 就是 都是 BUSINESS 西 啊 你 你 你 就 去 SEOUL GARDEN SEOUL 有 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0856678_0863694 is -3.81204 over 700 frames.
+UI08MAZ_0101_0863694_0871624 你 那个 你 就 去 的 面 啦 就 LIKE FIRST WHEN 你 STUDY SO 你们 GO THROUGH 多少 LECTURE 啊 就是 一个 好处 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0863694_0871624 is -4.0791 over 791 frames.
+UI08MAZ_0101_0871624_0876846 不是 我 我 觉得 然后 过后 我 面 ACCOMMODATION 需要 很多 MALAYSIAN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0871624_0876846 is -3.72629 over 520 frames.
+UI08MAZ_0101_0876846_0887218 如果 没有 我 我 是 觉得 因为 你 要 看 就 我 有 KNOWLEDGE 话 你 有 MOTION 他们 就 WAH THEN 加 一个 一点 东 西 不 对 我 就是 叫 我 全部 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0876846_0887218 is -4.13593 over 1035 frames.
+UI08MAZ_0101_0887218_0894193 啊 的 时候 啊 还有 F AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0887218_0894193 is -3.33751 over 696 frames.
+UI08MAZ_0101_0894193_0900500 就 我 是 SIL2 SIL2 我 是 觉得 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0894193_0900500 is -3.33027 over 629 frames.
+UI08MAZ_0101_0915345_0916585 HELLO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0915345_0916585 is -3.05849 over 122 frames.
+UI08MAZ_0101_0920255_0921716 什么 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0101_0920255_0921716 is -3.39436 over 144 frames.
+UI08MAZ_0102_0009581_0017417 就是 就是 PARTY 啊 就是 ARCHITECTURE 应该 去 P 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0009581_0017417 is -3.36488 over 782 frames.
+UI08MAZ_0102_0017417_0019401 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0017417_0019401 is -3.4364 over 196 frames.
+UI08MAZ_0102_0019401_0027073 五年 THREE BUS TO 是 SECONDARY 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0019401_0027073 is -3.58069 over 765 frames.
+UI08MAZ_0102_0027073_0034473 就是 PART ONE PART 就是 ER 一个 好像 我 BACHELOR 我 的 G P 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0027073_0034473 is -3.74937 over 738 frames.
+UI08MAZ_0102_0034473_0040449 很多 PART TWO 就是 BATCH 有 ARCHITECTURE 有 MORE MAIN LANGUAGE SIL2 是 就 帮 SCHOOL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0034473_0040449 is -3.98166 over 596 frames.
+UI08MAZ_0102_0043601_0047550 啊 是 在 于 在 WHY 果 在 新加坡 是 FOCUS ONE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0043601_0047550 is -4.06388 over 393 frames.
+UI08MAZ_0102_0047550_0054520 NO FOUR YEARS 是 PART ONE LO 这个 是 啊 我 认识 他 都 不是 IN N U S 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0047550_0054520 is -3.76162 over 695 frames.
+UI08MAZ_0102_0062170_0071273 SIL2 SIL2 还没有 I PAD 之 前 有 做 BASE AH MINIMUM 是 你 GO AWAY 去 看 一个 TEST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0062170_0071273 is -3.76383 over 908 frames.
+UI08MAZ_0102_0071273_0079104 才能 拿 到 LIAO 太 PROFESSIONAL 那个 TITLE 然后 才 可以 开 工 事 情 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0071273_0079104 is -3.82359 over 781 frames.
+UI08MAZ_0102_0082897_0091021 就 有 啊 他 RECOVER 就是 你 要 一个 只是 里面 你 COMPLETE 一个 PROJECT 就是 从 TOKEN 我 以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0082897_0091021 is -3.95359 over 810 frames.
+UI08MAZ_0102_0091021_0099410 做 这个 CONSTRUCTION 你 你 STARTING 三 MISSION 过后 大 后 CONDITION 那个 CONSTRUCTION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0091021_0099410 is -3.756 over 837 frames.
+UI08MAZ_0102_0099410_0107727 整 个 THE WHOLE PROCESS 那个 THE MINIMUM REQUIREMENT SIL2 然后 就 COST SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0099410_0107727 is -3.69084 over 830 frames.
+UI08MAZ_0102_0114471_0116392 YA ARCHITECTURE FOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0114471_0116392 is -3.96699 over 190 frames.
+UI08MAZ_0102_0118400_0122181 SIL2 我 我 SIL2 很 觉得 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0118400_0122181 is -3.81317 over 376 frames.
+UI08MAZ_0102_0135992_0139135 啊 对 那个 EXPERIENCE 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0135992_0139135 is -3.72042 over 312 frames.
+UI08MAZ_0102_0139135_0140885 ACT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0139135_0140885 is -3.53939 over 173 frames.
+UI08MAZ_0102_0140885_0147185 SIL2 OK KID EH 就 S 的 ASSISTANT THAT'S 我 的 是 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0140885_0147185 is -3.75289 over 628 frames.
+UI08MAZ_0102_0147185_0152860 SO 我 可以 做 THEY GOT FRIENDS 然后 就 真 的 很多 很多 THREE D MODEL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0147185_0152860 is -4.2235 over 566 frames.
+UI08MAZ_0102_0152860_0159917 我 就 DON'T REALLY SIL2 去 DATING 啊 啊 然后 SIL2 ASSISTANT BACKS PROJECT MANAGEMENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0152860_0159917 is -3.56239 over 704 frames.
+UI08MAZ_0102_0159917_0165506 的 BASIC 如果 华 人 他 他 有 那个 他 有 他 的 A MINIMUM REQUIREMENT 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0159917_0165506 is -3.9874 over 557 frames.
+UI08MAZ_0102_0165506_0171326 你 从 不 可 能 为了 给 一个 PROJECT SIL2 我 去 好 是 你 是 HANDLE 这个 PROJECT 的 THE PREPARATION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0165506_0171326 is -4.34872 over 580 frames.
+UI08MAZ_0102_0171326_0176678 PLAY MAJOR FOR THE WHOLE WATCH ACTION 了 CUTE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0171326_0176678 is -3.61253 over 533 frames.
+UI08MAZ_0102_0180621_0185596 很 不 会 的 是 你 要 WATER POLO OPEN 新 人 SIL2 所以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0180621_0185596 is -3.8041 over 496 frames.
+UI08MAZ_0102_0185596_0192136 因为 如果 你 不 你 不准 去 WAH 还有 WITHIN YA 他 就 可 以 S U 已经 有 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0185596_0192136 is -4.09643 over 652 frames.
+UI08MAZ_0102_0199586_0206080 你 有 那个 那个 叫 什么 我 们 的 REPORT 还是 是 那个 叫 啊 一个 PORTFOLIO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0199586_0206080 is -3.7083 over 647 frames.
+UI08MAZ_0102_0206080_0212318 他 也是 不好 没有 我 自己 CREAM IMPOSSIBLE 我 就 上 MEET KNOW 过 他 就 输 了 过后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0206080_0212318 is -4.08978 over 622 frames.
+UI08MAZ_0102_0212318_0215480 他 就 你们 去 的 TEST 那个 是 YOU MEAN 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0212318_0215480 is -4.12581 over 314 frames.
+UI08MAZ_0102_0215480_0223179 HUH 你 问 ONE 全部 过 你 因为 我们 ER BUILDING 很多 种 HOUSING 有 我们 去 REAL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0215480_0223179 is -3.88439 over 768 frames.
+UI08MAZ_0102_0223179_0229176 有 INDUSTRIAL OR MAYBE 一个 CONSTRUCTION NEED TO KNOW 你 跟 我 一起 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0223179_0229176 is -3.92419 over 598 frames.
+UI08MAZ_0102_0229176_0236707 EH 你 看 我 全部 PASS 啊 就 不 多 讲 是 用 你 的 是 做 什么 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0229176_0236707 is -3.89971 over 751 frames.
+UI08MAZ_0102_0236707_0242283 SIL2 不错 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0236707_0242283 is -3.35111 over 556 frames.
+UI08MAZ_0102_0242283_0249396 我们 多数 都是 LAB 的 学 DEGREE 后来 是 FIRST BATCH 的 DEGREE LOR DEGREE MOTOR THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0242283_0249396 is -4.01606 over 709 frames.
+UI08MAZ_0102_0249396_0256763 UNI ONLY GO 要 自己 MASTER 就 MASTER 完了 MAJORING 什么 西 然后 过后 再 拿 P H D 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0249396_0256763 is -4.02834 over 735 frames.
+UI08MAZ_0102_0256763_0263927 MAYBE 什么 西 那个 还 不是 PROFESSIONAL 可是 TO LIKE 我 今年 在 考 这个 我 觉得 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0256763_0263927 is -3.88931 over 714 frames.
+UI08MAZ_0102_0263927_0271727 SIL2 对 我 的 J C 不是 很 HIGH TECH NORMAL 就是 一个 一个 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0263927_0271727 is -3.71648 over 778 frames.
+UI08MAZ_0102_0271727_0275111 SO SIL OVAL IN 工 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0271727_0275111 is -3.45963 over 336 frames.
+UI08MAZ_0102_0285361_0291445 我 去 POLY 三 年 了 就 开始 了 就是 G P A FIVE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0285361_0291445 is -3.57512 over 606 frames.
+UI08MAZ_0102_0291445_0297763 去 如果 是 年 就 做 一个 那时 进 QUARTER 去 DUTY 有些 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0291445_0297763 is -3.9716 over 630 frames.
+UI08MAZ_0102_0297763_0301429 没有 我 会 跟 他 我 进 进 了 AGREE 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0297763_0301429 is -4.2266 over 365 frames.
+UI08MAZ_0102_0301429_0308778 你 是 我 一 个 P 我 已经 是 都是 五 岁 的 时候 是 是 所以 然后 过后 他 是 你 有 SPORTS GENE 二十 多 岁 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0301429_0308778 is -4.07767 over 733 frames.
+UI08MAZ_0102_0313301_0321657 就 COMPLAIN 过 FREE OR 一下 里面 去 会 东 西 我 进 要 进 没有 C THOSE PERSONAL 就 去 印度 人 的 时候 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0313301_0321657 is -4.17542 over 834 frames.
+UI08MAZ_0102_0321657_0328508 你 一 出来 REPEAT IT'S 是 一 过 那个 TEST 的 你 就 DURATION SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0321657_0328508 is -3.8605 over 683 frames.
+UI08MAZ_0102_0328508_0332442 我 就 有 的 COUNTRY 去 SING 我 的 啊 去 的 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0328508_0332442 is -4.31989 over 391 frames.
+UI08MAZ_0102_0339099_0345536 不 远 THEN 你 在 你 的 是 里面 到 跑 不 动 是 OKAY 我 在 这个 SWIMMING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0339099_0345536 is -4.00994 over 642 frames.
+UI08MAZ_0102_0345536_0354484 如果 你们 你们 COMPLAIN 那个 而已 就 BOOK A 总统 过 CHINESE IS 八 个 西 那个 YOU ARE 觉得 POP 就 能够 PRODUCE 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0345536_0354484 is -4.39266 over 893 frames.
+UI08MAZ_0102_0354484_0360529 所以 你 考 得 的 过程 过后 你 应该 比 不 上 后 你 可以 去 做 HOUSING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0354484_0360529 is -4.01792 over 603 frames.
+UI08MAZ_0102_0360529_0368511 EH 他 里面 HOUSING BASICALLY 要 去 要 三 都是 一样 的 一个 HOUSING SCHEME PROJECT 很 到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0360529_0368511 is -4.03212 over 796 frames.
+UI08MAZ_0102_0368511_0371516 你 你 要 TO GO AND THEN 很 辛苦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0368511_0371516 is -4.14406 over 299 frames.
+UI08MAZ_0102_0371516_0376577 可是 如果 你 SHE SO SO 起 ABOUT 还没有 COMPLETE 你 可以 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0371516_0376577 is -4.08561 over 504 frames.
+UI08MAZ_0102_0376577_0385785 可是 你 一个 没有 REPLY 我 已经 有一个 SEC THREE 的 SEC THREE 那个 PORTFOLIO 他们 可以 去 申 请 就 靠 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0376577_0385785 is -4.22757 over 919 frames.
+UI08MAZ_0102_0391601_0398862 SIL2 CHARMING 就 SIL2 就 ER 不是 MAJOR 是 SPECIALLY FOR 就 SPECIALIST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0391601_0398862 is -3.53888 over 724 frames.
+UI08MAZ_0102_0398862_0403277 如果 你 出去 你 要 做 什么 CALL 有 COMMON COMMON BASICALLY 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0398862_0403277 is -4.62013 over 440 frames.
+UI08MAZ_0102_0403277_0410864 你 可以 THEN 加 那种 HIGH RISE IT'S 你 SO 那种 BUT YOU KNOW 你 SO ER 没有 做 工 常 年 SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0403277_0410864 is -3.93653 over 757 frames.
+UI08MAZ_0102_0410864_0417051 STEADY 啊 ANYTHING 你 走 走 我们 还是 里 PERSPIRE 在 ER 要 做 OFFICE WHAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0410864_0417051 is -4.11563 over 617 frames.
+UI08MAZ_0102_0417051_0424016 那时 OFFICER CONSULTANT 就 JOIN JOIN 研究 那个 了 一个 BUILDING 的 我 给 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0417051_0424016 is -4.21147 over 695 frames.
+UI08MAZ_0102_0424016_0429907 NORM IN HALL 他 的 你 MEAN CHURCH 的 BECAUSE ENGINEER 我 也 是 给 外面 的 那 段 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0424016_0429907 is -4.31835 over 587 frames.
+UI08MAZ_0102_0429907_0435572 THAT'S WHAT THEN OFFICER CONSULTANT 然后 你 可以 己 的 是 SPECIALLY FOR HIGHLIGHTS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0429907_0435572 is -3.96664 over 565 frames.
+UI08MAZ_0102_0435572_0444430 真 的 觉得 我 每 次 建 SO 不可 以 是 二十 多 十 五 STORY 个 BUILDING 啊 那种 我 的 是 的 TREE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0435572_0444430 is -3.96212 over 884 frames.
+UI08MAZ_0102_0444430_0449021 SIL2 PACKAGING INDUSTRIAL 就 全部 REJECTED 找 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0444430_0449021 is -3.94318 over 457 frames.
+UI08MAZ_0102_0449021_0454949 SIL2 SIL2 SIL2 HOUSING SIL2 然后 桥 LO 很 都是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0449021_0454949 is -3.3383 over 591 frames.
+UI08MAZ_0102_0454949_0460165 你 所以 很多 DEVELOPER AH THE BUT I VERY NOT VERY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0454949_0460165 is -3.65456 over 520 frames.
+UI08MAZ_0102_0460165_0466107 好像 I JAM 啊 他 MEETING 考试 ADVANCE TO WORK UNDER 那个 一个 岛 罢了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0460165_0466107 is -4.31381 over 592 frames.
+UI08MAZ_0102_0466107_0473752 因为 你 就 DESIGN 还有 什么 兴趣 DESIGN 啊 他 就 不用 他 就 BUT SIL2 那种 是 比较 硬 好像 你 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0466107_0473752 is -4.04287 over 763 frames.
+UI08MAZ_0102_0476866_0481861 也是 没有 我 们 是 我们 YOU KNOW 是 的 我 觉 得 就是 出去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0476866_0481861 is -3.97157 over 498 frames.
+UI08MAZ_0102_0481861_0489285 THEN 是 LEADER THEN 那天 C 的 MARKET THE 去 就 他 就 是 说 只是 我们 他 地方 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0481861_0489285 is -3.88629 over 740 frames.
+UI08MAZ_0102_0494964_0505073 PUSH MAIL 是 边 去 过后 如果 你 要 DESIGN 一个 HEART 一个 一个 一个 BUILDING GENERALLY 在 COMPUTER C BESIDE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0494964_0505073 is -4.00513 over 1009 frames.
+UI08MAZ_0102_0505073_0511174 没有 做 一个 已经 REGISTER AS IT OUT 也是 THE FINAL YEAR 可以 早 上 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0505073_0511174 is -3.94613 over 608 frames.
+UI08MAZ_0102_0511174_0513024 很多 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0511174_0513024 is -3.5157 over 183 frames.
+UI08MAZ_0102_0515950_0519608 SIL2 对 看 你 看 你 自 己 的 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0515950_0519608 is -3.74098 over 364 frames.
+UI08MAZ_0102_0523029_0525758 因为 他 觉得 有 东 西 需要 STUDY 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0523029_0525758 is -4.0519 over 271 frames.
+UI08MAZ_0102_0525758_0532908 你 做 工 的 STUDY 不要 啦 这样 一时 ER STUDIES 是 你 会 去 TRAINING 的 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0525758_0532908 is -3.8775 over 713 frames.
+UI08MAZ_0102_0532908_0541761 你 THESIS 你 有一个 你 的 ER 人家 问 你 做 不到 你 已经 就是 的 东 西 然后 TECHNOLOGY 然后 GREEN THEN 我 去 医院 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0532908_0541761 is -4.17487 over 883 frames.
+UI08MAZ_0102_0541761_0545836 NO NEED TO CHINA 是 REALIZE NO ACTUALLY 我 是 MAJOR 今天 要 五十 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0541761_0545836 is -4.29077 over 406 frames.
+UI08MAZ_0102_0545836_0552644 一个人 觉得 有 兴趣 STILL 暂 时 是 THEN 就 输 了 你 有 去 去 你 就 给 那些 现在 UNION 看到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0545836_0552644 is -4.16653 over 679 frames.
+UI08MAZ_0102_0552644_0560700 啊 这 两 块 是 STUDY 你 可以 B OVERALL 你 可以 你 可以 掌握 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0552644_0560700 is -3.70275 over 804 frames.
+UI08MAZ_0102_0560700_0568077 你 可以 FORESEE FUTURE 因为 你 看 FOR FUTURE CAN DEEP IDEAS 跟 你 讲 你 STEADY 就 久 一下 RELAX 走过 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0560700_0568077 is -4.10994 over 736 frames.
+UI08MAZ_0102_0570348_0579571 MORE TO STUDY IN REAL LIFE 我 每 个 人 都 会 做 一些 MY 人 他们 全部 就 全部 时候 跟 我们 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0570348_0579571 is -3.82718 over 920 frames.
+UI08MAZ_0102_0579571_0588433 WHAT ABOUT 我 讲 只是 SIX TEACHER 没有 只是 很 很 COMMON 的 是 的 一个 STOP SIL2 因为 ER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0579571_0588433 is -4.15382 over 884 frames.
+UI08MAZ_0102_0588433_0594095 TURN KEY FULL 不 所以 二十二 KNOW 他们 比较 你 的 PROJECT DRAMA 我们 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0588433_0594095 is -3.84577 over 564 frames.
+UI08MAZ_0102_0594095_0599468 然后 我们 华 人 你 就要 去 做 的 PRIVATE 的 给 MASTER ROOM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0594095_0599468 is -3.76274 over 535 frames.
+UI08MAZ_0102_0599468_0605578 CHEMICAL 很 己 的 国家 COUNTRY 来 MACHINE 的 是 FREE 去 JOURNAL 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0599468_0605578 is -3.97563 over 609 frames.
+UI08MAZ_0102_0609496_0615770 ER 看 我 STAY 到 就是 那个 SUSTAINABLE 就是 CHOOSE GREEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0609496_0615770 is -3.59443 over 625 frames.
+UI08MAZ_0102_0615770_0619946 他 就 REDUCE CARBON 的 FOOD PRINCE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0615770_0619946 is -3.9238 over 416 frames.
+UI08MAZ_0102_0623020_0632815 用 THAT SIL GARDEN 有 在 跑步 的 BE TO BUY HOLIDAYS 有 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0623020_0632815 is -3.65999 over 978 frames.
+UI08MAZ_0102_0635095_0642427 啊 那个 I DO THE BEAUTY OF ADOBE 很 严重 果 能 LOCAL 不要 动 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0635095_0642427 is -3.85245 over 731 frames.
+UI08MAZ_0102_0642427_0649847 YA 不 的 BE 那个 可是 在 一个 CENTRE PUBLIC 这个 一个 CITY EH 这个 CITY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0642427_0649847 is -3.95565 over 740 frames.
+UI08MAZ_0102_0649847_0654981 他 刚才 我 一 个 部分 一个 ROOF TOP 观察 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0649847_0654981 is -4.02023 over 511 frames.
+UI08MAZ_0102_0654981_0660384 那个 那个 CITIES AROUND 没有 记 错 是 很 BECAUSE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0654981_0660384 is -3.90063 over 538 frames.
+UI08MAZ_0102_0660384_0668856 不是 很 到 名气 啊 然后 他 如果 SHY 他 自己 GENERATE MEAN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0660384_0668856 is -3.73783 over 845 frames.
+UI08MAZ_0102_0668856_0675231 我 拒绝 RING 因为 I KNOW 他们 他 们 的 CLIQUE 他们 讲 的 到 那个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0668856_0675231 is -3.93376 over 636 frames.
+UI08MAZ_0102_0675231_0679190 NOT THAT SIL 他们 他 们 的 DIRECT FROM SETTING FROM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0675231_0679190 is -4.28765 over 394 frames.
+UI08MAZ_0102_0679190_0688538 我 就 CONSERVE 那个 我 都 会 读 读 读 书 不 像 然后 FROM MEAN 的 ENERGY 我 的 到 多少 PERSON 的 一个 去 SPEAK KNOW FORM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0679190_0688538 is -4.16176 over 933 frames.
+UI08MAZ_0102_0688538_0695256 SO 啦 我 的 THOSE N A TOTAL OF 全部 我 还 去 能 得到 那个 MAP 给 我 CARBON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0688538_0695256 is -4.10095 over 670 frames.
+UI08MAZ_0102_0697512_0705775 IM G P A SO 多 因为 的 TECHNOLOGY 是 侯 我 还没有 COVER 我们 间断 所以 我 是 大概 知道 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0697512_0705775 is -4.07941 over 824 frames.
+UI08MAZ_0102_0705775_0711631 这个 叫 我们 在 我们 啦 跟 那个 EQUATION 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0705775_0711631 is -3.90992 over 584 frames.
+UI08MAZ_0102_0713912_0722095 那个 GROUP AH ER 没有 记 错 的 而且 是 叫 一个 叫 什么 FOOD 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0713912_0722095 is -3.77771 over 816 frames.
+UI08MAZ_0102_0722095_0731288 SO CARBON 啊 他 不是 BUT 他 们 的 是 他 的 CARBON 的 OUR THINK THAT ONE 时候 可能 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0722095_0731288 is -3.70074 over 917 frames.
+UI08MAZ_0102_0731288_0737281 你 叫 TURNOVER 的 可是 做 SORRY 考试 读 啊 那个 们 的 MEDIA 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0731288_0737281 is -4.01077 over 597 frames.
+UI08MAZ_0102_0737281_0744470 可是 的 PROMOTE 她们 应该 ONE 十五 号 ME 自从 我 需要 他 是 ONE TOLD YOU YOU COPING 的 LEH 他 COMING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0737281_0744470 is -4.61791 over 717 frames.
+UI08MAZ_0102_0744470_0751942 他 他 的 时候 KEEP IT AS A P 跟 RELEASE IT'S QUITE 那种 的 CATALYST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0744470_0751942 is -4.10234 over 745 frames.
+UI08MAZ_0102_0758092_0767884 可以 可以 用 NO 他 是 都 会 有 是 朋友 他 是 BASED ON 它 的 那个 DESIGN 他 要 想 拍 他们 一个 叫 SO LONG FORM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0758092_0767884 is -4.12633 over 977 frames.
+UI08MAZ_0102_0767884_0776885 就是 一个 地方 真 的 SO 那个 ER 要 过 我 的 LOGISTICS IN HALL 有 MALAYSIA 找不到 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0767884_0776885 is -3.96241 over 898 frames.
+UI08MAZ_0102_0780875_0788463 啊 有 啊 对 那个 是 在 UNI 的 是 子 所以 那种 MAH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0780875_0788463 is -3.50293 over 757 frames.
+UI08MAZ_0102_0788463_0794931 真 的 真 的 是 多少 他 IS A 他们 SIL2 SOME MORE 啊 在 RATE 多少 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0788463_0794931 is -3.88922 over 645 frames.
+UI08MAZ_0102_0794931_0800958 全部 人 的 弟 弟 也 可以 啊 可以 拿 到 很 PERCENT OF 三 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0794931_0800958 is -3.70057 over 601 frames.
+UI08MAZ_0102_0807331_0817061 HOUR 到 三 岁 你 就 很 少 哈 哈 哈 是 我们 TENNIS 是 不久 SHOULD BE MORE 的 是 CONSUMING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0807331_0817061 is -3.7219 over 971 frames.
+UI08MAZ_0102_0817061_0824004 然后 所以 我 他们 在 还有 三 种 说 可能 说 前 十五 岁 DURATION SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0817061_0824004 is -4.04389 over 692 frames.
+UI08MAZ_0102_0824004_0830154 ER 有 三 种 然后 就 不同 PLACING THEN 我 就 不同 LIFE 他 的 他 PERIOD 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0824004_0830154 is -4.41293 over 613 frames.
+UI08MAZ_0102_0830154_0836919 然后 SIL2 SIL2 SIL2 做 TENNIS 好玩 演 的 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0830154_0836919 is -3.293 over 675 frames.
+UI08MAZ_0102_0836919_0843529 以 MALAYSIA 就是 WORKABLE 因为 我们 这里 很多 一 我 太 多 WE'LL ALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0836919_0843529 is -4.08559 over 659 frames.
+UI08MAZ_0102_0843529_0846869 我 寄 去 MEETING 跟 我 还有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0843529_0846869 is -3.91694 over 332 frames.
+UI08MAZ_0102_0846869_0857004 而是 我 们 的 三 的 时候 我 然后 他 一个 新的 AT 会 TO 知道 他 不能 HUNDRED PERCENT 的 时候 就是 我 们 的 坏 处 那时 我 还 可以 用 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0846869_0857004 is -4.12517 over 1012 frames.
+UI08MAZ_0102_0857004_0864051 IN ORDER TO 我 最 小 的 啊 COMMERCIAL OFF FOR SIL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0857004_0864051 is -3.4903 over 703 frames.
+UI08MAZ_0102_0878797_0888429 他 跟 我 讲 SIL2 因为 我 MORE IN 啊 我 我 MAJOR IN BETWEEN 做 NORMAL 没有 像 你 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0878797_0888429 is -3.80348 over 961 frames.
+UI08MAZ_0102_0891205_0901595 不 的 时候 都是 我 觉得 还有 他 他们 BEASTIE THERE'S NO POTENTIAL 以 MALAYSIA 可是 我 觉得 没有 POTENTIAL 东 西 也 能 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0891205_0901595 is -3.96078 over 1037 frames.
+UI08MAZ_0102_0901595_0907397 EH 这个 是 ATTACKER THEN 没有 人 去 那些 POSITION I'M I SAY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0901595_0907397 is -3.83373 over 578 frames.
+UI08MAZ_0102_0907397_0914852 MAYBE 就 觉得 那个 是 你 很多 我 是 觉得 可以 做 了 因为 你 KOREAN SHOWS 有 你 出去 你 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0907397_0914852 is -4.36071 over 744 frames.
+UI08MAZ_0102_0914852_0921665 JAPANESE YEAR 我 那个 POLY 又 不能 做 东 西 很多 我 的 COMMISSION 样 子 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0914852_0921665 is -4.09596 over 679 frames.
+UI08MAZ_0102_0929005_0937941 SIL2 我 TENSION 可能 是 S 就是 SIL2 DEGREE 的 时候 我 MEAN 我 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0929005_0937941 is -3.50722 over 892 frames.
+UI08MAZ_0102_0937941_0942389 SIL2 我 都是 需要 我 我 都是 真 的 是 饿 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0937941_0942389 is -3.74371 over 443 frames.
+UI08MAZ_0102_0942389_0950032 我 可以 就 是 说 其实 我 不 想 THEY WERE TELLING 去 ENTRIES ENERGY SCHOOL FOR 那个 人 少 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0942389_0950032 is -3.93716 over 762 frames.
+UI08MAZ_0102_0950032_0960962 THE CIRCLE FOR SIL YES OR TWO WAYS AH CHOP CALL 那些 THEN I KNOW CAN YOU 之后 我 都 很多 午 餐 你 五十 这个 FOR ALL THOSE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0950032_0960962 is -3.9092 over 1091 frames.
+UI08MAZ_0102_0960962_0966287 然后 说 那些 我 都是 很 需要 一个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0960962_0966287 is -3.62228 over 531 frames.
+UI08MAZ_0102_0966287_0973013 因为 他 的 SETTLE BOY 了 的 我 这种 BIO 他 HOME 很 不 一 样 的 很 不 一 PATIENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0966287_0973013 is -4.27698 over 671 frames.
+UI08MAZ_0102_0973013_0981651 THEY SHOULD HAVE CHOSEN 大 都是 不 一 PATIENT 去 CRIMINAL NO ENERGY 去 SUPPORT 这个 这个 MALAYSIA 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0973013_0981651 is -4.18391 over 862 frames.
+UI08MAZ_0102_0981651_0990055 那个 习惯 了 那个 那个 底 就是 一个 POTENTIAL TO TO BE ER THIS MODULE BE ALOT MORE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0981651_0990055 is -3.80793 over 838 frames.
+UI08MAZ_0102_0994198_1003084 你 给 我 之 前 不要 啦 你 没有 个 的 SIDE EFFECT THEY 是 一个 很 很 没有 人 跟 小 小 的 WE WERE 一个 LADY THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_0994198_1003084 is -4.16609 over 887 frames.
+UI08MAZ_0102_1003084_1007866 一个 REGRET 一 MANAGEMENT 你 可以 LAST 我 也 是 OKAY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1003084_1007866 is -4.13299 over 476 frames.
+UI08MAZ_0102_1007866_1013729 但是 你 IN ORDER TO THE THEN 你 去 你 去 要 进 过 很多 PROCESS SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1007866_1013729 is -3.89257 over 584 frames.
+UI08MAZ_0102_1013729_1018938 PROCESS 你 很多 我 的 WE STAGE 的 PROCEDURE 就 输 了 SO 哪里 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1013729_1018938 is -3.98643 over 519 frames.
+UI08MAZ_0102_1018938_1026796 ER WHICH IS FINE HOLLAND 好 的 一个 SHOULD BE WASTED 学 他们 SO 在 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1018938_1026796 is -3.86053 over 784 frames.
+UI08MAZ_0102_1026796_1032113 BE INDIAN OR TWO METRES IT TO MAYBE TWO KILOMETRES 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1026796_1032113 is -4.06174 over 530 frames.
+UI08MAZ_0102_1032113_1040038 BUT 如果 MALAYSIA WHY 你 没有 做 做 到 那个 东 西 啊 OCEAN 我们 这个 MAJOR ABRASION 就是 我 AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1032113_1040038 is -4.20929 over 791 frames.
+UI08MAZ_0102_1040038_1050960 啊 那个 CAMERA G 我们 找不到 我们 走 到 睡 觉 我 是 比较 多 我 我 MINA 的 SAUCE 的 LECTURER SOURCES OF 那个 叫 什么 你们 就 AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1040038_1050960 is -4.00802 over 1090 frames.
+UI08MAZ_0102_1050960_1055761 你 都 很 好 K YOU AIM AIM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1050960_1055761 is -3.51866 over 478 frames.
+UI08MAZ_0102_1055761_1064272 如果 没有 MUSCLE 是 说 PROVE 去 IMPORT 有 去 不 会 来 你 给 我 的 己 的 COVER 了 啊 的 道理 有 COVER FOUR PRINCE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1055761_1064272 is -4.20141 over 849 frames.
+UI08MAZ_0102_1071662_1079438 AFTER GRADUATE SO 我 会 去 去 然 我 要 看 我 GRADUATE 过后 那个 经济 这样 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1071662_1079438 is -3.95071 over 776 frames.
+UI08MAZ_0102_1079438_1083561 PUBLICITY 给 我 进 现在 我 又 去 TO 去 做 MASTER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1079438_1083561 is -4.23966 over 410 frames.
+UI08MAZ_0102_1083561_1090554 EH 你 MASTER 因为 我 的 RENTAL 去 KNOW 如果 经济 好 的 话 我 就 出去 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1083561_1090554 is -4.05079 over 697 frames.
+UI08MAZ_0102_1090554_1100470 十年 我 COMPLAIN ASSUMING 会 四年 考 开 工 是 在 BUSY OR 最近 开 一个 REASON 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1090554_1100470 is -3.72917 over 990 frames.
+UI08MAZ_0102_1100470_1106967 只是 我 的 COMMISSION 那时 我 觉得 是 做 到 很 久 一点 BE 我 不要 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1100470_1106967 is -4.09743 over 648 frames.
+UI08MAZ_0102_1112174_1113325 FAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1112174_1113325 is -3.43403 over 113 frames.
+UI08MAZ_0102_1118036_1125799 OK 就 SIL2 我 我 就 BACK OF THE HOUSE 我 的 一个 讲 也 要 一 间 家 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1118036_1125799 is -3.9153 over 774 frames.
+UI08MAZ_0102_1125799_1130396 没有 只要 得到 自己 因为 觉得 O K B COMPANY 你 去 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1125799_1130396 is -4.24319 over 458 frames.
+UI08MAZ_0102_1130396_1138256 有 去 CITY 你 每个 月 的 TAKE BUS 会 MAKE USE OF PEOPLE TRY 你 没有 YOU KNOW EH COURSE SIL2 清楚 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1130396_1138256 is -4.03731 over 784 frames.
+UI08MAZ_0102_1138256_1146536 我 去 MACHINE CHECK 你 就 不 讲 要 的 东 西 我 ENERGY 就是 THOSE YOU'LL CLUB ONLY 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1138256_1146536 is -3.98468 over 826 frames.
+UI08MAZ_0102_1146536_1157100 I DID YOU COME AND THEN 就 NO ENERGY 我 啊 是 在 想 OUR FIELD 他们 就是 你 我 东 西 MARRY STUBBORN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1146536_1157100 is -3.81496 over 1054 frames.
+UI08MAZ_0102_1157100_1163275 因为 你 讲 REDUCE 那个 他们 拿 到 OTHER THAN THAT 给 我 CARBON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1157100_1163275 is -3.70322 over 616 frames.
+UI08MAZ_0102_1163275_1168641 AT HOME THAT IS YOU AM AT THE ENERGY 就是 你 自己 不 完 自 己 的 ENERGY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1163275_1168641 is -4.41505 over 535 frames.
+UI08MAZ_0102_1168641_1175309 你 比较 有 特别 的 TRIP CHEAP WHAT 可是 如果 大 的 两个 THAT WE CAN OH JIAN 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1168641_1175309 is -4.1528 over 665 frames.
+UI08MAZ_0102_1175309_1181719 可是 IN ORDER TO BE DEAL 是 我们 BILL 我们 叫 一 个 BUILDING YAH 比较 比较 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1175309_1181719 is -4.094 over 639 frames.
+UI08MAZ_0102_1181719_1186580 多 八十 块 九 十 块 THEN 你 就 我 年 UNCOMFORTABLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1181719_1186580 is -4.04863 over 484 frames.
+UI08MAZ_0102_1186580_1192130 回 到 来 SUNDAY KNOW HOW TO BETRAY 提高 LOR 啊 BEEN TO 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1186580_1192130 is -3.99442 over 553 frames.
+UI08MAZ_0102_1192130_1199881 NORMAL 的 ENERGY EFFICIENT 的 P TO P 他 的 REDUCE 那个 有 很多 SEEDS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0102_1192130_1199881 is -3.73412 over 773 frames.
+UI08MAZ_0103_0000000_0010163 也是 THEY WILL COME TO LIKE BUT THEN CREATE 一个 LIAO 一个 LIGHTING EFFICIENT BAIL GREECE OUT 别的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0000000_0010163 is -3.8394 over 1014 frames.
+UI08MAZ_0103_0010163_0015837 然后 你 就 不用 多 一点 是 都是 去 多 的 是 在 老师 是 说 不 想 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0010163_0015837 is -4.17031 over 565 frames.
+UI08MAZ_0103_0015837_0024459 IN THE WHOLE HOUSE 如果 你 有 REDUCE 一半 已经 算 了 去 KEBAB AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0015837_0024459 is -3.6203 over 860 frames.
+UI08MAZ_0103_0030731_0037665 对 我 们 是 做 那些 东 西 啊 我们 就 OK 了 PRIZES OK 所以 CHARGE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0030731_0037665 is -4.16783 over 691 frames.
+UI08MAZ_0103_0037665_0044057 SIL2 对 我 CONSCIOUS 的 VISITOR ARCHITECTURE GENERAL O K 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0037665_0044057 is -3.98032 over 637 frames.
+UI08MAZ_0103_0044057_0050351 对 THEN 为什么 有一个 有 THEY ARE MORE 这里 学 一个 炒 果 条 LEH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0044057_0050351 is -3.82439 over 627 frames.
+UI08MAZ_0103_0050351_0057026 走过 他 三 LIKE LIKE 那种 PLASTIC DESIGN THIS YEAR 就是 跟着 你 ORIENTATION OF 你 的 BUILDING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0050351_0057026 is -4.28441 over 666 frames.
+UI08MAZ_0103_0057026_0062533 如果 你 SIGHT 的 你 看 了 但是 私 底 下 READINGS 那些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0057026_0062533 is -3.80494 over 549 frames.
+UI08MAZ_0103_0062533_0069385 BUT THEN THEY 的 面对 同样 的 THEN LIKE SIMILAR 他们 就是 没有 没有 LOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0062533_0069385 is -3.85136 over 683 frames.
+UI08MAZ_0103_0069385_0077826 因为 这 边 是 FIFTY FIFTY SIL2 因为 它 STEPHANIE 过 PITY 这 两年 我 如果 你 的 房间 有一个 ER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0069385_0077826 is -4.04522 over 842 frames.
+UI08MAZ_0103_0077826_0083618 他 的 DESIGN 的 讲 过 SIL2 你 就算 了 LIKE 如果 你 是 不要 WHAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0077826_0083618 is -3.92672 over 577 frames.
+UI08MAZ_0103_0083618_0087744 你 就 放 其 他 的 FIFTY PERCENT SIL2 那个 就是 他 NORMALLY 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0083618_0087744 is -4.26528 over 411 frames.
+UI08MAZ_0103_0087744_0091738 ALTHOUGH 如果 你 DESIGN 一个 这样 子 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0087744_0091738 is -4.18715 over 397 frames.
+UI08MAZ_0103_0091738_0099012 EH 你 不能 吃 东 西 进 去 买 全部 的 SIL2 如果 你 放 讲 过 FRINGE 我 二十 PEOPLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0091738_0099012 is -4.31517 over 725 frames.
+UI08MAZ_0103_0099012_0106647 NO MAJOR MAJOR BUILDING INCREASE 你 就 开 工 你 就 开 工 你 就会 变 你 要 MAKE 他们 DISCOVER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0099012_0106647 is -4.06108 over 762 frames.
+UI08MAZ_0103_0106647_0113871 那些 所以 我 们 的 ORIENTATION 还有 YOU ARE NOT ORIENTATION 就是 SYSTEM MINIMUM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0106647_0113871 is -4.09187 over 720 frames.
+UI08MAZ_0103_0113871_0119234 你们 算 LIKE THAT SO LIKE BUT GET THE MAXIMUM OFF DAY LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0113871_0119234 is -3.99099 over 534 frames.
+UI08MAZ_0103_0119234_0126025 你 我 讲 BALL 进 来 的 是 比较 CITY WALK MAYBE 就是 其 他 就是 他 OF 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0119234_0126025 is -4.08176 over 677 frames.
+UI08MAZ_0103_0126025_0130427 他 LECTURER 有 讲 到 那 是 说 妈妈 那 小 说 啊 跳舞 MEAN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0126025_0130427 is -3.9985 over 438 frames.
+UI08MAZ_0103_0130427_0138110 对 如果 你 MEAN CAUSE WE MEDITATION 的 是 COURSE MATE 的 是 你 你 BUILDING 吃饭 这样 子 啊 他 是 最近 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0130427_0138110 is -4.3555 over 766 frames.
+UI08MAZ_0103_0138110_0146729 可是 没有 你 JUST MAXIMIZE 啊 我 有 我 就 BASE ON 那些 然后 叫 SITE ANALYSIS 去 D TO ME 我 的 BABY 的 讲 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0138110_0146729 is -3.93599 over 860 frames.
+UI08MAZ_0103_0146729_0152794 啊 的 PASS EXAM FEES 也是 不用 到 MECHANICAL 要 PRODUCE 一个 是 要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0146729_0152794 is -3.98262 over 605 frames.
+UI08MAZ_0103_0152794_0160240 可是 DESIGN 比较 ACTIVE SEASON I THINK THAT SHE ALWAYS LISTEN TO THE PLACE 找 到 一个 这样的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0152794_0160240 is -3.9878 over 743 frames.
+UI08MAZ_0103_0163216_0167243 用 功 PHONE LO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0163216_0167243 is -2.78208 over 401 frames.
+UI08MAZ_0103_0167243_0175748 MEDITATION 读 书 OR 你 CHOOSE 朋友 FIGHT 的 讲 SCREENING 啊 就是 TOPIC 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0167243_0175748 is -3.81231 over 849 frames.
+UI08MAZ_0103_0177856_0183024 就 觉得 是 比较 西 啦 比较 OKAY 那个 LONDON 进 来 给 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0177856_0183024 is -3.80889 over 515 frames.
+UI08MAZ_0103_0186099_0188306 WHERE IS IT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0186099_0188306 is -3.20261 over 219 frames.
+UI08MAZ_0103_0192992_0202749 HUH 很 健康 一点 我们 这里 的 如果 CRAM EX ER LAND 就是 这里 就是 HOT THEN 就 MIDDLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0192992_0202749 is -3.9644 over 974 frames.
+UI08MAZ_0103_0202749_0208526 很 高 一 MAYBE 有 HOT PLATE 那 边 LEH 就是 CO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0202749_0208526 is -3.58107 over 576 frames.
+UI08MAZ_0103_0208526_0214577 有 OK MAYBE HOLIDAY 你 不用 你 出去 你 等 一下 他 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0208526_0214577 is -3.89552 over 603 frames.
+UI08MAZ_0103_0214577_0222136 问题 的 的 话 你 不会 ASSIGN 那 边 他 IMMEDIATELY T U 的 考试 我们 记 错 是 H ONE TEENAGER ONE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0214577_0222136 is -4.33138 over 754 frames.
+UI08MAZ_0103_0222136_0228363 所以 的 那 边 DESIGN 的 PUBLICITY 整 个 都是 BUS LOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0222136_0228363 is -3.81528 over 621 frames.
+UI08MAZ_0103_0228363_0233518 因为 他们 做 P 你 拿 那个 CONSIDER MISSION 其实 不要 问 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0228363_0233518 is -3.71151 over 514 frames.
+UI08MAZ_0103_0233518_0239266 所以 就是 NOT APPLICABLE IN DIFFERENT PLACE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0233518_0239266 is -3.51839 over 573 frames.
+UI08MAZ_0103_0239266_0244426 然后 如果 你 沙 滩 个 三三 有 不 一 样 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0239266_0244426 is -3.7561 over 514 frames.
+UI08MAZ_0103_0244426_0251610 SIL2 的 什么 什么 什么 很 大 路 不要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0244426_0251610 is -3.54295 over 716 frames.
+UI08MAZ_0103_0251610_0261782 还有 我 的 BURN 的 BIRTHDAY TO YOU ALL 不要 SIL2 只是 不是 是 SIL2 SIL2 只有 一 听 COUNTRY CAUSATION SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0251610_0261782 is -3.98275 over 1015 frames.
+UI08MAZ_0103_0268973_0277459 没有 做 的 是 自己 要 EH 我 是 跟 我 以前 的 PRACTICAL BUT 他 C 可是 东 西 啊 我 觉得 会 去 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0268973_0277459 is -3.8401 over 847 frames.
+UI08MAZ_0103_0277459_0284387 就 WILL 做 SONY 我 是 我 我们 就会 解释 你 我 是 然后 把 我 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0277459_0284387 is -3.84384 over 691 frames.
+UI08MAZ_0103_0284387_0294146 然后 就 很 TO HOLD IT 哪里 了 随时 会 不要 一直 我们 应该 放 OPEN 就是 SIL2 他说 为什么 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0284387_0294146 is -3.99292 over 974 frames.
+UI08MAZ_0103_0297198_0307092 只是 你 的 啊 THEN 我们 很 很 PRESSURE 就是 比 我 求 你 看 我 是 说 他们 SO 他们 很 不 需要 很 奇怪 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0297198_0307092 is -4.06046 over 987 frames.
+UI08MAZ_0103_0307092_0312999 然后 他们 有 可能 早 出去 是 在 TO 他 的 TO PLAY NOTHING APPLY 什么 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0307092_0312999 is -4.0617 over 589 frames.
+UI08MAZ_0103_0312999_0322314 哪里 可以 我 的 我 的 房间 你 要 在 哪里 啊 他们 有 PAPAYA 过 CLUB IS ABOUT 过去 一个 MEAN 哪里 有 放 进 不 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0312999_0322314 is -4.04633 over 930 frames.
+UI08MAZ_0103_0324844_0331791 我 我 还没有 有 我 有时 我 是 还没有 QUIZ 因为 我 只 C B C 个 去 AH BASIC 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0324844_0331791 is -4.15599 over 693 frames.
+UI08MAZ_0103_0331791_0335268 那个 叫 NO AGE LIMIT 还没有 还没有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0331791_0335268 is -3.88465 over 346 frames.
+UI08MAZ_0103_0335268_0342046 WANNA GO HOME 人 去 过 那些 那个 的 戏 就是 一个 TOPIC 讲 你 的 衣服 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0335268_0342046 is -4.24311 over 676 frames.
+UI08MAZ_0103_0342046_0349171 我们 THEN 我们 自己 BEEN NO BODY MOBY 好 我 有 去 JOIN YOUR 啊 那个 READS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0342046_0349171 is -4.00292 over 711 frames.
+UI08MAZ_0103_0351259_0361128 JOVIAL 他 没有 啦 OUR 我 看 的 是 ME ME 过 任何 的 是 是 LINGUISTIC 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0351259_0361128 is -3.8698 over 985 frames.
+UI08MAZ_0103_0361128_0367552 有 我 听 CHRIS 还有 所以 我 最 讨厌 PERSONAL 的 对 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0361128_0367552 is -3.87194 over 640 frames.
+UI08MAZ_0103_0367552_0372422 那时 我 不知道 因为 他 的 ORIGIN 是 在 啊 很 那时 他们 有 他们 有 看 的 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0367552_0372422 is -4.35932 over 485 frames.
+UI08MAZ_0103_0374976_0383485 OH SIL2 这个 东 西 是 看 你 信 心 的 话 就 好像 G P A LIVING 很 新 华 人 就 OK SIL2 就 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0374976_0383485 is -4.07137 over 849 frames.
+UI08MAZ_0103_0383485_0391562 H ONE ONLY NEED TO GO TO A 如果 你 做 ONE 他 讲 的 东 西 很多 句 而已 做 ONE IS REALLY 是 BY 要 过 所以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0383485_0391562 is -4.31814 over 806 frames.
+UI08MAZ_0103_0397266_0405124 PRACTICAL 很 好 看 可是 我 LA 我 我 觉得 不是 一定 全部 人 可以 介绍 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0397266_0405124 is -4.10167 over 784 frames.
+UI08MAZ_0103_0413778_0422007 啊 也 对 对 那个 的 那个 THE 想 啊 对 可是 你 东 西 是 是 INTERN 一下 全部 ALL WE GO TO THE SAME WHAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0413778_0422007 is -4.15863 over 821 frames.
+UI08MAZ_0103_0422007_0430178 我 的 是 白 我 我 的 不 是 是 会 怎样 画 那个 做 很多 一个 就 WHOA 我 不 可 能 MODEL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0422007_0430178 is -4.26143 over 815 frames.
+UI08MAZ_0103_0441756_0447166 然后 我 不是 我 跟 我 跟 我们 讲 说 个 东 西 IN BIS LAW 那个 人 SINGING SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0441756_0447166 is -4.47299 over 539 frames.
+UI08MAZ_0103_0447166_0452901 THEN 你 去 SOMETHING 这样 子 啊 他 叫 什么 好 看 一些 新的 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0447166_0452901 is -4.06717 over 572 frames.
+UI08MAZ_0103_0459695_0468519 还没有 COURSE 了 啊 应该 是 没有 时间 AH 我 MAJOR 我们 MINOR 我们 全部 都是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0459695_0468519 is -3.96555 over 880 frames.
+UI08MAZ_0103_0468519_0475067 ALL BUILDING SIL2 跑 去 BUILDING ECONOMY ECONOMY 也是 过 一个 SECTION 一个 ME 然后 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0468519_0475067 is -4.03651 over 653 frames.
+UI08MAZ_0103_0475067_0483371 啊 CONSTRUCTION MANAGEMENT 也是 可以 CRASH GENERATION 啊 那些 东 西 ROOMY NATION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0475067_0483371 is -3.90465 over 828 frames.
+UI08MAZ_0103_0483371_0492797 MATERIALS 就会 就会 MEETING 的 我们 我 自 己 的 时间 SHOULD 我 都 有 东 西 LO THEN 还有 就是 GREEN 歌 剧 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0483371_0492797 is -3.97707 over 941 frames.
+UI08MAZ_0103_0492797_0498394 啊 比较 就 其实 是 不错 的 是 ENGINEER 他 的 是 MECHANICAL ENGINEERING 的 BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0492797_0498394 is -4.26386 over 558 frames.
+UI08MAZ_0103_0498394_0504298 THEN 我们 就会 讲 I THINK 我们 BUILDING 掉 变成 跟 跟 到了 门 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0498394_0504298 is -3.82368 over 588 frames.
+UI08MAZ_0103_0504298_0511916 MEAN NO 一直 不 讲 话 最 主要 的 WE DON'T REALLY START FROM BUILDING 建 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0504298_0511916 is -3.77434 over 760 frames.
+UI08MAZ_0103_0511916_0519458 MAYBE DIGITAL OVER 自动 会 其 他人 去 的 地方 一直 都 有 影响 到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0511916_0519458 is -3.85621 over 752 frames.
+UI08MAZ_0103_0525335_0534669 他们 已经 是 YOU KNOW FOR MIXED MODE SIL2 的 所以 MALAYSIA 是 POTENTIAL 我 END UP ALSO GIRL 这 两年 里面 建筑 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0525335_0534669 is -3.80557 over 931 frames.
+UI08MAZ_0103_0534669_0543136 还 好 建筑 不是 六月 THEN 就 ER 我 喜欢 有些 三个 一起 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0534669_0543136 is -3.82048 over 845 frames.
+UI08MAZ_0103_0543136_0549733 是 到 在 真 的 里面 可以 TO WAIT WAIT 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0543136_0549733 is -3.57608 over 658 frames.
+UI08MAZ_0103_0549733_0558406 BALL SO IN THE NATURE 因为 我们 可以 我们 还是 所以 算 是 一个 UNDER DEVELOPED COUNTRY 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0549733_0558406 is -3.83466 over 865 frames.
+UI08MAZ_0103_0558406_0561014 很多 C 我 们 的 做 到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0558406_0561014 is -3.91243 over 259 frames.
+UI08MAZ_0103_0561014_0566475 很多 很多 人 RESTRAIN 的 美国 我 是 YOU GET 一点 是 说 很 RELAXING MORE MORE ON 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0561014_0566475 is -4.25346 over 544 frames.
+UI08MAZ_0103_0566475_0571910 他 DRESSING 去 完了 没有 B S YOUR NORMAL PRODUCE 了 我们 要 怎样 去 SUSTAIN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0566475_0571910 is -4.33492 over 542 frames.
+UI08MAZ_0103_0571910_0574894 再 去 就是 去 那些 他 他 们 是 做 有些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0571910_0574894 is -4.15368 over 296 frames.
+UI08MAZ_0103_0574894_0582003 我 们 是 一边 做 那个 RESPONSIBLE 一边 起 你 READING A 所以 我们 会 比较 THAT WAS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0574894_0582003 is -4.19288 over 709 frames.
+UI08MAZ_0103_0582003_0590233 啊 我 是 想 那 边 他们 一起 做 错 东 西 我们 就 看到 对 我们 就 不要 去 了 就 出现 在 BIO 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0582003_0590233 is -4.28714 over 821 frames.
+UI08MAZ_0103_0600936_0602580 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0600936_0602580 is -3.07203 over 162 frames.
+UI08MAZ_0103_0602580_0606474 其实 THINK 是 不 是 一个 MORE PEOPLE 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0602580_0606474 is -3.78683 over 387 frames.
+UI08MAZ_0103_0606474_0613607 讲 回去 SUSTAINABLE PAY 比较 SENSIBLE 就 觉得 你 有 CONSTRUCTION 那种 不 想 STAY 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0606474_0613607 is -4.10394 over 711 frames.
+UI08MAZ_0103_0613607_0619485 这个 很 贵 的 我们 THIS IS WORKING 自 己 的 LEH 我 做 一个 好像 有 READING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0613607_0619485 is -4.12709 over 586 frames.
+UI08MAZ_0103_0619485_0624993 你 觉得 你 你 觉得 FOREST 你 看 我 全部 SO 已经 发现 WILL BELIEVE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0619485_0624993 is -3.96243 over 549 frames.
+UI08MAZ_0103_0624993_0631244 我 FOR ME SO 就 不见 了 THEN 那个 MONOPOLY 到 前 我们 有 给 你 我们 不 PATIENT 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0624993_0631244 is -4.37218 over 623 frames.
+UI08MAZ_0103_0631244_0638542 好像 BEAM 变成 去 前 是 MALE 的 就是 最后 一 是 年轻 的 现在 三月 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0631244_0638542 is -3.89615 over 728 frames.
+UI08MAZ_0103_0638542_0642965 以前 没有 BE 去 的 TRAIL PERIOD 我 知道 据 我 所 知 道 有 一些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0638542_0642965 is -4.09136 over 440 frames.
+UI08MAZ_0103_0642965_0650385 所以 看 BEHAVIOR 还 BASICALLY 每 个 人 都 不 那个 还有 全部 起来 THEN 旁边 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0642965_0650385 is -3.86385 over 740 frames.
+UI08MAZ_0103_0650385_0660597 你 的 时间 觉得 去年 后 会 这样 I JAM 到 旁边 的 些 他 RATE 那个 的 叫 我 ER DUE TO EXPRESS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0650385_0660597 is -3.781 over 1019 frames.
+UI08MAZ_0103_0660597_0667874 THE EYES 旁边 全部 PIZZA 好 的 因为 他 觉得 那个 EXPRESS 他 可以 我 那些 COMMITTEE 是 ALL THE PEOPLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0660597_0667874 is -4.11559 over 726 frames.
+UI08MAZ_0103_0667874_0671383 十年 KNOW WHY 全部 你 不 可 能 叫 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0667874_0671383 is -3.70573 over 349 frames.
+UI08MAZ_0103_0671383_0675235 SIL2 只是 我 YES THAT ONE REASON SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0671383_0675235 is -3.70363 over 383 frames.
+UI08MAZ_0103_0675235_0682117 因为 你 一 讲 到 海边 是 给 很多 东 西 发生 SOCIAL PROMISE 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0675235_0682117 is -3.9744 over 686 frames.
+UI08MAZ_0103_0682117_0691912 如果 你 一个 PLANNING SOCIAL 跟 你 不好 啊 很多 东 西 会 发生 这个 DESIGN 会 要 不 然 你 不 管 你 的 地方 给 HANDLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0682117_0691912 is -4.10957 over 978 frames.
+UI08MAZ_0103_0691912_0702324 真 的 没有 一个 MEANING 里面 五十 YOU KNOW LEH 那时 WHICH 我们 你 被 打 想 MELISSA 是 那种 我 听 过 如果 你 是 觉得 你 不 HALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0691912_0702324 is -4.00993 over 1039 frames.
+UI08MAZ_0103_0702324_0710457 就 PLANNING 可以 讲 到 很多 NO NO SO HAPPENING 的 ER 叫 CULTURE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0702324_0710457 is -3.62381 over 811 frames.
+UI08MAZ_0103_0710457_0720014 EH 你 讲 CULTURE CULTURE NOTES 如果 你 没有 CONTROL 我 们 的 时候 我 知道 每个 看 看 P PEOPLE 你 要 们 的 时候 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0710457_0720014 is -3.98317 over 954 frames.
+UI08MAZ_0103_0720014_0726486 觉得 那个 HALL 的 时候 COACH 我 应该 ARM FORCE MY GENERATION 的 话 就 去 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0720014_0726486 is -4.19218 over 645 frames.
+UI08MAZ_0103_0735212_0745537 OK 就 OH YOU KNOW SIL2 CHARGE OF PUSH 如果 好像 THE SHOTS MEDICINE VERY PASSIONATE ABOUT THE PATIENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0735212_0745537 is -3.89618 over 1031 frames.
+UI08MAZ_0103_0745537_0751973 然后 边 做 你 觉得 现在 只是 喜欢 SHOP HOW'S SEMI COMMERCIAL 三 年 是 HOUSING 所以 就算 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0745537_0751973 is -4.1589 over 642 frames.
+UI08MAZ_0103_0751973_0761803 所以 他 COACH 已经 觉得 就是 因为 每 个 人 都 不知道 FROM THE START LATE 我们 要 加 把 那些 人 带 回去 FELICIA 的 CULTURE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0751973_0761803 is -3.9774 over 981 frames.
+UI08MAZ_0103_0761803_0771796 就是 BE 有 那种 SHOW HOUSE SOME IN JUNE OR SOMETHING TO 也是 是 他们 不要 JUNIOR COLLEGE KEYBOARD LIFE 真 的 变成 就 比较 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0761803_0771796 is -4.13909 over 997 frames.
+UI08MAZ_0103_0771796_0782332 我 去 MIDDLE MOST 到 SUPPER BUNGEE JUMP OFF 不要 去 AH 去 GURNEY AREA 去 就 都 去 读 过 啊 那些 东 西 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0771796_0782332 is -4.04003 over 1052 frames.
+UI08MAZ_0103_0782332_0792176 我们 讲 BRING BACK 他们 PLAY 因为 他们 我们 DEGREE 的 BUILDING 了 你 就 想 没有 COMMERCIAL 上 面 HOUSING 这个 TEACHING 通常 的 你 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0782332_0792176 is -4.14443 over 982 frames.
+UI08MAZ_0103_0792176_0802489 他 只是 ONE SO STANDARD PEOPLE IN THE WORLD EH 你 都 TROUBLE TO TRAVEL 你 就是 那个 BURN 啊 THIS 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0792176_0802489 is -3.77084 over 1029 frames.
+UI08MAZ_0103_0806035_0815926 因为 现在 的 现在 的 不知道 那个 COMMISSION 的 COLLEAGUE 有 BUT 很 吵 EH 人家 BROTHER TO 真 的 人 那些 TRAVEL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0806035_0815926 is -4.00792 over 987 frames.
+UI08MAZ_0103_0815926_0820816 NO NO MINE SAD 啦 我 们 的 MENTALITY 我 们 的 人 MENTALITY 不 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0815926_0820816 is -4.2833 over 487 frames.
+UI08MAZ_0103_0820816_0827953 就 OK BE SO 我 一 一 个 人 跟 你 讲 GREENER TAKE 一个 SCENARIO 好像 脚 车 是 ASK US 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0820816_0827953 is -4.11076 over 712 frames.
+UI08MAZ_0103_0827953_0836827 ASK US 啦 他 没有 ELECTRICAL 你 还是 一样 用 GOOGLE 好像 我 们 的 要 开 在 CON 啊 的 MENTALITY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0827953_0836827 is -4.03055 over 885 frames.
+UI08MAZ_0103_0836827_0844106 都是 BUYER SIL2 我 不 我 我 就 说 你 不 的 DEGREE 不到 因为 你 什么 都 不 多 那种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0836827_0844106 is -3.9929 over 726 frames.
+UI08MAZ_0103_0844106_0851433 BUT 我 就是 WHICH 我 JONE 都 好 因为 我 不知道 看 我 没有 看到 以后 是 最 便 怎样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0844106_0851433 is -4.16072 over 731 frames.
+UI08MAZ_0103_0851433_0856664 我 IT'S A GOING TO HAPPEN 读 书 不知道 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0851433_0856664 is -3.40263 over 521 frames.
+UI08MAZ_0103_0856664_0865725 MOSTLY 我 觉得 我们 跟 他们 应该 有 DEPRESSION 这样 给 我们 看 的 SENIOR 有 外面 很 掺 掺 新的 有 二十 年 我 现在 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0856664_0865725 is -4.12666 over 904 frames.
+UI08MAZ_0103_0865725_0873589 因为 如果 我们 在 不 去 去 MAINTAIN 话 我们 每 学 BUILDING 的 GROUP 我们 你 PERSON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0865725_0873589 is -3.99863 over 784 frames.
+UI08MAZ_0103_0873589_0881445 那个 AUNTIE 的 SHOPPING ROLL 他 就 SEE NEVER LIKE SEMI 的 SIL2 真 的 的 STOP 先 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0873589_0881445 is -3.84073 over 784 frames.
+UI08MAZ_0103_0881445_0889431 的 那个 如果 他们 TRADING SIL2 IM CANTEEN FIVE TEN YEARS TIME TRAVELLING TO SET 一个 少 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0881445_0889431 is -3.86935 over 797 frames.
+UI08MAZ_0103_0889431_0894597 LIKE SIMILAR SYLLABUS 这个 多 少 钱 如果 他 出 一个 CAMPAIGN 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0889431_0894597 is -4.18125 over 515 frames.
+UI08MAZ_0103_0894597_0900557 因为 他 去 CANTEEN 讲 真 的 JUST A 不见 因为 没有 这样 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0894597_0900557 is -3.76077 over 594 frames.
+UI08MAZ_0103_0900557_0906326 家乡 他们 在 才 去 的 的 MONDAY THE PERSON 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0900557_0906326 is -3.48212 over 575 frames.
+UI08MAZ_0103_0906326_0911473 他们 应该 跟 跟 讲 话 他 SIL2 我 是 去 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0906326_0911473 is -3.72281 over 513 frames.
+UI08MAZ_0103_0915813_0925869 SIL2 OH MY 我 只是 POLY 西 就是 你 是 我 觉得 MALAYSIA 好 我 多 BUSY LEH BUT INDIA 啊 BECAUSE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0915813_0925869 is -3.90163 over 1004 frames.
+UI08MAZ_0103_0925869_0928928 没有 事 做 我们 其实 好 DON'T 用 五十 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0925869_0928928 is -4.46916 over 304 frames.
+UI08MAZ_0103_0928928_0939268 ECONOMY 好 我 有 钱 买 东 西 也 觉得 是 那个 一个 AGE 五百 块 的 PRICE USE POSITION 有 SIL2 其实 我 们 的 ECOLOGY COPE 到 我们 ASIA 好 我 有 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0928928_0939268 is -4.30508 over 1032 frames.
+UI08MAZ_0103_0939268_0946367 不是 说 CHOSEN 就 有 钱 有 钱 就 刚刚 好 那个 OVERALL 刚刚 好 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0939268_0946367 is -3.92279 over 708 frames.
+UI08MAZ_0103_0946367_0953276 就是 没有 人 会 都是 ETHICAL 每天 的 是 RACIAL BRUSSEL 可以 住 HALL PEOPLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0946367_0953276 is -3.98022 over 689 frames.
+UI08MAZ_0103_0959298_0968570 他 的 ACTIVITY 跟 他 在 他 的 HALL PEOPLE 他 是 的 MODE 的 是 PAINT TIME OR 有 可能 还要 CON 常 的 MAINTENANCE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0959298_0968570 is -4.30456 over 925 frames.
+UI08MAZ_0103_0968570_0973879 如果 MAINTENANCE 以 ONE TEAM 有 钱 DEMANDING 的 话 这个 东 西 我 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0968570_0973879 is -4.23848 over 529 frames.
+UI08MAZ_0103_0980386_0990454 SIL2 DUE BY 那个 SIL2 SIL2 TUNE 对 只是 只是 一边 TOW 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_0980386_0990454 is -3.61835 over 1005 frames.
+UI08MAZ_0103_1000097_1009180 就 给 我 看到 他 们 的 东 西 的 不是 不是 他们 到 底 有 钱 的 是 CIVIL 很 低 边 他们 最近 两次 CANADA 最 YOU WANT 进 钱 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1000097_1009180 is -4.23021 over 906 frames.
+UI08MAZ_0103_1009180_1015618 在 环境 已经 很 近 那 间 喜欢 BUILDING MAYBE 听到 所以 之 前 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1009180_1015618 is -3.94662 over 642 frames.
+UI08MAZ_0103_1015618_1025140 有 他们 有 有 一天 会 比较 会 觉得 我 没有 人 要 我 那种 清 GO HOME VACANCY 你 APPRECIATE 我 是 觉得 这 是 我 的 自己 POSSESSION AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1015618_1025140 is -4.20552 over 950 frames.
+UI08MAZ_0103_1025140_1029853 我 不 需要 这种 LAB 有 是 STABLE 他们 拿 钱 去 还 东 西 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1025140_1029853 is -4.19272 over 469 frames.
+UI08MAZ_0103_1029853_1037275 你 有 一天 就是 比较 是 啊 十五 我 东 西 啊 你 不知道 你 真 真 的 真 的 我 的 是 看 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1029853_1037275 is -4.03064 over 740 frames.
+UI08MAZ_0103_1037275_1043077 你 给 我 也 不 会 ONE 啊 不是 YOU WANT 又是 以前 没有 要 YOU YOU ARE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1037275_1043077 is -3.98222 over 578 frames.
+UI08MAZ_0103_1045508_1054816 因为 每 个 人 OKAY 就 OBSERVE 很 CANNOT MEET 果 错 一个 钱 每年 一年 讲 美国 错 T P R 是 钱 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1045508_1054816 is -4.05348 over 929 frames.
+UI08MAZ_0103_1054816_1063644 SIL2 TV 叫 我 应该 去 METRES 然后 TO TEACHING KNOW YOU CAN BROCHURE 讲 SO 我 有 全部 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1054816_1063644 is -3.97243 over 881 frames.
+UI08MAZ_0103_1063644_1073734 对 所以 全部 因为 BEFORE 所以 我 不要 怕 有 几个 MY YOU 很 他们 有 我 有 THEN 我 八十 所以 我们 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1063644_1073734 is -4.00204 over 1007 frames.
+UI08MAZ_0103_1073734_1080271 一点 如果 会 PITCH RELATIVELY 之 前 就 在 一 整 年 超过 超过 整 个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1073734_1080271 is -4.12677 over 652 frames.
+UI08MAZ_0103_1080271_1084743 整 个 NATION 有一个 去 COURSE 我 YOU 我 没有 用 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1080271_1084743 is -3.81755 over 445 frames.
+UI08MAZ_0103_1084743_1091969 YOU 就 比较 也 比较 能 没有 没有 叫 是 SIL2 我 的 DO BUT 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1084743_1091969 is -3.6007 over 721 frames.
+UI08MAZ_0103_1094300_1101232 他 YOU YOU 没有 就 其实 那个 不 是 朋友 的 他 们 是 RELATIONSHIP 还 比较 好 朋友 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1094300_1101232 is -4.50194 over 691 frames.
+UI08MAZ_0103_1101232_1109945 啊 对 啊 一下 啦 好像 是 的 是 USUALLY 我 其实 MAKE A SIL TRAVEL 啊 有 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1101232_1109945 is -4.00675 over 869 frames.
+UI08MAZ_0103_1116873_1118510 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1116873_1118510 is -3.47879 over 162 frames.
+UI08MAZ_0103_1134676_1143675 我 的 LOR 没有 YOU ALL THE CHARGES 了 我 YOGURT 我 我 成绩 要 做 你 MALAYSIA 现在 经济 是 靠 我 的 CROSS 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1134676_1143675 is -4.00291 over 898 frames.
+UI08MAZ_0103_1148081_1155280 我们 学校 LIKE 那个 两个 I MEAN MEAN 如果 你 面 前 的 们 是 一个 问题 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1148081_1155280 is -3.83597 over 718 frames.
+UI08MAZ_0103_1156867_1164878 只是 我 担 心 东 西 以后 ME DO FOR 什么 事 情 会 发生 WHAT YOU DON'T THINK 不可 以 去 TOUCH 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1156867_1164878 is -3.8854 over 799 frames.
+UI08MAZ_0103_1164878_1171519 你 一 DON'T KNOW 你 是 BELOW THE SOCIAL SOCIAL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1164878_1171519 is -3.58564 over 662 frames.
+UI08MAZ_0103_1179750_1184103 SIL2 SIL2 SIL2 RESORT 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1179750_1184103 is -3.88682 over 433 frames.
+UI08MAZ_0103_1184103_1187141 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1184103_1187141 is -3.06714 over 302 frames.
+UI08MAZ_0103_1187141_1191920 这样的 我 们 的 I THINK SHE WILL 要 做 一个 是 今年 参 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1187141_1191920 is -3.75416 over 476 frames.
+UI08MAZ_0103_1191920_1198617 他 在 KIDDING 一些 可能 有 做 一个 DEFERMENT 所以 可是 THINK 可能 就是 很难 SCOLDING IS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1191920_1198617 is -4.11119 over 668 frames.
+UI08MAZ_0103_1198617_1203089 因为 是 STUDIO 你 你 H TWO 就 很 SUBJECTIVE ALL THE THINGS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0103_1198617_1203089 is -4.11372 over 445 frames.
+UI08MAZ_0104_0000000_0004962 你 你 H TWO 就 很 SUBJECTIVE 我 的 局势 呢 是 喜欢 你 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0000000_0004962 is -4.19661 over 494 frames.
+UI08MAZ_0104_0004962_0010449 很 便 宜 我 不 我 不 想 你 东 西 THREE DIFFERENT 他 给 东 西 PROJECT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0004962_0010449 is -4.02624 over 547 frames.
+UI08MAZ_0104_0010449_0019772 TWENTY FOUR AS IN 觉得 自己 因为 每个 因为 其实 的 是 听 去 做 我 的 我 听 不 多 岁 我 就是 对 我 AGE 比较 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0010449_0019772 is -4.24434 over 930 frames.
+UI08MAZ_0104_0019772_0028599 那个 是 我 也 不 喜欢 THAT'S O K 你 的 B B B C D B C 你 讲 那 边 也是 不可 以 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0019772_0028599 is -3.95941 over 881 frames.
+UI08MAZ_0104_0035493_0044107 OH MODEL 做 我 的 SIL2 我 们 的 有 做 THREE D 我 用 COMPUTER 有 ER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0035493_0044107 is -3.53738 over 859 frames.
+UI08MAZ_0104_0044107_0051250 ER 的 家 BASE ON ALOT 时候 也是 可以 BE 我 的 很 恐怖 SUSTAIN SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0044107_0051250 is -3.63595 over 712 frames.
+UI08MAZ_0104_0051250_0058886 你 有 去 买 不 到 我们 一 BE 我 THOUGH 我们 好 吃 会 不 会 有 PROJECT MINIMUM BUT 我 以上 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0051250_0058886 is -4.14212 over 762 frames.
+UI08MAZ_0104_0058886_0067431 所以 我 就 不是 一个 很 好 PROMOTE FROM 去 过 B 的 的 好 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0058886_0067431 is -3.75074 over 853 frames.
+UI08MAZ_0104_0067431_0073395 SIL2 BILINGUALISM SIL2 YOU DO YOU 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0067431_0073395 is -3.74191 over 594 frames.
+UI08MAZ_0104_0073395_0080772 我 是 是 分 我 本身 的 STUDIO 跟 起来 过后 SO 就 就 我 我 的 是 六 巴 进 UNI 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0073395_0080772 is -4.25085 over 736 frames.
+UI08MAZ_0104_0080772_0087436 THEY 以 我 衣服 有 啦 就是 还 没 有 JOIN BASIC BASIC 然后 过后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0080772_0087436 is -4.04606 over 664 frames.
+UI08MAZ_0104_0087436_0093911 其 他 的 那个 所以 你 就 其他 的 读 那些 EH 你 去 是 西 啊 那种 HISTORICAL 啊 那些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0087436_0093911 is -4.36863 over 646 frames.
+UI08MAZ_0104_0093911_0101578 然后 OTHER SUPPORT UNI 就是 PROJECT SIL2 没有 没有 MUSCLE 没有 PEOPLE 没有 DEVELOP 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0093911_0101578 is -3.91853 over 765 frames.
+UI08MAZ_0104_0101578_0105452 所以 你 就 有 我 今年 我们 做 HOUSING 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0101578_0105452 is -3.61197 over 385 frames.
+UI08MAZ_0104_0105452_0115197 IT WILL 就 要 C 就 就 啊 有 他 HOUSING 是 觉得 有 去年 有 八 个 人 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0105452_0115197 is -3.84763 over 973 frames.
+UI08MAZ_0104_0115197_0124730 他 他 一 GROUP 他 是 真 的 是 还没有 你们 到 BE SINGLE 们 的 就是 YOU 你 你 他 每 次 你 不 需要 MAKE SURE 你 看 来 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0115197_0124730 is -4.22781 over 951 frames.
+UI08MAZ_0104_0124730_0133271 我 有 他 把 那些 东 西 啊 很 粗俗 我 是 你 要 OH 子 啊 自己 本身 DESIGN 不好 我 已经 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0124730_0133271 is -4.18797 over 852 frames.
+UI08MAZ_0104_0133271_0138828 我 觉得 不是 F 我 老师 COURSE 已经 想 想 到 他 已经 好像 说 他 一直 跟 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0133271_0138828 is -4.29598 over 554 frames.
+UI08MAZ_0104_0138828_0147338 你 就 不用 你 就 不是 一个 你 还 不够 是 过去 SOME FOR SECOND THEN I JOINED UNI SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0138828_0147338 is -3.99136 over 849 frames.
+UI08MAZ_0104_0147338_0155357 是 SUBJECT 就是 PRETTY 先 PACK 好 一个 RESEARCH DETECT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0147338_0155357 is -3.6047 over 800 frames.
+UI08MAZ_0104_0155357_0161977 有 啊 MONTH 我 我 就 被 说 那些 应该 是 要 做 一个 ARCHITECTURE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0155357_0161977 is -3.95197 over 660 frames.
+UI08MAZ_0104_0161977_0169043 要 TO 的 P 了 好 THROUGHOUT RESEARCH SIL2 有 OH SO YOU CAN JOIN HOCKEY 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0161977_0169043 is -4.21008 over 705 frames.
+UI08MAZ_0104_0169043_0179854 二十二 年 我们 已经 所以 十 多 年 了 就 STRUCTURE 一个 就是 一个 就 MEAN THIS IS OVERSEAS OVER 真 的 时候 你 然后 到了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0169043_0179854 is -4.0267 over 1079 frames.
+UI08MAZ_0104_0184725_0195660 对 啊 这 边 是 你 自己 MISSION 啦 比 我 的 BATCH 真 的 是 ER PART TIMER 还是 YOU 坐 HALFWAY 就 公 事 啊 啊 很 小 很 小 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0184725_0195660 is -4.12125 over 1092 frames.
+UI08MAZ_0104_0195660_0205271 对 还有 那些 BRICKS 有些 人 他们 他 们 是 MAJORITY 那个 几个 MINUTES 我 会 DEAN LISTER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0195660_0205271 is -4.02193 over 959 frames.
+UI08MAZ_0104_0205271_0210995 是 MOSTLY 是 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0205271_0210995 is -3.21422 over 570 frames.
+UI08MAZ_0104_0216115_0221616 可以 没有 对 对 有 有 DECAY 的 时候 是 这样的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0216115_0221616 is -3.80345 over 548 frames.
+UI08MAZ_0104_0221616_0230371 YA LOR SO 直接 在 面 找 那些 GUYS IN SHAPE 你 的 现象 就是 很 很 少 哈 没有 不可 以 给 给 你 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0221616_0230371 is -4.065 over 874 frames.
+UI08MAZ_0104_0234438_0243184 有 我 有 我 的 印 象 就是 觉得 他 他 们 就 的 THEN 我 觉得 我 帮 我 N U S A P H D 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0234438_0243184 is -3.71609 over 873 frames.
+UI08MAZ_0104_0243184_0249462 的 RESEARCH 话 TO 那些 COMPONENT THESIS SIL2 NO ALSO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0243184_0249462 is -3.86933 over 626 frames.
+UI08MAZ_0104_0249462_0255960 NO 有 我 我 喜欢 因为 我 平时 东 西 因为 他们 可能 东 西 我 CON 我 就 不要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0249462_0255960 is -4.07785 over 648 frames.
+UI08MAZ_0104_0255960_0258710 我 喜欢 就是 那些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0255960_0258710 is -3.6501 over 273 frames.
+UI08MAZ_0104_0258710_0265170 已经 是 KNOW THE 觉得 他们 已经 已经 读 完了 我 就 SIMPLE 普 通 时候 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0258710_0265170 is -4.22547 over 644 frames.
+UI08MAZ_0104_0265170_0271491 我 就 不 会 有 不会 啦 是 IF 你 要 吃 东 西 如果 我 就 APPLY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0265170_0271491 is -3.94169 over 630 frames.
+UI08MAZ_0104_0279451_0287455 我们 我 们 的 ONE D SEVENTY SHEEP 多 过 人 PAGE 因为 我 不 起 我 不 喜欢 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0279451_0287455 is -3.89311 over 798 frames.
+UI08MAZ_0104_0287455_0289310 ALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0287455_0289310 is -2.65856 over 184 frames.
+UI08MAZ_0104_0289310_0295511 老师 讲 我 讲 OH MY 我 是 C 我们 去 YOU WANT TO BE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0289310_0295511 is -3.60877 over 618 frames.
+UI08MAZ_0104_0295511_0304091 WAY TRIP 就 的 PAINTINGS 感觉 没有 CONSIDERATION 然后 我们 自己 STANDARD PUT UP TO INFORMATION SEVEN 我 自己 觉得 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0295511_0304091 is -4.34708 over 856 frames.
+UI08MAZ_0104_0304091_0313841 然 一边 的 学生 的 SIL2 好像 有 我们 我 觉得 就 比较 NAME IN THE LOGISTICS 的 比赛 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0304091_0313841 is -3.713 over 973 frames.
+UI08MAZ_0104_0313841_0318750 因为 我 给 他们 真 的 比赛 啊 我 觉得 THEN I THINK 去 BESIDE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0313841_0318750 is -4.01512 over 489 frames.
+UI08MAZ_0104_0318750_0324578 PACKAGE 我们 STUDIO 我 觉得 为什么 还是 WEEK IN SINGAPORE 你 CHOSE TO DO PROJECT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0318750_0324578 is -4.3228 over 581 frames.
+UI08MAZ_0104_0324578_0332759 到 十 五 MEET 他 们 的 去 PUBLISH 的 所以 他们 STANDARD ULTIMATELY 就是 ENGLISH 的 那个 INTERNATIONAL 的 过 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0324578_0332759 is -4.2265 over 816 frames.
+UI08MAZ_0104_0332759_0339285 我们 没有 我们 需要 LOR 喜欢 WILL HELP YOU TO 我 喜欢 OH 你 是 LEADER 你 不是 WINTER 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0332759_0339285 is -4.56452 over 651 frames.
+UI08MAZ_0104_0339285_0344860 我 也 会 我 就 不 吃 我 喜欢 这种 去 了 你 做 错 的 话 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0339285_0344860 is -4.35336 over 556 frames.
+UI08MAZ_0104_0344860_0353888 那种 我们 都 没有 动 比较 是 YOU 去 范围 不是 RACIST 我 没有 看 一些 PRESET 有 我 没有 PASS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0344860_0353888 is -3.90517 over 901 frames.
+UI08MAZ_0104_0353888_0357992 BUT UNIQUE EH 没有 我 就 一年 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0353888_0357992 is -3.55701 over 408 frames.
+UI08MAZ_0104_0357992_0365860 其实 你 做 有 MALE 还是 你 要 一年 还是 去 去 啊 去 做好 自 己 的 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0357992_0365860 is -4.20968 over 785 frames.
+UI08MAZ_0104_0369656_0378030 TOP READING 是 有 K SIL2 U K 是 叫 一个 叫 一 一 叫 他 TAX 有时 去 看 戏 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0369656_0378030 is -4.03466 over 835 frames.
+UI08MAZ_0104_0378030_0384330 一个 是 人 是 IN 去 远 所以 学 然后 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0378030_0384330 is -3.69538 over 628 frames.
+UI08MAZ_0104_0384330_0391992 那 边 HUH 去 很 你 看 你 QUEEN ENGLISH 他 是 那个 YOGA NATION 很多 哪里 读 CHE 就 出 名 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0384330_0391992 is -4.29003 over 764 frames.
+UI08MAZ_0104_0395092_0403887 FOREST AH NO 他 是 讲 TRY 了 因为 现在 ALL 那个 MOBILE TRAINING 我 去 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0395092_0403887 is -3.78786 over 878 frames.
+UI08MAZ_0104_0403887_0410128 我们 这 边 CLASS 啊 IRIS AH 那个 TRAINING 过去 每 个 人 CHOOSE TO SUSTAINABLE LEH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0403887_0410128 is -4.10909 over 622 frames.
+UI08MAZ_0104_0410128_0414821 那 边 一直 讲 GREENER 你 他们 EACH 我 有 BUT 来了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0410128_0414821 is -4.06128 over 467 frames.
+UI08MAZ_0104_0414821_0421214 对 SIL2 我 你 的 MINI RIDGE 他们 FOR 没有 BUILDING 比较 RICH 的 那种 CREAM DEGREE MAIN COM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0414821_0421214 is -4.2015 over 637 frames.
+UI08MAZ_0104_0421214_0424828 如果 REACH 到 我 不 给 你 我 不 给 你 APPROVE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0421214_0424828 is -4.20712 over 359 frames.
+UI08MAZ_0104_0424828_0432099 TO 我 不可 以 踢 球 O C 拿 不到 的 叫 我 我 喜欢 我 SINGAPORE 那种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0424828_0432099 is -4.08734 over 725 frames.
+UI08MAZ_0104_0432099_0441445 SIL2 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0432099_0441445 is -3.08334 over 933 frames.
+UI08MAZ_0104_0441445_0448294 哇 还没有 我 是 看 SO RESULTS 我 是 是 新加坡 只有 我 有时 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0441445_0448294 is -3.99105 over 683 frames.
+UI08MAZ_0104_0448294_0454324 有 不错 的 YET 啦 他 们 的 我 讲 啊 他 就 关 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0448294_0454324 is -3.43005 over 601 frames.
+UI08MAZ_0104_0454324_0462681 很 很 很 厉害 他 是 NINETEEN 要 THE CANDLE AND P A DELL 的 很 厉害 也是 在 ADIDAS 以 P 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0454324_0462681 is -4.18606 over 834 frames.
+UI08MAZ_0104_0462681_0472361 然后 他 就 DESIGN 的 LECTURER AGREE 如果 你 看 SWEET 一下 不知道 他 只是 去 过 这样 SIL2 你 要 去 申 请 回 我 也 那个 觉得 他 的 衣服 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0462681_0472361 is -4.20312 over 966 frames.
+UI08MAZ_0104_0472361_0482230 YOU MEAN YOU KNOW FORMAL 的 地方 SIL2 SIL2 我 不是 KNOW 数 好像 WINDY INDIAN 你 的 朋友 都 很 HAPPENING 的 地方 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0472361_0482230 is -4.14796 over 985 frames.
+UI08MAZ_0104_0482230_0488905 ENGLISH 我们 其 他 东 西 就是 因为 我们 我 要 拿 到 一个 钱 给 PATIENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0482230_0488905 is -3.85404 over 666 frames.
+UI08MAZ_0104_0488905_0497231 FIFTEEN 还 给 他 C P R T ONE APPROVE 去 K L 直接 去 用 他 没有 WE GOT AND YOU 时候 啊 是 对 对 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0488905_0497231 is -4.16589 over 831 frames.
+UI08MAZ_0104_0497231_0504754 他 COMMERCIAL 我 们 的 HOUSING 讲 啊 来 去 CUBICLE YAH 不是 每 个 人 家 里 有 一些 到 WHISTLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0497231_0504754 is -4.12094 over 750 frames.
+UI08MAZ_0104_0504754_0514698 因为 有些 没有 去 很 啊 很 他 讲 其实 有些 N U SO 我们 没有 久 之 前 我 没有 TACKLE 就是 我们 STUDY 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0504754_0514698 is -3.82507 over 992 frames.
+UI08MAZ_0104_0519384_0523721 有 去 过 我 HALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0519384_0523721 is -3.12659 over 432 frames.
+UI08MAZ_0104_0543462_0551148 还有 自己 I MAYBE CAN 想 就是 了 他们 有 一 科 是 一 个 就是 HELLO 子 可是 MAYBE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0543462_0551148 is -4.15982 over 767 frames.
+UI08MAZ_0104_0551148_0560392 他们 一起 TRAIN 自己 ADDICTED 啊 然后 IN 新加坡 就 MELODY 因为 他 是 的 的 THAT 全部 就 世界 的 东 西 不好 那 边 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0551148_0560392 is -4.08493 over 922 frames.
+UI08MAZ_0104_0570488_0580858 SIL2 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0570488_0580858 is -3.04939 over 1035 frames.
+UI08MAZ_0104_0580858_0584354 对 那些 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0580858_0584354 is -3.15798 over 348 frames.
+UI08MAZ_0104_0589636_0593703 SIL2 对 不 起 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0589636_0593703 is -3.31276 over 405 frames.
+UI08MAZ_0104_0596254_0602359 有 我们 有 ER 我们 有 在 有 有一个 CALL 就 WHAT THEN 就 WAH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0596254_0602359 is -3.82925 over 609 frames.
+UI08MAZ_0104_0602359_0607735 因为 可是 ESCALATOR 啊 另外 一个 有 ASSIGN 可是 TO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0602359_0607735 is -4.06345 over 536 frames.
+UI08MAZ_0104_0607735_0615169 THEN SKIP 就 就 走 走 走 说 很 贵 COM 在 啦 你 看 的 BUBBLE STREETS SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0607735_0615169 is -3.90072 over 741 frames.
+UI08MAZ_0104_0615169_0618693 然后 到 CHRISTMAS TREE 全部 THEN 就 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0615169_0618693 is -3.95613 over 350 frames.
+UI08MAZ_0104_0618693_0624393 他 都 不 到 还没有 学 到 我 我 自己 练 就 我 自己 啊 我 比 我 一直 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0618693_0624393 is -4.31154 over 568 frames.
+UI08MAZ_0104_0624393_0629651 没有 比较 有趣 拉 读 书 LOR 啊 二十 那个 CUPBOARD SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0624393_0629651 is -4.14168 over 524 frames.
+UI08MAZ_0104_0629651_0636285 然后 因为 ENGLISH 我 去 去 COURSE DO DESIGN 就是 YOU 去 的 地方 有 一 自己 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0629651_0636285 is -4.2775 over 661 frames.
+UI08MAZ_0104_0636285_0640612 要 保持 SIL2 MEDIA 找 事 效 SIL2 也 不 会 IT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0636285_0640612 is -4.16674 over 431 frames.
+UI08MAZ_0104_0644477_0653106 ALL TOPIC 那个 那个 是 那个 生意 CERTAIN 是 的 BETTER 啦 可是 如果 你 小 的 们 的 什么 事 情 就 了 多少 也 不 错 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0644477_0653106 is -4.52731 over 861 frames.
+UI08MAZ_0104_0659727_0668664 OH OKAY 我 而且 那 是 叫 我 去 见 啦 那个 CHEESE CHRISTMAS TREE 去 会 BUT 块 多 少 一个 想 要 听 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0659727_0668664 is -4.10112 over 892 frames.
+UI08MAZ_0104_0668664_0678310 因为 那个 是 AMERICAN 有 注意 了 如果 他 给 你 没有 多 大 可是 我 跟 是 很 每天 做 每年 的 读 书 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0668664_0678310 is -3.99424 over 963 frames.
+UI08MAZ_0104_0684333_0694797 有 有 多 多 不同 种 有 书 因为 你 的 在 什么 自己 做 不是 我 有 做 我 SUBMIT 做 然后 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0684333_0694797 is -3.70956 over 1044 frames.
+UI08MAZ_0104_0694797_0702878 MORE ON STILTS 啊 那个 SCHOOL CHOP AH 啊 去 过 她 不同 多 不同 J C 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0694797_0702878 is -3.904 over 806 frames.
+UI08MAZ_0104_0702878_0709832 THEN 我们 以 我 就 读 书 们 是 讲 是 用 WE HAVE THREE TIMES AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0702878_0709832 is -4.17621 over 693 frames.
+UI08MAZ_0104_0709832_0718575 他 讲 SAFETY 了 我 是 没有 打 可是 我 这 几 年 前 的 到 十 六 七十 年 觉得 不是 一 TO PARTY 我 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0709832_0718575 is -4.31587 over 872 frames.
+UI08MAZ_0104_0721201_0729111 WHOA TO 是 我 喜欢 如果 去 BABY 的 什么 啦 他 可以 三个 月 到 SO GRID 里面 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0721201_0729111 is -3.96895 over 789 frames.
+UI08MAZ_0104_0729111_0734229 SIL2 SIL2 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0729111_0734229 is -3.0216 over 510 frames.
+UI08MAZ_0104_0749541_0751971 就 对 不 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0749541_0751971 is -3.34136 over 241 frames.
+UI08MAZ_0104_0762433_0773106 因为 有 MOTION 我 之 前 是 我 以后 BEEN GOING HOME 多 我 说 话 我 HALL 的 KNOW CALL 过 我 就 在 想 读 I T 时候 叫 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0762433_0773106 is -4.01577 over 1065 frames.
+UI08MAZ_0104_0773106_0780718 我 叫 我 去 如果 叫 不是 很 REALISTIC SIL2 我 也 不是 一个 很 真 的 是 一样 的 我们 在 看 笑 话 讲 话 就 自 己 的 LADY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0773106_0780718 is -4.31338 over 759 frames.
+UI08MAZ_0104_0780718_0785555 然后 我 老师 全部 是 很 你 来 我 家 啊 造 造 STUFF 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0780718_0785555 is -4.21541 over 482 frames.
+UI08MAZ_0104_0785555_0793969 EH 然后 我 觉得 你 要 我 要 我 想 真 就是 给 SIL2 PLAY BADMINTON 就是 些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0785555_0793969 is -3.97317 over 839 frames.
+UI08MAZ_0104_0793969_0801098 ER 所以 我 就 去 找 你 的 话 THEN 可以 可以 SO WEIRD SAFE TO 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0793969_0801098 is -3.88805 over 711 frames.
+UI08MAZ_0104_0801098_0807377 就是 OK 可以 一个 BUILDING EIGHT K 点 家 CLOSING 会 K 的 LAST LO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0801098_0807377 is -3.98198 over 626 frames.
+UI08MAZ_0104_0807377_0812341 然后 KEEP DREAMING 我 I'M I'M I'M PAYING THE WHOLE FAMILY MIX TOGETHER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0807377_0812341 is -3.939 over 494 frames.
+UI08MAZ_0104_0812341_0819420 啊 那个 是 一个 CHRISTIAN 啊 我 都 FEEL 不是 INSTANT 深入 D N T U CITY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0812341_0819420 is -3.9659 over 706 frames.
+UI08MAZ_0104_0819420_0823509 OKAY 每 个 人 在 用 走 进 不到 啊 西 吃 什么 FOOD 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0819420_0823509 is -4.17174 over 407 frames.
+UI08MAZ_0104_0825170_0830641 我 的 MISSION 我 觉得 很难 打 到 的 是 很 人 来 全部 用 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0825170_0830641 is -4.1392 over 545 frames.
+UI08MAZ_0104_0834286_0840454 啊 和 好 所以 才 有 SIL2 的 是 MEDIUM IS IS 还有 AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0834286_0840454 is -3.57277 over 615 frames.
+UI08MAZ_0104_0840454_0845491 是 我 是 参加 BESIDE 我 一定 有 我 有 TOUCH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0840454_0845491 is -3.87418 over 502 frames.
+UI08MAZ_0104_0845491_0852829 SIL2 SO 我 就 想 去 看 了 我 的 有 话 天 才 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0845491_0852829 is -3.61272 over 732 frames.
+UI08MAZ_0104_0852829_0859974 就 MEET MEET YAH SIL2 我 OR OK LEH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0852829_0859974 is -3.58379 over 713 frames.
+UI08MAZ_0104_0859974_0868735 SIL2 SIL2 什么 YOU ARE 我 给 我 是 参加 比赛 了 后来 我 是 做 GREAT EASTERN 的 我 什么 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0859974_0868735 is -4.11597 over 874 frames.
+UI08MAZ_0104_0870743_0872677 SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0870743_0872677 is -3.16286 over 191 frames.
+UI08MAZ_0104_0872677_0879693 SO SO 我 觉得 不 TRIP 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0872677_0879693 is -3.43018 over 700 frames.
+UI08MAZ_0104_0879693_0882161 不要 讲 从小 啦 但是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0879693_0882161 is -3.78085 over 245 frames.
+UI08MAZ_0104_0882161_0888184 OK OK OK OK OK 啦 要 MAINLY 我 要 我 CAME INTO YOUR 了 还是 GAME AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0882161_0888184 is -4.73642 over 600 frames.
+UI08MAZ_0104_0888184_0898376 很 好 几 本 书 HA 那个 给 人家 的 MEALS 也是 我 是 我 是 我 其实 了 五十 七十 PERCENT SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0888184_0898376 is -4.0815 over 1017 frames.
+UI08MAZ_0104_0898376_0902463 你 跟 你 要 比 我 和 我 是 可以 我 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0898376_0902463 is -4.3088 over 407 frames.
+UI08MAZ_0104_0902463_0906110 SIL2 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0902463_0906110 is -3.24149 over 363 frames.
+UI08MAZ_0104_0906110_0913777 WILL BE ONE HOUR FOR ME NOW 我 我 东 西 我 是 我 的 脚 FIX 我 不要 我 就 讲 我 们 的 我 的 脚 EH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0906110_0913777 is -4.31145 over 765 frames.
+UI08MAZ_0104_0913777_0921359 或者 是 WORKING AT THE SHOWS THAT NO IT 因为 我 讲 我 没有 话 比较 不会 我 就是 很 比较 YAH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0913777_0921359 is -4.14581 over 756 frames.
+UI08MAZ_0104_0926467_0929589 我 我们 有时 也是 不 比较 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0926467_0929589 is -3.91857 over 310 frames.
+UI08MAZ_0104_0932936_0936730 CHEK CHEK CHEK CHEK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0932936_0936730 is -3.26949 over 377 frames.
+UI08MAZ_0104_0939284_0945706 我 话 我 我 没有 没有 没有 机会 去 TOUCH BALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0939284_0945706 is -3.97792 over 640 frames.
+UI08MAZ_0104_0945706_0951321 可是 我 其实 一个 USE 我 希望 像 有 间断 SIMPLE THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0945706_0951321 is -3.95269 over 560 frames.
+UI08MAZ_0104_0951321_0959851 对 可以 走 走 很 很 讲 我 喜欢 的 啊 进 不 了 就 去 我 是 喜欢 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0951321_0959851 is -3.64305 over 851 frames.
+UI08MAZ_0104_0962281_0968013 的 是 可以 SKETCH J J C 也是 我 MALAYSIA 我 的 SKETCH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0962281_0968013 is -3.87207 over 571 frames.
+UI08MAZ_0104_0968013_0974974 CRIME SIL2 有 FEES 太 甜 了 什么 CASH CONTROL 有 ISLAND SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0968013_0974974 is -3.97751 over 694 frames.
+UI08MAZ_0104_0978967_0981196 THE GREATNESS OF 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0978967_0981196 is -3.78178 over 221 frames.
+UI08MAZ_0104_0981196_0988685 ER 我 去 到 那个 那个 那个 LANGUAGE 去 到 那里 的 NATURAL LANGUAGE 有 我们 你 说 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0981196_0988685 is -4.23545 over 747 frames.
+UI08MAZ_0104_0988685_0992926 我们 女 生 然后 就 已经 DEGREE 是 SECOND YEAR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0988685_0992926 is -4.00139 over 422 frames.
+UI08MAZ_0104_0992926_0999764 这个 也是 ARCHITECTURE MAJOR PERSONAL 走过 INTERNATIONAL 我 也 是 名 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_0992926_0999764 is -3.82963 over 682 frames.
+UI08MAZ_0104_1001145_1007834 然后 今天 的 过 不 了 的 成绩 OFF 我 BUS OWNER 很多 FIELD 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1001145_1007834 is -4.05142 over 667 frames.
+UI08MAZ_0104_1007834_1013069 SIL2 SIL2 的 是 很 少 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1007834_1013069 is -3.52261 over 522 frames.
+UI08MAZ_0104_1016169_1023502 以前 我 我 起 初 的 多 是 跑步 PROMISES TO 你 他 东 西 GO THROUGH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1016169_1023502 is -3.773 over 731 frames.
+UI08MAZ_0104_1023502_1027042 好 不 希望 不是 走 FEEL 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1023502_1027042 is -4.07173 over 352 frames.
+UI08MAZ_0104_1027042_1036874 因为 到 好像 不能 做 一个 东 西 就 吗 我 要 我 的 我 我 好看 的 ME 啊 我 是 从 我 BUFFER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1027042_1036874 is -4.02044 over 981 frames.
+UI08MAZ_0104_1039403_1047992 对 啊 的 BATCH 就是 因为 他 讲 的 I T 是 很 东 西 不是 了 因为 每 个 人 看 了 就 不 一 样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1039403_1047992 is -4.04019 over 857 frames.
+UI08MAZ_0104_1047992_1052466 你 我 TO 那个 TWINS 跟 你 不 多 RANGE 不用 意识 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1047992_1052466 is -4.22541 over 445 frames.
+UI08MAZ_0104_1052466_1062060 就是 好 笑 到 东 西 他 才 MONEY WITH ME 可能性 不要 我 我 我 去 我 吃 过 如果 每 个 人 可能 有 西 一样 WATCHED A BIT 我 不可 以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1052466_1062060 is -4.46243 over 957 frames.
+UI08MAZ_0104_1062060_1069326 因为 我 看 的 我 做 那个 TO 我 都 不是 ARTISTS P WORKABLE 要 PASTOR 就是 一个 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1062060_1069326 is -3.99606 over 725 frames.
+UI08MAZ_0104_1069326_1074979 我 PHOTOGRAPHER I P SO DURABLE 我 我 不是 那种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1069326_1074979 is -4.17575 over 563 frames.
+UI08MAZ_0104_1074979_1081226 你 SIL2 只是 你 没有 不要 的 了 你 要 的 的 我 一个 INDEPENDENT SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1074979_1081226 is -3.96874 over 623 frames.
+UI08MAZ_0104_1081226_1091566 啊 学校 他们 那里 三个 搞 笑 的 够 啊 啊 那种 那些 OUTINGS 我 对 我 讲 那种 啊 那 整 个 EPISODE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1081226_1091566 is -3.83197 over 1032 frames.
+UI08MAZ_0104_1095311_1104633 去 LIKE SIL2 现在 啊 现在 有 还没有 真 真 的 去 去 深入 的 讲 的 都是 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1095311_1104633 is -3.68529 over 930 frames.
+UI08MAZ_0104_1104633_1111551 因为 我 我 先进 有 西 SO 我 的 SIL SO THEY 这个 DETECT A FEW SURFING 我 MY 点 LIMITED 那 边 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1104633_1111551 is -4.16881 over 690 frames.
+UI08MAZ_0104_1113212_1119702 很多 SIL2 觉得 我 可以 最 价 钱 这样 很 很 GREEN BUILDING 啊 或者 你 DURING MEETING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1113212_1119702 is -4.01109 over 647 frames.
+UI08MAZ_0104_1119702_1126338 就是 他 的 FACILITY THEN 他 BUILDING 一 定 要 我 是 ER SUSTAINABLE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1119702_1126338 is -3.87275 over 662 frames.
+UI08MAZ_0104_1126338_1135919 EH 这些 BIRD PARK 要 TOUCH 到 他 的 手 了 一个 SPECIAL 如果 有 THEN 他 的 CASH 五 多 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1126338_1135919 is -3.82042 over 956 frames.
+UI08MAZ_0104_1135919_1143305 还有 一个 一个 TANK 在 MAIN COM 我 的 TO USE 啦 就是 很多 一个 BEAM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1135919_1143305 is -4.12023 over 737 frames.
+UI08MAZ_0104_1143305_1149818 他 的 F O C 讲 他 的 去 全部 是 BASED ON 那个 PHONE 去 DESIGNER 他们 也是 要 就是 给 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1143305_1149818 is -4.12332 over 649 frames.
+UI08MAZ_0104_1149818_1159747 我 有些 是 HIGH TECH 五十 块 对 对 我 CHECK 不 静 的 还 特地 去 啊 我 就 摆 去 他们 就 PHILOSOPHY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1149818_1159747 is -3.89186 over 991 frames.
+UI08MAZ_0104_1159747_1169468 然后 有些 是 叫 他 很 不同 很 不同 的 SIL2 EXTRACTION IS 了 然 后 你 我 SPECIALIST 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1159747_1169468 is -3.68788 over 970 frames.
+UI08MAZ_0104_1172384_1179343 对 他 份 工作 然后 你 你 做 东 西 不可 以 是 其 他 的 人 都是 有 一 部 分 人 喜欢 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1172384_1179343 is -4.24351 over 694 frames.
+UI08MAZ_0104_1179343_1185595 他 没有 错 的 很多 COMPLAIN TO 有些 人 不 喜欢 LISTENING 自 己 的 世界 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1179343_1185595 is -4.11984 over 623 frames.
+UI08MAZ_0104_1185595_1193761 啊 他 是 什么 C C T V 的 北京 VISITED 有 很多 人 COMPLAIN 也 比较 走 到 好像 很 做 到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1185595_1193761 is -4.0508 over 815 frames.
+UI08MAZ_0104_1193761_1199802 我 只是 他 们 的 工作 是 P 觉得 因为 这个 是 一个 因为 那个 这个 地方 HEALTH ISSUE AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1193761_1199802 is -4.36576 over 602 frames.
+UI08MAZ_0104_1199802_1208478 他 故 意 去 有时 好像 他 的 THEME 是 CARRY BACK 老师 就会 的 可以 TAKE ONE TWO O'CLOCK OH PRO 一点 的 感觉 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1199802_1208478 is -4.45954 over 866 frames.
+UI08MAZ_0104_1208478_1214125 对 就 讲 他 TECHNICAL 很 INDIAN BUILDING 了 啊 很多 我 们 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1208478_1214125 is -4.07991 over 563 frames.
+UI08MAZ_0104_1214125_1220573 就 很 SUBJECTIVE 的 HOLIDAY 的 是 喜欢 你 喜欢 的 出现 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1214125_1220573 is -3.91863 over 643 frames.
+UI08MAZ_0104_1223698_1227743 SIL2 因为 他 还是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1223698_1227743 is -3.43869 over 403 frames.
+UI08MAZ_0104_1227743_1237231 OH BUILDING 很 轻 声 机会 O C D 会 的 眼 看 书 的 在 那个 除了 女 生 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1227743_1237231 is -4.05276 over 947 frames.
+UI08MAZ_0104_1237231_1242718 尽 机会 之 前 我 的 我 的 学校 都 有 很 PRACTICAL 很 美 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1237231_1242718 is -3.82028 over 547 frames.
+UI08MAZ_0104_1242718_1252628 SINGAPORE 去 过 的 有 一点 要 去 SO ER 的 SALARY 也 没 有 H P TELL YOU TO THE BUS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1242718_1252628 is -3.52332 over 989 frames.
+UI08MAZ_0104_1254438_1257959 一点 P LIKE 所以 这个 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1254438_1257959 is -3.96881 over 350 frames.
+UI08MAZ_0104_1260960_1266904 THEN YOU KEEP KEEP KEPT DOESN'T MATTER 那时 我 那个 CAMPUS 你 没有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1260960_1266904 is -4.19039 over 592 frames.
+UI08MAZ_0104_1271541_1278219 TEAM IS OK 去 看 电影 因为 那个 他 的 TO GET TO KNOW MORE PROCESSOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1271541_1278219 is -3.99575 over 666 frames.
+UI08MAZ_0104_1280426_1287693 对 他 是 他 们 的 食物 不是 不是 LONDON 的 CORE READINGS WHAT THAT'S WHY 时间 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1280426_1287693 is -4.14186 over 725 frames.
+UI08MAZ_0104_1287693_1295094 SIL2 那个 LECTURE 全部 就是 AFTER 我 们 是 ANOTHER MOVIE 我 就 把 做 一个 有 ONE 你 的 城市 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1287693_1295094 is -4.27705 over 738 frames.
+UI08MAZ_0104_1295094_1298465 我 就 去 ONE 他 们 的 这个 BUILDING 我 的 SECURE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1295094_1298465 is -4.30723 over 335 frames.
+UI08MAZ_0104_1298465_1302603 他 是 IM QUITE ALOT OF 去 INVITE 是 FISHING GOT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1298465_1302603 is -4.19116 over 412 frames.
+UI08MAZ_0104_1302603_1308260 有名 的 SPECS 去 BUILD 每 一个 他 有 COMBINATION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1302603_1308260 is -4.05594 over 564 frames.
+UI08MAZ_0104_1308260_1315571 所以 是 ATTITUDE 是 BASICALLY SIL2 的 的 讲 是 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1308260_1315571 is -3.73413 over 729 frames.
+UI08MAZ_0104_1315571_1323570 一个 的 家 是 CONSULTANT 好 听 我 的 等 你 应该 是 就是 是 SLAM SIL2 我 们 的 是 时候 是 E I D 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1315571_1323570 is -4.10573 over 798 frames.
+UI08MAZ_0104_1323570_1327348 就 跟 跟 我 觉得 MARKETING 有 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1323570_1327348 is -4.0144 over 376 frames.
+UI08MAZ_0104_1330002_1340194 SAY SATURDAY I BEGIN 人 的 他 那个 也 很 真 的 也是 像 PROPAGANDA 啦 只是 YEAR BUT 他 的 他 那个 FORM 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1330002_1340194 is -4.11493 over 1017 frames.
+UI08MAZ_0104_1340194_1347578 之 前 我 有 看 DISCOVERY CHANNEL 话 也是 有 那个 FORM 就是 比 NORMAL LOR PASTE 一个 你们 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1340194_1347578 is -4.02979 over 736 frames.
+UI08MAZ_0104_1347578_1355242 就 自己 啊 全部 CHECK 为什么 这样 减 的 东 西 不 叫 AUNTIE LOOK LIKE A 先 THAT'S WHY COMPETITION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1347578_1355242 is -4.35271 over 764 frames.
+UI08MAZ_0104_1355242_1361911 他 的 还有 一 的 THEORY 的 东 西 电 脑 OK OK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1355242_1361911 is -3.60803 over 665 frames.
+UI08MAZ_0104_1361911_1367354 很 不 顺 那 你 可以 找 问题 可以 做 到 五 种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1361911_1367354 is -4.05229 over 542 frames.
+UI08MAZ_0104_1370553_1379691 没有 啊 是 所以 这个 GENE 我 了 CANE 我 BROKE 我 如果 如果 AS 刚刚 去 是 以 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1370553_1379691 is -3.89061 over 912 frames.
+UI08MAZ_0104_1387983_1395570 COMPETITOR 是 SAY SATURDAY 啊 该 啊 他 是 是 可是 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1387983_1395570 is -3.89392 over 757 frames.
+UI08MAZ_0104_1395570_1402823 就 可 以 了 我 已经 是 说 其 其 BUT 只是 要 他 就 去 K L 也是 不是 全部 她 觉得 她 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1395570_1402823 is -4.51632 over 723 frames.
+UI08MAZ_0104_1402823_1406958 他 是 给 IDEA OKAY 我 也 不 要 PREPARING FOR REST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1402823_1406958 is -4.31861 over 412 frames.
+UI08MAZ_0104_1406958_1416215 我 家乡 没有 RELIGION 是 一个 一个 他 的 一个 COACH 看到 一 个 FOR MORE 有 方面 到 很多 FOSSIL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1406958_1416215 is -4.23949 over 924 frames.
+UI08MAZ_0104_1416215_1423671 他 就 去 到 比较 多 好像 没有 六 个 DESIGN GROUP B 在 STUDIO 一个 DEAN 是 THEN 了 二十 个 一个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1416215_1423671 is -4.23972 over 744 frames.
+UI08MAZ_0104_1423671_1430887 二十 个 了 二十 个 人 都 比较 不要 那个 TIMOTHY 的 是 D 我 一起 住 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1423671_1430887 is -4.15822 over 720 frames.
+UI08MAZ_0104_1430887_1439773 一个 THEME OH 我 去 我 去 TOILET 我 去 看 我 去 我 就 三 年 是 给 我 就 可 以 讲 话 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1430887_1439773 is -3.8451 over 887 frames.
+UI08MAZ_0104_1439773_1449174 这个 是 他 的 话 他 的 坏 处 走 快 BEEN TO KNOW WHAT TO SAY 我们 讲 你 会 知道 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1439773_1449174 is -3.87772 over 938 frames.
+UI08MAZ_0104_1449174_1459091 是 的 时候 他 不是 你 如果 在 那 边 做 我 做 给 厉害 CREAM 的 MEAN YOU 是 这 方面 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1449174_1459091 is -3.6127 over 990 frames.
+UI08MAZ_0104_1465860_1473982 SIL2 SIL2 因为 他 他 讲 近 近 SIL2 P C FAIR 了 我 的 老师 就会 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1465860_1473982 is -3.93909 over 810 frames.
+UI08MAZ_0104_1473982_1478987 就 找 那些 很 厉害 英文 了 EH THAT'S WHY 他 我 比较 难 进 可以 GAME 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1473982_1478987 is -4.19299 over 499 frames.
+UI08MAZ_0104_1478987_1484173 叫 也是 THESIS ALTHOUGH 我 的 TOPIC 我 不是 只是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1478987_1484173 is -3.99657 over 517 frames.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 624 utterances, errors on 0
+UI08MAZ_0104_1484173_1491111 ANALYSIS YA IT'S IT'S 有 全部 COMMITTEE 我 看 我 CHECK 看 你 不对 那个 一起 过 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1484173_1491111 is -4.13923 over 692 frames.
+UI08MAZ_0104_1491111_1501378 所以 很多 的 SIL2 SIL2 全部 都是 要 然后 就 得 其实 你 是 不是 喜欢 LATER LATE 这个 名 字 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1491111_1501378 is -4.25058 over 1025 frames.
+UI08MAZ_0104_1501378_1508548 因为 个 小 时 这样 靠 近 SOME 厚 厚 的 东 西 做 的 做 东 西 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1501378_1508548 is -3.79489 over 715 frames.
+UI08MAZ_0104_1508548_1514703 OH EIGHTY PEOPLE USE YOUR BECAUSE THE PLACE PEOPLE YOU REACH 那个 STANDARD 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1508548_1514703 is -4.17072 over 614 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.5633 over 422425 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:161) Applied transform to 624 utterances; 0 had errors.
+UI08MAZ_0104_1514703_1520705 HA HA HA 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI08MAZ_0104_1514703_1520705 is -3.43222 over 598 frames.
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:176) Time taken 5726.77s: real-time factor assuming 100 frames/sec is 1.35569
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:179) Done 624 utterances, failed for 0
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -3.9264 over 422425 frames.
+# Accounting: time=5728 threads=1
+# Ended (code 0) at Sat Apr 22 02:05:51 UTC 2017, elapsed time 5728 seconds

@@ -1,0 +1,2 @@
+gmm-transform-means exp/tri22/2.mat.new exp/tri22/2.mdl exp/tri22/2.mdl 
+LOG (gmm-transform-means[5.1.60~1-b2d5d]:main():gmm-transform-means.cc:103) Written model to exp/tri22/2.mdl

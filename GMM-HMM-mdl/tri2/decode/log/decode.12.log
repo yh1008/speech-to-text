@@ -1,0 +1,101 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/12/utt2spk scp:data/test/split14/12/cmvn.scp scp:data/test/split14/12/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2/decode/lat.12.gz" 
+# Started at Sat Apr 22 00:30:23 UTC 2017
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/12/utt2spk scp:data/test/split14/12/cmvn.scp scp:data/test/split14/12/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2/decode/lat.12.gz' 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split14/12/utt2spk scp:data/test/split14/12/cmvn.scp scp:data/test/split14/12/feats.scp ark:- 
+UI03FAZ_0101_0012957_0017908 啊 THEY THEY SET 啊 那 边 G L 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0012957_0017908 is -3.72799 over 493 frames.
+UI03FAZ_0101_0027783_0029649 然后 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0027783_0029649 is -3.42611 over 185 frames.
+UI03FAZ_0101_0031733_0034438 我 是 在 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0031733_0034438 is -3.21816 over 269 frames.
+UI03FAZ_0101_0049315_0051872 一个 做 把 它 的 时候 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0049315_0051872 is -3.67085 over 254 frames.
+UI03FAZ_0101_0060978_0063331 J K 啊 I L 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0060978_0063331 is -4.20015 over 233 frames.
+UI03FAZ_0101_0065131_0066729 THE SAME 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0065131_0066729 is -3.86501 over 158 frames.
+UI03FAZ_0101_0078605_0081665 现在 在 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0078605_0081665 is -3.09595 over 304 frames.
+UI03FAZ_0101_0081665_0083504 印度 程度 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0081665_0083504 is -3.28918 over 182 frames.
+UI03FAZ_0101_0083504_0086134 大 的 八 所以 MIRROR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0083504_0086134 is -3.20147 over 261 frames.
+UI03FAZ_0101_0086134_0090201 RIGHT ENGINE TECHNOLOGY 上 班 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0086134_0090201 is -3.51118 over 405 frames.
+UI03FAZ_0101_0090201_0094315 他 是 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0090201_0094315 is -2.86737 over 409 frames.
+UI03FAZ_0101_0094315_0097678 他 是 ONE OF 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0094315_0097678 is -3.02388 over 334 frames.
+UI03FAZ_0101_0097678_0101842 CAUSE FRIENDS INTERNET MANUFACTURING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0097678_0101842 is -3.86779 over 414 frames.
+UI03FAZ_0101_0148822_0154695 啊 FROM HALL 有 一些 爸 有时候 觉得 在 MANUFACTURING 做 工 是 很 BORING 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0148822_0154695 is -3.92655 over 585 frames.
+UI03FAZ_0101_0157862_0159554 然后 UM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0157862_0159554 is -3.04024 over 167 frames.
+UI03FAZ_0101_0173739_0176501 做 CUSTOMER SERVICE SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0173739_0176501 is -3.58677 over 274 frames.
+UI03FAZ_0101_0189490_0193989 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0189490_0193989 is -2.8715 over 448 frames.
+UI03FAZ_0101_0193989_0201489 在 我 们 的 TEAM 里面 有 啊 CREATE QUOTATION 是 ORDER ENTRY 跟 我 的 MANAGEMENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0193989_0201489 is -3.83317 over 748 frames.
+UI03FAZ_0101_0206099_0208832 一半 受 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0206099_0208832 is -3.22366 over 271 frames.
+UI03FAZ_0101_0213045_0217410 CREATE QUOTATION SO 我 就 PLAN CYBER SOCIETY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0213045_0217410 is -3.87791 over 435 frames.
+UI03FAZ_0101_0227126_0229635 的 SALES 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0227126_0229635 is -2.99552 over 249 frames.
+UI03FAZ_0101_0242841_0249893 我 们 是 又 ORACLE SYSTEM 来 啊 HANDLE 我 们 的 DAILY PASS 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0242841_0249893 is -3.747 over 703 frames.
+UI03FAZ_0101_0252873_0257793 SIL2 R S T 其实 是 STANDS FOR FEW ENGINEERS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0252873_0257793 is -3.97222 over 490 frames.
+UI03FAZ_0101_0257793_0260825 THEN THEN 看 就是 SERIOUS PERSON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0257793_0260825 is -4.10193 over 301 frames.
+UI03FAZ_0101_0281529_0287402 然后 在 I CAN LEARN 上 班 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0281529_0287402 is -3.30496 over 585 frames.
+UI03FAZ_0101_0293472_0295690 但是 对 对 对 STANDARD 靠 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0293472_0295690 is -4.50158 over 220 frames.
+UI03FAZ_0101_0320216_0329039 IF 一个 叫 THEN COMPATIBLE 的 WORKING ENVIRONMENT AND TWO 没有 OH SIMPLE 的 对 还是 PINK COLOUR 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0320216_0329039 is -4.38181 over 880 frames.
+UI03FAZ_0101_0335688_0339165 现在 整 个 TEAM 应该 是 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0335688_0339165 is -3.92205 over 346 frames.
+UI03FAZ_0101_0339165_0346294 睡 到 读 十 多 他 啊 AFTER LAST YEAR 的 ECONOMY CRISIS 时候 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0339165_0346294 is -3.83729 over 711 frames.
+UI03FAZ_0101_0427614_0430736 就是 啊 SUPPORT ORDER ENTRY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0427614_0430736 is -3.54452 over 310 frames.
+UI03FAZ_0101_0442306_0445273 这个 CUSTOMER SERVICE I 在一起 过 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0442306_0445273 is -4.13577 over 295 frames.
+UI03FAZ_0101_0491379_0499495 UM WENT TO JAPAN 的 SALES 一 拿 到 生意 FROM JAPAN 的 CUSTOMER 之后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0491379_0499495 is -3.82015 over 810 frames.
+UI03FAZ_0101_0499495_0505303 他们 啊 看 什么 通常 会 而已 是 比 后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0499495_0505303 is -3.55834 over 579 frames.
+UI03FAZ_0101_0506845_0510171 啊 K F C A FEW ENGINEER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0506845_0510171 is -3.77183 over 331 frames.
+UI03FAZ_0101_0510171_0515136 AND THEN 我 的 DIARY TO THEM MORE TRUE FRIEND SAYS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0510171_0515136 is -4.34785 over 494 frames.
+UI03FAZ_0101_0543185_0544931 COMIC COCOA POWDER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0543185_0544931 is -4.34684 over 173 frames.
+UI03FAZ_0101_0629009_0638370 AND THEN SOMETIMES 要 COME OUT 啊 PROPOSAL HOW TO IMPROVE 啊 我 们 的 我 PROCESS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0629009_0638370 is -3.65717 over 934 frames.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 43 utterances, errors on 0
+UI03FAZ_0101_0638370_0643910 然后 好 TO 而 去 第 八 个 SITE 啊 来 啊 MANAGEMENT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0638370_0643910 is -3.77476 over 552 frames.
+UI03FAZ_0101_0728054_0739315 然后 做 LEADER 你 要 后 天 里面 的 THEN ABLE TO FOLLOW 有 INSTRUCTIONS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0728054_0739315 is -3.52761 over 1124 frames.
+UI03FAZ_0101_0739315_0744050 THEN ER LISTEN TO 要 GUIDANCE 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0739315_0744050 is -3.28473 over 472 frames.
+UI03FAZ_0101_0752704_0755591 SO THAT 他 THERE'S A CHALLENGE S SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0752704_0755591 is -4.42589 over 287 frames.
+UI03FAZ_0101_0805699_0809914 TO ME THIS IS 啦 BUT THINK GRADE ALSO P 没有 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0805699_0809914 is -4.3991 over 420 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.5633 over 18510 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:161) Applied transform to 43 utterances; 0 had errors.
+UI03FAZ_0101_0877153_0881319 你 的 JAPANESE 的 PROFICIENCY LEVEL P 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI03FAZ_0101_0877153_0881319 is -3.65146 over 415 frames.
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:176) Time taken 222.096s: real-time factor assuming 100 frames/sec is 1.19987
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:179) Done 43 utterances, failed for 0
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -3.70817 over 18510 frames.
+# Accounting: time=223 threads=1
+# Ended (code 0) at Sat Apr 22 00:34:06 UTC 2017, elapsed time 223 seconds
