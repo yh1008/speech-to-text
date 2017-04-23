@@ -55,3 +55,6 @@ reverberate_data_dir.py --rir-set-parameters rir_list --foreground-snrs 20:10:15
 
 ## RNN LM Rescoring
 ### Kaldi: [rnnlmrescore.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/steps/rnnlmrescore.sh)
+
+## Tandem system with deep bottleneck features
+### Kaldi+PDNN: [shell scripts & benchmark results](https://www.cs.cmu.edu/~ymiao/kaldipdnn.html)
