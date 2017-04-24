@@ -1,5 +1,12 @@
 ## Speech Data Augmentation
-### Kaldi: [reverberate_data_dir.py](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/steps/data/reverberate_data_dir.py)
+### Related Paper
+- [Audio Augmentation for Speech Recognition](http://www.danielpovey.com/files/2015_interspeech_augmentation.pdf)
+>In this paper, we investigate audio-level speech augmentation methods which directly process the raw signal. The method we particularly recommend is to change the speed of the audio signal, producing 3 versions of the original signal with speed factors of 0.9, 1.0 and 1.1. The proposed technique has a low implementation cost, making it easy to adopt. We present results on 4 different LVCSR tasks with training data ranging from 100 hours to 1000 hours, to examine the effectiveness of audio augmentation in a variety of data scenarios. An average relative improvement of 4.3% was observed across the 4 tasks.
+- [Vocal Tract Length Perturbation (VTLP) improves speech recognition](http://www.cs.toronto.edu/~ndjaitly/jaitly-icml13.pdf)
+> At test time, a prediction is made by averaging the predictions over multiple warp factors. When this technique is applied to TIMIT using Deep Neural Networks (DNN) of different depths, the Phone Error Rate (PER) improved by an average of 0.65% on the test set. For a Convolutional neural network (CNN) with convolutional layer in the bottom, a gain of 1.0% was observed. These improvements were achieved without increasing the number of training epochs, and suggest that data transformations should be an important component of training neural networks for speech, especially for data limited projects.
+
+### Speed perturbation in Kaldi: [run_ivector_common.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/local/nnet3/run_ivector_common.sh)
+### Reverberate in Kaldi: [reverberate_data_dir.py](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/steps/data/reverberate_data_dir.py)
 - path: kaldi/egs/wsj/s5/steps/data/reverberate_data_dir.py
 - usage: reverberate_data_dir.py [options...] <in-data-dir> <out-data-dir>
 - example
