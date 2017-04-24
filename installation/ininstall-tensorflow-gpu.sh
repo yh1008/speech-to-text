@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# be careful, works on Google Cloud not AWS! 
 sudo tar -xvf cudnn-8.0-linux-x64-v5.0-ga.tgz -C /usr/local
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
