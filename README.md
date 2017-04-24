@@ -236,4 +236,4 @@ very likely you are in the actual `tensorflow` git repo. [source](https://github
 
 ### Chinese CER (Character Error Rate)
 
-1. [egs/hkust/s5/local/ext/score.sh] (https://github.com/kaldi-asr/kaldi/blob/master/egs/hkust/s5/local/ext/score.sh)
+1. [egs/hkust/s5/local/ext/score.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/hkust/s5/local/ext/score.sh)
