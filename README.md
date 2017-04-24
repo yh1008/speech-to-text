@@ -231,7 +231,7 @@ very likely you are in the actual `tensorflow` git repo. [source](https://github
 
 ### Kaldi script to train nnet
 
-1. with online decoding:
+1. 3-4 hours to train, 3 hours to decode on GPU: 
 [local/online/run_nnet2_baseline.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/local/online/run_nnet2.sh)
 
 ### Chinese CER (Character Error Rate)
