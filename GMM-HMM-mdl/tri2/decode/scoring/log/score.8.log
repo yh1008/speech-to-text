@@ -1,5 +1,0 @@
-# cat exp/tri2/decode/scoring/8.tra | utils/int2sym.pl -f 2- exp/tri2/graph/words.txt | sed s:\<UNK\>::g | compute-wer --text --mode=present ark:exp/tri2/decode/scoring/test_filt.txt ark,p:- >& exp/tri2/decode/wer_8 
-# Started at Sat Apr 22 02:06:36 UTC 2017
-#
-# Accounting: time=1 threads=1
-# Ended (code 0) at Sat Apr 22 02:06:37 UTC 2017, elapsed time 1 seconds

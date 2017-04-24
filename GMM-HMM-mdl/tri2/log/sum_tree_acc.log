@@ -1,7 +1,0 @@
-# sum-tree-stats exp/tri2/treeacc exp/tri2/1.treeacc exp/tri2/10.treeacc exp/tri2/11.treeacc exp/tri2/12.treeacc exp/tri2/13.treeacc exp/tri2/14.treeacc exp/tri2/15.treeacc exp/tri2/16.treeacc exp/tri2/2.treeacc exp/tri2/3.treeacc exp/tri2/4.treeacc exp/tri2/5.treeacc exp/tri2/6.treeacc exp/tri2/7.treeacc exp/tri2/8.treeacc exp/tri2/9.treeacc 
-# Started at Sat Apr 22 00:09:00 UTC 2017
-#
-sum-tree-stats exp/tri2/treeacc exp/tri2/1.treeacc exp/tri2/10.treeacc exp/tri2/11.treeacc exp/tri2/12.treeacc exp/tri2/13.treeacc exp/tri2/14.treeacc exp/tri2/15.treeacc exp/tri2/16.treeacc exp/tri2/2.treeacc exp/tri2/3.treeacc exp/tri2/4.treeacc exp/tri2/5.treeacc exp/tri2/6.treeacc exp/tri2/7.treeacc exp/tri2/8.treeacc exp/tri2/9.treeacc 
-LOG (sum-tree-stats[5.1.60~1-b2d5d]:main():sum-tree-stats.cc:88) Wrote summed accs ( 337634 individual stats)
-# Accounting: time=12 threads=1
-# Ended (code 0) at Sat Apr 22 00:09:12 UTC 2017, elapsed time 12 seconds

@@ -1,2 +1,0 @@
-gmm-transform-means exp/tri2/4.mat.new exp/tri2/4.mdl exp/tri2/4.mdl 
-LOG (gmm-transform-means[5.1.60~1-b2d5d]:main():gmm-transform-means.cc:103) Written model to exp/tri2/4.mdl
