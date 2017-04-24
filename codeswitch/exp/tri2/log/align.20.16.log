@@ -1,0 +1,151 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 1 exp/tri2/20.mdl - |" "ark:gunzip -c exp/tri2/fsts.16.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/16/utt2spk scp:data/train/split16/16/cmvn.scp scp:data/train/split16/16/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/12.mat ark:- ark:- |" "ark:|gzip -c >exp/tri2/ali.16.gz" 
+# Started at Sat Apr 22 00:20:11 UTC 2017
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/tri2/20.mdl - |' 'ark:gunzip -c exp/tri2/fsts.16.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/16/utt2spk scp:data/train/split16/16/cmvn.scp scp:data/train/split16/16/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/12.mat ark:- ark:- |' 'ark:|gzip -c >exp/tri2/ali.16.gz' 
+gmm-boost-silence --boost=1.0 1 exp/tri2/20.mdl - 
+WARNING (gmm-boost-silence[5.1.60~1-b2d5d]:main():gmm-boost-silence.cc:82) The pdfs for the silence phones may be shared by other phones (note: this probably does not matter.)
+LOG (gmm-boost-silence[5.1.60~1-b2d5d]:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
+LOG (gmm-boost-silence[5.1.60~1-b2d5d]:main():gmm-boost-silence.cc:103) Wrote model to -
+apply-cmvn --utt2spk=ark:data/train/split16/16/utt2spk scp:data/train/split16/16/cmvn.scp scp:data/train/split16/16/feats.scp ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2/12.mat ark:- ark:- 
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0101_0056880_0061699 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0101_0093803_0100904 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0101_0783443_0788851 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0101_0898756_0904815 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0102_0142002_0150152 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0102_0420801_0427505 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0102_0477791_0480317 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0102_0859924_0864851 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:475) Did not successfully decode file UI12FAZ_0102_0859924_0864851, len = 491
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0102_1189120_1195499 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0255436_0257748 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0397635_0405555 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0522176_0526839 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0526839_0530376 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0555869_0563033 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0698667_0706258 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0103_0986838_0993180 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0072035_0081713 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0291852_0298807 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0302904_0308381 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0491255_0495099 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0721386_0729921 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0775561_0778695 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0848610_0850408 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0104_0947867_0949654 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0105_0044640_0050025 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0105_0132229_0134936 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI12FAZ_0105_0242064_0246529 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0101_0153595_0165472 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0101_0719673_0732379 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0101_0838860_0842946 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0102_0058859_0063942 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0102_0988349_0991921 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0103_0213145_0220065 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0103_0353773_0358606 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0103_1023144_1025218 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0103_1182856_1185751 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0231793_0238228 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:475) Did not successfully decode file UI13FAZ_0104_0231793_0238228, len = 642
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0242850_0243769 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0477701_0480136 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0542019_0549733 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:475) Did not successfully decode file UI13FAZ_0104_0542019_0549733, len = 769
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0563323_0575038 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0639614_0644527 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0104_0785041_0795731 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0105_0275997_0285420 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0105_0336368_0338019 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI13FAZ_0105_0411814_0418684 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0091232_0100942 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0402016_0412304 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0412304_0424553 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0463912_0472514 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0504225_0513627 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0629545_0639796 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0813208_0820415 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0828995_0836421 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0836421_0844688 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0844688_0857036 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0857036_0871059 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0881234_0894373 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0894373_0905032 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0905032_0916292 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0101_0930461_0945672 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0043350_0057319 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0141298_0154276 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0386951_0399025 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0503268_0511823 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0547674_0555930 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0578008_0588349 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0616555_0626170 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0747316_0759410 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0779022_0792236 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0825521_0840124 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0866818_0876285 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0876285_0884915 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0895897_0905739 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_0913575_0920430 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_1063438_1070356 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0102_1070356_1082914 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0300111_0306997 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0336614_0348663 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0394182_0403432 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0472619_0485302 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0741731_0744519 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:475) Did not successfully decode file UI14MAZ_0103_0741731_0744519, len = 277
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0757077_0765524 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0812379_0824738 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0901004_0909221 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_0932887_0946394 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_1015114_1029198 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:475) Did not successfully decode file UI14MAZ_0103_1015114_1029198, len = 1406
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_1118838_1128010 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0103_1193755_1198700 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0051917_0060334 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0127637_0139078 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0311318_0319024 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0319024_0329853 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0410828_0420309 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0603586_0617962 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0641344_0649617 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0649617_0659015 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0669155_0677635 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0959250_0973630 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0104_0973630_0985359 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0105_0059598_0071542 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0105_0137974_0150456 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0105_0150456_0159520 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0105_0184947_0194640 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0105_0194640_0206716 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI14MAZ_0105_0286067_0294396 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI15FAZ_0102_0132519_0135057 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI15FAZ_0102_0169836_0171771 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI15FAZ_0102_0172793_0175143 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI15FAZ_0105_0367959_0369186 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI17FAZ_0102_0288565_0291143 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI17FAZ_0103_0130277_0132275 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI17FAZ_0105_0035671_0037433 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI18MAZ_0102_0901389_0903484 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI18MAZ_0105_0052938_0056660 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI19MAZ_0101_0456004_0458632 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI19MAZ_0105_0389947_0390893 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI19MAZ_0105_0455562_0456648 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI20MAZ_0102_0048291_0052299 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI21MAZ_0103_0330816_0332983 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI21MAZ_0103_0424611_0428271 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI22MAZ_0102_0608582_0612334 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI23FAZ_0103_1069720_1073620 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI23FAZ_0104_0148079_0156091 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI24MAZ_0104_0225436_0227728 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI26MAZ_0101_0464721_0467886 with beam 40
+WARNING (gmm-align-compiled[5.1.60~1-b2d5d]:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance UI26MAZ_0103_0666002_0670227 with beam 40
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 3640 utterances, errors on 0
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.5633 over 1.81682e+06 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:161) Applied transform to 3640 utterances; 0 had errors.
+LOG (gmm-align-compiled[5.1.60~1-b2d5d]:main():gmm-align-compiled.cc:129) Overall log-likelihood per frame is -45.8145 over 1813235 frames.
+LOG (gmm-align-compiled[5.1.60~1-b2d5d]:main():gmm-align-compiled.cc:131) Retried 127 out of 3640 utterances.
+LOG (gmm-align-compiled[5.1.60~1-b2d5d]:main():gmm-align-compiled.cc:133) Done 3635, errors on 5
+# Accounting: time=136 threads=1
+# Ended (code 0) at Sat Apr 22 00:22:27 UTC 2017, elapsed time 136 seconds

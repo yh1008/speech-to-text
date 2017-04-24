@@ -1,0 +1,29 @@
+# compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri22/tree exp/tri22/1.mdl data/lang/L.fst "ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/15/text |" "ark:|gzip -c >exp/tri22/fsts.15.gz" 
+# Started at Sat Apr 22 03:35:40 UTC 2017
+#
+compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri22/tree exp/tri22/1.mdl data/lang/L.fst 'ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/15/text |' 'ark:|gzip -c >exp/tri22/fsts.15.gz' 
+sym2int.pl: replacing 麒 with 1
+sym2int.pl: replacing 麟 with 1
+sym2int.pl: replacing 麟 with 1
+sym2int.pl: replacing NG-KANG-LIN with 1
+sym2int.pl: replacing 懂 with 1
+sym2int.pl: replacing 呱 with 1
+sym2int.pl: replacing 咯 with 1
+sym2int.pl: replacing 筑 with 1
+sym2int.pl: replacing 筑 with 1
+sym2int.pl: replacing 嗯 with 1
+sym2int.pl: replacing JOHORE with 1
+sym2int.pl: replacing SEGAMAT with 1
+sym2int.pl: replacing 榴 with 1
+sym2int.pl: replacing 莲 with 1
+sym2int.pl: replacing 榴 with 1
+sym2int.pl: replacing 莲 with 1
+sym2int.pl: replacing 榴 with 1
+sym2int.pl: replacing 莲 with 1
+sym2int.pl: replacing 趁 with 1
+sym2int.pl: replacing 抬 with 1
+sym2int.pl: not warning for OOVs any more times
+** Replaced 2013 instances of OOVs with 1
+LOG (compile-train-graphs[5.1.60~1-b2d5d]:main():compile-train-graphs.cc:147) compile-train-graphs: succeeded for 3201 graphs, failed for 0
+# Accounting: time=59 threads=1
+# Ended (code 0) at Sat Apr 22 03:36:39 UTC 2017, elapsed time 59 seconds

@@ -1,0 +1,109 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/4/utt2spk scp:data/test/split14/4/cmvn.scp scp:data/test/split14/4/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2/decode/lat.4.gz" 
+# Started at Sat Apr 22 00:30:23 UTC 2017
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/4/utt2spk scp:data/test/split14/4/cmvn.scp scp:data/test/split14/4/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2/decode/lat.4.gz' 
+transform-feats exp/tri2/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split14/4/utt2spk scp:data/test/split14/4/cmvn.scp scp:data/test/split14/4/feats.scp ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+NC12MAY_0101_0021410_0023700 SIGNING 钟 你 已经 GRADUATE 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0021410_0023700 is -4.96642 over 227 frames.
+NC12MAY_0101_0049490_0051260 美国 的 那个 ARTICLES 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0049490_0051260 is -4.90058 over 175 frames.
+NC12MAY_0101_0084160_0087310 RECESS 也是 有 CUSTOMER CALL 进 来 UNI 的 话 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0084160_0087310 is -4.3395 over 313 frames.
+NC12MAY_0101_0087860_0091410 WAH WAH 那个 THEN 我 可能 很 就是 很 第 一 个 帮 我 给 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0087860_0091410 is -4.99511 over 353 frames.
+NC12MAY_0101_0095700_0099690 啊 所以 我们 自己 那 是 六十 块 的 那种 POLITICS 东 西 出现 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0095700_0099690 is -4.97291 over 397 frames.
+NC12MAY_0101_0127280_0129260 就是 没有 讲 的 POSSIBILITY AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0127280_0129260 is -4.77973 over 196 frames.
+NC12MAY_0101_0141600_0144470 你 可以 SIX 啊 SOME EVENT BASIC 的 吗 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0141600_0144470 is -4.74958 over 285 frames.
+NC12MAY_0101_0175000_0178950 IS 因为 我们 那个 CALL CENTRE 是 就 点 开始 就 开始 接 电 话 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0175000_0178950 is -4.73651 over 393 frames.
+NC12MAY_0101_0180540_0182740 也是 BEFORE 那个 就 这种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0180540_0182740 is -4.52007 over 218 frames.
+NC12MAY_0101_0405280_0408790 BECAUSE 我 是 方便 啦 就是 TRANSPORTATION IS WHAT TACTIC 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0405280_0408790 is -4.75697 over 349 frames.
+NC12MAY_0101_0424190_0428570 我 是 比较 SOUTHERN 去 购物 ASK 我 那些 东 西 啊 所以 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0424190_0428570 is -4.55627 over 436 frames.
+NC12MAY_0101_0437910_0441760 AS IN 如果 你 在 GOLDEN VILLAGE 小 哪里 可能 还没有 啊 FOR LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0437910_0441760 is -4.44578 over 383 frames.
+NC12MAY_0101_0485350_0489410 他们 B C 来 做 一些 COMPETITION 也是 COMPUTER DESIGN 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0485350_0489410 is -4.67721 over 404 frames.
+NC12MAY_0101_0552760_0556740 POSTER 也是 没有 什么 在 MALAYSIA 可是 的 DEPOSIT 了 他 会 JUST DO THAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0552760_0556740 is -4.86158 over 396 frames.
+NC12MAY_0101_0780290_0782570 啊 是 用 P 那个 MARKET LIKE TO 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0780290_0782570 is -4.9101 over 226 frames.
+NC12MAY_0101_0848290_0852580 就是 MORE 那个 SECURITY GUARD 啊 还是 MORE PRACTICAL 你 的 PROJECT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0848290_0852580 is -4.49454 over 427 frames.
+NC12MAY_0101_0943640_0947170 我 THEN 你 觉得 你 FOCUS 你 自己 CAN COMPLETELY DINNER TIME 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0943640_0947170 is -4.85602 over 351 frames.
+NC12MAY_0101_0961260_0964410 TWO WEEKS OR TWO WEEKS LATER 讲 那里 来 的 就 一个 YEAR 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0961260_0964410 is -4.44863 over 313 frames.
+NC12MAY_0101_0993000_0996060 我们 去 找 一些 LOW COST 的 地方 也是 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_0993000_0996060 is -4.66962 over 304 frames.
+NC12MAY_0101_1030890_1033390 I FRANKLY SPEAKING 就是 WE ARE SIGNING CONTRACT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1030890_1033390 is -5.15458 over 248 frames.
+NC12MAY_0101_1105590_1108370 然后 你 就是 可以 COMPETE MONTHS LATER 到 一个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1105590_1108370 is -4.58441 over 276 frames.
+NC12MAY_0101_1119620_1121050 给 他们 要 FOR 的 GRAPHICS SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1119620_1121050 is -4.95034 over 141 frames.
+NC12MAY_0101_1127520_1129160 你 没有 TIMOTHY SAY 你 去 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1127520_1129160 is -4.96617 over 162 frames.
+NC12MAY_0101_1309670_1311630 我们 因为 你 FOR SOME SPECIAL 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1309670_1311630 is -4.47759 over 194 frames.
+NC12MAY_0101_1321690_1325290 因为 就是 那 边 也是 很 的 吗 SO MAKE THEMSELVES THAT THAT 讲 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1321690_1325290 is -4.6725 over 358 frames.
+NC12MAY_0101_1466890_1470180 AH 然后 就是 MEAN 对 人家 SO SOME MONEY 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1466890_1470180 is -4.26646 over 327 frames.
+NC12MAY_0101_1476280_1478230 真 真 真 的 I 想 不 到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1476280_1478230 is -5.11701 over 193 frames.
+NC12MAY_0101_1491800_1495320 BECAUSE 我们 会 去 的 时候 是 IN CANTONESE 啊 所以 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1491800_1495320 is -4.29056 over 350 frames.
+NC12MAY_0101_1501310_1506040 I 到 APPLE APPLE CONCERTS 我 DEAL WITH 那些 HONG KONG CUSTOMER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1501310_1506040 is -4.72961 over 471 frames.
+NC12MAY_0101_1628760_1634190 SO NOW 就是 他们 很 多 DISTANCE 的 ER SORRY 选 他们 现在 SINGAPORE BECAUSE GOT QUITE SMALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1628760_1634190 is -4.73719 over 541 frames.
+NC12MAY_0101_1854500_1858140 他们 两个 MALAYSIAN 参加 一个 TAIWAN 啊 那个 COMPETITION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1854500_1858140 is -4.77683 over 362 frames.
+NC12MAY_0101_1867744_1870144 THIS ONE DAY 他 拿 到 三 十 一 号 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_1867744_1870144 is -4.53245 over 238 frames.
+NC12MAY_0101_2137990_2140370 SO SOME LAUNDRY SO IS 那些 EMCEE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2137990_2140370 is -4.57601 over 236 frames.
+NC12MAY_0101_2152230_2153880 可是 MOSTLY 啊 吃 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2152230_2153880 is -4.44171 over 163 frames.
+NC12MAY_0101_2215380_2218100 有一个 是 FOR HOUSE RENTAL 讲 东 西 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2215380_2218100 is -4.55454 over 270 frames.
+NC12MAY_0101_2274080_2277870 哪 一个 是 FOR THE NEXT DANCERS 来 一个 FOURTEEN 给 USER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2274080_2277870 is -4.42603 over 377 frames.
+NC12MAY_0101_2293330_2296210 ACTUALLY 现在 是 没有 什么 CLUB AS LOUD AS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2293330_2296210 is -4.54995 over 286 frames.
+NC12MAY_0101_2301690_2304760 啊 那个 INCOME 也 可以 START 了 我 几个 月 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2301690_2304760 is -4.85355 over 305 frames.
+NC12MAY_0101_2328870_2331630 就 WHISTLE OR JUST THAT ITS ALL MY 觉得 如果 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2328870_2331630 is -4.83536 over 274 frames.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 47 utterances, errors on 0
+NC12MAY_0101_2440980_2443350 一 段 时间 FOR 我 的 HOMETOWN 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2440980_2443350 is -4.90624 over 235 frames.
+NC12MAY_0101_2446410_2449350 我 还是 要 靠 近 那个 EXPENSES 也是 COURSE SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2446410_2449350 is -4.813 over 292 frames.
+NC12MAY_0101_2449500_2451840 在 AS DIMENSIONAL 叫 几 几个 TIME GAP 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2449500_2451840 is -4.81943 over 232 frames.
+NC12MAY_0101_2452070_2455340 I SAY 我 喜欢 看 那种 BASIC CALCULUS 讲 慢 觉得 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2452070_2455340 is -4.71086 over 325 frames.
+NC12MAY_0101_2775280_2777390 我 已经 很 满意 COMPARE 那种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2775280_2777390 is -4.5283 over 209 frames.
+NC12MAY_0101_2977140_2981150 也是 他们 INGREDIENT 是 比较 WELL SO THAT'S WHY 他 们 是 BASED ON 海 PRICE 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_2977140_2981150 is -4.84167 over 399 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.5633 over 14090 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:161) Applied transform to 47 utterances; 0 had errors.
+NC12MAY_0101_3421137_3423387 你 没有 SO 一个 TIME MANAGEMENT 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_3421137_3423387 is -4.14164 over 223 frames.
+NC12MAY_0101_3448660_3451250 ONE MINUTE 才 所以 还 也是 没有 时间 读 书 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NC12MAY_0101_3448660_3451250 is -4.70049 over 257 frames.
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:176) Time taken 325.176s: real-time factor assuming 100 frames/sec is 2.30785
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:179) Done 47 utterances, failed for 0
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -4.68588 over 14090 frames.
+# Accounting: time=326 threads=1
+# Ended (code 0) at Sat Apr 22 00:35:49 UTC 2017, elapsed time 326 seconds

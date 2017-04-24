@@ -1,0 +1,57 @@
+# ali-to-post "ark:gunzip -c exp/tri2_ali/ali.6.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15 exp/tri2_ali/final.mdl ark:- ark:- | acc-lda --rand-prune=4.0 exp/tri2_ali/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/6/utt2spk scp:data/train/split16/6/cmvn.scp scp:data/train/split16/6/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- |" ark,s,cs:- exp/tri22/lda.6.acc 
+# Started at Sat Apr 22 03:33:04 UTC 2017
+#
+ali-to-post 'ark:gunzip -c exp/tri2_ali/ali.6.gz|' ark:- 
+weight-silence-post 0.0 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15 exp/tri2_ali/final.mdl ark:- ark:- 
+acc-lda --rand-prune=4.0 exp/tri2_ali/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/6/utt2spk scp:data/train/split16/6/cmvn.scp scp:data/train/split16/6/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- |' ark,s,cs:- exp/tri22/lda.6.acc 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split16/6/utt2spk scp:data/train/split16/6/cmvn.scp scp:data/train/split16/6/feats.scp ark:- 
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 100 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_1184147_1185590
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 200 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_1527117_1532057
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_1534187_1535717
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_1901855_1903435
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 300 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_2574303_2575553
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_2695909_2698509
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_2862512_2865372
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_260101_2925886_2929006
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 400 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_300101_0834860_0836310
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 500 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_300101_2162451_2165191
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 600 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC49FBQ_300101_3057311_3061110
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 700 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 800 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 900 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC50FBP_320101_0525379_0528229
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1000 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1100 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1200 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1300 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1400 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC50XFB_0101_1079342_1084202
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC50XFB_0101_1229502_1236322
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC50XFB_0101_1694552_1699420
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1500 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1600 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1700 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1800 utterances.
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC52FBQ_0101_0441859_0446419
+WARNING (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:77) No posteriors for utterance NC52FBQ_0101_0963139_0966539
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 1900 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2000 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2100 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2200 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2300 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2400 utterances.
+LOG (ali-to-post[5.1.60~1-b2d5d]:main():ali-to-post.cc:65) Converted 2501 alignments.
+LOG (weight-silence-post[5.1.60~1-b2d5d]:main():weight-silence-post.cc:95) Done 2501 posteriors.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 2518 utterances, errors on 0
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:114) Done 2500 utterances.
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:117) Done 2501 files, failed for 17
+LOG (acc-lda[5.1.60~1-b2d5d]:main():acc-lda.cc:122) Written statistics.
+# Accounting: time=6 threads=1
+# Ended (code 0) at Sat Apr 22 03:33:10 UTC 2017, elapsed time 6 seconds

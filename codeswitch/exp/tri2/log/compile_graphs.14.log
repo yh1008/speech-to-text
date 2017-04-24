@@ -1,0 +1,29 @@
+# compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri2/tree exp/tri2/1.mdl data/lang/L.fst "ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/14/text |" "ark:|gzip -c >exp/tri2/fsts.14.gz" 
+# Started at Sat Apr 22 00:11:04 UTC 2017
+#
+compile-train-graphs --read-disambig-syms=data/lang/phones/disambig.int exp/tri2/tree exp/tri2/1.mdl data/lang/L.fst 'ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang/words.txt < data/train/split16/14/text |' 'ark:|gzip -c >exp/tri2/fsts.14.gz' 
+sym2int.pl: replacing KHOR-CHEE-WEI with 1
+sym2int.pl: replacing KHOR-CHEE-WEI with 1
+sym2int.pl: replacing KHOR-CHEE-WEI with 1
+sym2int.pl: replacing KHOR-CHEE-WEI with 1
+sym2int.pl: replacing 咯 with 1
+sym2int.pl: replacing 嘛 with 1
+sym2int.pl: replacing 咯 with 1
+sym2int.pl: replacing 慧 with 1
+sym2int.pl: replacing 慧 with 1
+sym2int.pl: replacing KHOR-CHEE-WEI with 1
+sym2int.pl: replacing 嘛 with 1
+sym2int.pl: replacing 补 with 1
+sym2int.pl: replacing 习 with 1
+sym2int.pl: replacing KHOR-CHEE-WEI with 1
+sym2int.pl: replacing 咯 with 1
+sym2int.pl: replacing CHEE-WEI with 1
+sym2int.pl: replacing 玩 with 1
+sym2int.pl: replacing 慧 with 1
+sym2int.pl: replacing 咯 with 1
+sym2int.pl: replacing 咯 with 1
+sym2int.pl: not warning for OOVs any more times
+** Replaced 2770 instances of OOVs with 1
+LOG (compile-train-graphs[5.1.60~1-b2d5d]:main():compile-train-graphs.cc:147) compile-train-graphs: succeeded for 3708 graphs, failed for 0
+# Accounting: time=56 threads=1
+# Ended (code 0) at Sat Apr 22 00:12:00 UTC 2017, elapsed time 56 seconds

@@ -1,0 +1,479 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/14/utt2spk scp:data/test/split14/14/cmvn.scp scp:data/test/split14/14/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2/decode/lat.14.gz" 
+# Started at Sat Apr 22 00:30:23 UTC 2017
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/14/utt2spk scp:data/test/split14/14/cmvn.scp scp:data/test/split14/14/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2/decode/lat.14.gz' 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split14/14/utt2spk scp:data/test/split14/14/cmvn.scp scp:data/test/split14/14/feats.scp ark:- 
+UI29FAZ_0101_0000000_0002039 比较 做 STAY 到 COLLECTION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0000000_0002039 is -4.78043 over 202 frames.
+UI29FAZ_0101_0008334_0009212 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0008334_0009212 is -3.04959 over 86 frames.
+UI29FAZ_0101_0009212_0010438 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0009212_0010438 is -2.58801 over 121 frames.
+UI29FAZ_0101_0010438_0013725 今天 我 应该 的 SECTION 是 啊 BELOW 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0010438_0013725 is -4.25931 over 327 frames.
+UI29FAZ_0101_0013725_0014681 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0013725_0014681 is -3.34233 over 94 frames.
+UI29FAZ_0101_0014681_0016728 也是 WORKING PROGRESS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0014681_0016728 is -4.30199 over 203 frames.
+UI29FAZ_0101_0020341_0025588 PRODUCTION HOW THEY ARE RUNNING 的 BOSS THROUGHOUT THE WHOLE PROCESS SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0020341_0025588 is -4.26547 over 523 frames.
+UI29FAZ_0101_0034420_0036506 TASTE SO CALL WEEK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0034420_0036506 is -3.55706 over 207 frames.
+UI29FAZ_0101_0036506_0038891 我 的 IMPORTANCE 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0036506_0038891 is -4.09917 over 237 frames.
+UI29FAZ_0101_0044034_0046174 然后 三个 INSTRUCTOR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0044034_0046174 is -4.05215 over 212 frames.
+UI29FAZ_0101_0046174_0047405 所以 我 OFF 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0046174_0047405 is -3.81914 over 121 frames.
+UI29FAZ_0101_0056974_0060890 THEN 的 PRESENT THREE AND ANALYSIS EH 你 的 PROCESS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0056974_0060890 is -4.33809 over 390 frames.
+UI29FAZ_0101_0060890_0061767 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0060890_0061767 is -3.00749 over 86 frames.
+UI29FAZ_0101_0065957_0067117 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0065957_0067117 is -3.1911 over 114 frames.
+UI29FAZ_0101_0067461_0069955 还有 一个 LAST SESSION 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0067461_0069955 is -4.05619 over 247 frames.
+UI29FAZ_0101_0069955_0073670 啊 一 定 要 放 一边 是 ELECTRONIC THAT SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0069955_0073670 is -4.47629 over 370 frames.
+UI29FAZ_0101_0073670_0075287 这个 是 AH SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0073670_0075287 is -3.78643 over 160 frames.
+UI29FAZ_0101_0075545_0077381 HOW WAS ABOUT THIS TYPE OF 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0075545_0077381 is -4.54619 over 182 frames.
+UI29FAZ_0101_0077932_0079893 就 们 的 SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0077932_0079893 is -4.26554 over 194 frames.
+UI29FAZ_0101_0083235_0084718 很多 CUSTOMER SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0083235_0084718 is -4.13936 over 146 frames.
+UI29FAZ_0101_0093244_0095949 ONE PROPS 啊 我 营 ONE ISLAND 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0093244_0095949 is -4.06944 over 269 frames.
+UI29FAZ_0101_0095949_0097101 啊 K SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0095949_0097101 is -3.87162 over 113 frames.
+UI29FAZ_0101_0097669_0100163 这个 CUSTOMER STATION CAN BE DONE LO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0097669_0100163 is -4.61424 over 247 frames.
+UI29FAZ_0101_0100163_0102574 FOR EVERY CUSTOMER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0100163_0102574 is -3.84741 over 239 frames.
+UI29FAZ_0101_0109694_0113306 FASHION 了 PLUS THAT 你 跟 有 SHELTER 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0109694_0113306 is -3.9674 over 359 frames.
+UI29FAZ_0101_0114373_0116179 这个 人 你 的 CLASS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0114373_0116179 is -3.95966 over 179 frames.
+UI29FAZ_0101_0117606_0119343 全部 都是 你 还要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0117606_0119343 is -4.10413 over 172 frames.
+UI29FAZ_0101_0125226_0128477 啊 SUPPORT COMMON ATTACKING SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0125226_0128477 is -4.2232 over 323 frames.
+UI29FAZ_0101_0128477_0135426 没有 的 以 是 PURELY 也是 DEVELOPER 他们 没有 听 过 不过 没有 ENVIRONMENT IN PRODUCTION LINE 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0128477_0135426 is -4.14992 over 693 frames.
+UI29FAZ_0101_0140990_0144564 有 我们 现在 都 没有 BECAUSE TOO MANY SECTION 后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0140990_0144564 is -3.99654 over 355 frames.
+UI29FAZ_0101_0144564_0146800 FROM 公 平 的 NATION 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0144564_0146800 is -3.7512 over 222 frames.
+UI29FAZ_0101_0146800_0150658 刚才 在 MAIN COM DEVIATION 到 我 会 TRY 给 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0146800_0150658 is -4.00927 over 384 frames.
+UI29FAZ_0101_0150658_0155405 SIL2 TAO 后 INSPECTION 开始 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0150658_0155405 is -3.41327 over 473 frames.
+UI29FAZ_0101_0158170_0161145 还有 啊 TALK ABOUT FOUR DAY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0158170_0161145 is -3.93308 over 296 frames.
+UI29FAZ_0101_0161145_0163893 还要 TYPE OF US SHIPPING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0161145_0163893 is -3.94345 over 273 frames.
+UI29FAZ_0101_0167933_0171955 啊 SO 我们 逼 MASTER 西 你 要 到 我们 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0167933_0171955 is -3.85755 over 400 frames.
+UI29FAZ_0101_0190893_0196795 THEN TRAINING 的 啊 会 LAST FOR ONE WEEK SEVENTIES 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0190893_0196795 is -3.73528 over 588 frames.
+UI29FAZ_0101_0254449_0259859 都 做 过 的 AH MANAGER 去 SYSTEM TREKKING 啊 读 书 过后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0254449_0259859 is -3.9237 over 539 frames.
+UI29FAZ_0101_0259859_0266449 BEFORE 可能 他们 FINALIZE 在 用 够 IN 我 因为 ONE CALL CONTINUOUS S DAYS MODEL 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0259859_0266449 is -4.2877 over 657 frames.
+UI29FAZ_0101_0276806_0280686 你 看 ANY NAVIGATION 还有 然后 B B SIX 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0276806_0280686 is -4.33906 over 386 frames.
+UI29FAZ_0101_0288223_0293247 NOT NICE TO COME TO DEVELOP AH THEN M S S K SIL2 不 保证 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0288223_0293247 is -4.33937 over 500 frames.
+UI29FAZ_0101_0305217_0306241 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0305217_0306241 is -3.36885 over 100 frames.
+UI29FAZ_0101_0306241_0307841 HMM THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0306241_0307841 is -3.59927 over 158 frames.
+UI29FAZ_0101_0307841_0309062 七 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0307841_0309062 is -4.03034 over 120 frames.
+UI29FAZ_0101_0309062_0314996 他 现在 像 FARMER 全部 MANUFACTURING 我 家 的 那些 BONDING SESSION WISE 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0309062_0314996 is -4.30207 over 591 frames.
+UI29FAZ_0101_0317043_0323237 可是 我们 有 很多 看 SO MY FOR 自 己 的 CUSTOMER SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0317043_0323237 is -3.64042 over 617 frames.
+UI29FAZ_0101_0327501_0334623 不 需要 P PURELY COUNT MONEY SECOND SISTER 我们 要 P 是 RUNNING COMPENSATING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0327501_0334623 is -4.04989 over 710 frames.
+UI29FAZ_0101_0346775_0348855 啊 HOPEFULLY 我们 可以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0346775_0348855 is -4.11461 over 206 frames.
+UI29FAZ_0101_0351573_0353434 你 妈妈 的 SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0351573_0353434 is -4.12876 over 184 frames.
+UI29FAZ_0101_0353434_0354996 他 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0353434_0354996 is -3.45098 over 154 frames.
+UI29FAZ_0101_0354996_0361824 所以 的 MANAGEMENT 尽 量 OK ONE THEREFORE FOR 过后 就 说 FOR PLANNING 大 后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0354996_0361824 is -4.33111 over 681 frames.
+UI29FAZ_0101_0393369_0395690 没有 这样 FLAT C A 说法 啦 但是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0393369_0395690 is -4.35995 over 230 frames.
+UI29FAZ_0101_0395690_0398391 这个 性 的 APPLICATION LO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0395690_0398391 is -3.77438 over 268 frames.
+UI29FAZ_0101_0403958_0407345 他们 钱 拿 他们 什么 有 想 会 不 斗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0403958_0407345 is -4.12961 over 337 frames.
+UI29FAZ_0101_0407345_0412158 很 明显 的 飞机 来 的 话 也是 会 EXTENDED 到 那 很多 CONTAMINATION 要 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0407345_0412158 is -4.40078 over 479 frames.
+UI29FAZ_0101_0430977_0432049 他 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0430977_0432049 is -3.05247 over 105 frames.
+UI29FAZ_0101_0432496_0435593 S T P 要 AH 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0432496_0435593 is -3.602 over 308 frames.
+UI29FAZ_0101_0435593_0437609 THEN 要是 跟 FOUL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0435593_0437609 is -4.1465 over 200 frames.
+UI29FAZ_0101_0437609_0443780 THAT EASY THEN BY THEN IF THEY SAY SYSTEM THEN 的 FOUL IT'S NOT THAT 印度 的 SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0437609_0443780 is -4.04224 over 615 frames.
+UI29FAZ_0101_0479822_0483004 但是 他们 REPORT OKAY 你 的 S M U S SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0479822_0483004 is -4.29247 over 316 frames.
+UI29FAZ_0101_0484999_0486770 就是 因为 就是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0484999_0486770 is -3.70357 over 175 frames.
+UI29FAZ_0101_0491449_0495508 然后 FIELDER 要 FURTHER FEEDBACK 啊 DATE 到了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0491449_0495508 is -4.0011 over 404 frames.
+UI29FAZ_0101_0537101_0538426 我 觉得 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0537101_0538426 is -3.36397 over 131 frames.
+UI29FAZ_0101_0540404_0542055 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0540404_0542055 is -2.84856 over 163 frames.
+UI29FAZ_0101_0542055_0544824 有 很多 啊 FROM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0542055_0544824 is -3.10141 over 275 frames.
+UI29FAZ_0101_0544824_0546848 CON 就 NO PROBLEM 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0544824_0546848 is -3.81554 over 200 frames.
+UI29FAZ_0101_0546848_0552662 到 现在 我 听 的 还有 一些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0546848_0552662 is -3.07958 over 579 frames.
+UI29FAZ_0101_0552662_0555004 还有 SPACE 这 也是 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0552662_0555004 is -3.49739 over 232 frames.
+UI29FAZ_0101_0556033_0559559 SIL2 这样 子 啊 CONDITION 他 的 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0556033_0559559 is -3.46422 over 351 frames.
+UI29FAZ_0101_0564667_0567649 有 我 们 的 BASED 是 在 U S 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0564667_0567649 is -3.54359 over 296 frames.
+UI29FAZ_0101_0568560_0569403 所以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0568560_0569403 is -2.8571 over 82 frames.
+UI29FAZ_0101_0585140_0588652 我 可以 做 那些 因为 AS THEY P 是 GLOBAL LO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0585140_0588652 is -4.58373 over 349 frames.
+UI29FAZ_0101_0607648_0610380 那个 这样 子 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0607648_0610380 is -3.16794 over 271 frames.
+UI29FAZ_0101_0648594_0652435 他 要 我们 没有 力 去 有 FORMALLY 不过 PLACE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0648594_0652435 is -4.16718 over 382 frames.
+UI29FAZ_0101_0663504_0665155 I THINK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0663504_0665155 is -3.67379 over 163 frames.
+UI29FAZ_0101_0710381_0711551 CHINESE LOH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0710381_0711551 is -3.71649 over 115 frames.
+UI29FAZ_0101_0793419_0794521 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0793419_0794521 is -3.25706 over 108 frames.
+UI29FAZ_0101_0794521_0795486 OK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0794521_0795486 is -3.47113 over 95 frames.
+UI29FAZ_0101_0805663_0807712 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0805663_0807712 is -4.60407 over 203 frames.
+UI29FAZ_0101_0819066_0820788 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0819066_0820788 is -2.62361 over 170 frames.
+UI29FAZ_0101_0820788_0822510 SIL2 不错 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0820788_0822510 is -3.32743 over 170 frames.
+UI29FAZ_0101_0832187_0834428 然后 因为 STOCK EH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0832187_0834428 is -4.10918 over 222 frames.
+UI29FAZ_0101_0892874_0897999 要 的 CARDBOARD 啦 然后 LIKE US 都是 给 大 也是 很 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0892874_0897999 is -4.11644 over 511 frames.
+UI29FAZ_0101_0897999_0902468 R CERTIFY SOFTWARE ENGINEER 啊 怎样 UNLESS 啊 就是 那个 说 的 东 西 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0897999_0902468 is -4.50958 over 445 frames.
+UI29FAZ_0101_0926418_0929782 AFTER THE BONDING LIKE WORKING IN 我 COMPANY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0926418_0929782 is -5.04118 over 334 frames.
+UI29FAZ_0101_0963688_0968524 SIL2 因为 每 每 一 PER PERSON AH 那个 OK 整 天 都是 BUT THEN 会 的 那个 人 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0963688_0968524 is -4.60726 over 482 frames.
+UI29FAZ_0101_0968524_0972907 THEN 讲 OK 你 COMPLETE COMPETITION 很 忙 PENCIL 就 会 带 我们 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0968524_0972907 is -4.35462 over 436 frames.
+UI29FAZ_0101_0972907_0974287 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0972907_0974287 is -2.59592 over 136 frames.
+UI29FAZ_0101_0984423_0986358 他 叫 OK 啊 这样 子 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_0984423_0986358 is -4.43925 over 192 frames.
+UI29FAZ_0101_1006329_1008155 SIL2 的 事 几百 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1006329_1008155 is -3.63481 over 181 frames.
+UI29FAZ_0101_1020297_1022209 我 是 第一 班 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1020297_1022209 is -3.62662 over 189 frames.
+UI29FAZ_0101_1026892_1027805 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1026892_1027805 is -2.98765 over 89 frames.
+UI29FAZ_0101_1038814_1039951 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1038814_1039951 is -3.16658 over 112 frames.
+UI29FAZ_0101_1042586_1043791 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1042586_1043791 is -2.83141 over 118 frames.
+UI29FAZ_0101_1047424_1048354 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1047424_1048354 is -3.03523 over 91 frames.
+UI29FAZ_0101_1096386_1098318 然后 放 可能 只是 负责 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1096386_1098318 is -4.61634 over 191 frames.
+UI29FAZ_0101_1098318_1100300 啊 COFFEE DURATION 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1098318_1100300 is -3.8617 over 196 frames.
+UI29FAZ_0101_1100300_1103036 来 的 THEN THEY 钱 然后 还有 SUPPORT LOH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1100300_1103036 is -4.17341 over 272 frames.
+UI29FAZ_0101_1103036_1105605 啊 THEY SAY SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1103036_1105605 is -2.94393 over 255 frames.
+UI29FAZ_0101_1108013_1111926 R S T P O K 不要 讲 他们 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1108013_1111926 is -3.62379 over 389 frames.
+UI29FAZ_0101_1111926_1114489 因为 他 THE 一个 被 SUSPEND EH 而且 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1111926_1114489 is -4.56816 over 254 frames.
+UI29FAZ_0101_1121624_1125896 BOWLING 我 会 JUST 很 重 要 ON STRESS RIGHT IF BODY 有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1121624_1125896 is -4.57236 over 425 frames.
+UI29FAZ_0101_1125896_1130603 所以 现在 很多 做 一些 P 看到 的 拿 他 不是 FOR MY AUNTIE LOOK BACK 到 的 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1125896_1130603 is -4.71642 over 469 frames.
+UI29FAZ_0101_1134385_1138014 因为 我 CATHEDRAL 以前 OK 我 的 是 COFFEE 而已 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1134385_1138014 is -4.3124 over 361 frames.
+UI29FAZ_0101_1141059_1146674 然后 那时 因为 S T P M M R T 来 接 代 那种 啊 机构 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1141059_1146674 is -4.11348 over 560 frames.
+UI29FAZ_0101_1165388_1166456 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0101_1165388_1166456 is -2.7434 over 105 frames.
+UI29FAZ_0102_0034680_0037172 新加坡 不 很 奇怪 是 很 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0034680_0037172 is -4.17693 over 247 frames.
+UI29FAZ_0102_0037172_0040492 我们 SHARE AMONG HALL 的 不同 的 ENTERPRISE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0037172_0040492 is -4.39499 over 330 frames.
+UI29FAZ_0102_0040492_0041782 COMPANY 了 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0040492_0041782 is -4.03054 over 127 frames.
+UI29FAZ_0102_0049040_0050984 不 觉 得 DESIGN 好 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0049040_0050984 is -4.39446 over 192 frames.
+UI29FAZ_0102_0057112_0059090 啊 这样 子 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0057112_0059090 is -3.13286 over 196 frames.
+UI29FAZ_0102_0118297_0122340 啊 IS 但是 没有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0118297_0122340 is -3.0656 over 402 frames.
+UI29FAZ_0102_0122340_0125162 很多 都是 我们 那时 侯 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0122340_0125162 is -3.85953 over 280 frames.
+UI29FAZ_0102_0190905_0191820 啊 以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0190905_0191820 is -3.44016 over 90 frames.
+UI29FAZ_0102_0311985_0313960 那个 然后 HORIZON 了 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0311985_0313960 is -4.28516 over 196 frames.
+UI29FAZ_0102_0329983_0341773 他 做 的 方式 MEDITATION 有关 的 STUDY 然后 八千 DEVELOPER 去 DEVELOP 到 的 BELLY 对 他 的 家 家 里 下 完 THEN IT'S 啊 THEN 他 STAND IN THE COMMITTEE 的 CUSTOMER 需要 贵 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0329983_0341773 is -4.4784 over 1177 frames.
+UI29FAZ_0102_0347011_0350623 BESIDE MAINLY 我们 现在 SUPPORT 啦 变成 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0347011_0350623 is -4.14619 over 359 frames.
+UI29FAZ_0102_0366688_0368365 我 跟 我 们 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0366688_0368365 is -3.72933 over 166 frames.
+UI29FAZ_0102_0399146_0402027 不 MANAGE 不 是 MONDAY 啦 但是 PARIS 他 讲 话 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0399146_0402027 is -4.67865 over 286 frames.
+UI29FAZ_0102_0421326_0423521 MALAYSIA 来 他 在 一个 SPAIN 里面 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0421326_0423521 is -4.31411 over 218 frames.
+UI29FAZ_0102_0507782_0509087 但是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0507782_0509087 is -3.99153 over 129 frames.
+UI29FAZ_0102_0528607_0531625 THEN 他 的 很多 美 KNOWLEDGE 有 那个 BASH O K 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0528607_0531625 is -4.35442 over 300 frames.
+UI29FAZ_0102_0543038_0551279 我们 SO 他们 现在 我 们 的 TEAM 里面 全部 都是 I DIDN'T 高 啊 然后 IF 啊 SUPPORTING MANUFACTURING SYSTEM 的 THAT 他 的 S P M 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0543038_0551279 is -4.52092 over 822 frames.
+UI29FAZ_0102_0568017_0570409 只是 会 BASE 在 QUARTER 的 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0568017_0570409 is -3.75715 over 237 frames.
+UI29FAZ_0102_0587377_0591109 那时 都是 MANUFACTURING RELATED 的 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0587377_0591109 is -4.39399 over 371 frames.
+UI29FAZ_0102_0615168_0616936 他 这个 CORE 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0615168_0616936 is -4.33768 over 175 frames.
+UI29FAZ_0102_0633140_0635428 的 部分 FEEL 到 完了 所以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0633140_0635428 is -3.8367 over 227 frames.
+UI29FAZ_0102_0635428_0638396 那时 侯 我 会 MOST OF THE 到 GENERALLY LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0635428_0638396 is -4.47202 over 295 frames.
+UI29FAZ_0102_0648235_0650702 那个 CALL THAT MEANS 里面 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0648235_0650702 is -3.74499 over 245 frames.
+UI29FAZ_0102_0685139_0686288 HUH BEST 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0685139_0686288 is -4.86917 over 113 frames.
+UI29FAZ_0102_0702314_0706105 巴 要 买 THAT 像 未来 好像 LAY STYLISH AND 被 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0702314_0706105 is -4.51162 over 377 frames.
+UI29FAZ_0102_0736842_0739353 你 的 大概 有 THEN 他们 有 说 过 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0736842_0739353 is -4.05225 over 249 frames.
+UI29FAZ_0102_0752301_0761349 他 以前 QUARANTINE 的 BASIC 那些 啊 然后 最近 我们 太 累 啊 他 照顾 啊 MEAN 他 们 的 GROUP S N 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0752301_0761349 is -4.23944 over 903 frames.
+UI29FAZ_0102_0767369_0769073 对 现在 LOCAL SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0767369_0769073 is -3.91364 over 168 frames.
+UI29FAZ_0102_0769073_0772393 啊 好 因为 这个 这个 是 COMMUNIST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0769073_0772393 is -3.94093 over 330 frames.
+UI29FAZ_0102_0789624_0793356 YA 那些 一个 很 好 看 那些 BEAM 啊 我 很 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0789624_0793356 is -4.22936 over 371 frames.
+UI29FAZ_0102_0793356_0798275 啊 我 一个 DO ONCE A 可能 比较 会 比较 大 DUSTY THEN 好 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0793356_0798275 is -4.05664 over 490 frames.
+UI29FAZ_0102_0807425_0810435 可以 给 全部 ACCORDINGLY 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0807425_0810435 is -3.95667 over 299 frames.
+UI29FAZ_0102_0823937_0826655 对 啊 因为 他 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0823937_0826655 is -4.45418 over 270 frames.
+UI29FAZ_0102_0845678_0846861 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0845678_0846861 is -3.18764 over 116 frames.
+UI29FAZ_0102_0881011_0883976 他 在 是 跟 一起 做 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0881011_0883976 is -3.87062 over 295 frames.
+UI29FAZ_0102_0883976_0885552 他 以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0883976_0885552 is -3.11482 over 156 frames.
+UI29FAZ_0102_0890523_0892346 一个 大声 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0890523_0892346 is -3.7361 over 180 frames.
+UI29FAZ_0102_0905182_0906282 SO 他 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0905182_0906282 is -3.91458 over 108 frames.
+UI29FAZ_0102_0983564_0987249 OK WHOA 他 不会 END 我 一下 他 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_0983564_0987249 is -4.38703 over 367 frames.
+UI29FAZ_0102_1015438_1017131 应该 是 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1015438_1017131 is -3.26498 over 167 frames.
+UI29FAZ_0102_1075140_1077547 那时 我 还 好 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1075140_1077547 is -3.84207 over 239 frames.
+UI29FAZ_0102_1077547_1078752 还 可 以 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1077547_1078752 is -4.3663 over 119 frames.
+UI29FAZ_0102_1090603_1093633 HOW HOW DID IT CAN SIL2 啊 和 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1090603_1093633 is -3.6803 over 301 frames.
+UI29FAZ_0102_1119269_1121126 I THINK 还在 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1119269_1121126 is -3.96423 over 184 frames.
+UI29FAZ_0102_1152996_1154773 他 懒惰 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1152996_1154773 is -3.27735 over 176 frames.
+UI29FAZ_0102_1182029_1183731 ER 我 老板 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0102_1182029_1183731 is -3.90394 over 168 frames.
+UI29FAZ_0103_0037877_0039310 他 是 一个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0037877_0039310 is -3.7927 over 141 frames.
+UI29FAZ_0103_0070924_0075190 爱 因为 SENIOR M U S MANAGER 然后 在 HALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0070924_0075190 is -4.03161 over 425 frames.
+UI29FAZ_0103_0107248_0108581 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0107248_0108581 is -3.28822 over 131 frames.
+UI29FAZ_0103_0178070_0179687 WHY 行 道 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0178070_0179687 is -3.62155 over 160 frames.
+UI29FAZ_0103_0189453_0190591 可是 很多 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0189453_0190591 is -4.42334 over 112 frames.
+UI29FAZ_0103_0246506_0248570 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0246506_0248570 is -3.45791 over 204 frames.
+UI29FAZ_0103_0249706_0251013 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0249706_0251013 is -3.15817 over 129 frames.
+UI29FAZ_0103_0304870_0305816 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0304870_0305816 is -3.39249 over 93 frames.
+UI29FAZ_0103_0307381_0309320 啊 对 对 啦 过后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0307381_0309320 is -4.00677 over 192 frames.
+UI29FAZ_0103_0415210_0416362 HALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0415210_0416362 is -3.35889 over 113 frames.
+UI29FAZ_0103_0420989_0422402 当然 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0420989_0422402 is -4.02872 over 139 frames.
+UI29FAZ_0103_0464014_0465046 OK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0464014_0465046 is -3.30365 over 101 frames.
+UI29FAZ_0103_0598471_0600158 都 没有 了 SPEND 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0598471_0600158 is -3.66193 over 167 frames.
+UI29FAZ_0103_0606137_0609806 是 啊 啊 下 来 吃 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0606137_0609806 is -3.24309 over 365 frames.
+UI29FAZ_0103_0623887_0625448 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0623887_0625448 is -3.04139 over 154 frames.
+UI29FAZ_0103_0633725_0634671 然后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0633725_0634671 is -2.89219 over 93 frames.
+UI29FAZ_0103_0698114_0701057 是 没有 没有 去 的 COURSE 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0698114_0701057 is -4.08716 over 292 frames.
+UI29FAZ_0103_0771335_0773134 SIL2 发展 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0771335_0773134 is -3.71612 over 178 frames.
+UI29FAZ_0103_0777537_0778837 我 觉得 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0777537_0778837 is -3.21817 over 128 frames.
+UI29FAZ_0103_0811227_0814029 我 觉得 IS 他们 因为 CHOIR 要 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0811227_0814029 is -3.92746 over 278 frames.
+UI29FAZ_0103_0898580_0903330 COURSE WISE 啊 他 每 你 要 是 DEFINE 的 话 啦 你 你 把 几个 LEVEL 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0898580_0903330 is -4.31805 over 473 frames.
+UI29FAZ_0103_0903330_0905332 你 还 OK RING 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0903330_0905332 is -4.09456 over 198 frames.
+UI29FAZ_0103_0919898_0921220 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0919898_0921220 is -3.07501 over 130 frames.
+UI29FAZ_0103_0958902_0962512 对 还是 想 想 而已 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0958902_0962512 is -3.69293 over 359 frames.
+UI29FAZ_0103_0980804_0982369 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_0980804_0982369 is -2.91593 over 155 frames.
+UI29FAZ_0103_1024530_1025484 他 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1024530_1025484 is -4.23832 over 93 frames.
+UI29FAZ_0103_1057163_1061453 COURSE TRAIN STRETCH TRAINING 啦 STREAMING M B P STREAM 的 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1057163_1061453 is -4.48086 over 427 frames.
+UI29FAZ_0103_1067570_1070053 他们 KNOW 不够 多 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1067570_1070053 is -4.25349 over 246 frames.
+UI29FAZ_0103_1073056_1074966 THEN 他们 多 少 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1073056_1074966 is -4.27022 over 189 frames.
+UI29FAZ_0103_1098713_1100471 你 也是 一个 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1098713_1100471 is -4.04495 over 174 frames.
+UI29FAZ_0103_1109962_1111923 哇 桑 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1109962_1111923 is -3.08292 over 194 frames.
+UI29FAZ_0103_1135356_1137541 啊 他 并没有 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1135356_1137541 is -4.17504 over 217 frames.
+UI29FAZ_0103_1152033_1153888 I 去 地方 MOHS 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1152033_1153888 is -4.00494 over 184 frames.
+UI29FAZ_0103_1174952_1176559 好像 I THINK 要 先 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1174952_1176559 is -4.51507 over 159 frames.
+UI29FAZ_0103_1192023_1194568 就 看 那个 KNOW 他们 很 好 LEH 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1192023_1194568 is -4.68008 over 253 frames.
+UI29FAZ_0103_1199505_1200977 然后 WE CAN 我们 KENNY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0103_1199505_1200977 is -5.18791 over 141 frames.
+UI29FAZ_0104_0000000_0001162 可以 去 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0000000_0001162 is -3.54611 over 114 frames.
+UI29FAZ_0104_0084195_0085370 可以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0084195_0085370 is -3.94495 over 116 frames.
+UI29FAZ_0104_0124250_0127429 SIL2 其实 如果 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0124250_0127429 is -3.24008 over 316 frames.
+UI29FAZ_0104_0149274_0151166 SEND 我 不 动 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0149274_0151166 is -3.79402 over 187 frames.
+UI29FAZ_0104_0177133_0180132 他 是 他 他 EXPECT FOR 我 们 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0177133_0180132 is -4.61735 over 298 frames.
+UI29FAZ_0104_0196310_0198064 我 十点 只是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0196310_0198064 is -4.01067 over 173 frames.
+UI29FAZ_0104_0228400_0229553 在 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0228400_0229553 is -3.27743 over 113 frames.
+UI29FAZ_0104_0238462_0239865 对 对 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0238462_0239865 is -3.75043 over 138 frames.
+UI29FAZ_0104_0257375_0259060 对 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0257375_0259060 is -3.12171 over 167 frames.
+UI29FAZ_0104_0282677_0283761 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0282677_0283761 is -4.22903 over 106 frames.
+UI29FAZ_0104_0294187_0296974 没有 那个 BE ON ABOUT 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0294187_0296974 is -4.13807 over 277 frames.
+UI29FAZ_0104_0357652_0358839 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0357652_0358839 is -3.36837 over 117 frames.
+UI29FAZ_0104_0373269_0374316 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0373269_0374316 is -3.96112 over 103 frames.
+UI29FAZ_0104_0427702_0428862 很 少 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0427702_0428862 is -4.11536 over 114 frames.
+UI29FAZ_0104_0483447_0485113 他们 都 OK 了 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0483447_0485113 is -4.16213 over 165 frames.
+UI29FAZ_0104_0485113_0487369 是 啊 我 觉得 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0485113_0487369 is -3.72162 over 224 frames.
+UI29FAZ_0104_0536726_0538996 他 的 人 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0536726_0538996 is -3.57371 over 225 frames.
+UI29FAZ_0104_0538996_0541521 那 边 每 NOT SURE SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0538996_0541521 is -3.75195 over 251 frames.
+UI29FAZ_0104_0542213_0546272 啊 这样的 这样 慢 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0542213_0546272 is -3.45989 over 404 frames.
+UI29FAZ_0104_0582373_0584954 可以 KNOW 因为 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0582373_0584954 is -4.05464 over 256 frames.
+UI29FAZ_0104_0628294_0632588 HALL TEN K 啦 啊 之 前 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0628294_0632588 is -3.70773 over 427 frames.
+UI29FAZ_0104_0636051_0637258 SET 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0636051_0637258 is -3.4554 over 119 frames.
+UI29FAZ_0104_0684337_0685759 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0684337_0685759 is -2.99 over 140 frames.
+UI29FAZ_0104_0689823_0691360 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0689823_0691360 is -2.85328 over 152 frames.
+UI29FAZ_0104_0697839_0699331 我 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0697839_0699331 is -2.8313 over 147 frames.
+UI29FAZ_0104_0703498_0705201 MORE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0703498_0705201 is -3.31571 over 168 frames.
+UI29FAZ_0104_0719707_0722973 啊 我 那时 后 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0719707_0722973 is -3.6803 over 325 frames.
+UI29FAZ_0104_0774646_0777825 可 以 在这里 SIL2 要 想 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0774646_0777825 is -3.81467 over 316 frames.
+UI29FAZ_0104_0779513_0781902 他 有 啦 其实 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0779513_0781902 is -3.44661 over 237 frames.
+UI29FAZ_0104_0788885_0790347 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0788885_0790347 is -3.13089 over 144 frames.
+UI29FAZ_0104_0790932_0793722 不 想 拿 我 TAKE 的 那个 SUPPORT 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0790932_0793722 is -3.9827 over 277 frames.
+UI29FAZ_0104_0793722_0795851 不过 很 健康 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0793722_0795851 is -3.50942 over 211 frames.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 232 utterances, errors on 0
+UI29FAZ_0104_0812459_0815142 HUH ER 很 很 厚 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0812459_0815142 is -3.67059 over 266 frames.
+UI29FAZ_0104_0829479_0831096 会 看到 罢了 的 LEH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0829479_0831096 is -4.42323 over 160 frames.
+UI29FAZ_0104_0866454_0867977 CHINESE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0866454_0867977 is -3.57255 over 150 frames.
+UI29FAZ_0104_0892152_0893735 全部 也是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0892152_0893735 is -4.10729 over 156 frames.
+UI29FAZ_0104_0896376_0897339 老板 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0896376_0897339 is -4.14268 over 94 frames.
+UI29FAZ_0104_0906868_0909052 OK 啦 因为 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0906868_0909052 is -4.22206 over 216 frames.
+UI29FAZ_0104_0909052_0912234 SO 我 就 OK OK SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0909052_0912234 is -3.99639 over 316 frames.
+UI29FAZ_0104_0927323_0930573 I MEAN 你 可以 你 可以 你 这个 看到 的 不 多 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0927323_0930573 is -5.03816 over 323 frames.
+UI29FAZ_0104_0939810_0941547 六 点 多 一点 也是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0939810_0941547 is -4.08536 over 172 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.5633 over 59444 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:161) Applied transform to 232 utterances; 0 had errors.
+UI29FAZ_0104_0946277_0947464 对 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0946277_0947464 is -3.58965 over 117 frames.
+UI29FAZ_0104_0975410_0977779 过后 也是 OK 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0975410_0977779 is -4.57144 over 235 frames.
+UI29FAZ_0104_0985128_0986293 那个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance UI29FAZ_0104_0985128_0986293 is -3.19424 over 115 frames.
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:176) Time taken 880.744s: real-time factor assuming 100 frames/sec is 1.48164
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:179) Done 232 utterances, failed for 0
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -3.97202 over 59444 frames.
+# Accounting: time=882 threads=1
+# Ended (code 0) at Sat Apr 22 00:45:05 UTC 2017, elapsed time 882 seconds

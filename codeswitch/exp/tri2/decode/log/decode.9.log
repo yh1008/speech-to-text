@@ -1,0 +1,513 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/9/utt2spk scp:data/test/split14/9/cmvn.scp scp:data/test/split14/9/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2/decode/lat.9.gz" 
+# Started at Sat Apr 22 00:30:23 UTC 2017
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2/graph/words.txt exp/tri2/final.mdl exp/tri2/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split14/9/utt2spk scp:data/test/split14/9/cmvn.scp scp:data/test/split14/9/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2/decode/lat.9.gz' 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split14/9/utt2spk scp:data/test/split14/9/cmvn.scp scp:data/test/split14/9/feats.scp ark:- 
+NI45FBP_0101_0000000_0002730 真 真 的 要 只是 一个 小 时 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0000000_0002730 is -4.26044 over 271 frames.
+NI45FBP_0101_0010420_0012120 然后 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0010420_0012120 is -3.79286 over 168 frames.
+NI45FBP_0101_0013540_0016350 好像 SAND 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0013540_0016350 is -4.11113 over 279 frames.
+NI45FBP_0101_0016350_0025120 啊 啊 啊 我 家 前 起 啊 所以 C C A ONE SEASON 在 只是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0016350_0025120 is -3.90709 over 875 frames.
+NI45FBP_0101_0025120_0034120 ACTUALLY 在 NINE 大家 RIGHT OKAY 啊 这个 LIKE BRYAN HE 我 比较 喜欢 COM THEN N U S M S M U 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0025120_0034120 is -4.26846 over 898 frames.
+NI45FBP_0101_0034120_0055660 LIKE 啊 AUNTIE 啦 I CAN 因为 你 FRIEND J B AND F Y P VERY DISAPPOINTED AFTER YAH THEN I F I CHANCE LIKE TRYING TO 给 听 过 一天 他 讲 尽 量 啊 七 加 一 间 家 一点 朋友 SIL2 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0034120_0055660 is -4.14751 over 2152 frames.
+NI45FBP_0101_0058480_0065110 ER ACTUALLY 我 没有 去 过 那个 OPEN HOUSE BUT 我 觉得 AN O B S N T U S SYSTEM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0058480_0065110 is -4.62281 over 661 frames.
+NI45FBP_0101_0065110_0084530 那个 BEING 因为 SAY S S COMPRESSOR 吗 你 REGISTER 你 CAUSE AS COMPARED WHEN 一些 你 要 有 他 ENOUGH POINTS IS THE 你 MUST BE THEN I DON'T LIKE BECAUSE 就是 要 靠 哪里 然后 LIKE SHE CAN SEE 要 那个 COURSE 你 啊 这样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0065110_0084530 is -4.3924 over 1940 frames.
+NI45FBP_0101_0084670_0090630 THEN 那些 N T U 的 有 HALL 可以 除了 那些 比较 以 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0084670_0090630 is -4.23618 over 594 frames.
+NI45FBP_0101_0091310_0104810 人 住 HALL EIGHT THEN 还在 研究 IM IN INDIA 那个 啦 AT LEAST I MEAN 那个 BE INDIAN SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0091310_0104810 is -3.95515 over 1348 frames.
+NI45FBP_0101_0105230_0112600 啊 然后 这样 BUT 比较 方便 啊 很多 BUS S 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0105230_0112600 is -4.20512 over 735 frames.
+NI45FBP_0101_0120080_0123820 西 穿 S 或者 是 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0120080_0123820 is -4.41089 over 372 frames.
+NI45FBP_0101_0123820_0126760 是 穿 CAN TWO 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0123820_0126760 is -4.13103 over 292 frames.
+NI45FBP_0101_0127990_0130860 CAN 啊 O S I C CAN REASON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0127990_0130860 is -4.42624 over 285 frames.
+NI45FBP_0101_0130860_0134480 啊 CAN DO IT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0130860_0134480 is -4.19773 over 360 frames.
+NI45FBP_0101_0135160_0139310 除了 我 打 包 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0135160_0139310 is -3.86138 over 413 frames.
+NI45FBP_0101_0143740_0149510 AS EASY SIL2 跟 你 开 那个 哪里 啊 我 也 是 TOILET 西 EH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0143740_0149510 is -4.38149 over 575 frames.
+NI45FBP_0101_0149510_0153510 的 N T U C C A 东 西 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0149510_0153510 is -4.00613 over 398 frames.
+NI45FBP_0101_0153620_0162160 TAKE 的 N T U C C R C IS LIKE IS MORE THAN SPECIAL PROJECTS UNDER N T U C C 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0153620_0162160 is -4.26419 over 852 frames.
+NI45FBP_0101_0162160_0174870 THEN N T C C IS IT THEN 你 ONE MEMBER CLUBS AND SEVEN SPECIAL PROJECTS SO F O C CLUB IT THEN YES I THINK THEY 你 SIX TO GAMING COMMENTING THAT IS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0162160_0174870 is -4.24514 over 1269 frames.
+NI45FBP_0101_0174870_0182900 THE MY POSITION 你 的 P C G 啊 你 去 I'M QUITE 想 COS I NEVER BUY FOR 以 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0174870_0182900 is -4.12815 over 801 frames.
+NI45FBP_0101_0182900_0197680 ER 开 你 讲 SETTLE 了 但是 COMMITTEE 啊 MEETING 的 好 明 COMMITTEES TO SIL2 啊 对 啊 你 的 要 给 钱 加 在 那个 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0182900_0197680 is -4.05621 over 1476 frames.
+NI45FBP_0101_0197680_0212880 YES TIMES 然后 IT SIL2 我们 在 那个 CAMP 的 DATABASE RIGHT 那时 也有 大 SIZE 一 七 九 十 而已 啊 还在 西 筹备 讲 什么 吗 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0197680_0212880 is -4.16654 over 1518 frames.
+NI45FBP_0101_0212880_0226110 然后 OH 可以 现在 在 几个 EH 你 去 THEN EASY SIL2 STANDING THERE IS IS A LOT OF THINGS TO DO LIKE THE NEXT TIMES AND SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0212880_0226110 is -3.96717 over 1321 frames.
+NI45FBP_0101_0227860_0233590 M S N C AND THEN DECEMBER VERY THEN EVERYTHING 笑 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0227860_0233590 is -3.92923 over 571 frames.
+NI45FBP_0101_0233590_0242510 THEN SEE THEM IN 我 HALL 啊 TODAY TO Y O G THEN 你 要 来 TWENTY 很 麻烦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0233590_0242510 is -4.4767 over 890 frames.
+NI45FBP_0101_0242510_0248400 IS SO 年 SIL2 SIL2 啊 是 想 N GAME 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0242510_0248400 is -4.16182 over 587 frames.
+NI45FBP_0101_0248410_0256880 SIL2 那 带 EH SOME 刚 啊 差 不 多 要 一个人 一个 半小时 的 啦 就是 每年 来 你 可以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0248410_0256880 is -4.31585 over 845 frames.
+NI45FBP_0101_0256880_0266280 然后 最近 有 在 N T U 讲 啦 那个 工作 一个 小 时 就 QUITE 那个 N T U 喜欢 TON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0256880_0266280 is -4.23769 over 938 frames.
+NI45FBP_0101_0268500_0275850 就 CORE N T U ALUMNI TO ME 啊 ONE TIME DONATION C D QUITE O K LIKE SINCE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0268500_0275850 is -4.24595 over 733 frames.
+NI45FBP_0101_0275850_0284050 啊 SCENES 在一起 SAY IN MEAN COME CANNOT PASS 啊 FULL TIME 较 好 PART TIME 叫 LIKELY TO FRIDAY KIND 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0275850_0284050 is -4.61307 over 818 frames.
+NI45FBP_0101_0284050_0294870 这个 TRY 一下 THEN YOU FIND 在 N T U C 讲 MICHELLE YAH TWENTY FOUR 啊 MOST OF TIME SIL2 THEN OF THIS CRISIS LIKE THAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0284050_0294870 is -4.40188 over 1080 frames.
+NI45FBP_0101_0298160_0308370 FIERCE LEH LIKE 以 YAH LAST FIFTEEN DAY ONE D 他 LAKESIDE IS STARING AT THESE CANVASSING THEN 啊 BUT YET 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0298160_0308370 is -4.43002 over 1019 frames.
+NI45FBP_0101_0308370_0313100 THEN 啊 I SAY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0308370_0313100 is -3.48588 over 471 frames.
+NI45FBP_0101_0320950_0335950 SO I 想 在这里 啊 因为 I HAVE THIS IS 以 THEN I CAME TO YOUR AGE LIKE S Y F O C IN 你 买 THAT TIME AS IN TWO ONE RIGHT SO 是 我 的 FRIEND 跟 我 讲 有 这个 CAMPUS ONE LYING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0320950_0335950 is -4.31591 over 1498 frames.
+NI45FBP_0101_0335950_0343390 SO 到 那个 WHY DECEMBER 也是 THEN 看到 很多 不同 的 C C A 你 CUT THEY ARE ORIENTATION CAMP 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0335950_0343390 is -4.54941 over 742 frames.
+NI45FBP_0101_0343390_0352560 YES ACTUALLY QUITE INTERESTING 我 GET ANG BAO 看 FIVE DOLLARS THERE SO 没有 参加 我 THEN 的 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0343390_0352560 is -4.33731 over 915 frames.
+NI45FBP_0101_0352560_0357920 我 就 看 就是 你 STAY 年 很 真 的 C C A C S THINKING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0352560_0357920 is -4.56891 over 534 frames.
+NI45FBP_0101_0357920_0366330 SIL2 MY FRIEND SICK C C A C MEAN MORE FUN AN HOUR THEN JUST THEN 你 今年 SO YAH SO LIKE WHEN TO SAY ASEAN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0357920_0366330 is -4.40515 over 839 frames.
+NI45FBP_0101_0366330_0371910 只有 在 C C A C A 在 N 是 到 啊 已经 还 好 朋友 就 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0366330_0371910 is -4.338 over 556 frames.
+NI45FBP_0101_0371910_0378310 他们 第一 天 我 读 过 要 我 SIL2 我 SIGN ON TYPING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0371910_0378310 is -4.14467 over 638 frames.
+NI45FBP_0101_0378310_0386410 然后 在 因为 他们 我们 全部 一起 JOIN 啊 DIFFERENT COMMITTEES AH 像 我 的 ROOM MATE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0378310_0386410 is -4.21282 over 808 frames.
+NI45FBP_0101_0386410_0398480 他 是 SIL2 我 们 是 一样 的 BUT 她 是 她 JOIN DANCE 讲 SUB 的 C P M 我 以后 会 以 GUY HAS 啊 C C A C COMPARED TO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0386410_0398480 is -4.41136 over 1205 frames.
+NI45FBP_0101_0398480_0407080 SHE JUST 啊 因为 听说 啦 因为 在 以 给 一些 我 九 点 少 开 心 因为 那些 那 边 的 人 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0398480_0407080 is -4.27215 over 858 frames.
+NI45FBP_0101_0407080_0426770 就 很 SAY THEY ARE VERY THEN UP WITH ENGLISH IS 啊 THEN THEY I SEE THAT I DO THINGS I THAT ARE RESTRICTIONS THEN I DON'T HAVE THE SAME TO SIL2 他 LIKE SOME 会 问 他 做 的 东 西 然后 在 ANGEL 少 饭 再 加上 IS A VERY DIFFERENT THING 啊 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0407080_0426770 is -4.21098 over 1967 frames.
+NI45FBP_0101_0426770_0442740 YA HE CHAP LESSON IS MORE FRIENDLY LIKE AND 是 我 的 PLAN 有 那个 是 因为 他 是 我 的 朋友 的 A BETTER 样 只是 他 会 给 我们 那个 FREEDOM TO DO WHAT WE ONE UNDER 啦 所以 你 家 THEN ENGINE SIZE ONE TIME VERY SURE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0426770_0442740 is -4.39531 over 1595 frames.
+NI45FBP_0101_0442740_0450130 我们 可以 学 到 更多 东 西 我们 可以 THEN 可以 就会 就会 很多 只有 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0442740_0450130 is -4.04425 over 737 frames.
+NI45FBP_0101_0450290_0472700 BUT I AM F O C BECAUSE ALOT OF TIME BUT I I KNOW WHY THEY IN BUT I EXPECTED THEN 来 讲 英文 的 COMMITTEE WAS NOT WHAT I NEED TO GET FROM YAH THEN SO I 现在 你 觉得 以后 我 没有 JOIN F O C THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0450290_0472700 is -4.25747 over 2239 frames.
+NI45FBP_0101_0472700_0492340 C C 就会 JAM 不 开 心 要 就 没有 我 想 要 来 的 感觉 EH 没有 那种 家庭 的 感觉 啊 你 要 我 觉得 每 西 开会 的 那个 很 气 在 THEN 就 觉得 每 次 一起 就 是 说 的 加 起来 他 FEELING 啊 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0472700_0492340 is -4.23254 over 1962 frames.
+NI45FBP_0101_0499700_0510210 ER 我们 通常 都 会 LIKE VERY TO 去 EASY AT ONE MAIN COMMITTEE SIL2 BUT THEN HE GOT CAUGHT 西 ME I FEEL I QUITE USELESS I WAS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0499700_0510210 is -4.55072 over 1049 frames.
+NI45FBP_0101_0510210_0515500 YOU MEET FOR TWO THREE HOURS THEN 有 一 TO 跑 FOR 了 DAYS THEN 他 THING IS ALWAYS THE SAME 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0510210_0515500 is -4.53774 over 527 frames.
+NI45FBP_0101_0515500_0524460 SAME THINGS WELL 的 GAME THEN I SAY THEY SMALL 比较 EFFICIENT 啊 IF WE DOING MY PORTFOLIO 啦 THEN YOU TELL ME 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0515500_0524460 is -4.45377 over 894 frames.
+NI45FBP_0101_0524460_0528290 有 啊 BAKING FROM ANYBODY AH 已经 开始 YEAH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0524460_0528290 is -4.62296 over 381 frames.
+NI45FBP_0101_0528290_0537390 THEN MY PART 是 THERE'S NOTHING BECAUSE MY 七 加 来 的 TEN READINGS THEN 我们 也是 要 做 东 西 给 我 一个人 做 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0528290_0537390 is -4.58291 over 908 frames.
+NI45FBP_0101_0537390_0548240 THEN 上次 我 进 觉得 是 有 个 人 的 不满 LA THEY PAY MORE 些 人 所以 变成 啊 你 讲 HAPPY LEH SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0537390_0548240 is -4.24805 over 1083 frames.
+NI45FBP_0101_0550130_0559250 啊 BECAUSE 我 已经 讲 过 很多 是 THEN 他 他 一直 说 他 会 TAKE TIME APPLYING THEY BE MORE INVOLVE THEN 他 THING BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0550130_0559250 is -4.36541 over 910 frames.
+NI45FBP_0101_0559250_0570900 到 现在 还是 一样 啊 THEN 就 让 我 觉得 还是 就 没 有 很多 变化 要 FURTHER 我 觉得 我 在 那 边 也 TIME 结婚 THEN 你 MISSING 的 吗 HAPPY 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0559250_0570900 is -4.1852 over 1163 frames.
+NI45FBP_0101_0581720_0591380 EH ACTUALLY REGISTERING I THE SEA SAY SOME COS 我 觉得 我 是 那种 要 比较 会 有 ONE 可以 完 的 人 啊 SO 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0581720_0591380 is -4.23937 over 964 frames.
+NI45FBP_0101_0591380_0603410 而且 我 以前 S IS IS 都是 比较 ACTIVE 的 都是 SPORTS 的 LIKE ROCK CLIMBING 啊 BADMINTON 这些 然后 现在 我 JOIN TOUR 的 时候 我 觉得 很 奇怪 RIGHT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0591380_0603410 is -4.22693 over 1201 frames.
+NI45FBP_0101_0603410_0618630 BUT 就 我 觉得 我 现在 在 大学 VERY DIFFERENT FROM WHAT I DO IS TO BE IN J C C A SQUATTER SOME MORE OUTSPOKEN I DO ALOT OF SIL2 I THINK THAT THE REQUIRED MISTAKE 买 SOMETHING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0603410_0618630 is -4.32499 over 1520 frames.
+NI45FBP_0101_0618630_0628180 BUT THEN 来 看 TO 在 IN 南 大 THEN 在 F O C A LIST 已经 近 YEAR END UP 他 讲 因为 这些 东 西 要 讲 SO I I THAT IS LIKE SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0618630_0628180 is -4.53443 over 953 frames.
+NI45FBP_0101_0628180_0642330 I LIKE I E 那些 I EMAIL GIRLS ONE YAH LIKE 觉得 LIKE 啦 所以 没有 什么 SIL2 地方 NOT NICE PLACE TO 你 ME TO DEVELOP MYSELF THAT'S WHAT I THOUGHT I WILL MAKE IT HAS 啦 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0628180_0642330 is -4.49452 over 1413 frames.
+NI45FBP_0101_0642330_0652330 所以 觉得 如果 可以 笑 话 就 很 好 啊 BUT 应该 是 不可 以 THEN 是 可以 LIKE STAY IN N T U 的 CAMPAIGNS 啦 BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0642330_0652330 is -4.31542 over 998 frames.
+NI45FBP_0101_0652330_0663670 I'M I'M NOT JOIN THAT HAS THE MAIN COMMITTEE 来 啦 MAYBE JUST A 小 ONLINE SUB COMMITTEE 就 可 以 啊 然后 一起 JOIN 边 东 西 而且 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0652330_0663670 is -4.51214 over 1132 frames.
+NI45FBP_0101_0663670_0670940 THEN 这个 SAY 给 我 需要 上去 样 东 西 啊 LIKE 就 因为 他 一下 我 就会 一点 回来 IN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0663670_0670940 is -4.3942 over 725 frames.
+NI45FBP_0101_0670940_0679740 你 每天 到 来 要 你 做 LEADER 啊 的 THEN I SEVEN 叫 NG CAN GO FOR THE 上来 RESEARCHING 在一起 THEN 他 THING 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0670940_0679740 is -4.43058 over 878 frames.
+NI45FBP_0101_0679740_0686950 THEN I THINK NOT I WAS LIKE JUST FOR THIS CAMP ALONE YA YOU'LL BE FINDING THAT'S WHY IS LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0679740_0686950 is -4.24574 over 719 frames.
+NI45FBP_0101_0686950_0694010 I DON'T SEE I I 他 是 一个 SENSOR ACCOMPLISHMENT C 两 三 年 T N T U 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0686950_0694010 is -4.39623 over 704 frames.
+NI45FBP_0101_0713650_0716140 看 他 讲 ROCK CLIMBING 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0713650_0716140 is -4.49615 over 247 frames.
+NI45FBP_0101_0716320_0721560 啊 我 是 那种 比较 SIAN CAMPING 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0716320_0721560 is -4.28171 over 522 frames.
+NI45FBP_0101_0722940_0729350 他 他 就是 因为 喜欢 这种 东 西 而已 下 晒 太阳 ON 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0722940_0729350 is -4.45363 over 639 frames.
+NI45FBP_0101_0731300_0733520 可以 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0731300_0733520 is -4.14183 over 220 frames.
+NI45FBP_0101_0734060_0742810 BUT 还 好 我 因为 JUST GO 其他 样 BOSSY MORE ACTIVE 啊 THEN 你 是 在 那 边 我 就 不知道 ONE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0734060_0742810 is -4.55189 over 873 frames.
+NI45FBP_0101_0742810_0749350 所以 觉得 你 还是 可以 这 也是 我 NINE THEN 在一起 啊 啊 因为 我 觉得 很 SO-SO SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0742810_0749350 is -4.46782 over 652 frames.
+NI45FBP_0101_0749350_0754820 BUT I KNOW THEN GO 家 MONEY C AH SO YAH I THINK OH SHIT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0749350_0754820 is -4.34771 over 545 frames.
+NI45FBP_0101_0754820_0765170 因为 ALWAYS LIKE 他 SAY SAY THAT GO 下 一 过 THEN THEN 我 I CAN GO DO THINGS LIKE ONE GUY IS TO LIKE GO FOR EACH OTHER SPORTS 啊 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0754820_0765170 is -4.62991 over 1033 frames.
+NI45FBP_0101_0765170_0774060 GO THERE I'M DOING SOMETHING AS I THINK SOME MORE ON THOSE CROCODILES 比较 啊 HALL 不过 比较 想 到 打 讲 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0765170_0774060 is -4.31196 over 887 frames.
+NI45FBP_0101_0775880_0783740 他 在 对 J ONE BUT 因为 久 以前 三个 啊 THEN 没有 什么 机会 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0775880_0783740 is -4.213 over 784 frames.
+NI45FBP_0101_0783740_0796660 因为 在 J C THERE ARE LIKE THREE OR FOUR C C 一起 去 要 FOR J C THAT THERE'S ROCK CLIMBING ONE IS CAN SEE THEN 没有 什么 时间 SHE OUT 啊 去 SUCK SUCK THUMB 这些 SO 只有 在 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0783740_0796660 is -4.60058 over 1290 frames.
+NI45FBP_0101_0796660_0806330 啊 我 SUCH AS LIKE SEND IN J C 啊 THEN 我 就 JOIN 了 SIL2 BUT ACTUALLY 很 TOUGH 啦 THAN PHYSICAL TRAINING IS LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0796660_0806330 is -4.25448 over 965 frames.
+NI45FBP_0101_0806380_0814480 ONE SO THEY THEY LIKE THREE BACK TO 我 需要 AS I GUESS TO DO P T THEN THEY'LL BE LECTURE APPLYING FOR ONE HOUR 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0806380_0814480 is -4.38283 over 808 frames.
+NI45FBP_0101_0814480_0817010 SIL2 SO INFUSE 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0814480_0817010 is -4.36024 over 251 frames.
+NI45FBP_0101_0817010_0823110 THEN 在 那 里 到 他 没有 时间 SO BUT JOIN 这些 SPORTY EVENT 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0817010_0823110 is -4.4237 over 608 frames.
+NI45FBP_0101_0825490_0829160 THEN 有 啊 因为 那个 BALL DARING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0825490_0829160 is -4.06268 over 365 frames.
+NI45FBP_0101_0829730_0838310 不当 CAR 有 多 DARING BUT ITS A DIFFERENT 他 THINK COMPARED TO 那个 ROCK CLIMBING THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0829730_0838310 is -4.48572 over 856 frames.
+NI45FBP_0101_0838310_0846340 FOR BANK P ROCK CLIMBING THEN I 啦 因为 ROCK CLIMBING SAY WANT SOME PART 然后 BOWL THE RACE 往 旁边 他 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0838310_0846340 is -4.61727 over 801 frames.
+NI45FBP_0101_0846340_0855900 SO 你 要 MAINTAIN 他 是 LIKE 两 层 高 然后 你 忙 旁边 他 讲 日 语 是 T 到 上海 NINE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0846340_0855900 is -4.41018 over 954 frames.
+NI45FBP_0101_0858330_0875670 啊 M J C 的 那个 COME 然后 叫 我 的 SENIOR 是 他 们 的 PRESIDENT SIL2 他 想 解释 哈 小 吃 啊 SITE 宜 一点 五 五 五 做 YAH 然后 很 还有 一 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0858330_0875670 is -4.30323 over 1732 frames.
+NI45FBP_0101_0876770_0888840 我 以前 是 要 做 一直 做 中学 啊 然后 有些 你 还是 H E 那个 NIGHT 是 做人 那个 那个 PUB 啊 因为 真 太 恐怖 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0876770_0888840 is -4.46746 over 1205 frames.
+NI45FBP_0101_0888840_0893720 MAINLY 是 很 少 会 去 演 错 啦 对 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0888840_0893720 is -4.2678 over 486 frames.
+NI45FBP_0101_0894270_0899510 他 SIL2 还 好 而已 一些 THEN AT NIGHT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0894270_0899510 is -4.18565 over 522 frames.
+NI45FBP_0101_0908810_0911080 他 小 学 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0908810_0911080 is -3.83034 over 225 frames.
+NI45FBP_0101_0911080_0915280 想 西 在 小 T M 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0911080_0915280 is -4.16147 over 418 frames.
+NI45FBP_0101_0916580_0920150 因为 他 是 是 很 STAGE SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0916580_0920150 is -4.50011 over 355 frames.
+NI45FBP_0101_0920730_0930110 PRICE QUITE SAD 啦 啊 LET'S SAY I THINK 应该 是 吗 MY SIBLINGS 啊 所以 看 THEN 要 FAIL THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0920730_0930110 is -4.39046 over 936 frames.
+NI45FBP_0101_0930110_0939090 所以 要 在 LIKE THEN 适应 到 也是 很 SAY 很 想 吃 东 西 啊 BUT THEN 这样 大 你 讲 EH I NEED TO PLAN SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0930110_0939090 is -4.54993 over 896 frames.
+NI45FBP_0101_0943560_0948470 I THINK JACUZZI THERE S OBJECT PHYSICS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0943560_0948470 is -4.26003 over 489 frames.
+NI45FBP_0101_0948470_0959280 THEN THAT MUST 因为 I THINK THAT 是 EXPLAIN 给 来 THEN EXOTIC 啊 BUT THEN I LIKE GO FOR A GEOGRAPHY AH THEN 就 去 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0948470_0959280 is -4.34237 over 1079 frames.
+NI45FBP_0101_0959910_0964250 CASINO 啊 好像 是 啊 那个 心 可以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0959910_0964250 is -4.3712 over 432 frames.
+NI45FBP_0101_0964250_0968020 SIZE DIRTY THEN 是 LIKE 贵 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0964250_0968020 is -4.13484 over 375 frames.
+NI45FBP_0101_0968100_0986580 BUT 啊 是 T J C 在 洗 的 DIRECTORS 就会 NOT BAD 啊 FORENSIC 一 一 边 THEN IT'S LIKE YAH WE SAY THE VARIETY LICENSE 的 人 比较 CASE OF US 啦 可以 才 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0968100_0986580 is -4.32433 over 1846 frames.
+NI45FBP_0101_0986580_0990940 THEN SOME 看 啊 EH 差 不 多 啦 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0986580_0990940 is -4.1075 over 434 frames.
+NI45FBP_0101_0991940_1001020 啊 没有 时间 比较 好 因为 下 K 晒 了 那 是 去 见 他 的 小 我们 你 找 SISTER 啦 THEN THEY ARE SELECTED 被 EASILY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_0991940_1001020 is -4.59094 over 906 frames.
+NI45FBP_0101_1001020_1009300 THEN 是 P C C 你 ONE 多 比较 多 两 三 块 然后 你 他 的 没有 什么 一点 THEN 一点 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1001020_1009300 is -4.45 over 826 frames.
+NI45FBP_0101_1018530_1026030 啊 对 一下 他 的 笑 LEH ITS NOT INTO LIKE NEVER SAY SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1018530_1026030 is -4.06171 over 748 frames.
+NI45FBP_0101_1033280_1044490 AT HOME YAH 这样 小 的 时候 西 COMPARE 那个 WRONG 的 因为 我 BUT 我 刚 的 朋友 去 啊 要 喜欢 吃 小 我们 这些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1033280_1044490 is -4.39734 over 1119 frames.
+NI45FBP_0101_1044490_1048830 SO 去 CDS H T U 比较 好 吃 啊 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1044490_1048830 is -4.02088 over 432 frames.
+NI45FBP_0101_1066680_1069680 SUNDAY NIGHT YAH 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1066680_1069680 is -4.249 over 298 frames.
+NI45FBP_0101_1079120_1081510 因为 MANGA 我 是 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1079120_1081510 is -3.79981 over 237 frames.
+NI45FBP_0101_1081510_1084580 啊 看 AT THE RIGHT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1081510_1084580 is -4.09935 over 305 frames.
+NI45FBP_0101_1095210_1102420 I 的 没有 不知道 因为 我 没有 去年 就是 SUMMARIZE SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1095210_1102420 is -4.21639 over 719 frames.
+NI45FBP_0101_1106540_1113360 啊 对 他 是 BUT 是 如果 去 这样 SAY THEN 多 只是 要 单 化 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1106540_1113360 is -4.40456 over 680 frames.
+NI45FBP_0101_1113360_1116910 SIL2 那些 吃 啊 所以 STAGE SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1113360_1116910 is -4.20249 over 353 frames.
+NI45FBP_0101_1125500_1128400 可能 还有 好像 那个 跑 TRACK 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1125500_1128400 is -4.55571 over 288 frames.
+NI45FBP_0101_1128400_1138550 CHANGE MY 因为 那个 是 你 是 吃 像 可能 是 因为 新加坡 也是 他 跑 才 回家 ARMY IT'S 我 记得 以前 啊 真 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1128400_1138550 is -4.69196 over 1013 frames.
+NI45FBP_0101_1138610_1150910 就 因为 需要 我 的 I THINK 他们 就会 MEETING 己 DESIGN VERY COMMON 就 啦 SO SEE WHAT YOU GOT THEIR CHINESE 那个 KOREAN SUNDAY EXPLAIN TRY SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1138610_1150910 is -4.44605 over 1228 frames.
+NI45FBP_0101_1155730_1161060 啊 THEN BUT 知道 没有 看 过 也是 很 使 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1155730_1161060 is -4.10461 over 531 frames.
+NI45FBP_0101_1172140_1186560 ER OR 像 HAWKER FOOD I GOT 因为 THEN 他 是 新加坡 人 NEXT LIKE MORE 的 考 家人 啊 ABOUT LIKE SUNNY 了 没有 NOTICE 啊 COMPARED TO SMASH TRAVELLING AND STUFF LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1172140_1186560 is -4.55917 over 1440 frames.
+NI45FBP_0101_1186560_1198430 ANY IS IT IN 我 YOU LIKE DIRECTIONS SIL2 BUT NOT AREA THEN 我 YES 他 跟 我 AFTER THAT THEN SOME MORE IT'S LIKE SO MANY LANGUAGES 我 也 DIFFERENT HAWKERS 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1186560_1198430 is -4.21656 over 1185 frames.
+NI45FBP_0101_1198700_1207330 THEM 看 SEASON CENTRE I GO FOR 啊 I J C 没有 因为 我 觉得 LIKE 我们 现在 学生 THEN 不是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1198700_1207330 is -4.38333 over 861 frames.
+NI45FBP_0101_1207330_1220190 不 动 站 站 钱 还 钱 那个 父 母 啦 吗 所以 I DON'T THINK WE SAY IT'S LIKE JUST 啦 THEN EVERYTHING HE IS THE JUMP 好 笑 THEN MEDIA MONEY FROM OUR PARENTS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1207330_1220190 is -4.51624 over 1284 frames.
+NI45FBP_0101_1220250_1230040 THEN 他 讲 我们 很 辛苦 因为 给 我们 一 整 年 花 花 很多 钱 这样 所以 I THINK HAWKER FOOD 就是 给 你 好 吃 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1220250_1230040 is -4.37135 over 977 frames.
+NI45FBP_0101_1230050_1241000 我 觉得 就会 讲 看到 一些 己 的 东 西 LIKE WHETHER POPULAR 啊 HAWKER FOOD 一样 把 THEN CAN GO AND TRY 啊 对 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1230050_1241000 is -4.30331 over 1093 frames.
+NI45FBP_0101_1249040_1253410 SOURCE FOR SIXTY SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1249040_1253410 is -3.68484 over 435 frames.
+NI45FBP_0101_1255340_1266940 EH 的 BUT I I LOVE BITES EH I 你 看 你 THEN YES LIKE TUITION THAT KIND YAH SO THAT THEY ARE WE 参加 所以 你 NEXT TIME 看 啦 BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1255340_1266940 is -4.55335 over 1158 frames.
+NI45FBP_0101_1266940_1277210 STAY 我 是 觉得 还是 没有 这个 P 要 就是 每 一 餐 起 前 两 间 RESTAURANT 啊 刚才 有 起 起 几 间 RESTAURANT 那种 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1266940_1277210 is -4.2873 over 1025 frames.
+NI45FBP_0101_1286200_1288810 ERR 叫 ARM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1286200_1288810 is -3.75496 over 259 frames.
+NI45FBP_0101_1288910_1293200 FOR STILL WHEN YOU SAY SOMETHING CAUSE IT'S VERY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1288910_1293200 is -4.18 over 427 frames.
+NI45FBP_0101_1293200_1302360 EH EH INDIA THEN I I I AM ONLY STILL LIKE COS AND ER WHAT I DID HE IS 啊 FACTOR 啦 少 LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1293200_1302360 is -4.25048 over 914 frames.
+NI45FBP_0101_1302360_1312580 听 对 吗 不 喜欢 BECAUSE 我 觉得 如果 吃 太 多 要 会 变 肥 啊 THEN 没有 必 要 用 要 一 层 是 Z 久 久 没有 起 起 叫 R C 而且 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1302360_1312580 is -4.58006 over 1020 frames.
+NI45FBP_0101_1312580_1322490 MY FRIENDS LO 每 次 讲 SHE SAY STEAMBOAT RIGHT ITS IS BOOK FISHING 你 还没有 吃 到 而已 BUT OH 你 是 PLAN 了 I'LL BE THEN BY TIME 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1312580_1322490 is -4.65857 over 989 frames.
+NI45FBP_0101_1322490_1333820 到 AS IN THERE'S ONLY ASK 也 要 不 想 想 而已 ME NOW 我 觉得 是 听 我 是 为了 要 有 MOOD 要 心情 讲 要 知道 自己 起来 IN 打 打 最 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1322490_1333820 is -4.62148 over 1131 frames.
+NI45FBP_0101_1333820_1339190 讲 啊 BUT 如果 没有 的 话 THEN 就 NORMAL FOOD 讲 SIL2 THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1333820_1339190 is -4.06928 over 535 frames.
+NI45FBP_0101_1361050_1373170 对 THEN BUS YAH THEY ARE FEELING 就会 解释 给 他 的 他 在 N T C WHAT THEN 他们 很 甜 你 睡 觉 了 啊 不是 很 好 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1361050_1373170 is -4.51233 over 1210 frames.
+NI45FBP_0101_1377530_1391730 我 也 不大 像 NANO NANO 看 你 的 就是 那个 没有 七 第 一 个 DANCE 因为 我 觉得 他 SIL2 你 吃 THAT 吃 那种 SCHOOL 然后 你 很多 起 然后 所以 很 紧张 然后 TO 讲 不是 FULL SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1377530_1391730 is -4.59572 over 1418 frames.
+NI45FBP_0101_1391730_1402220 THEN 没有 那个 虾 好 像 我 要 喜欢 BY 开 学 啊 THEN 一些 他 THAILAND 的 就 问 的 BY 开 心 啊 给 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1391730_1402220 is -4.47211 over 1047 frames.
+NI45FBP_0101_1404400_1409210 啊 对 I THINK 是 因为 我 OF FRIENDS 都是 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1404400_1409210 is -4.39691 over 479 frames.
+NI45FBP_0101_1409210_1422260 我 们 的 LIKE FAMILY 都是 要 这种 进 看 SO 很 少 吃 到 UNI 啊 在 啦 THEN 比较 下 他 BY 开 心 一 队 的 C D 算 妈妈 的 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1409210_1422260 is -4.30592 over 1303 frames.
+NI45FBP_0101_1423210_1436340 对 对 SO 我们 他 很 少 西 是 J C 因为 以前 小 时 后 就 有 用 啊 SO MAIN ER 超过 三 餐 一 没有 GUITAR 三 餐 都 在 家 一些 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1423210_1436340 is -4.4512 over 1311 frames.
+NI45FBP_0101_1436340_1441070 每天 每 个 人 的 位 只是 加 加 些 SO 我们 从小 到 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1436340_1441070 is -4.34813 over 471 frames.
+NI45FBP_0101_1441070_1452420 就 已经 有 两 两 菜 那 习惯 啦 就 第一 MULTI 你 看 THING THEN OUR AS EIGHT HOURS THREE HOURS NOT NOT VERY 重 啊 不是 当 重 口 味 啊 那种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1441070_1452420 is -4.51722 over 1133 frames.
+NI45FBP_0101_1452420_1463310 THEN 现在 他 可以 可以 去 啊 MY NAME THAT SO WE MY MY MUM CAN AFFORD TO EVERYDAY KOPE SO 我 THEN 而且 我们 在 这 LYING ON 打 所以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1452420_1463310 is -4.37047 over 1087 frames.
+NI45FBP_0101_1463310_1479050 就 每 次 吃 到 外面 时候 就 话 C D 然后 就 LIKE SPARE MORTAL I CAN IS THAT 的 THE BASE AH IS VERY 就 很 很 真 的 很 喜欢 啊 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1463310_1479050 is -4.38364 over 1572 frames.
+NI45FBP_0101_1497260_1505790 SIL2 LEH LIKE WHEN I SAY BUT O E LECTURE 我 的 那个 PASSION 啊 我 一下 是 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1497260_1505790 is -4.23631 over 851 frames.
+NI45FBP_0101_1505790_1517800 SIL2 WHAT IS THAT THEN SITE 去 你 现在 要 ONE HOUR 以下 IS TO DO THEY SAY ONE MONEY SO I ENOUGH FOURTEEN 给 他 对 啊 BUT THEN LECTURE THEN 啊 现在 AS IN HALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1505790_1517800 is -4.50686 over 1199 frames.
+NI45FBP_0101_1517800_1528120 我 会 以 每 个 人 尽 机会 带 戏 QUITE SO 每天 一些 两 分 所以 我 讲 YES 那个 FIND 就 尽 量 少 吃 SIL2 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1517800_1528120 is -4.43237 over 1030 frames.
+NI45FBP_0101_1528690_1538390 AH COS ER 因为 他 I S THREE 去 THEN 我 会 带 那些 要 要 PIN 动 的 所以 只 可以 带 听说 THEN 才 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1528690_1538390 is -4.44657 over 968 frames.
+NI45FBP_0101_1538390_1544870 SIL2 THEN ANYWAY 又 讲 吃 了 啊 SO I 太 小 P C 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1538390_1544870 is -4.32706 over 646 frames.
+NI45FBP_0101_1544870_1548300 啊 LAST TIME 就是 N T U S S 也 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1544870_1548300 is -4.81318 over 341 frames.
+NI45FBP_0101_1548300_1559900 YA IT'S LIKE BEST TEAM HAS 啦 LIKE THAT MEANS AFTER J C AS IN 啊 YAH SIL2 SIL2 SIL2 THEN 要 印度 也是 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1548300_1559900 is -4.32981 over 1158 frames.
+NI45FBP_0101_1562670_1568440 印 象 对 啊 我 在 学校 我 就会 每个 柏油 去 跑步 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1562670_1568440 is -4.50093 over 575 frames.
+NI45FBP_0101_1568440_1578610 BUT THEN 因为 我 的 如果 你 不 喜欢 跑步 THEN 我 我 有 会 SIGN A MY 你 去 跑步 所以 你 知道 LIKE 一下 你 去 跑步 THEN 写 因为 一个人 去 跑 EH 跳舞 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1568440_1578610 is -4.68733 over 1015 frames.
+NI45FBP_0101_1578610_1586550 THEN THEY 觉得 有 OK OK 去 有用 给 THEN LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1578610_1586550 is -4.12041 over 792 frames.
+NI45FBP_0101_1593980_1597010 觉得 很 差 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1593980_1597010 is -4.18464 over 301 frames.
+NI45FBP_0101_1597740_1599390 OH BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1597740_1599390 is -4.44375 over 163 frames.
+NI45FBP_0101_1599390_1609940 啊 在 你 家里 因为 我 在 U H E 可以 加 SO THAT 讲 我 家 对 面 有 东 西 THEN 一些 DATA 啦 I C 一起 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1599390_1609940 is -4.36611 over 1053 frames.
+NI45FBP_0101_1613620_1616620 啦 THEN I SAY UNTIL 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1613620_1616620 is -3.96873 over 298 frames.
+NI45FBP_0101_1616620_1622090 那 那 算 是 N T U 会 比 男生 大 A 过 大多 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1616620_1622090 is -4.74015 over 545 frames.
+NI45FBP_0101_1622290_1629400 还 可以 因为 他 的 HALL 比较 多 啊 然后 比较 多 AND THEN 随着 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1622290_1629400 is -4.30713 over 709 frames.
+NI45FBP_0101_1645950_1648380 啊 因为 你 看 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1645950_1648380 is -4.85313 over 241 frames.
+NI45FBP_0101_1648380_1657440 一天 会 东 西 两 三 岁 还是 算 所以 THEN 就要 赶 给 因为 POLY 不 买 THINK 一个 I MEAN 边 的 钱 你 的 SALARY 啊 你 不可 以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1648380_1657440 is -4.73023 over 904 frames.
+NI45FBP_0101_1657440_1664230 就要 近 SEE IN THE END OF THE DAY 你 才 SEEN THE CORRECT WHAT I THINK 用 的 N J J 很 不 自 在 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1657440_1664230 is -4.84623 over 677 frames.
+NI45FBP_0101_1664240_1671780 SIL2 THEN 再 难 道 不同 啊 因为 他们 年 真 的 啊 海 鲜 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1664240_1671780 is -4.25978 over 752 frames.
+NI45FBP_0101_1692630_1695640 所以 NINE 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1692630_1695640 is -3.82737 over 299 frames.
+NI45FBP_0101_1695680_1699970 MY YAH LA I THINK FROM SCHOOL 有 JOIN PLEASE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1695680_1699970 is -4.94039 over 427 frames.
+NI45FBP_0101_1700640_1710040 SIL2 就 SIL2 EASY COME BACK SLEEP 而且 DRAW 一些 IN COME BACK 写 那个 ALOT OF THE WATER 是 CITY 要 WHAT LIKE ABOUT 到 IS 那个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1700640_1710040 is -4.5848 over 938 frames.
+NI45FBP_0101_1710040_1715710 有 RELEASE LIKE 啊 啊 LIKE THOSE THEY WILL MAKE IT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1710040_1715710 is -4.30431 over 565 frames.
+NI45FBP_0101_1716360_1721940 就 O S M R T ALIVE THEN YOU GO TO THE INTERCHANGE MIND 啦 这个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1716360_1721940 is -4.36135 over 556 frames.
+NI45FBP_0101_1721940_1725640 SIL2 两 三个 在 遇到 然后 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1721940_1725640 is -4.57783 over 368 frames.
+NI45FBP_0101_1725640_1736010 我 不知道 EH BUT 我 知道 我 只 去 过 THEN 那 边 很 好 ONE 太 那个 WASTE TOO LAZY 不 OH THEN 那个 STRIKES 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1725640_1736010 is -4.22861 over 1035 frames.
+NI45FBP_0101_1736010_1747080 SIL2 THEN RACE 也是 一 THIS ONE AN HOUR 行 COMPLEX 啊 THEN SMALL FRY NIGHT THEN IF YOU ENTER 是 I SAY IS T 那个 到 BIAS 那个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1736010_1747080 is -4.40813 over 1105 frames.
+NI45FBP_0101_1747080_1750600 啊 那个 到 那些 那个 比较 好玩 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1747080_1750600 is -3.99777 over 350 frames.
+NI45FBP_0101_1750730_1755810 他 现在 在 PASS 以前 D D AH AS IN HALL 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1750730_1755810 is -4.39457 over 506 frames.
+NI45FBP_0101_1755810_1765110 就是 那个 你 大 GREEN LINE ONE AREA YAH BUSES 那 边 然后 再 打 车 进 去 那个 CHALET 那 边 那个 那个 是 NOT BAD 啦 BUT 那个 二十 多 HA HA 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1755810_1765110 is -4.64563 over 928 frames.
+NI45FBP_0101_1765110_1774050 因为 十 多 块 就 在 那 是 因为 写 写 名 COME BACK SIX DAYS ONLY LIKE DOLLAR PLUS THIS IS A NORMAL YAH THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1765110_1774050 is -4.54599 over 892 frames.
+NI45FBP_0101_1774050_1778480 THERE'S A C D THEN I BETTER THAN 啊 妈妈 行 COMPLEX 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1774050_1778480 is -4.41878 over 441 frames.
+NI45FBP_0101_1778480_1786820 THEN 你 要 你 要 ONE J J ONE S LIKE 讲 话 的 那个 PLACE TO Y Z 不 在 了 你 就 拿 我们 有 用 啊 也是 可以 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1778480_1786820 is -4.48309 over 832 frames.
+NI45FBP_0101_1787350_1797440 因为 不是 那个 LIKE IS LIKE 啊 有 还 的 PROS 啊 IN THE HALL CANVASSING COME BACK THEN THE WATER 我 是 ROMANCE 而已 THEN THEY ARE WE FIRST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1787350_1797440 is -4.47806 over 1007 frames.
+NI45FBP_0101_1797450_1802590 然后 你 就 转 那个 时候 上 每天 讲 妈妈 K 啊 啊 IT'S 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1797450_1802590 is -4.22545 over 512 frames.
+NI45FBP_0101_1803410_1810080 啊 THEY THEN 你 就 坐 在 上 面 你 就 ONE 讲 OKAY 啊 就 看 你 家 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1803410_1810080 is -3.95354 over 665 frames.
+NI45FBP_0101_1810210_1820650 WAYS AH 他 没有 OK WAY FOR YOU THEN UNDER 是 ON THE FIRST AH 对 AH THEN I WENT N I E MORE FUN 啊 THEN 的 造型 COMPLEX 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1810210_1820650 is -4.06665 over 1042 frames.
+NI45FBP_0101_1825650_1832460 上 一些 NOT BAD 啊 SIL2 ACTUALLY 你 应该 啊 那 FOR THIS 你 FOCUS 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1825650_1832460 is -4.61934 over 679 frames.
+NI45FBP_0101_1832460_1841100 AH SINGAPORE'S AS IN ANY SINGAPORE TO LIKE SHIT 啊 AND THEN THE THING IS VERY SINGAPORE AIRLINE SO 一 听到 就 找 到 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1832460_1841100 is -4.83306 over 862 frames.
+NI45FBP_0101_1843760_1848220 啊 LIKE 很 少 COS I DON'T TRUST 那个 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1843760_1848220 is -4.58388 over 444 frames.
+NI45FBP_0101_1848220_1856200 没有 边 YAH 你们 IS ONE THING THEN 而且 你 看 那个 MORAL 你 你 知道 他 穿 什么 SIZE 啊 看到 他 有 写 BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1848220_1856200 is -4.87265 over 796 frames.
+NI45FBP_0101_1856200_1865260 THEN 你 看 你 他 给 ANSWER 有 什么 SIL2 READING 跟 我 讲 YAH THEN DEFENDING 有 INSTEAD OF MONEY SIL2 你 CANNOT LEH THEN 很 浪 费 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1856200_1865260 is -4.35017 over 904 frames.
+NI45FBP_0101_1865260_1874660 那些 对 啊 买 衣服 那种 应该 自己 SHE TRY 了 才 会 动 MANY C 啊 你 还是 不是 因为 我 通常 我 买 的 衣服 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1865260_1874660 is -4.52242 over 938 frames.
+NI45FBP_0101_1874660_1880390 THEN 一 TRY OUR HALL 还是 要 去 要 打 SO 他 麻烦 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1874660_1880390 is -4.38839 over 571 frames.
+NI45FBP_0101_1880390_1888340 SUN I E 的 N 太 难 CONTROL 你 就 一直 KEEP 已经 SAFETY NET 看 那种 BAND 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1880390_1888340 is -4.77136 over 793 frames.
+NI45FBP_0101_1888340_1891200 你 觉得 很 好 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1888340_1891200 is -4.38932 over 284 frames.
+NI45FBP_0101_1891200_1904890 然后 你 要 啊 的 已经 前 我们 要 名 打 J L P MORE PRACTICAL 啦 CANNOT BE LIKE SIL2 你 STAND THEN 你 要 CONSIDER 啦 SO I THINK 用 可以 开始 写 我 觉得 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1891200_1904890 is -4.34853 over 1367 frames.
+NI45FBP_0101_1904890_1911980 我们 种 你 不 应该 有 啦 因为 少 啦 因为 SOME GUYS IN 还 不是 很 好 啊 一些 CAN STAY THEN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1904890_1911980 is -4.52907 over 707 frames.
+NI45FBP_0101_1911980_1915610 你 家 FRIENDS 不要 被 很多 LIKE SIL2 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1911980_1915610 is -4.62973 over 361 frames.
+NI45FBP_0101_1916020_1925750 有 BUT 可以 啦 不要 对 要 加 啦 小孩子 一 WHAT WHY 我 最 小 I DECIDED 一 ON 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1916020_1925750 is -4.65088 over 971 frames.
+NI45FBP_0101_1925750_1932360 因为 AT 啊 因为 ON OUR WORKING AT MY 英 他 MY WORK I 看起来 像 CANADA AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1925750_1932360 is -4.9586 over 659 frames.
+NI45FBP_0101_1932360_1939360 I STILL THINK I'M LIKE 就 讲 SIZE LOR 因为 I STILL 他 在 看 我 的 父 母 你 给 我 钱 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1932360_1939360 is -4.51442 over 698 frames.
+NI45FBP_0101_1939360_1946590 SO JAM NOW 没有 这个 P R T SCAN 你 啊 西 THAT THEY ARE YAH BUT THEN AH 买 米 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1939360_1946590 is -4.34594 over 721 frames.
+NI45FBP_0101_1949530_1957640 THEY THEY 是 我 找 PART TIME JOB 就 尽 量 不要 拿 ALLOWANCE SIL2 真 的 啊 叫 他们 介绍 啊 看到 买 ALLOWANCE AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1949530_1957640 is -4.36423 over 809 frames.
+NI45FBP_0101_1957640_1965380 因为 我 觉得 BUT 要 ER FOR 那种 HOLIDAY 然后 我 不 我 不 找 工作 THEN SUDDENLY 在 家 也 要 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1957640_1965380 is -4.48636 over 772 frames.
+NI45FBP_0101_1965380_1977830 在 海 浪 费 时间 啊 因为 时间 不 你 就 不可 以 也是 过 很快 我 N ONE 是 ONE SENSE 我 世界 一个 比较 开 可是 你 帮 你 如 说 是 所以 那里 DO SIL2 THEN 一 一 个 SEMESTER AH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1965380_1977830 is -4.66568 over 1243 frames.
+NI45FBP_0101_1977830_1979640 SO YAH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1977830_1979640 is -3.67838 over 179 frames.
+NI45FBP_0101_1986720_1990510 AH I READ 我 中学 了 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1986720_1990510 is -4.56095 over 377 frames.
+NI45FBP_0101_1990510_1997650 就 看 就 进 这样 觉得 啦 THEN 我 的 SIBLINGS 也是 ABOUT THE SAME AS IN COMMON SENSE 啊 就 WE DOING 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1990510_1997650 is -4.664 over 712 frames.
+NI45FBP_0101_1997650_2006980 我 有 LIKE WHAT THEY SPEND ALOT OF 啊 SPEND MONEY ON 就会 STICK 一直 SO 起 RIGHT 你 BUT 我 有 需要 SO THEN 我 用 吗 讲 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_1997650_2006980 is -4.62224 over 931 frames.
+NI45FBP_0101_2006980_2016250 没有 那个 觉得 有 那个 NEED TO SPEND ALOT JUST TO MAINTAIN 买 小 BUT YAH THEN 他 TAKE SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2006980_2016250 is -4.39202 over 925 frames.
+NI45FBP_0101_2016520_2025690 其他 LIKE ONE 在 开 心 你 不够 用 到 七 ON 你 不要 我 觉得 ONE 种 东 西 不 需要 花 很多 钱 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2016520_2025690 is -4.59523 over 915 frames.
+NI45FBP_0101_2025690_2033360 YOU CAN ENTER WHY WE ARE DOING IN GOING ON SPEND 了 啦 给 讲 你 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2025690_2033360 is -4.422 over 765 frames.
+NI45FBP_0101_2038620_2046220 什么 事 EH NAIL EH 我 都 不会 说 会 LIKE MAKE ANOTHER TWENTY LIKE ALOT C A MODULE FROM 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2038620_2046220 is -4.51758 over 758 frames.
+NI45FBP_0101_2046320_2054170 就是 不是 NIGHT 就 我们 IS 啊 SUN 叫 美 啊 就会 有 那种 THINKING 啊 IT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2046320_2054170 is -4.31857 over 783 frames.
+NI45FBP_0101_2056200_2067160 MEMORIZE 要 跟 他 一起 THEN 在 那 里 话 钱 的 所以 我 觉得 我 都 已经 西 啊 我 觉得 我 I I SPENT RELAX 啦 BUT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2056200_2067160 is -4.46403 over 1094 frames.
+NI45FBP_0101_2067160_2071700 因为 有 睡 觉 I 啊 他 有 是 觉得 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2067160_2071700 is -4.2111 over 452 frames.
+NI45FBP_0101_2071700_2082790 他们 要 是 去 完了 我 觉得 LIKE SIL2 因为 想 要 还 的 话 讲 我 会 觉得 哇 SUBCONSCIOUSLY 你 去 MORE MONEY 来 啦 其实 NOT NOT VERY GOOD THING 啊 I MEAN 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2071700_2082790 is -4.58681 over 1107 frames.
+NI45FBP_0101_2082790_2093760 啊 间 也是 每个 BUT 如果 太 过 下雨 然后 还有 变成 你 讲 SIL2 他 不好 也是 要 SIL2 SIL2 对 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2082790_2093760 is -4.3529 over 1095 frames.
+NI45FBP_0101_2094300_2096260 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2094300_2096260 is -4.50348 over 194 frames.
+NI45FBP_0101_2099910_2119040 I THINK IS EASIER LIKE 这个 MIND SET 应该 是 每 个 人 的 YAH YAH I MEAN 不 管 你 在 REASONING 啊 因为 你 计算 长 大 后 然后 你 就 有 家 庭 啊 他 到 福 建 你 的 BUT THEN 变成 N T 你 在一起 你 当 地 铁 的 时候 有人 BE 啦 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2099910_2119040 is -4.46084 over 1911 frames.
+NI45FBP_0101_2119040_2124250 那 AS 要 POINT LIKE FACE IN THE 以 LIKE 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2119040_2124250 is -4.10165 over 519 frames.
+NI45FBP_0101_2124250_2139220 已经 多 PLACE 啊 THEN OUR BED 而已 WHEN I THINK 他 ENOUGH TO FACE LIKE 你们 AFTER 是 BUT 动物 AT LEAST TWO 了 THEN 你 拿 好 是 YAH THEN 那个 BUT THEN 就 很 大 然后 我 不 动 MEDICINE 钱 AMOUNT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2124250_2139220 is -4.64686 over 1495 frames.
+NI45FBP_0101_2139220_2148060 THEN I CAN I WILL WORK FOR TO PAY FOR THE RIGHT IT'S POISONOUS AH THEN MY C S FOR MY TEACHERS AH THEN SIL2 THIN MALLET 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2139220_2148060 is -4.47512 over 882 frames.
+NI45FBP_0101_2148170_2157060 BUT THIS IS C S N ONE 啊 因为 也是 这样 高 啊 SIL2 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2148170_2157060 is -4.20811 over 887 frames.
+NI45FBP_0101_2170040_2175630 那些 什么 想 SPONSOR 你 是 从 哪 一 个 COURSE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2170040_2175630 is -4.58716 over 557 frames.
+NI45FBP_0101_2175630_2177490 SIL2 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2175630_2177490 is -4.1576 over 184 frames.
+NI45FBP_0101_2180280_2185120 SO THEY SO 因为 来 新加坡 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2180280_2185120 is -4.60349 over 482 frames.
+NI45FBP_0101_2240300_2242110 所以 在 哪里 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2240300_2242110 is -3.92593 over 179 frames.
+NI45FBP_0101_2260760_2263170 所以 他说 很 好 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2260760_2263170 is -4.09476 over 239 frames.
+NI45FBP_0101_2294670_2299370 那些 STING THEN 做 RESEARCH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2294670_2299370 is -4.24429 over 468 frames.
+NI45FBP_0101_2302750_2314260 像 THE MAX 我 都 CAMP 是 我 觉得 我 拿 MINOR NEXT SIL2 BUT SIL2 不是 啦 有时候 可以 FASTEST 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2302750_2314260 is -4.05862 over 1149 frames.
+NI45FBP_0101_2314290_2319100 NO 我 为了 GOING TO RESEARCH ON 一个 时候 我 觉得 我 们 是 那种 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2314290_2319100 is -4.60493 over 479 frames.
+NI45FBP_0101_2319100_2326290 AH AT 你 I THINK VERY 所以 叫 THEN 在 LATER LATE 讲 我 觉得 很 BORING SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2319100_2326290 is -4.19624 over 717 frames.
+NI45FBP_0101_2327890_2330830 CHEMISTRY SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2327890_2330830 is -4.15657 over 292 frames.
+NI45FBP_0101_2335970_2341470 对 SO 不知道 我 以后 的 错 要 做 什么 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2335970_2341470 is -4.27524 over 548 frames.
+NI45FBP_0101_2346900_2349690 会 FINALLY 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2346900_2349690 is -4.15171 over 277 frames.
+NI45FBP_0101_2352800_2361190 SIL2 是 没有 因为 觉得 LIKE ACTUAL STAY AT ER JUST DOING IS LIKE LESS 海 来 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2352800_2361190 is -4.45342 over 837 frames.
+NI45FBP_0101_2361190_2369480 现在 的 那个 PLANNING 一直 做 FIGHT THEN 早 上 八 点 到 晚上 八 点 THEN 讲 很 SO WHEN WHEN SHE EH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2361190_2369480 is -4.35624 over 827 frames.
+NI45FBP_0101_2369480_2377760 SIL2 SO 我 想 找 一些 比较 SPECIAL BUT I I I I 学 DON'T CARE 啦 CAUSE THEN BELIEVE THAT SPECIALIZE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2369480_2377760 is -4.57752 over 826 frames.
+NI45FBP_0101_2377760_2381410 一起 去 找 外面 比较 ENGINEER I D 讲 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2377760_2381410 is -4.40635 over 363 frames.
+NI45FBP_0101_2385500_2394590 THEN 看 WHAT I NEED WHAT I E SO I CALL YEARS THEN 讲 T M 都是 那些 HE SAYS YES OR BUS 样 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2385500_2394590 is -4.32915 over 907 frames.
+NI45FBP_0101_2394590_2403740 啊 KEN 在 THEN 做 几 年 还是 Y O G 啊 GO 多 THEN CAN SEE CHANGE A JOB 啦 SO 我 不要 在 LIKE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2394590_2403740 is -4.42786 over 913 frames.
+NI45FBP_0101_2403740_2413740 FOR REST OF MY LIFESTYLE DNA 哪里 EH THEN I STAY 你 AT THE SAME PLACE THEN 我 就 想 LICENSE 了 十年 然后 还 去 别的 地方 做 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2403740_2413740 is -4.30734 over 998 frames.
+NI45FBP_0101_2416770_2419730 看 SINGAPORE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2416770_2419730 is -4.09577 over 294 frames.
+NI45FBP_0101_2436590_2438730 LAST ONE 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2436590_2438730 is -3.86951 over 212 frames.
+NI45FBP_0101_2438730_2442050 那些 会 SOMEBODY 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2438730_2442050 is -4.3116 over 330 frames.
+NI45FBP_0101_2442590_2446940 就会 BORING 那个 家 的 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2442590_2446940 is -4.77315 over 433 frames.
+NI45FBP_0101_2446940_2450510 啊 对 SURF 他 是 THAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2446940_2450510 is -4.29018 over 355 frames.
+NI45FBP_0101_2454260_2462210 AH 那个 SIGN YOU STUDY 以后 AND IN UNI RIGHT 啊 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2454260_2462210 is -4.12242 over 793 frames.
+NI45FBP_0101_2473300_2476600 已经 是 CAMPUS THAT 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2473300_2476600 is -4.54481 over 328 frames.
+LOG (apply-cmvn[5.1.60~1-b2d5d]:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 249 utterances, errors on 0
+NI45FBP_0101_2508220_2519710 我 怕 那个 BUS B RIGHT BUS ME AH 那个 COURSE OTHER HALLS THEN PLUS MY THEN 我 PASS BY C MEAN UNDER LIKE COME BACK SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2508220_2519710 is -4.05298 over 1147 frames.
+NI45FBP_0101_2520150_2529230 THEN OFF ONE PERSON RUNNY NOSE T H M 啊 THEN IT'S VERY BORING ME THAT'S RIGHT THEN 因为 他 有 LEH 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2520150_2529230 is -4.52917 over 906 frames.
+NI45FBP_0101_2529230_2536840 因为 那么 T LATER 有 里面 那个 SENIOR 给 他 已经 啊 他 就 好 THEN 还要 做 接着 讲 没有 什么 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2529230_2536840 is -4.48936 over 759 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.5633 over 198302 frames.
+LOG (transform-feats[5.1.60~1-b2d5d]:main():transform-feats.cc:161) Applied transform to 249 utterances; 0 had errors.
+NI45FBP_0101_2536840_2547460 YA BUT I RETRY TO JUST 讲 一下 啦 BECAUSE 他 I DON'T SEE A POINT 叫 你 SIL2 
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance NI45FBP_0101_2536840_2547460 is -4.18545 over 1060 frames.
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:176) Time taken 2889.61s: real-time factor assuming 100 frames/sec is 1.45718
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:179) Done 249 utterances, failed for 0
+LOG (gmm-latgen-faster[5.1.60~1-b2d5d]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -4.37221 over 198302 frames.
+# Accounting: time=2891 threads=1
+# Ended (code 0) at Sat Apr 22 01:18:34 UTC 2017, elapsed time 2891 seconds
