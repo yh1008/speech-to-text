@@ -233,3 +233,7 @@ very likely you are in the actual `tensorflow` git repo. [source](https://github
 
 1. with online decoding:
 [local/online/run_nnet2_baseline.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/local/online/run_nnet2.sh)
+
+### Chinese CER (Character Error Rate)
+
+1. [egs/hkust/s5/local/ext/score.sh] (https://github.com/kaldi-asr/kaldi/blob/master/egs/hkust/s5/local/ext/score.sh)
