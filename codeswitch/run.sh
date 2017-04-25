@@ -116,5 +116,31 @@ utils/mkgraph.sh data/lang exp/tri3 exp/tri3/graph
 #local/score.sh --cmd run.pl data/test exp/tri3/graph exp/tri3/decode
 
 echo ============================================================================
+echo            "            DNN-baseline              "
+echo ============================================================================
+
+# train nnet
+chmod +x local/online/run_nnet2_baseline.sh 
+local/online/run_nnet2_baseline.sh 
+# decode
+chmod +x local/online/decode_run_nnet2_baseline.sh
+./local/online/decode_run_nnet2_baseline.sh
+# if the scoring failed, try, replace tri2 with whatever GMM system you are using., replace tri2_nnet_a_gpu_baseline to whatever nnet system you are using
+local/score.sh --cmd run.pl data/test exp/tri2/graph exp/nnet2_online/tri2_nnet_a_gpu_baseline
+
+echo "we are about to enter reinstalling perl to older version, this is needed to run score_basic_ext.sh"
+echo "put this piece of code source ~/perl5/perlbrew/etc/bashrc  in ~/.profile"
+sudo vim ~/.profile 
+source ~/.profile
+perlbrew install-patchperl
+perlbrew --notest install perl-5.12.2
+perlbrew switch perl-5.12.2
+echo "switch perl to 5.12.2" 
+
+# CER scoring
+chmod +x ./local/ext/score_basic_ext.sh
+./local/ext/score_basic_ext.sh data/test exp/tri2/graph exp/nnet2_online/tri2_nnet_a_gpu_baseline/decode
+
+echo ============================================================================
 echo            "                  Run.sh finished!                   "
 echo ============================================================================
