@@ -1,11 +1,16 @@
 #!/bin/bash
 . cmd.sh
+
 stage=1
 train_stage=-10
 use_gpu=false
+
+tri_dir=tri2  # modify this to point to your intended tri* folder
+
 . cmd.sh
 . ./path.sh
 . ./utils/parse_options.sh
+
 if $use_gpu; then
   if ! cuda-compiled; then
     cat <<EOF && exit 1
@@ -18,7 +23,7 @@ EOF
   num_threads=1
   minibatch_size=512
   # the _a is in case I want to change the parameters.
-  dir=exp/nnet2_online/tri22_nnet_a_gpu_baseline
+  dir=exp/nnet2_online/$tri_dir_nnet_a_gpu_baseline
   echo "using gpu 1"
 else
   # Use 4 nnet jobs just like run_4d_gpu.sh so the results should be
@@ -26,12 +31,12 @@ else
   num_threads=16
   minibatch_size=128
   parallel_opts="--num-threads $num_threads"
-  dir=exp/nnet2_online/tri22_nnet_a_gpu_baseline
+  dir=exp/nnet2_online/$tri_dir_nnet_a_gpu_baseline
 fi
 if [ $stage -le 2 ]; then
-    graph_dir=exp/tri22/graph
+    graph_dir=exp/$tri_dir/graph
     # use already-built graphs.
     steps/nnet2/decode.sh --nj 14 --cmd "$decode_cmd" \
          $graph_dir data/test $dir/decode || exit 1;
 fi
-echo "finish decode online!"
+echo "finish decode nnet!"
