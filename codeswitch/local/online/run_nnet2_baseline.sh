@@ -5,7 +5,10 @@
 
 stage=1
 train_stage=-10
-use_gpu=true
+use_gpu=false
+
+tri_dir=tri2 # modify this to your intended tri* folder!
+
 . cmd.sh
 . ./path.sh
 . ./utils/parse_options.sh
@@ -22,7 +25,7 @@ EOF
   num_threads=1
   minibatch_size=512
   # the _a is in case I want to change the parameters.
-  dir=exp/nnet2_online/nnet_a_gpu_baseline
+  dir=exp/nnet2_online/$tri_dir_nnet_a_gpu_baseline
   echo "using gpu 1"
 else
   # Use 4 nnet jobs just like run_4d_gpu.sh so the results should be
@@ -30,7 +33,7 @@ else
   num_threads=16
   minibatch_size=128
   parallel_opts="--num-threads $num_threads"
-  dir=exp/nnet2_online/nnet_a_baseline
+  dir=exp/nnet2_online/$tri_dir_nnet_a_baseline
 fi
 
 
@@ -51,12 +54,14 @@ if [ $stage -le 1 ]; then
     --cmd "$decode_cmd" \
     --pnorm-input-dim 2400 \
     --pnorm-output-dim 300 \
-    data/train data/lang exp/tri4 $dir  || exit 1;
+    data/train data/lang exp/$tri_dir $dir  || exit 1;
 fi
 
-
+DEBUG=false
+if ${DEBUG}; then
+echo "this block is intended to be commented out"
 if [ $stage -le 2 ]; then
-    graph_dir=exp/tri4/graph
+    graph_dir=exp/$tri_dir/graph
     # use already-built graphs.
     steps/nnet2/decode.sh --nj 8 --cmd "$decode_cmd" \
          $graph_dir data/test $dir/decode || exit 1;
@@ -71,8 +76,10 @@ fi
 
 if [ $stage -le 4 ]; then
   # Decode.  The --per-utt true option makes no difference to the results here.
-    graph_dir=exp/tri4b/graph
+    graph_dir=exp/$tri_dir/graph
     steps/online/nnet2/decode.sh --cmd "$decode_cmd" --nj 8 \
         --per-utt true \
         "$graph_dir" data/test ${dir}_online/decode_utt || exit 1;
+fi
+echo "block ends"
 fi
