@@ -129,13 +129,17 @@ chmod +x local/online/decode_run_nnet2_baseline.sh
 local/score.sh --cmd run.pl data/test exp/tri2/graph exp/nnet2_online/tri2_nnet_a_gpu_baseline
 
 echo "we are about to enter reinstalling perl to older version, this is needed to run score_basic_ext.sh"
-echo "put this piece of code source ~/perl5/perlbrew/etc/bashrc  in ~/.profile"
+echo "put this piece of code 
+echo "source ~/perl5/perlbrew/etc/bashrc"
+echo "in"
+echo "~/.profile"
+
 sudo vim ~/.profile 
 source ~/.profile
 perlbrew install-patchperl
 perlbrew --notest install perl-5.12.2
 perlbrew switch perl-5.12.2
-echo "switch perl to 5.12.2" 
+echo "switched perl to 5.12.2" 
 
 # CER scoring
 chmod +x ./local/ext/score_basic_ext.sh
