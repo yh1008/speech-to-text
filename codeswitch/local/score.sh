@@ -8,6 +8,7 @@
 cmd=run.pl
 min_lmwt=7
 max_lmwt=17
+iter="final" # to be compatible with nnet2
 #end configuration section.
 
 [ -f ./path.sh ] && . ./path.sh
