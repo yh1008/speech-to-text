@@ -8,6 +8,11 @@
   - tri3a on tri2 [LDA+MLLT]
   - tri4a on tri3a [fmllr]
   - tri5a on tri4a [SAT]
+  - train make_denlats.sh on tri5a [discriminative]
+    - then tri5a_mpe (boost 0.1)
+    - then tri5a_mmi 
+  - train train_ubm.sh on tri5a [SGMM]
+    - then sgmm2_5a
 ```
 # for x in exp/*/decode; do [ -d $x ] && grep WER $x/cer_* | utils/best_wer.sh; done
 %WER 80.72 [ 45327 / 56154, 1609 ins, 10856 del, 32862 sub ] exp/mono0a/decode/cer_9
