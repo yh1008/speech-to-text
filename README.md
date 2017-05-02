@@ -16,6 +16,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 ### Feature Improvement related Paper:
 - [Improved feature processing for Deep Neural Networks](http://www.danielpovey.com/files/2013_interspeech_nnet_lda.pdf)  
 - [iVector](http://people.csail.mit.edu/sshum/talks/ivector_tutorial_interspeech_27Aug2011.pdf)
+- [iVector discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/4e0dc1d5/)
 
 ### Interesting Python Kaldi Wrapper to be examined:
 - [Pykaldi](https://github.com/UFAL-DSG/pykaldi/tree/master/pykaldi) 
