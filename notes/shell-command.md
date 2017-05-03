@@ -91,6 +91,10 @@ find ./ -name *NC02FBY*
 ls -l . | egrep -c '^-'
 ls -1 | wc -l
 ```
+### count total number of lines in all files in a directory
+```
+find ./LDC2015S04/seame_d1/data/conversation/transcript_filtered_old -name '*.txt' | xargs wc -l
+```
 
 ### delete a file by name (e.g. .DS_Store and .ipynb_checkpoints)
 ```
