@@ -12,7 +12,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [Language Model](#lm)
 - [MFCC feature Extraction](#mfcc)
 - [HMM-GMM](#hmm-gmm)
-- [CNN-Filterbank)(#cnn-mfsc)
+- [CNN-Filterbank](#cnn-mfsc)
 - [Run Kaldi on GPU](#kaldi-gpu)
 - [Install Tensorflow-gpu](#tf-gpu)
 - [Keras-kaldi](#keras-kaldi)
