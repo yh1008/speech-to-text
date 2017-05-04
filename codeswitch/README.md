@@ -39,6 +39,7 @@ within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py`
 ### <a name="mer"></a> calculate MER
 If you want to use `MER_score.sh` to calculate char or word level MER (with Chinese and English Ins, Subs, Del displayed), please see the following example for execution:
 ```
+cd local
 chmod +x MER_score.py
 ./MER_score.py tri2 /data/lang True
 ./MER_score.py nnet2_online/nnet_a_gpu_baseline /data/lang False
