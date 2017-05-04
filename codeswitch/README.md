@@ -22,7 +22,7 @@ contains data preperation script and its README file
 within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories. 
 
 ### <a name="mer"></a> calculate MER
-to use `MER_score.sh` to calculate char or word level WER (with Chinese and English Ins, Subs, Del displayed), please see the following example:
+If you want to use `MER_score.sh` to calculate char or word level MER (with Chinese and English Ins, Subs, Del displayed), please see the following example for execution:
 ```
 chmod +x MER_score.py
 ./MER_score.py tri2 /data/lang True
@@ -31,7 +31,7 @@ chmod +x MER_score.py
 `MER_score.py` takes in three arguments:
 1. model dir
 2. lang dir
-3. True for use char based, False for use word based calculation
+3. True for using char based calculator, False for using word based calculation
 
 
 ### path.sh 
