@@ -21,7 +21,7 @@ in `run.sh`, a shell script called `data_prep.sh` will be execuated to prepare a
 contains data preperation script and its README file   
 within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories. 
 
-### calculate MER
+## calculate MER
 to use `MER_score.sh` to calculate char or word level WER (with Chinese and English Ins, Subs, Del displayed), please see the following example:
 ```
 chmod +x MER_score.py
