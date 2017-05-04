@@ -25,7 +25,8 @@ in `run.sh`, a shell script called `data_prep.sh` will be execuated to prepare a
 
 ### <a name="local"></a> local
 contains data preperation script and its README file regarding acoustic data prep   
-within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories. 
+within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories.   
+`data_prep.sh` also calls `lang_data_prep.py` which cleans up the transcription and prepares the lexicon. 
 
 ### <a name="mer"></a> calculate MER
 If you want to use `MER_score.sh` to calculate char or word level MER (with Chinese and English Ins, Subs, Del displayed), please see the following example for execution:
