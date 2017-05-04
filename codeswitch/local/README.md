@@ -1,4 +1,4 @@
-# Acoustic Data Preperation
+# Local Directory Description
 ### Table of Content 
 - [data_prep.sh](#dp)
   - [acoustic_data_prep.py](#adp)
@@ -25,7 +25,7 @@ prepares lexicon, silence_phones.txt
 
 ### <a name="mer"></a>MER scoring 
 author: SpacePineapple, Emily Hua  
-calculate M(ix) E(rror) R(ate), Insertion, Substituion and Deletion Error for English and Chinese seperately
+calculate M(ix) E(rror) R(ate), Insertion, Substituion and Deletion Error for English and Chinese seperately (on either word or character level) 
 
 ### <a name="online"></a> Online   
 contains the neural network code modified for this task. [taken from egs/wsj/s5/local/online](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/local/online/run_nnet2_baseline.sh)
