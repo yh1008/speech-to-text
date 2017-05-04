@@ -1,5 +1,4 @@
 # codeswitch directory description
-- [calculate MER](#calculate MER)
 
 move this `codeswitch` directory under `kaldi/egs/`
 ```
@@ -7,6 +6,8 @@ cp codeswitch ./kaldi/egs/
 ```
 also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch` 
 
+## Table of contents
+- [calculate MER](#calculate MER) 
 
 ### run.sh
 contains the script to prepare acoustic data and create MFCC feature extractions, (soon to be language model generation, tri-phone alignment, DNN and decode)
