@@ -139,7 +139,7 @@ mkdir data/local/tmp
 ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -text data/local/corpus.txt -lm data/local/tmp/lm.arpa
 ```
 
-###<a name="lm"></a> 7. create G.fst using the ARPA language model
+### <a name="lm"></a> 7. create G.fst using the ARPA language model
 `G.fst` is an acceptor (i.e. input and output symbols are identical on each arc) with words as its symbols. The exception is the disambiguation symbol #0 which only appears on the input side. 
 ```
  lang=data/lang
