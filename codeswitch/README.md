@@ -8,6 +8,8 @@ also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch`
 
 ## Table of contents
 - [calculate MER](#mer)
+- [Language Data Prep](#lm)
+- [Decoding](#decode)
 
 ### run.sh
 contains the script to prepare acoustic data and create MFCC feature extractions, (soon to be language model generation, tri-phone alignment, DNN and decode)
@@ -42,7 +44,7 @@ echo $KALDI_ROOT
 ```
 
 
-## Language Model Preparation
+## <a name="lm"></a>Language Data Preparation
 ### 1. Combine and fix the transcripts
 #### Folder: data/train, data/test
 #### File created: text
@@ -143,7 +145,7 @@ ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -tex
 Here we used `disambig-symbol=#0` to make the grammar transducer(G) determinizable. The effect of this omission was that the back-off arcs in the G.fst being cut-off, leading to a highly non-stochastic LG cascade with a very spiky distribution over the allowed word sequences and hence the higher WER [source](http://vpanayotov.blogspot.com/2012/06/kaldi-decoding-graph-construction.html)  
 `#0` is used for epsilon on the input of G.fst. `episolon` ( `<eps>` ) is a special symbol, meaning "there is no symbol on this arc". `eps2disambig.pl` converts all episolon input labels to special symbol `#0`. I checked, in our lexicon there is no `#0`, so this symbol won't be mistaken as a word. [source](http://kaldi-asr.org/doc/graph_recipe_test.html)
 
-## Decoding Phase
+## <a name="decode"></a>Decoding Phase
 ### 1. Make sure to install portaudio successfully
 ```
 cd /kaldi/tools
