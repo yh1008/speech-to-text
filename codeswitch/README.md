@@ -32,7 +32,7 @@ to execute:
 in `run.sh`, a shell script called `data_prep.sh` will be execuated to prepare audio and acoustic data, along with fixing and validating the directories. 
 
 ### <a name="local"></a> local
-contains data preperation script and its README file regarding acoustic data prep   
+contains data preperation script, scoring script and neural networks-training script specifically designed for this task.    
 within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories.   
 `data_prep.sh` also calls `lang_data_prep.py` which cleans up the transcription and prepares the lexicon. 
 
