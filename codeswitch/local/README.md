@@ -1,8 +1,31 @@
 # Acoustic Data Preperation
 ### Table of Content 
+- [data_prep.sh](#dp)
+  - [acoustic_data_prep.py](#adp)
+  - [audio_data_prep.py](#audiodp)
+  - [lang_data_perp.py](#ldp)
+- [MER Scoring](#mer)
 - [online Directory Description](#online)
-- [ext Directory Description)(#ext)
+- [ext Directory Description](#ext)
 
+### <a name="dp"></a>data_prep.sh
+the essential script to prepare audio, acoustic, language data, and install neccessarily toolkit to build language models
+
+#### <a name="adp"></a>acoustic_data_prep.py
+author: Emily Hua
+prepares spk2gender, utt2spk, segments, text, wav.scp for data/train and data/test 
+
+#### <a name="audiodp"></a>audio_data_prep.py
+author: Emily Hua
+prepares audio directory for Kaldi to consume 
+
+#### <a name="ldp"></a>lang_data_prep.py
+author: Wendy Wang
+prepares lexicon, silence_phones.txt
+
+### <a name="mer"></a>MER scoring 
+author: SpacePineapple, Emily Hua
+calculate M(ix) E(rror) R(ate), Insertion, Substituion and Deletion Error for English and Chinese seperately
 
 ### <a name="online"></a> Online 
 contains the neural network code modified for this task. [taken from egs/wsj/s5/local/online](https://github.com/kaldi-asr/kaldi/blob/master/egs/wsj/s5/local/online/run_nnet2_baseline.sh)
