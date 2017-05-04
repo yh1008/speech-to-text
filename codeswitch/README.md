@@ -7,19 +7,22 @@ cp codeswitch ./kaldi/egs/
 also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch` 
 
 ## Table of contents
-- [calculate MER](#mer)
-- [Language Data Prep](#lm)
+- [run.sh](#run)
+ - [local](#local)
+ - [calculate MER](#mer)
+- [Language Data Prep](#ld)
+ - [Language Model](#lm)
 - [Decoding](#decode)
 
-### run.sh
-contains the script to prepare acoustic data and create MFCC feature extractions, (soon to be language model generation, tri-phone alignment, DNN and decode)
+### <a name="run"></a>run.sh
+contains the main script to prepare acoustic data and create MFCC feature extractions, language model generation, tri-phone alignment, DNN and decode 
 to execute:
 ```
 ./run.sh
 ```
 in `run.sh`, a shell script called `data_prep.sh` will be execuated to prepare audio and acoustic data, along with fixing and validating the directories. 
 
-### local
+###<a name="local"></a> local
 contains data preperation script and its README file   
 within `data_prep.sh`, it calls `audio_data_prep.py` and `acoustic_data_prep.py` to prepare audio and acoustic data, along with native Kaldi script to generate `spk2utt`, sorting files and validate `data/train` and `data/test` directories. 
 
@@ -44,7 +47,7 @@ echo $KALDI_ROOT
 ```
 
 
-## <a name="lm"></a>Language Data Preparation
+## <a name="ld"></a>Language Data Preparation
 ### 1. Combine and fix the transcripts
 #### Folder: data/train, data/test
 #### File created: text
@@ -135,7 +138,7 @@ mkdir data/local/tmp
 ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -text data/local/corpus.txt -lm data/local/tmp/lm.arpa
 ```
 
-### 7. create G.fst using the ARPA language model
+###<a name="lm"></a> 7. create G.fst using the ARPA language model
 `G.fst` is an acceptor (i.e. input and output symbols are identical on each arc) with words as its symbols. The exception is the disambiguation symbol #0 which only appears on the input side. 
 ```
  lang=data/lang
