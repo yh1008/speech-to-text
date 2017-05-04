@@ -238,3 +238,20 @@ very likely you are in the actual `tensorflow` git repo. [source](https://github
 ### Chinese CER (Character Error Rate)
 
 1. [egs/hkust/s5/local/ext/score.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/hkust/s5/local/ext/score.sh)
+
+### Keras-Kaldi
+[dspavankumar/keras-kaldi github repo](https://github.com/dspavankumar/keras-kaldi)  
+Up to the time that we ran his code, the enviornment is still Keras 1.2.0 
+Make sure that the Keras version is the same across the machines. 
+to reinstall Keras from 2.0.3 to older version, type
+```
+$ sudo pip3 install keras==1.2
+```
+If there is version inconsistency (train model using 1.2.0 but decode it with 2.0.3, you will run into problem when loading an existing model:
+```
+  File "steps_kt/nnet-forward.py", line 33, in <module>
+    m = keras.models.load_model (model)
+  File "/usr/local/lib/python3.5/dist-packages/keras/models.py", line 281, in load_model
+    Error: “Optimizer weight shape (1024, ) not compatible with provided weight shape (429,1024)”
+```
+[source](https://github.com/fchollet/keras/issues/4044)  
