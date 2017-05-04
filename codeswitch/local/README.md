@@ -4,6 +4,7 @@
   - [Interview](#d2)
   - [Conversation](#d1)
 - [Acoustic Data Preperation](#acoustic-prep)
+  - [acoustic_data_prep.py](#adp)
   - [Create feats.scp](#feats)
   - [Create cmvn.scp](#cmvn)
   - [Validate directory](#vd)
@@ -38,6 +39,7 @@ In real feature extraction:
 1. calling fix_data_dir.sh: kept 49897 utterances out of 50457 (speaker NC50XFB was filtered out cause its gender is unknown) 
 2. fix_data_dir.sh: kept all 4137 utterances.
 
+#### <a name="adp"></a> Acoustic_data_prep.py
 files I code the `acoustic_data_prep.py` to create:   
 - [x] utt2spk  
 - [x] text   
