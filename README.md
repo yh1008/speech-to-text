@@ -2,18 +2,32 @@
 
 ### From the team:   
 As Chinese students studying in the states, we found our speaking habits morphed -- English words and phrases easily get slipped into Chinese sentences. We greatly feel the need to have messaging apps that can handle multilingual speech-to-text translation. So in this task, we are going to develop this function -- build a model using deep learning technologies to corretly translate multilingual audio (having Chinese and English in the same sentence) into text.
+### Table of Content:
+- [Data Source](#ds)
+- [Baseline Model](#bm)
+- [Other Code-switching Paper](#otherpaper)
+- [Feature Improvement Paper](#fi)
+- [Understanding Kaldi](#kr)
+- [Understanding Data Prep](#dp)
+- [Language Model](#lm)
+- [MFCC feature Extraction](#mfcc)
+- [HMM-GMM](#hmm-gmm)
+- [CNN-Filterbank)(#cnn-mfsc)
+- [Run Kaldi on GPU](#kaldi-gpu)
+- [Install Tensorflow-gpu](#tf-gpu)
+- [Keras-kaldi](#keras-kaldi)
 
-### Data Source:
+### <a name="ds"></a> Data Source:
 - [Mandarin-English Code-Switching in South-East Asia](https://catalog.ldc.upenn.edu/ldc2015s04)   
 
-### Baseline Model Paper:
+### <a name="bm"></a> Baseline Model Paper:
 - [A Chinese-English Mixlingual Database and A Speech Recognition Baseline](https://arxiv.org/pdf/1609.08412v1.pdf)
 
-### Other Code-switching related Paper:
+### <a name="otherpaper"></a> Other Code-switching related Paper:
 - [A First Speech Recognition System For Mandarin-English Code-switch Conversational Speech](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6289015)
 - [Speech Recognition on English-Mandarin Code-Switching Data using Factored Language Models](http://www.csl.uni-bremen.de/cms/images/documents/publications/DA_JanGebhardt.pdf)
 
-### Feature Improvement related Paper:
+### <a name="fi"></a> Feature Improvement related Paper:
 - [Improved feature processing for Deep Neural Networks](http://www.danielpovey.com/files/2013_interspeech_nnet_lda.pdf)  
 - [iVector](http://people.csail.mit.edu/sshum/talks/ivector_tutorial_interspeech_27Aug2011.pdf)
 - [iVector discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/4e0dc1d5/)
@@ -25,7 +39,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 ### Kaldi recommended recipe to be examined:
 - [Librispeech](http://www.openslr.org/11/)    
 
-### Kaldi resources:
+### <a name="kr"></a> Kaldi resources:
 - [Daniel Povey Lectures](http://www.danielpovey.com/kaldi-lectures.html)
 - [An Introduction to Kaldi Toolkit](http://berlin.csie.ntnu.edu.tw/Courses/Speech%20Recognition/Lectures2013/SP2013F_Lecture14-Introduction%20to%20the%20Kaldi%20toolkit.pdf)
 - [Building Speech Recognition Systems with the Kaldi Toolkit](https://engineering.jhu.edu/clsp/wp-content/uploads/sites/75/2016/06/Building-Speech-Recognition-Systems-with-the-Kaldi-Toolkit.pdf)
@@ -44,7 +58,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
   - [Understanding the decoding graph construciton](http://vpanayotov.blogspot.com/2012/06/kaldi-decoding-graph-construction.html)
 
 
-### Data Preperation:
+### <a name="dp"></a> Data Preperation:
 - [Kaldi for Dummies Tutorial](http://kaldi-asr.org/doc/kaldi_for_dummies.html  )  
   
 |  | filename: |  pattern: | format: |path: | source:|
@@ -61,7 +75,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 |  |steps  | | | / | kaldi/egs/wsj/s5 |
 |  | score.sh | | | /| kaldi/egs/voxforge/s5/local |   
 
-### Language Model:
+### <a name="lm"></a> Language Model:
 - [ARPA LM format](http://www1.icsi.berkeley.edu/Speech/docs/HTKBook3.2/node213_mn.html)   
 
 What are our language model:  
@@ -104,7 +118,7 @@ The --sil-prob might be another potentially important option.
 - optional_silence.txt
 - silence_phones.txt 
 
-### MFCC Feature Extraction: 
+### <a name="mfcc"></a> MFCC Feature Extraction: 
 ```
    echo
    echo "===== FEATURES EXTRACTION ====="
@@ -125,7 +139,7 @@ The --sil-prob might be another potentially important option.
 MFCC-related documents
 - [MFCC extraction in detail (CN)](https://my.oschina.net/jamesju/blog/193343)
 
-### HMM - GMM 
+### <a name="hmm-gmm"></a> HMM - GMM 
 [Reference](http://www.inf.ed.ac.uk/teaching/courses/asr/2012-13/asr03-hmmgmm-4up.pdf)  
 
 ![a](https://latex.codecogs.com/gif.latex?a_%7Bij%7D) as the transition probability from state i to state j   
@@ -140,7 +154,7 @@ HMM solves the following three problems:
 2. training (Forward-backward algorithm EM): given an observation sequence, learn the best ![lambda](https://latex.codecogs.com/gif.latex?%5Clambda%5C%7B%20a_%7Bij%7D%2C%20b_j%28X%29%20%5C%7D)
 3. decoding (Viterbi algorithm): given an on observation sequence, determine the most probable hidden state sequence
 
-### CNN and MFSC features
+### <a name="cnn-mfsc"></a> CNN and MFSC features
 
 In order to train CNN, we need to extract MFSC features from the acoustic data instead of MFCC features, as Discrete Cosine Transformation (DCT) in MFCC destroys locality. MFSC features also called filter banks. In Kaldi, the scripts are something like the following: 
 ```
@@ -151,7 +165,7 @@ notice that fbanks don't work well with GMM as fbanks features are highly correl
 [why MFSC+GMM produced high WER-see Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)   
 [why DCT destroys locality-see post](http://dsp.stackexchange.com/questions/31917/why-discrete-cosine-transform-may-not-maintain-locality)
 
-### Run Kaldi on single GPU
+### <a name="kaldi-gpu"></a> Run Kaldi on single GPU
 
 This doesn't require Sun GridEngine. 
 Simply download [CUDA toolkit] (https://developer.nvidia.com/cuda-downloads), install it with
@@ -187,7 +201,7 @@ sudo sh NVIDIA-Linux-x86_64-367.18.run
 ```
 and then when installing `cuda_8.0.61_375.26_linux.run`, it will ask you whether to install NVIDIA driver 375, make sure you choose `no`. 
 
-### Install tensorflow-gpu 
+### <a name="tf-gpu"></a> Install tensorflow-gpu 
 Required:
 1. [install CUDA toolkit](https://developer.nvidia.com/cuda-downloads) 8.0 as of 04-18-2017   
 2. [install cuDNN](https://developer.nvidia.com/cudnn) download v5, as of 04-18-2017, Tensorflow performs the best with cuDNN 5.x     
@@ -239,7 +253,7 @@ very likely you are in the actual `tensorflow` git repo. [source](https://github
 
 1. [egs/hkust/s5/local/ext/score.sh](https://github.com/kaldi-asr/kaldi/blob/master/egs/hkust/s5/local/ext/score.sh)
 
-### Keras-Kaldi
+### <a name="keras-kaldi"></a> Keras-Kaldi
 [dspavankumar/keras-kaldi github repo](https://github.com/dspavankumar/keras-kaldi)  
 Up to the time that we ran his code, the enviornment is still Keras 1.2.0 
 Make sure that the Keras version is the same across the machines. 
