@@ -37,8 +37,10 @@ chmod +x MER_score.py
 `MER_score.py` takes in three arguments:
 1. model dir
 2. lang dir
-3. True for using char based calculator, False for using word based calculation
+3. True for using char based calculator, False for using word based calculation  
 
+sampe output:
+![alt text](https://github.com/yh1008/speech-to-text/blob/master/codeswitch/local/assets/MER_output.png)
 
 ### path.sh 
 tells where to find kaldi binary `. ./path.sh` is executed on all shell script to set the kaldi environment variable. 
