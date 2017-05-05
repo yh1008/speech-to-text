@@ -244,7 +244,7 @@ ImportError: libcudart.so.8.0: cannot open shared object file: No such file or d
 ```
 very likely you are in the actual `tensorflow` git repo. [source](https://github.com/tensorflow/tensorflow/issues/8107), make sure you jump out of it before testing. 
 
-### Install Theano GPU
+### Install <a name="tn-gpu"></a> Theano GPU
 Keras-kaldi's LSTM training script breaks under the current tensorflow (as tensorflow went through series of API changes during the previous months), we need to install Theano GPU and switch to the theano backend for running `run_kt_LSTM.sh`.  
 After installing Theano-gpu using [miniconda](http://deeplearning.net/software/theano/install_ubuntu.html), 
 in order to modify to modify the `theano.config` file, you can create `.theanorc` by the following command:
