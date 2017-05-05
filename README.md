@@ -5,24 +5,36 @@ As Chinese students studying in the states, we found our speaking habits morphed
 ## Table of Content:
 - [Directory Overview](#do)
   - [codeswitch](#cs)
-- [Data Source](#ds)
-- [Baseline Model](#bm)
-- [Other Code-switching Paper](#otherpaper)
-- [Feature Improvement Paper](#fi)
-- [Understanding Kaldi](#kr)
-- [Understanding Data Prep](#dp)
-- [Language Model](#lm)
-- [MFCC feature Extraction](#mfcc)
-- [HMM-GMM](#hmm-gmm)
-- [CNN-Filterbank](#cnn-mfsc)
-- [Run Kaldi on GPU](#kaldi-gpu)
-- [Install Tensorflow-gpu](#tf-gpu)
-- [Install Theano-gpu](#tn-gpu)
-- [Keras-kaldi](#keras-kaldi)
+  - [description](#des)
+  - [notes](#notes)
+ - [Resources to Build the System](#rs)
+    - [Data Source](#ds)
+    - [Baseline Model](#bm)
+    - [Other Code-switching Paper](#otherpaper)
+    - [Feature Improvement Paper](#fi)
+    - [Understanding Kaldi](#kr)
+    - [Understanding Data Prep](#dp)
+    - [Language Model](#lm)
+    - [MFCC feature Extraction](#mfcc)
+    - [HMM-GMM](#hmm-gmm)
+    - [CNN-Filterbank](#cnn-mfsc)
+- [Packages Installation](#pi)
+    - [Run Kaldi on GPU](#kaldi-gpu)
+    - [Install Tensorflow-gpu](#tf-gpu)
+    - [Install Theano-gpu](#tn-gpu)
+    - [Keras-kaldi](#keras-kaldi)
 ##  <a name="do"></a>Directory Description  
 
 ###  <a name="cs"></a> codeswitch:
-contains scripts to build our system  
+Contains scripts to build our system  
+
+###  <a name="des"></a> description:
+LDC2015S04, our dataset description
+
+###  <a name="notes"></a> notes:
+Our study notes on Kaldi related recipie, including `timit` and `librispeech`  
+
+## <a name="rs"></a> Resources to Build the System  
 
 ### <a name="ds"></a> Data Source:
 - [Mandarin-English Code-Switching in South-East Asia](https://catalog.ldc.upenn.edu/ldc2015s04)   
@@ -172,6 +184,7 @@ notice that fbanks don't work well with GMM as fbanks features are highly correl
 [why MFSC+GMM produced high WER-see Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)   
 [why DCT destroys locality-see post](http://dsp.stackexchange.com/questions/31917/why-discrete-cosine-transform-may-not-maintain-locality)
 
+## <a name="pi"></a> Required Packages 
 ### <a name="kaldi-gpu"></a> Run Kaldi on single GPU
 
 This doesn't require Sun GridEngine. 
