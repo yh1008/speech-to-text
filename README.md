@@ -15,6 +15,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
 - [CNN-Filterbank](#cnn-mfsc)
 - [Run Kaldi on GPU](#kaldi-gpu)
 - [Install Tensorflow-gpu](#tf-gpu)
+- [Install Theano-gpu](#tn-gpu)
 - [Keras-kaldi](#keras-kaldi)
 
 ### <a name="ds"></a> Data Source:
@@ -243,6 +244,24 @@ ImportError: libcudart.so.8.0: cannot open shared object file: No such file or d
 ```
 very likely you are in the actual `tensorflow` git repo. [source](https://github.com/tensorflow/tensorflow/issues/8107), make sure you jump out of it before testing. 
 
+### Install Theano GPU
+Keras-kaldi's LSTM training script breaks under the current tensorflow (as tensorflow went through series of API changes during the previous months), we need to install Theano GPU and switch to the theano backend for running `run_kt_LSTM.sh`.  
+After installing Theano-gpu using [miniconda](http://deeplearning.net/software/theano/install_ubuntu.html), 
+in order to modify to modify the `theano.config` file, you can create `.theanorc` by the following command:
+```
+echo -e "\n[global]\nfloatX=float32\n" >> ~/.theanorc
+```
+and add `device=gpu` to the this file. 
+If theano can't detect NVCC, by giving you the following error:
+```
+ERROR (theano.sandbox.cuda): nvcc compiler not found on $PATH. Check your nvcc installation and try again.
+```
+(but you sure that you installed CUDA), you can solve it by adding the following lines to `~/.profile`:
+```
+export PATH=/usr/local/cuda-8.0/bin/:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+```
+don't forget to `source ~/.profile` to enable the change. 
 
 ### Kaldi script to train nnet
 
