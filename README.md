@@ -18,7 +18,7 @@ As Chinese students studying in the states, we found our speaking habits morphed
     - [MFCC feature Extraction](#mfcc)
     - [HMM-GMM](#hmm-gmm)
     - [CNN-Filterbank](#cnn-mfsc)
-- [Packages Installation](#pi)
+- [Required Packages](#pi)
     - [Run Kaldi on GPU](#kaldi-gpu)
     - [Install Tensorflow-gpu](#tf-gpu)
     - [Install Theano-gpu](#tn-gpu)
