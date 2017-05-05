@@ -7,6 +7,7 @@
 - [MER Scoring](#mer)
 - [online Directory Description](#online)
 - [ext Directory Description](#ext)
+- [asset Directory Description(#assets)
 
 ### <a name="dp"></a>data_prep.sh
 the essential script to prepare audio, acoustic, language data, and install neccessarily toolkit to build language models  
@@ -33,4 +34,6 @@ contains the neural network code modified for this task. [taken from egs/wsj/s5/
 ### <a name="ext"></a> Ext   
 contains perl and shell script to calculate Chinese C(harecter)E(rror)R(ate). [taken from egs/hkust/s5/local/ext](https://github.com/kaldi-asr/kaldi/tree/master/egs/hkust/s5/local/ext)
 
+### <a name="assets"></a> Asset
+contains intermediate jupyter notebooks 
 
