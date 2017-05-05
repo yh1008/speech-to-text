@@ -247,7 +247,7 @@ very likely you are in the actual `tensorflow` git repo. [source](https://github
 ### Install <a name="tn-gpu"></a> Theano GPU
 Keras-kaldi's LSTM training script breaks under the current tensorflow (as tensorflow went through series of API changes during the previous months), we need to install Theano GPU and switch to the theano backend for running `run_kt_LSTM.sh`.  
 After installing Theano-gpu using [miniconda](http://deeplearning.net/software/theano/install_ubuntu.html), 
-in order to modify to modify the `theano.config` file, you can create `.theanorc` by the following command:
+in order to modify the `theano.config` file, you can create `.theanorc` by the following command:
 ```
 echo -e "\n[global]\nfloatX=float32\n" >> ~/.theanorc
 ```
@@ -279,6 +279,8 @@ Make sure that the Keras version is the same across the machines.
 to reinstall Keras from 2.0.3 to older version, type
 ```
 $ sudo pip3 install keras==1.2
+or 
+$ conda install keras==1.2.2 # if you are using conda
 ```
 If there is version inconsistency (train model using 1.2.0 but decode it with 2.0.3, you will run into problem when loading an existing model:
 ```
