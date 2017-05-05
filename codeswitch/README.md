@@ -24,7 +24,7 @@ also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch`
 
 
 ### <a name="run"></a>run.sh
-contains the main script to prepare acoustic data and create MFCC feature extractions, language model generation, tri-phone alignment, DNN and decode 
+contains the main script to prepare acoustic data and create MFCC feature extractions, language model generation, tri-phone alignment, DNN and decode the system.   
 to execute:
 ```
 ./run.sh
