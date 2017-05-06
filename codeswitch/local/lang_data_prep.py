@@ -5,6 +5,10 @@ import codecs
 import re
 import os
 
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 #### default file structure ####
 # put this file under the local folder (codeswitch/local)
 # put two dictionaries (cmu one and TH one) under the local folder (codeswitch/local)
@@ -127,6 +131,7 @@ for line in f.readlines():
 print("Finish loading cmu dictionary")
 print("Number of English lexicon: " + str(len(d_cmu)))
 
+
 filename_th = "thchs30-lexicon.txt"
 d_th = dict()
 with codecs.open(dir_dicsource+filename_th, 'r', 'utf-8') as f:
@@ -135,6 +140,18 @@ with codecs.open(dir_dicsource+filename_th, 'r', 'utf-8') as f:
         d_th[line[0]] = ' '.join(line[1:])
 print("Finish loading thchs30 dictionary")
 print("Number of Chinese lexicon: " + str(len(d_th)))
+
+
+#filename_ce = "cedict_1_0_ts_utf-8_mdbg.txt"
+#
+#d_ce = dict()
+#with codecs.open(filename_ce, 'r', 'utf-8') as f:
+#    for line in f.readlines():
+#        if line[0] != "#":
+#            line = line.split()
+#            d_ce[line[1]] = re.findall(r'''\[(.+?)\]''', ' '.join(line[2:]))
+#print("Finish loading thchs30 dictionary")
+#print("Number of Chinese lexicon: " + str(len(d_ce)))
 
 
 #### update lexicon ####
@@ -170,8 +187,9 @@ chinese_part2 = ['人','时','上','面','话','没有','个','字','来','去',
                 '不对','可能','时候','不是','不要']
 
 for a,b in zip(chinese_part1,chinese_part2):
-    d_th[a+b] = d_th[a]+" " +d_th[b]
-    #print(a+b+": "+d_th[a+b])
+    print(d_th[a]+" " +d_th[b])
+    d_th[(a+b)] = d_th[a]+" " +d_th[b]
+    #print(a+b+": "+d_th[(a+b)])
 
 print("Finish creating new words by concatenating existent words in Chinese dictionary")
 print("Number of English lexicon now: " + str(len(d_th)))
@@ -222,10 +240,13 @@ d_waste2idx = dict()
 idx = -1
 for k in d_waste.keys():
     idx += 1
+    #d_waste2idx[k] = 'SIL' + str(idx)
+    
     if k[0] == '(':
         d_waste2idx[k] = 'SIL1'
     elif k[0] == '[':
         d_waste2idx[k] = 'SIL2'
+    
 
 d_idx2waste = {v:k for k,v in d_waste2idx.items()}
 
@@ -255,7 +276,10 @@ d_mis2fix = {k:v for k,v in zip(mis_ori,mis_fix)}
 #### to collect SIL words without [] or () ####
 
 waste_detect_1 = ['PPB','PPC','PPL','PPO']
-waste_detect_2 = ['ER','LOR','ORH','ORK','ORR','AR','ARR','EH','EM','EMM','ERR','ERM','ERRR','HOR','HORR','LAH','LA','LORH','LEH','MEH']
+waste_detect_2 = ['ORH','ORR','AR','ARR','EH','EM','EMM','ERR','ERM','HOR','HORR','LORH',
+                  'ER','LA','LEH','LOR','LAH','MEH',
+                  #'ERRR',
+                  'ORK']
 
 
 #### fix, filter, output text transcript ####
@@ -405,25 +429,28 @@ for dir in dirs:
                                         d_cmu[word_cur]
                                         words_cur_fix += [word_cur]
                                     except:
-                                        word_cur = word_cur.split('-')                                    
+                                        word_cur = word_cur.split('-') 
+                                                                         
                                         for i in range(len(word_cur)):
                                             try:
                                                 word_cur[i] = d_mis2fix[word_cur[i]]
                                             except:
-                                                word_cur[i] = word_cur[i]                                    
+                                                word_cur[i] = word_cur[i]   
+                                                                        
                                         words_cur_fix += word_cur
                                 else:
                                     # to collect SIL phones without [] or ()
                                     if word_cur in waste_detect_1:
-                                        word_cur = 'SIL1'
+                                        word_cur = d_waste2idx[('('+word_cur.lower()+')')]
                                     elif word_cur in waste_detect_2:
-                                        word_cur = 'SIL2'
+                                        word_cur = d_waste2idx[('['+word_cur.lower()+']')]
                                         
                                     else:
                                         try:
                                             word_cur = d_mis2fix[word_cur]
                                         except:
-                                            word_cur = word_cur                               
+                                            word_cur = word_cur    
+                                                               
                                  
                                     words_cur_fix += [word_cur]
                         
@@ -497,20 +524,81 @@ print("Finish writing silence_phones.txt")
 words_all = [word.upper() for word in words_all]
 words_all_uniq = list(set(words_all))
 words_train_uniq = list(set(words_train))
-words_test_uniq = list(set(words_test))
 
 d_all,words_oov_all_english,words_oov_all_chinese = oov(words_all_uniq,d_cmu,d_th)
 d_train,words_oov_train_english,words_oov_train_chinese = oov(words_train_uniq,d_cmu,d_th)
-d_test,words_oov_test_english,words_oov_test_chinese = oov(words_test_uniq,d_train,d_train)
 
 print("Finish calculating oov")
 print("Training set: English oov " + str(len(words_oov_train_english)) + "/" + str(len([item for item in words_train_uniq if isAlphahyphen(item)])))
 print("Training set: Chinese oov " + str(len(words_oov_train_chinese)) + "/" + str(len([item for item in words_train_uniq if not isAlphahyphen(item)])))
+
+'''
+words_test = []
+for dir in dirs:
+    if "conversation" in dir:
+        test_id = test_short_ids_c
+    elif "interview" in dir:
+        test_id = test_short_ids_i
+        
+    filenames = os.listdir(parent_path+dir+newfolder)
+    for filename in filenames:
+        if filename[-4:] == ".txt":
+            isTest = False
+            for short_id in test_id:
+                if short_id in filename:
+                    isTest = True
+            
+            if isTest:
+                with codecs.open(parent_path+dir+newfolder+filename, 'r', 'utf-8') as f:
+                    text = []
+
+                    for line in f.readlines():
+                        sentence_origin = line.strip()                              
+                        sentence = sentence_origin.split() # 1st element -- audio file id, 2nd element -- start time, 3rd element -- end time
+                        info_cur = sentence[:3] # idx: 0~2
+                        words_cur = sentence[3:] # idx: 3~
+    
+                        for word in words_cur: # filter out concatenated characters having Chinese characters, with length over 4
+
+                        # split chinese words into characters if not in TRAINING dictionary to decrease oov rate
+                            words_cur_fix = []
+                            for word_cur in words_cur:
+                                if not isAlphahyphen(word_cur): # if is not a english word
+                                    try:
+                                        d_train[word_cur]
+                                        words_cur_fix += [word_cur]
+                                    except:
+                                        if len(word_cur)>1: # if length of word > 1, or more than 1 chinese character
+                                            for char_idx in range(len(word_cur)):
+                                                words_cur_fix += word_cur[char_idx]
+                                        else: # if only has one chinese character
+                                            words_cur_fix += [word_cur]                                            
+                                else: # if is not chinese word
+                                    words_cur_fix += [word_cur]
+                                      
+                            sentence_cur = " ".join(info_cur) + " " + " ".join(words_cur_fix)
+
+                        text += [sentence_cur]
+                        words_test += words_cur_fix
+
+
+
+                f.close()
+            
+                #save files without unparsed lines
+                dir_save = parent_path + dir + newfolder
+                with codecs.open(dir_save+filename, 'w', 'utf-8') as f:
+                    for line in text:
+                        f.write(line + "\n")
+                f.close()
+
+            
+print("Finish fixing test utterances according to training dictionary")
+'''
+words_test_uniq = list(set(words_test))
+d_test,words_oov_test_english,words_oov_test_chinese = oov(words_test_uniq,d_train,d_train)
 print("Test set: English oov " + str(len(words_oov_test_english)) + "/" + str(len([item for item in words_test_uniq if isAlphahyphen(item)])))
 print("Test set: Chinese oov " + str(len(words_oov_test_chinese)) + "/" + str(len([item for item in words_test_uniq if not isAlphahyphen(item)])))
-
-
-
 
 '''
 words_oov = []
