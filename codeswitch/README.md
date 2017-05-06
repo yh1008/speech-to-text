@@ -13,6 +13,7 @@ also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch`
 - [Directory Overview](#do)
   - [exp](#exp)
   - [data](#data)
+  - [mfcc](#mfcc)  
 - [Audio Data Description](#ad)
   - [Interview](#d2)
   - [Conversation](#d1)
@@ -67,6 +68,9 @@ echo $KALDI_ROOT
 
 ### <a name="data"></a>data
 `data` folder created by `data_prep.sh` using language data v2(eng uppercase, merge SIL, eng oov not reduced, remains 1244/9520)   
+
+### <a name="mfcc"></a>mfcc
+`mfcc` feature and `cmvn` features 
 
 ## Acoustic Data Preperation
 ### <a name="ad"></a> Audio Data  
