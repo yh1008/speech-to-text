@@ -184,7 +184,12 @@ notice that fbanks don't work well with GMM as fbanks features are highly correl
 [why MFSC+GMM produced high WER-see Kaldi discussion](https://sourceforge.net/p/kaldi/discussion/1355348/thread/ddf22517/?limit=25)   
 [why DCT destroys locality-see post](http://dsp.stackexchange.com/questions/31917/why-discrete-cosine-transform-may-not-maintain-locality)
 
-## <a name="pi"></a> Required Packages 
+## <a name="pi"></a> Required Packages   
+
+tensorflow == 1.1.0  
+theano == 0.9.0.dev-c697eeab84e5b8a74908da654b66ec9eca4f1291  
+keras == 1.2  
+
 ### <a name="kaldi-gpu"></a> Run Kaldi on single GPU
 
 This doesn't require Sun GridEngine. 
