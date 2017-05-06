@@ -109,7 +109,7 @@ echo ===========================================================================
 echo            "      Tri3: SAT Aligned with FMLLR           "
 echo ============================================================================
 
-steps/train_sat.sh --cmd "$train_cmd" 1000 1100 data/train data/lang exp/tri2b_ali exp/tri3
+steps/train_sat.sh --cmd "$train_cmd" 1000 11000 data/train data/lang exp/tri2b_ali exp/tri3
 steps/align_fmllr.sh --cmd "$train_cmd" data/train data/lang exp/tri3 exp/tri3_ali
 utils/mkgraph.sh data/lang exp/tri3 exp/tri3/graph 
 #steps/decode_fmllr.sh --nj $decode_nj --cmd "$decode_cmd" exp/tri3/graph data/test exp/tri3/decode
