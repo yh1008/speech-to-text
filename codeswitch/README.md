@@ -181,33 +181,8 @@ fix the sorting error, use the following command:
 utils/fix_data_dir.sh data/train 
 ```
 ## <a name="ld"></a>Language Data Preparation
-### 1. Combine and fix the transcripts
-#### Folder: data/train, data/test
-#### File created: text
-#### File content: all the sentences in transcripts, with utterance id and sentence transcript
-Transcripts under folder data/train and data/test should be like the following, where a **unique utterance id** (if a speaker has more than one utterance, the utterance id is not the speaker id) is followed by a sentence.
-```
-110236_20091006_82330_F_0001 I'M WORRIED ABOUT THAT
-110236_20091006_82330_F_0002 AT LEAST NOW WE HAVE THE BENEFIT
-110236_20091006_82330_F_0003 DID YOU EVER GO ON STRIKE
-...
-120958_20100126_97016_M_0285 SOMETIMES LESS IS BETTER
-120958_20100126_97016_M_0286 YOU MUST LOVE TO COOK
-```
 
-Our data has multiple utterances for a speaker, so we need to
-- match utterance id and speaker id by creating a segment file like this, with utterance id, speaker id, start time, end time:
-```
-110236_20091006_82330_F_001 110236_20091006_82330_F 0.0 3.44
-110236_20091006_82330_F_002 110236_20091006_82330_F 4.60 8.54
-...
-120958_20100126_97016_M_285 120958_20100126_97016_M 925.35 927.88
-120958_20100126_97016_M_286 120958_20100126_97016_M 928.31 930.51
-```
-- remove the start time and end time in the original transcript and replace the unique speaker id with the unique utterance id
-- combine all the sentences in training data as a whole (and the same to test data)
-
-### 2. Get word list
+### 1. Get word list
 #### Folder: data/train, data/test
 #### File created: words.txt
 #### File content: all the unique words in text
@@ -215,13 +190,13 @@ Our data has multiple utterances for a speaker, so we need to
 cut -d ' ' -f 2- text | sed 's/ /\n/g' | sort -u > words.txt
 ```
 
-### 3. Filter lexicon
+### 2. Filter lexicon
 #### Folder: data/local/lang
 #### File created: lexicon.txt
 #### File content: the pronunciation (phones) of words that appear in the data
 Using python script
 
-### 4. Create phone list
+### 3. Create phone list
 #### Folder: data/local/lang
 #### File created: nonsilence_phone.txt, silence_phone.txt, optional_silence.txt
 #### File content: the range of phones
@@ -231,7 +206,7 @@ cut -d ' ' -f 2- lexicon.txt | sed 's/ /\n/g' | sort -u > nonsilence_phones.txt
 echo 'SIL' > optional_silence.txt
 ```
 
-### 5. Generate other files
+### 4. Generate other files
 #### Folder: codeswitch
 #### File created: phones (folder), oov.txt, L.fst
 #### File content: 
@@ -239,7 +214,7 @@ echo 'SIL' > optional_silence.txt
 cd codeswitch
 utils/prepare_lang.sh data/local/lang '<oov>' data/local/ data/lang
 ```
-### 6. Install srilm to build the ARPA language model 
+### 5. Install srilm to build the ARPA language model 
 
 you can download this srilm-1.7.2.tar.gz from [SRILM](http://www.speech.sri.com/projects/srilm/download.html) by filling out the download form (I uploaded this gz file to Git, but received an warning cause it exceeds 50MB limit. If you observe that this gz is currupted, go download it directly from the url linked above). And then copy this file to `kaldi/tools` and name it `srilm.tgz`. After that, execute `install_srilm.sh`
 ```
@@ -271,7 +246,7 @@ mkdir data/local/tmp
 ngram-count -order 3 -write-vocab data/local/tmp/vocab-full.txt -wbdiscount -text data/local/corpus.txt -lm data/local/tmp/lm.arpa
 ```
 
-### <a name="lm"></a> 7. create G.fst using the ARPA language model
+### <a name="lm"></a> 6. create G.fst using the ARPA language model
 `G.fst` is an acceptor (i.e. input and output symbols are identical on each arc) with words as its symbols. The exception is the disambiguation symbol #0 which only appears on the input side. 
 ```
  lang=data/lang
