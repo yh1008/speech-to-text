@@ -1,0 +1,14 @@
+NC01FBX /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:8
+NC02FBY /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:303
+NC11MAX /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:598
+NC12MAY /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:893
+NI01MAX /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:1188
+NI29MBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:1483
+NI42FBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:1778
+NI44MBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:2073
+NI45FBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:2368
+NI55FBP /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:2663
+NI67MBQ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:2958
+UI03FAZ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:3253
+UI08MAZ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:3548
+UI29FAZ /home/yh2901/kaldi/egs/codeswitch/mfcc/cmvn_test.ark:3843
