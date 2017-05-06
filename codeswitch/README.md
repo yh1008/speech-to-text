@@ -10,6 +10,9 @@ also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch`
 - [run.sh](#run)
   - [local](#local)
   - [calculate MER](#mer)
+- [Directory Overview](#do)
+  - [exp](#exp)
+  - [data](#data)
 - [Audio Data Description](#ad)
   - [Interview](#d2)
   - [Conversation](#d1)
@@ -58,9 +61,14 @@ to manually check if it is setted, use command
 ```
 echo $KALDI_ROOT
 ```
+## <a name="do"></a>Directory Overview  
+### <a name="exp"></a>exp
+`tri2`(LDA) and `tri22` (LDA+LDA) model created using language data v2(eng uppercase, merge SIL, eng oov not reduced, remains 1244/9520)      
+
+### <a name="data"></a>data
+`data` folder created by `data_prep.sh` using language data v2(eng uppercase, merge SIL, eng oov not reduced, remains 1244/9520)   
 
 ## Acoustic Data Preperation
-  
 ### <a name="ad"></a> Audio Data  
 #### <a name="d2"></a> For seame_d2/data/interview:    
 there are 95 speaker-id in total (e.g. NI01MAX). Technically format of `01MA` is sufficient for identifying any unique speaker in our audios, but to make the utterance-id, recording-id and speaker-id aligned for Kaldi to process, I decide to make the entire prefix (e.g. NI01MAX) of recording-id (e.g. NI01MAX_0101.flac) my speaker-id.   
