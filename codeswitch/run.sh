@@ -148,6 +148,23 @@ echo "switched perl to 5.12.2"
 chmod +x ./local/ext/score_basic_ext.sh
 ./local/ext/score_basic_ext.sh data/test exp/tri2/graph exp/nnet2_online/tri2_nnet_a_gpu_baseline/decode
 
+
+echo ============================================================================
+echo            "                 Tri4: SAT                  "
+echo ============================================================================
+
+steps/train_sat.sh  --cmd run.pl 1000 11000 data/train data/lang exp/tri3 exp/tri4
+utils/mkgraph.sh data/lang exp/tri4 exp/tri4/graph
+
+echo ============================================================================
+echo            "               DNN-perturbation              "
+echo ============================================================================
+
+chmod +x utils/perturb_data_dir_speed.sh
+chmod +x local/online/run_nnet2_perturb_speed.sh 
+local/online/run_nnet2_perturb_speed.sh
+local/score.sh --cmd run.pl data/test exp/tri2/graph exp/nnet2_online_perturb/nnet_a/decode
+
 echo ============================================================================
 echo            "                  Run.sh finished!                   "
 echo ============================================================================
