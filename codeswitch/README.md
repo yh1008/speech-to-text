@@ -70,7 +70,7 @@ echo $KALDI_ROOT
 `data` folder created by `data_prep.sh` using language data v2(eng uppercase, merge SIL, eng oov not reduced, remains 1244/9520)   
 
 ### <a name="mfcc"></a>mfcc
-`mfcc` feature and `cmvn` features 
+stores `mfcc`(Mel Frequency Cepstral Coefficents) feature and `cmvn` (Cepstral Mean and Variance Normalization) features 
 
 ## Acoustic Data Preperation
 ### <a name="ad"></a> Audio Data  
@@ -95,11 +95,11 @@ train set contains 60 speaker id: 'NC41MBP', 'NC22MBQ', 'NC40FBQ', 'NC53MBP', 'N
 ### <a name="acoustic-prep"></a> Acoustic Data
 make sure to execute `. ./path.sh` before running any command to set the Kaldi environmental variable 
 
-Upon recreating utterance id based on start and end time from each recording, we end up with 54594 utterances:
-1. there are 50457 utterances in train set  
-2. there are 4137 utterances in test set    
+Upon recreating utterance id based on start and end time from each recording, we end up with 54594 (46578 based on filtered transcript) utterances:
+1. there are 50457 (43186 based on filtered transcript) utterances in train set  
+2. there are 4137 (3392 based on filtered transcript) utterances in test set    
 
-In real feature extraction:  
+In real feature extraction: (the following stats is depreciated, the `tri2` and `tri22` are in fact created using `43186` in `train` and `3392` utterances in `test`)
 1. calling fix_data_dir.sh: kept 49897 utterances out of 50457 (speaker NC50XFB was filtered out cause its gender is unknown) 
 2. fix_data_dir.sh: kept all 4137 utterances.
 
