@@ -1,0 +1,12 @@
+NC43FBQ_250101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC43FBQ/NC43FBQ_250101.flac |
+NC43FBQ_330101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC43FBQ/NC43FBQ_330101.flac |
+NC44MBQ_220101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC44MBQ/NC44MBQ_220101.flac |
+NC44MBQ_440101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC44MBQ/NC44MBQ_440101.flac |
+NC45MBP_230101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC45MBP/NC45MBP_230101.flac |
+NC45MBP_240101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC45MBP/NC45MBP_240101.flac |
+NC45MBP_370101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC45MBP/NC45MBP_370101.flac |
+NC46FBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC46FBQ/NC46FBQ_0101.flac |
+NC47MBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC47MBP/NC47MBP_0101.flac |
+NC47MBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC47MBQ/NC47MBQ_0101.flac |
+NC48FBP_260101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC48FBP/NC48FBP_260101.flac |
+NC48FBP_300101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC48FBP/NC48FBP_300101.flac |

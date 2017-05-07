@@ -1,0 +1,12 @@
+NC25MBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:5908
+NC26MBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:6203
+NC27MBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:6498
+NC28MBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:6793
+NC29FBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:7088
+NC30MBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:7383
+NC31FBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:7678
+NC32FBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:7973
+NC33FBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:8268
+NC34FBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:8563
+NC35FBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:8858
+NC35FBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v4_pitch/cmvn_train.ark:9153

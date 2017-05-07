@@ -1,0 +1,14 @@
+NC01FBX /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:8
+NC02FBY /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:255
+NC11MAX /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:502
+NC12MAY /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:749
+NI01MAX /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:996
+NI29MBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:1243
+NI42FBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:1490
+NI44MBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:1737
+NI45FBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:1984
+NI55FBP /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:2231
+NI67MBQ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:2478
+UI03FAZ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:2725
+UI08MAZ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:2972
+UI29FAZ /home/wendy-dl/kaldi/egs/codeswitch/mfcc_v3_split_test/cmvn_test.ark:3219

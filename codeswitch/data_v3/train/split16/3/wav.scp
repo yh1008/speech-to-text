@@ -1,0 +1,14 @@
+NC25MBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC25MBP/NC25MBP_0101.flac |
+NC26MBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC26MBQ/NC26MBQ_0101.flac |
+NC27MBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC27MBP/NC27MBP_0101.flac |
+NC28MBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC28MBQ/NC28MBQ_0101.flac |
+NC29FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC29FBP/NC29FBP_0101.flac |
+NC30MBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC30MBQ/NC30MBQ_0101.flac |
+NC31FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC31FBP/NC31FBP_0101.flac |
+NC32FBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC32FBQ/NC32FBQ_0101.flac |
+NC33FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC33FBP/NC33FBP_0101.flac |
+NC34FBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC34FBQ/NC34FBQ_0101.flac |
+NC35FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC35FBP/NC35FBP_0101.flac |
+NC35FBQ_230101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC35FBQ/NC35FBQ_230101.flac |
+NC35FBQ_240101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC35FBQ/NC35FBQ_240101.flac |
+NC35FBQ_310101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NC35FBQ/NC35FBQ_310101.flac |

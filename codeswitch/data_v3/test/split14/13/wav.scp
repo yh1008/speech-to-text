@@ -1,0 +1,4 @@
+UI08MAZ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/test/UI08MAZ/UI08MAZ_0101.flac |
+UI08MAZ_0102 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/test/UI08MAZ/UI08MAZ_0102.flac |
+UI08MAZ_0103 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/test/UI08MAZ/UI08MAZ_0103.flac |
+UI08MAZ_0104 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/test/UI08MAZ/UI08MAZ_0104.flac |

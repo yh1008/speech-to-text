@@ -1,0 +1,15 @@
+UI02FAZ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI02FAZ/UI02FAZ_0101.flac |
+UI02FAZ_0102 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI02FAZ/UI02FAZ_0102.flac |
+UI02FAZ_0103 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI02FAZ/UI02FAZ_0103.flac |
+UI02FAZ_0104 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI02FAZ/UI02FAZ_0104.flac |
+UI02FAZ_0105 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI02FAZ/UI02FAZ_0105.flac |
+UI04FAZ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI04FAZ/UI04FAZ_0101.flac |
+UI04FAZ_0102 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI04FAZ/UI04FAZ_0102.flac |
+UI04FAZ_0103 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI04FAZ/UI04FAZ_0103.flac |
+UI04FAZ_0104 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI04FAZ/UI04FAZ_0104.flac |
+UI04FAZ_0105 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI04FAZ/UI04FAZ_0105.flac |
+UI05MAZ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI05MAZ/UI05MAZ_0101.flac |
+UI05MAZ_0102 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI05MAZ/UI05MAZ_0102.flac |
+UI05MAZ_0103 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI05MAZ/UI05MAZ_0103.flac |
+UI05MAZ_0104 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI05MAZ/UI05MAZ_0104.flac |
+UI05MAZ_0105 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/UI05MAZ/UI05MAZ_0105.flac |

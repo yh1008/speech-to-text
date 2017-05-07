@@ -1,0 +1,10 @@
+NI07FBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI07FBQ/NI07FBQ_0101.flac |
+NI08FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI08FBP/NI08FBP_0101.flac |
+NI08FBP_0201 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI08FBP/NI08FBP_0201.flac |
+NI09FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI09FBP/NI09FBP_0101.flac |
+NI09FBP_0201 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI09FBP/NI09FBP_0201.flac |
+NI10FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI10FBP/NI10FBP_0101.flac |
+NI11FBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI11FBP/NI11FBP_0101.flac |
+NI12MAP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI12MAP/NI12MAP_0101.flac |
+NI13MBQ_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI13MBQ/NI13MBQ_0101.flac |
+NI14MBP_0101 flac -c -d -s /home/wendy-dl/kaldi/egs/codeswitch/audio/train/NI14MBP/NI14MBP_0101.flac |
