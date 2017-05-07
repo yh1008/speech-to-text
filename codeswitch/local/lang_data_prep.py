@@ -532,7 +532,7 @@ print("Finish calculating oov")
 print("Training set: English oov " + str(len(words_oov_train_english)) + "/" + str(len([item for item in words_train_uniq if isAlphahyphen(item)])))
 print("Training set: Chinese oov " + str(len(words_oov_train_chinese)) + "/" + str(len([item for item in words_train_uniq if not isAlphahyphen(item)])))
 
-'''
+
 words_test = []
 for dir in dirs:
     if "conversation" in dir:
@@ -594,7 +594,7 @@ for dir in dirs:
 
             
 print("Finish fixing test utterances according to training dictionary")
-'''
+
 words_test_uniq = list(set(words_test))
 d_test,words_oov_test_english,words_oov_test_chinese = oov(words_test_uniq,d_train,d_train)
 print("Test set: English oov " + str(len(words_oov_test_english)) + "/" + str(len([item for item in words_test_uniq if isAlphahyphen(item)])))
