@@ -12,7 +12,9 @@ also put the `LDC2015S04` raw data folder under `kaldi/egs/codeswitch`
   - [calculate MER](#mer)
 - [Directory Overview](#do)
   - [exp](#exp)
+  - [exp_pitch](#exp_pitch)
   - [data](#data)
+  - [data_v4](#data4)
   - [mfcc](#mfcc)  
 - [Audio Data Description](#ad)
   - [Interview](#d2)
@@ -66,8 +68,14 @@ echo $KALDI_ROOT
 ### <a name="exp"></a>exp
 `tri2`(LDA) and `tri22` (LDA+LDA) model created using language data v2(eng uppercase, merge SIL, eng oov not reduced, remains 1244/9520)      
 
+### <a name="exp_pitch"></a>exp_pitch
+ model created using language data v4(eng uppercase, merge SIL, eng oov reduced to ~800/9520)  
+
 ### <a name="data"></a>data
 `data` folder created by `data_prep.sh` using language data v2(eng uppercase, merge SIL, eng oov not reduced, remains 1244/9520)   
+
+### <a name="data4"></a>data_v4
+`data` folder created by `data_prep.sh` using language data v4(eng uppercase, merge SIL, eng oov reduced to ~800/9520)  
 
 ### <a name="mfcc"></a>mfcc
 stores `mfcc`(Mel Frequency Cepstral Coefficents) feature and `cmvn` (Cepstral Mean and Variance Normalization) features 
